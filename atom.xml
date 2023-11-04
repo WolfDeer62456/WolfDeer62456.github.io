@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>WolfDeer</title>
+  
+  <subtitle>Dreams Remain Forever</subtitle>
+  <link href="https://wolfdeer62456.github.io/project/atom.xml" rel="self"/>
+  
+  <link href="https://wolfdeer62456.github.io/project/"/>
+  <updated>2023-11-04T16:03:55.947Z</updated>
+  <id>https://wolfdeer62456.github.io/project/</id>
+  
+  <author>
+    <name>WolfDeer</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>#C231104A. 构造题(squ)</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/04/c231104a-gou-zao-ti-squ/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/04/c231104a-gou-zao-ti-squ/</id>
+    <published>2023-11-04T05:00:00.000Z</published>
+    <updated>2023-11-04T16:03:55.947Z</updated>
+    
+    
+    <summary type="html">从样例中寻找规律</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="观察+分析" scheme="https://wolfdeer62456.github.io/project/tags/%E8%A7%82%E5%AF%9F-%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023.11.04 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/04/2023-11-04-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/04/2023-11-04-kao-shi-zong-jie/</id>
+    <published>2023-11-04T00:00:48.000Z</published>
+    <updated>2023-11-04T16:03:08.982Z</updated>
+    
+    
+    <summary type="html">充足睡眠</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一秒设置</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/04/yi-miao-she-zhi/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/04/yi-miao-she-zhi/</id>
+    <published>2023-11-03T16:00:00.000Z</published>
+    <updated>2023-11-04T16:03:35.148Z</updated>
+    
+    
+    <summary type="html">一秒设置</summary>
+    
+    
+    
+    <category term="资料" scheme="https://wolfdeer62456.github.io/project/categories/%E8%B5%84%E6%96%99/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>USACO23FEB-Silver A</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/03/usaco23feb-silver-a/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/03/usaco23feb-silver-a/</id>
+    <published>2023-11-03T12:19:06.000Z</published>
+    <updated>2023-11-04T16:00:52.015Z</updated>
+    
+    
+    <summary type="html">提升思维速度，找到合理方法</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="二分答案" scheme="https://wolfdeer62456.github.io/project/tags/%E4%BA%8C%E5%88%86%E7%AD%94%E6%A1%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023.11.03 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/03/2023-11-03-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/03/2023-11-03-kao-shi-zong-jie/</id>
+    <published>2023-11-03T12:00:00.000Z</published>
+    <updated>2023-11-04T16:02:58.249Z</updated>
+    
+    
+    <summary type="html">专注自己，合理分配时间</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>USACO23OPEN-Silver A</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/02/usaco23open-silver-a/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/02/usaco23open-silver-a/</id>
+    <published>2023-11-02T12:19:06.000Z</published>
+    <updated>2023-11-04T16:02:08.171Z</updated>
+    
+    
+    <summary type="html">计算局部对整体的影响</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="思维" scheme="https://wolfdeer62456.github.io/project/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023.11.02 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/02/2023-11-02-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/02/2023-11-02-kao-shi-zong-jie/</id>
+    <published>2023-11-02T12:00:00.000Z</published>
+    <updated>2023-11-04T16:02:36.304Z</updated>
+    
+    
+    <summary type="html">专心做题，不受影响</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>#C231101A. 茵蒂克丝(index)</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/01/c231101a-yin-di-ke-si-index/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/01/c231101a-yin-di-ke-si-index/</id>
+    <published>2023-11-01T08:43:33.000Z</published>
+    <updated>2023-11-04T16:03:50.195Z</updated>
+    
+    
+    <summary type="html">单调栈维护</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="单调栈" scheme="https://wolfdeer62456.github.io/project/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023.11.01 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/01/2023-11-01-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/01/2023-11-01-kao-shi-zong-jie/</id>
+    <published>2023-11-01T08:00:00.000Z</published>
+    <updated>2023-11-04T16:04:19.952Z</updated>
+    
+    
+    <summary type="html">训练思维，静心想题</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>成功完成任务!</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/10/31/cheng-gong-wan-cheng-ren-wu/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/10/31/cheng-gong-wan-cheng-ren-wu/</id>
+    <published>2023-10-31T06:57:38.000Z</published>
+    <updated>2023-11-04T16:03:28.742Z</updated>
+    
+    
+    <summary type="html">成长</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>#C231025B. 图论(graph)</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/10/30/c231025b-tu-lun-graph/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/10/30/c231025b-tu-lun-graph/</id>
+    <published>2023-10-30T11:09:53.000Z</published>
+    <updated>2023-11-04T16:03:40.397Z</updated>
+    
+    
+    <summary type="html">空间优化 分块思想</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="空间优化 分块" scheme="https://wolfdeer62456.github.io/project/tags/%E7%A9%BA%E9%97%B4%E4%BC%98%E5%8C%96-%E5%88%86%E5%9D%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My First New Blog</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/10/30/my-first-new-blog/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/10/30/my-first-new-blog/</id>
+    <published>2023-10-30T11:05:46.000Z</published>
+    <updated>2023-11-04T16:04:05.053Z</updated>
+    
+    
+    <summary type="html">博客建立</summary>
+    
+    
+    
+    <category term="资料" scheme="https://wolfdeer62456.github.io/project/categories/%E8%B5%84%E6%96%99/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/10/30/hello-world/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/10/30/hello-world/</id>
+    <published>2023-10-29T16:00:00.000Z</published>
+    <updated>2023-11-04T15:35:27.607Z</updated>
+    
+    
+    <summary type="html">Hexo 操作</summary>
+    
+    
+    
+    <category term="资料" scheme="https://wolfdeer62456.github.io/project/categories/%E8%B5%84%E6%96%99/"/>
+    
+    
+  </entry>
+  
+</feed>
