@@ -6,7 +6,7 @@
   <link href="https://wolfdeer62456.github.io/project/atom.xml" rel="self"/>
   
   <link href="https://wolfdeer62456.github.io/project/"/>
-  <updated>2023-11-10T13:59:56.000Z</updated>
+  <updated>2023-11-11T13:34:54.273Z</updated>
   <id>https://wolfdeer62456.github.io/project/</id>
   
   <author>
@@ -21,19 +21,17 @@
     <link href="https://wolfdeer62456.github.io/project/2023/11/10/usaco22open-platinum-p/"/>
     <id>https://wolfdeer62456.github.io/project/2023/11/10/usaco22open-platinum-p/</id>
     <published>2023-11-10T09:08:28.000Z</published>
-    <updated>2023-11-10T13:59:56.000Z</updated>
+    <updated>2023-11-11T13:34:54.273Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;USACO22OPEN-Platinum-P&quot;&gt;&lt;a href=&quot;#USACO22OPEN-Platinum-P&quot; class=&quot;headerlink&quot; title=&quot;USACO22OPEN-Platinum</summary>
-        
-      
+    <summary type="html">启发式合并 set建边删边</summary>
     
     
     
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="启发式合并" scheme="https://wolfdeer62456.github.io/project/tags/%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6/"/>
     
   </entry>
   
