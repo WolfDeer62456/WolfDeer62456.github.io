@@ -5,11 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="USACO23OPEN-Silver A, C++">
-    <meta name="description" content="题目来源洛谷：USACO23OPEN-Silver Milk Sum(A)
+    <meta name="description" content="USACO23OPEN-Silver A题目来源洛谷：USACO23OPEN-Silver Milk Sum(A)
 SPOJ：USACO23OPEN-Silver Milk Sum(A)
-题目题面简述给定数组  ，在数组中依次选出一个元素构成排列  。
-定义  。
-现在给出  个">
+题面简述$\qquad$给定数组 $a_1,…,a_">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -358,14 +356,14 @@ SPOJ：USACO23OPEN-Silver Milk Sum(A)
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-11-05
+                    2023-11-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    919
+                    921
                 </div>
                 
 
@@ -400,36 +398,24 @@ SPOJ：USACO23OPEN-Silver Milk Sum(A)
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="题目来源"><a href="#题目来源" class="headerlink" title="题目来源"></a>题目来源</h2><p>洛谷：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P9186">USACO23OPEN-Silver Milk Sum(A)</a></p>
+                <h1 id="USACO23OPEN-Silver-A"><a href="#USACO23OPEN-Silver-A" class="headerlink" title="USACO23OPEN-Silver A"></a>USACO23OPEN-Silver A</h1><h2 id="题目来源"><a href="#题目来源" class="headerlink" title="题目来源"></a>题目来源</h2><p>洛谷：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P9186">USACO23OPEN-Silver Milk Sum(A)</a></p>
 <p>SPOJ：<a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231102A">USACO23OPEN-Silver Milk Sum(A)</a></p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="题面简述"><a href="#题面简述" class="headerlink" title="题面简述"></a>题面简述</h3><p>给定数组  ，在数组中依次选出一个元素构成排列  。</p>
-<p>定义  。</p>
-<p>现在给出  个操作，每个操作有两个数  和  表示将  替换成  ，对于每一个操作求出操作后的  的最大值，每次操作后数组还原成原样。</p>
-<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>农民约翰的  头奶牛的产奶量为整数 。也就是说，第  头奶牛每分钟产奶  单位。</p>
-<p>每天早上，农场主约翰开始把牲口棚里的  头牛都拴在挤奶机上。他被要求一个接一个地解开它们，把它们送出去进行日常锻炼。他送出去的第一头奶牛在挤奶一分钟后就会解开钩，送出去的第二头奶牛在挤奶一分钟后就会解开钩，以此类推。因为第一头奶牛（例如奶牛）在挤奶机上只花了  分钟，所以她只贡献了  单位的总牛奶。第二头奶牛（比如奶牛）在挤奶机上总共花了  分钟，因此贡献了  单位的总牛奶。第三头奶牛（比如奶牛）贡献了  个单位，以此类推。假设  代表农场主约翰按最优顺序解开奶牛，他总共能收集到的最大牛奶量。</p>
-<p>农场主约翰很好奇，如果他的奶牛群的牛奶产量有所不同，会受到什么影响。对于每个  查询，每个查询由两个整数  和  指定，请计算如果  设置为 ， 的新值将是什么。注意，每个查询都考虑一个临时的潜在变化，独立于所有其他查询；也就是说， 在考虑下一个查询之前恢复到其原始值。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行输入一个整数  。</p>
-<p>第二行输入  个整数  。</p>
-<p>第三行输入一个整数  。</p>
-<p>接下来有  行，每行两个整数  和  。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出共有  行，每行一个整数，依次表示 第  次查询的所对应的  值。</p>
-<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><h3 id="输入数据-1"><a href="#输入数据-1" class="headerlink" title="输入数据 1"></a>输入数据 1</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1 10 4 2 6</span><br><span class="line">3</span><br><span class="line">2 1</span><br><span class="line">2 8</span><br><span class="line">4 5</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="输出数据-1"><a href="#输出数据-1" class="headerlink" title="输出数据 1"></a>输出数据 1</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">55</span><br><span class="line">81</span><br><span class="line">98</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="样例1解释"><a href="#样例1解释" class="headerlink" title="样例1解释"></a>样例1解释</h3><p>对于第一个查询， 将变成  ，  .</p>
-<p>对于第二个查询， 将变成  ，  .</p>
-<p>对于第三个查询， 将变成 ，  .</p>
-<h3 id="数据规模与约定"><a href="#数据规模与约定" class="headerlink" title="数据规模与约定"></a>数据规模与约定</h3><p>对于全部数据：；；；。</p>
-<ul>
-<li>测试点 ～：。</li>
-<li>测试点 ～：没有额外限制。</li>
-</ul>
+<h2 id="题面简述"><a href="#题面简述" class="headerlink" title="题面简述"></a>题面简述</h2><p>$\qquad$给定数组 $a_1,…,a_N$ ，在数组中依次选出一个元素构成排列 $b_1,…,b_N$ 。</p>
+<p>$\qquad$定义 $T = \sum _{i=1} ^N i \times b_i$ 。</p>
+<p>$\qquad$现在给出 $Q$ 个操作，每个操作有两个数 $s$ 和 $k$ 表示将 $a_s$ 替换成 $k$ ，对于每一个操作求出操作后的 $T$ 的最大值，每次操作后数组还原成原样。</p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>$\qquad$农民约翰的 $N$ 头奶牛的产奶量为整数 $a_1,……,a_N$。也就是说，第 $i$ 头奶牛每分钟产奶 $a_i$ 单位。</p>
+<p>$\qquad$每天早上，农场主约翰开始把牲口棚里的 $N$ 头牛都拴在挤奶机上。他被要求一个接一个地解开它们，把它们送出去进行日常锻炼。他送出去的第一头奶牛在挤奶一分钟后就会解开钩，送出去的第二头奶牛在挤奶一分钟后就会解开钩，以此类推。因为第一头奶牛（例如奶牛$x$）在挤奶机上只花了 $1$ 分钟，所以她只贡献了 $a_x$ 单位的总牛奶。第二头奶牛（比如奶牛$y$）在挤奶机上总共花了 $2$ 分钟，因此贡献了 $2∗ay$ 单位的总牛奶。第三头奶牛（比如奶牛$z$）贡献了 $3a_z$ 个单位，以此类推。假设 $T$ 代表农场主约翰按最优顺序解开奶牛，他总共能收集到的最大牛奶量。</p>
+<p>$\qquad$农场主约翰很好奇，如果他的奶牛群的牛奶产量有所不同，会受到什么影响。对于每个 $Q$ 查询，每个查询由两个整数 $i$ 和 $j$ 指定，请计算如果 $a_i$ 设置为 $j$，$T$ 的新值将是什么。注意，每个查询都考虑一个临时的潜在变化，独立于所有其他查询；也就是说，$a_i$ 在考虑下一个查询之前恢复到其原始值。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行输入一个整数 $N$ 。</p>
+<p>第二行输入 $N$ 个整数 $a_1\dots a_N$ 。</p>
+<p>第三行输入一个整数 $Q$ 。</p>
+<p>接下来有 $Q$ 行，每行两个整数 $i$ 和 $j$ 。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出共有 $Q$ 行，每行一个整数，依次表示 第 $Q$ 次查询的所对应的 $T$ 值。</p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>言简意赅，该题有几个性质：</p>
 <ol>
-<li>将  数组按从小到大顺序排列， ;</li>
-<li>对于每次操作，可以用  求得修改值在数组  中的位置；</li>
-<li><strong>考虑每次修改对   的影响</strong> ，分  种情况讨论，设  表示修改的位置对应的  在  数组的位置，设  表示修改的值  在  数组中的位置，分  ,  ,  三种情况枚举即可。</li>
+<li>将 $a$ 数组按从小到大顺序排列， ;</li>
+<li>对于每次操作，可以用 $lower_bound$ 求得修改值在数组 $b$ 中的位置；</li>
+<li><strong>考虑每次修改对  $ans$ 的影响</strong> ，分 $3$ 种情况讨论，设 $x$ 表示修改的位置对应的 $a[s]$ 在 $b$ 数组的位置，设 $y$ 表示修改的值 $k$ 在 $b$ 数组中的位置，分 $x&lt;y$ , $x=y$ , $x&gt;y$ 三种情况枚举即可。</li>
 </ol>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> For(i,l,r) for(int i=l;i&lt;=r;i++)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> Rof(i,l,r) for(int i=l;i&gt;=r;i--)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">input</span><span class="params">()</span></span>{<span class="type">int</span> x;<span class="keyword">return</span> cin&gt;&gt;x,x;}</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x3f3f3f3f3f3f3f3f</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">151234</span>;</span><br><span class="line"><span class="type">int</span> sum[N],ans;</span><br><span class="line"><span class="type">int</span> n,q,a[N],b[N];</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>),cin.<span class="built_in">tie</span>(<span class="number">0</span>),cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">"a.in"</span>,<span class="string">"r"</span>,stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">"a.out"</span>,<span class="string">"w"</span>,stdout);</span><br><span class="line">    cin&gt;&gt;n;<span class="built_in">For</span>(i,<span class="number">1</span>,n) a[i]=b[i]=<span class="built_in">input</span>();</span><br><span class="line">    <span class="built_in">sort</span>(b+<span class="number">1</span>,b+n+<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">For</span>(i,<span class="number">1</span>,n) sum[i]=sum[i<span class="number">-1</span>]+b[i],ans+=i*b[i];</span><br><span class="line">    cin&gt;&gt;q;</span><br><span class="line">    <span class="keyword">while</span>(q--){</span><br><span class="line">        <span class="type">int</span> k=<span class="built_in">input</span>(),w=<span class="built_in">input</span>(),res=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> x=<span class="built_in">lower_bound</span>(b+<span class="number">1</span>,b+n+<span class="number">1</span>,a[k])-b;</span><br><span class="line">        <span class="type">int</span> y=<span class="built_in">lower_bound</span>(b+<span class="number">1</span>,b+n+<span class="number">1</span>,w)-b;</span><br><span class="line">        <span class="keyword">if</span>(x==y) res=ans-b[x]*x+w*y;<span class="keyword">else</span></span><br><span class="line">        <span class="keyword">if</span>(x&gt;y) res=ans+sum[x<span class="number">-1</span>]-sum[y<span class="number">-1</span>]-b[x]*x+w*y;</span><br><span class="line">        <span class="keyword">else</span> res=ans-(sum[y<span class="number">-1</span>]-sum[x])-b[x]*x+w*(y<span class="number">-1</span>);</span><br><span class="line">        cout&lt;&lt;res&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">} </span><br></pre></td></tr></tbody></table></figure>
                 
@@ -852,7 +838,7 @@ SPOJ：USACO23OPEN-Silver Milk Sum(A)
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.4k</span>
+                        class="white-color">30.3k</span>
             
             
             
