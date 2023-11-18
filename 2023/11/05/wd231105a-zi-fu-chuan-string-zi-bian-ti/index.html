@@ -8,7 +8,7 @@
     <meta name="description" content="#WD231105A. 自福串(string)题目背景（啊哦！题目背景不见了，去其他地方找找看吧~）
 题目描述前提：$Zi\ Fu\  Chuan\ (ZFC)$是它，不是他/她
 
-一个 自福串 由 数字 构成，$S_i$ 表示该自福串的第">
+一个 自福串 由 数字 构成，$a_i$ 表示该自福串的第">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -133,6 +133,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://wolfdeer62456.github.io/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -213,6 +224,17 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://wolfdeer62456.github.io/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -325,8 +347,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="https://wolfdeer62456.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88-%E6%95%B0%E4%BD%8D%E5%A4%84%E7%90%86/">
-                                <span class="chip bg-color">单调栈 + 数位处理</span>
+                            <a href="https://wolfdeer62456.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/">
+                                <span class="chip bg-color">单调栈</span>
                             </a>
                         
                     </div>
@@ -357,14 +379,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-11-07
+                    2023-11-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    337
+                    347
                 </div>
                 
 
@@ -402,17 +424,17 @@
                 <h1 id="WD231105A-自福串-string"><a href="#WD231105A-自福串-string" class="headerlink" title="#WD231105A. 自福串(string)"></a>#WD231105A. 自福串(string)</h1><h2 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h2><p>（啊哦！题目背景不见了，去其他地方找找看吧~）</p>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><strong>前提：$Zi\ Fu\  Chuan\ (ZFC)$是它，不是他/她</strong></p>
 <ul>
-<li><p>一个 <strong>自福串</strong> 由 <strong>数字</strong> 构成，$S_i$ 表示该自福串的第 $i$ 位。</p>
+<li><p>一个 <strong>自福串</strong> 由 <strong>数字</strong> 构成，$a_i$ 表示该自福串的第 $i$ 位。</p>
 </li>
-<li><p>一个 <strong>自福串</strong> 的子串 $S_{l,r}$ 表示由  $S_{l},S_{l+1},…,S_r$ 依次拼接而成的自福串</p>
+<li><p>一个 <strong>自福串</strong> 的子串 $A_{l,r}$ 表示由  $a_{l},a_{l+1},…,a_r$ 依次拼接而成的自福串</p>
 </li>
 </ul>
 <p><strong>给定一个自福串 ，设：</strong></p>
 <ol>
-<li>$f(x)=max_{i=1}^{n}S_i$ </li>
-<li>$g(S)=S_{1}\left|S_{2}\right| \ldots \mid S_{n}$ .</li>
+<li>$f(A_{l,r})=max_{i=l}^{r}a_i$ .</li>
+<li>$g(A_{l,r})=a_{1}\left|a_{2}\right| \ldots \mid a_{n}$ .</li>
 </ol>
-<p><strong>现在 $\mathrm{ZFC}$ 想要问你, 对于给定的自福串 $S$, 有多少个子串 $T$, 满足 $g(T)&gt;f(T)$ 。</strong></p>
+<p><strong>现在 $\mathrm{ZFC}$ 想要问你, 对于给定的自福串 $S$, 有多少个子串 $A_{l,r}$, 满足 $g(A_{l,r})&gt;f(A_{l,r})$ 。</strong></p>
 <h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行一个整数 $n$ 。</p>
 <p>接下来一行 $n$ 个整数, 第 $i$ 个数表示 $S_{i}$ 。</p>
 <h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出一个数, 表示满足条件的子串的个数。</p>
@@ -494,8 +516,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="https://wolfdeer62456.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88-%E6%95%B0%E4%BD%8D%E5%A4%84%E7%90%86/">
-                                    <span class="chip bg-color">单调栈 + 数位处理</span>
+                                <a href="https://wolfdeer62456.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/">
+                                    <span class="chip bg-color">单调栈</span>
                                 </a>
                             
                         </div>
@@ -612,8 +634,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="https://wolfdeer62456.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88-%E6%95%B0%E4%BD%8D%E5%A4%84%E7%90%86/">
-                        <span class="chip bg-color">单调栈 + 数位处理</span>
+                    <a href="https://wolfdeer62456.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/">
+                        <span class="chip bg-color">单调栈</span>
                     </a>
                     
                 </div>
@@ -867,7 +889,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31.6k</span>
+                        class="white-color">44k</span>
             
             
             

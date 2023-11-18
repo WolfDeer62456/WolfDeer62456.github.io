@@ -6,7 +6,7 @@
   <link href="https://wolfdeer62456.github.io/project/atom.xml" rel="self"/>
   
   <link href="https://wolfdeer62456.github.io/project/"/>
-  <updated>2023-11-11T13:34:54.273Z</updated>
+  <updated>2023-11-15T12:34:38.000Z</updated>
   <id>https://wolfdeer62456.github.io/project/</id>
   
   <author>
@@ -17,11 +17,267 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>USACO22OPEN-Platinum P</title>
+    <title>AFO 小技巧</title>
+    <link href="https://wolfdeer62456.github.io/project/2025/06/10/afo-xiao-ji-qiao/"/>
+    <id>https://wolfdeer62456.github.io/project/2025/06/10/afo-xiao-ji-qiao/</id>
+    <published>2025-06-10T15:59:59.000Z</published>
+    <updated>2023-11-15T12:34:38.000Z</updated>
+    
+    
+    <summary type="html">AFO 小技巧</summary>
+    
+    
+    
+    <category term="说说" scheme="https://wolfdeer62456.github.io/project/categories/%E8%AF%B4%E8%AF%B4/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>#C231116D. 最长不下降子序列(lis)</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/16/c231116d-zui-chang-bu-xia-jiang-zi-xu-lie-lis/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/16/c231116d-zui-chang-bu-xia-jiang-zi-xu-lie-lis/</id>
+    <published>2023-11-16T15:59:59.000Z</published>
+    <updated>2023-11-17T06:53:58.000Z</updated>
+    
+    
+    <summary type="html">反悔贪心+线段树</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="反悔贪心" scheme="https://wolfdeer62456.github.io/project/tags/%E5%8F%8D%E6%82%94%E8%B4%AA%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C231116C. 简单图(graph)</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/16/c231116c-jian-dan-tu-graph/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/16/c231116c-jian-dan-tu-graph/</id>
+    <published>2023-11-16T12:55:47.000Z</published>
+    <updated>2023-11-17T06:55:00.000Z</updated>
+    
+    
+    <summary type="html">仔细分析，分类讨论</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="最短路算法" scheme="https://wolfdeer62456.github.io/project/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C231116B. 排列(perm)</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/16/c231116b-pai-lie-perm/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/16/c231116b-pai-lie-perm/</id>
+    <published>2023-11-16T05:05:45.000Z</published>
+    <updated>2023-11-17T07:28:28.000Z</updated>
+    
+    
+    <summary type="html">从题目中获取信息，并入手</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="观察+分析" scheme="https://wolfdeer62456.github.io/project/tags/%E8%A7%82%E5%AF%9F-%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C231116A. 玩具序列(sequence)</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/16/c231116a-wan-ju-xu-lie-sequence/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/16/c231116a-wan-ju-xu-lie-sequence/</id>
+    <published>2023-11-16T05:05:25.000Z</published>
+    <updated>2023-11-16T05:25:10.000Z</updated>
+    
+    
+    <summary type="html">仔细思考，多出样例</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="单调栈" scheme="https://wolfdeer62456.github.io/project/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023.11.16 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/16/2023-11-16-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/16/2023-11-16-kao-shi-zong-jie/</id>
+    <published>2023-11-16T04:00:00.000Z</published>
+    <updated>2023-11-16T05:28:54.000Z</updated>
+    
+    
+    <summary type="html">多出样例</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>#C231114B. 奇迹(miracle)</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/14/c231114b-qi-ji-miracle/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/14/c231114b-qi-ji-miracle/</id>
+    <published>2023-11-14T13:25:31.000Z</published>
+    <updated>2023-11-16T13:38:28.000Z</updated>
+    
+    
+    <summary type="html">思维</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="思维" scheme="https://wolfdeer62456.github.io/project/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C231114A. 平凡(ordinary)</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/14/c231114a-ping-fan-ordinary/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/14/c231114a-ping-fan-ordinary/</id>
+    <published>2023-11-14T13:25:16.000Z</published>
+    <updated>2023-11-15T06:57:22.000Z</updated>
+    
+    
+    <summary type="html">思维</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="思维" scheme="https://wolfdeer62456.github.io/project/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023.11.14 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/14/2023-11-14-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/14/2023-11-14-kao-shi-zong-jie/</id>
+    <published>2023-11-14T04:00:00.000Z</published>
+    <updated>2023-11-14T13:30:38.000Z</updated>
+    
+    
+    <summary type="html">仔细分析，分析好了再下手</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>#C231113B. 计树(tree)</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/13/c231113b-ji-shu-tree/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/13/c231113b-ji-shu-tree/</id>
+    <published>2023-11-13T07:06:21.000Z</published>
+    <updated>2023-11-17T08:15:00.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/project/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C231113A. 项链(necklace)</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/13/c231113a-xiang-lian-necklace/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/13/c231113a-xiang-lian-necklace/</id>
+    <published>2023-11-13T07:06:02.000Z</published>
+    <updated>2023-11-13T09:20:32.000Z</updated>
+    
+    
+    <summary type="html">二分答案</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="二分答案" scheme="https://wolfdeer62456.github.io/project/tags/%E4%BA%8C%E5%88%86%E7%AD%94%E6%A1%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023.11.13 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/13/2023-11-13-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/13/2023-11-13-kao-shi-zong-jie/</id>
+    <published>2023-11-13T07:04:44.000Z</published>
+    <updated>2023-11-13T07:44:10.000Z</updated>
+    
+    
+    <summary type="html">多拿暴力分，保持最好状态</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>#C231111A. 种树(plant)</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/11/c231111a-chong-shu-plant/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/11/c231111a-chong-shu-plant/</id>
+    <published>2023-11-11T07:00:00.000Z</published>
+    <updated>2023-11-13T08:07:44.000Z</updated>
+    
+    
+    <summary type="html">因数个数定理？</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="思维" scheme="https://wolfdeer62456.github.io/project/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023.11.11 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/11/11/2023-11-11-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/11/11/2023-11-11-kao-shi-zong-jie/</id>
+    <published>2023-11-11T04:00:00.000Z</published>
+    <updated>2023-11-13T07:27:50.000Z</updated>
+    
+    
+    <summary type="html">保证不挂分，多打暴力</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>USACO22OPEN-Platinum D</title>
     <link href="https://wolfdeer62456.github.io/project/2023/11/10/usaco22open-platinum-p/"/>
     <id>https://wolfdeer62456.github.io/project/2023/11/10/usaco22open-platinum-p/</id>
     <published>2023-11-10T09:08:28.000Z</published>
-    <updated>2023-11-11T13:34:54.273Z</updated>
+    <updated>2023-11-12T13:39:58.000Z</updated>
     
     
     <summary type="html">启发式合并 set建边删边</summary>
@@ -55,11 +311,11 @@
   </entry>
   
   <entry>
-    <title>USACO22OPEN-Silver S</title>
+    <title>USACO22OPEN-Silver B</title>
     <link href="https://wolfdeer62456.github.io/project/2023/11/10/usaco22open-silver-b/"/>
     <id>https://wolfdeer62456.github.io/project/2023/11/10/usaco22open-silver-b/</id>
     <published>2023-11-10T06:38:15.000Z</published>
-    <updated>2023-11-11T00:04:12.000Z</updated>
+    <updated>2023-11-12T13:38:58.000Z</updated>
     
     
     <summary type="html">学会联想 最大权值森林</summary>
@@ -74,11 +330,11 @@
   </entry>
   
   <entry>
-    <title>USACO22OPEN-Bronze B</title>
+    <title>USACO22OPEN-Bronze A</title>
     <link href="https://wolfdeer62456.github.io/project/2023/11/10/usaco22open-bronze-a/"/>
     <id>https://wolfdeer62456.github.io/project/2023/11/10/usaco22open-bronze-a/</id>
     <published>2023-11-10T06:37:19.000Z</published>
-    <updated>2023-11-11T00:03:26.000Z</updated>
+    <updated>2023-11-12T13:39:38.000Z</updated>
     
     
     <summary type="html">学会一句一句的读代码</summary>
@@ -125,262 +381,6 @@
     
     
     <category term="数学" scheme="https://wolfdeer62456.github.io/project/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>#P10253. 万能遥控器</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/09/p10253-wan-neng-yao-kong-qi/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/09/p10253-wan-neng-yao-kong-qi/</id>
-    <published>2023-11-09T08:00:00.000Z</published>
-    <updated>2023-11-09T08:03:02.000Z</updated>
-    
-    
-    <summary type="html">这是一道大美女</summary>
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="模拟" scheme="https://wolfdeer62456.github.io/project/tags/%E6%A8%A1%E6%8B%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>#P10252. k-斐波那契</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/09/p10252-k-fei-bo-na-qi/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/09/p10252-k-fei-bo-na-qi/</id>
-    <published>2023-11-09T05:00:00.000Z</published>
-    <updated>2023-11-09T10:25:28.000Z</updated>
-    
-    
-    <summary type="html">欧几里得 线性同余方程</summary>
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="数学" scheme="https://wolfdeer62456.github.io/project/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2023.11.09 考试总结</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/09/2023-11-09-kao-shi-zong-jie/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/09/2023-11-09-kao-shi-zong-jie/</id>
-    <published>2023-11-09T04:00:00.000Z</published>
-    <updated>2023-11-09T04:58:08.000Z</updated>
-    
-    
-    <summary type="html">多加练习</summary>
-    
-    
-    
-    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>#C231108B. 子序列(sub)</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/08/c231108b-zi-xu-lie-sub/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/08/c231108b-zi-xu-lie-sub/</id>
-    <published>2023-11-08T11:00:00.000Z</published>
-    <updated>2023-11-08T14:00:32.000Z</updated>
-    
-    
-    <summary type="html">区间动态规划 + 分治思想</summary>
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="动态规划" scheme="https://wolfdeer62456.github.io/project/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>#C231108A. 最大公约数(gcd)</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/08/c231108a-zui-da-gong-yue-shu-gcd/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/08/c231108a-zui-da-gong-yue-shu-gcd/</id>
-    <published>2023-11-08T07:00:00.000Z</published>
-    <updated>2023-11-08T11:58:26.000Z</updated>
-    
-    
-    <summary type="html">最大公约数</summary>
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="最大公约数" scheme="https://wolfdeer62456.github.io/project/tags/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>逃离</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/08/tao-chi/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/08/tao-chi/</id>
-    <published>2023-11-08T06:54:49.000Z</published>
-    <updated>2023-11-08T08:14:20.000Z</updated>
-    
-    
-    <summary type="html">锐评寝室陋习，逃离寝室影响</summary>
-    
-    
-    
-    <category term="说说" scheme="https://wolfdeer62456.github.io/project/categories/%E8%AF%B4%E8%AF%B4/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2023.11.08 考试总结</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/08/2023-11-08-kao-shi-zong-jie/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/08/2023-11-08-kao-shi-zong-jie/</id>
-    <published>2023-11-08T04:00:00.000Z</published>
-    <updated>2023-11-08T11:05:20.000Z</updated>
-    
-    
-    <summary type="html">好好睡觉</summary>
-    
-    
-    
-    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>#C231107C. 最短路(path)</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/07/c231107c-zui-duan-lu-path/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/07/c231107c-zui-duan-lu-path/</id>
-    <published>2023-11-07T10:21:47.000Z</published>
-    <updated>2023-11-11T14:22:51.813Z</updated>
-    
-    
-    <summary type="html">分层图 最短路算法</summary>
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="最短路算法" scheme="https://wolfdeer62456.github.io/project/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>#C231107B. 残片(garbage)</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/07/c231107b-can-pian-garbage/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/07/c231107b-can-pian-garbage/</id>
-    <published>2023-11-07T10:01:23.000Z</published>
-    <updated>2023-11-07T12:06:20.000Z</updated>
-    
-    
-    <summary type="html">Trie树 + 判环 + 差分约束</summary>
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="Trie树 判环 差分约束" scheme="https://wolfdeer62456.github.io/project/tags/Trie%E6%A0%91-%E5%88%A4%E7%8E%AF-%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>#C231107A. 剪发(haircut)</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/07/c231107a-jian-fa-haircut/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/07/c231107a-jian-fa-haircut/</id>
-    <published>2023-11-07T10:00:00.000Z</published>
-    <updated>2023-11-07T12:06:58.000Z</updated>
-    
-    
-    <summary type="html">逆向合并</summary>
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="并查集" scheme="https://wolfdeer62456.github.io/project/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2023.11.07 考试总结</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/07/2023-11-07-kao-shi-zong-jie/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/07/2023-11-07-kao-shi-zong-jie/</id>
-    <published>2023-11-07T04:00:00.000Z</published>
-    <updated>2023-11-07T12:08:34.000Z</updated>
-    
-    
-    <summary type="html">增强代码能力，提升代码速度</summary>
-    
-    
-    
-    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>#C231106B. 塔(tower)</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/06/c231106b-ta-tower/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/06/c231106b-ta-tower/</id>
-    <published>2023-11-06T11:10:54.000Z</published>
-    <updated>2023-11-07T12:29:30.000Z</updated>
-    
-    
-    <summary type="html">分析 + 确定方向</summary>
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="动态规划" scheme="https://wolfdeer62456.github.io/project/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>#C231106A. 点分治(tree)</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/06/c231106a-dian-fen-zhi-tree/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/06/c231106a-dian-fen-zhi-tree/</id>
-    <published>2023-11-06T04:40:00.000Z</published>
-    <updated>2023-11-06T13:07:56.000Z</updated>
-    
-    
-    <summary type="html">观察 + 关注提示</summary>
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="二进制" scheme="https://wolfdeer62456.github.io/project/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2023.11.06 考试总结</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/06/2023-11-06-kao-shi-zong-jie/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/06/2023-11-06-kao-shi-zong-jie/</id>
-    <published>2023-11-06T04:00:00.000Z</published>
-    <updated>2023-11-07T07:17:02.000Z</updated>
-    
-    
-    <summary type="html">抓住下午，赶紧改题</summary>
-    
-    
-    
-    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
-    
     
   </entry>
   

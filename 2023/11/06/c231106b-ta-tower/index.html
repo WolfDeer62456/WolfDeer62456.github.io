@@ -131,6 +131,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://wolfdeer62456.github.io/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -211,6 +222,17 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://wolfdeer62456.github.io/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -355,21 +377,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-11-07
+                    2023-11-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    9 分
                 </div>
                 
 
@@ -400,6 +422,16 @@
                 <h1 id="C231106B-塔-tower"><a href="#C231106B-塔-tower" class="headerlink" title="#C231106B. 塔(tower)"></a>#C231106B. 塔(tower)</h1><h2 id="前言（Front-talk）"><a href="#前言（Front-talk）" class="headerlink" title="前言（Front talk）"></a>前言（Front talk）</h2><p>$\qquad$做这道题的时候不知道该往哪个方向思考，导致最终没有做出来（也许就算想出来了实现也不会）。</p>
 <h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231106B">题目详情 - 塔(tower) - Super</a> </p>
 <p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231106B/solution">题解 - 塔(tower) - Super</a> </p>
+<h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><p>小 $G$ 在打隔膜。现在她已经来到了 $Boss$所处建筑物的底部。</p>
+<p>$Boss$ 所处的建筑物可以视为一座塔。这座塔呈一个三角形，高 $n$ 层，从高到低第 $i$ 层由 $i$ 个排成一列的房间构成。所有房间大小相同且每一层的中心都在一条直线上。用 $(x, y)$ 表示从高到低第 $x$ 层的第 $y$ 个房间。</p>
+<p>$Boss$ 在塔中 $k$ 个房间安插了守卫。小 $G$ 需要消灭这些守卫才能面对 $Boss$ 。</p>
+<p>小 $G$ 有两种法术：</p>
+<ol>
+<li>在某一个房间释放第一种法术，击杀该房间的所有守卫，法术的代价为 $3$ 。</li>
+<li>在某一个房间释放第二种法术，击杀该房间和下方房间的所有守卫，满足这些房间组成的图案与塔相似且最底下的房间位于最底层。形式化地，如果在 $(i, j)$ 释放该法术，从高到低第 $i$ 层到第 $n$ 层均会受到影响，第 $k$ 层受到影响的房间编号为 $(k, j)$ 到 $(k, k-i+j)$ ，法术代价为该法术影响的房间数量 $K+2$（不论房间里是否存在守卫）。</li>
+</ol>
+<p>求小 G 消灭所有守卫的最小代价。</p>
+<p><strong>范围</strong>： $n,k\le10^5；yi≤xi；∀i\not=j:(xi,yi)\not=(xj,yj)；0≤k≤\frac{n(n+1)}2 $。  </p>
 <h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p><del>啊啊啊，昨天没有睡好，脑子都是宕机状态，现在只能说是 “ 如懂 ”</del></p>
 <p>那就简单说一下这道题的好的思路：</p>
 <ul>
@@ -853,7 +885,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31.6k</span>
+                        class="white-color">44k</span>
             
             
             

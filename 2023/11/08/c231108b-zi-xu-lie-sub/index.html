@@ -130,6 +130,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://wolfdeer62456.github.io/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -210,6 +221,17 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://wolfdeer62456.github.io/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -354,21 +376,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-11-08
+                    2023-11-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -399,6 +421,10 @@
                 <h1 id="C231108B-子序列-sub"><a href="#C231108B-子序列-sub" class="headerlink" title="#C231108B. 子序列(sub)"></a>#C231108B. 子序列(sub)</h1><h2 id="前言（Front-talk"><a href="#前言（Front-talk" class="headerlink" title="前言（Front talk)"></a>前言（Front talk)</h2><p>$\qquad$动态规划的题都需要特殊理解，那彻底理解后，这道题对我的提升可不小，明天准备去凹 $1-2$ 道难题，再次提升代码能力，今天的 $T4$ 就很好。ヾ(•ω•`)o</p>
 <h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231108B">题目详情 - 子序列(sub) - Super</a> </p>
 <p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231108B/solution">题解 - 子序列(sub) - Super</a> </p>
+<h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><p>给定一个长为 $n$ 的 $01$ 字符串 $S$ 。求有多少个长为 $n$ 的字符串序列，满足 $A_{0}=S$，$A_{n}$ 为空，$A_{i}$ 长度为 $n-i$，且 $\forall 1 \leq i \leq n$，$A_{i}$ 是 $A_{i-1}$ 的子序列。</p>
+<p>定义 $S$ 是 $T$ 的子序列，当且仅当可以从 $T$ 中删去一些字符使之变为 $S$ 。</p>
+<p><strong>理解样例：输入：3 010；输出：5。</strong></p>
+<p>对于 $100 %$ 的数据，满足 $1 \leq n \leq 400$ ，答案对 $10^{9}+7$ 取模。</p>
 <h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>写一些刚看题解时不理解的点：</p>
 <ul>
 <li><p>题目大意就是将序列 $a[i]$ 每次删除一个位置，每删除一次就会有不同的序列生成，求最终的删除方案数，按理说方案数应该是 $O(n!)$ ，但是相同的序列重复计算的贡献需要删掉。例如 $10111$ 删去第四个 $1$ 或删去第五个 $1$ 贡献是相同的，需要删去。</p>
@@ -407,7 +433,7 @@
 </li>
 <li><p>按正常情况来理解，如果出现 $10001$ 这个序列，在不去重的情况下，删除后会出现五种情况： $@0001$ ，$1@001$，$10@01$ ，$100@1$ ，$1000@$ （其中 $@$ 代表删除的位置），对于删除最左边的 $1$ 或者删除最右边的 $1$ 方案数接不会计算重复，在此略去，仅考虑中间 $3$ 个 $0$ 的情况，我们固定只删除最右边的 $0$ ，那么对于 $0$ 不在最右边的情况则一定不能删去，因此在枚举到删除了左边的 $0$ 的情况时，我们可以直接特判，不去删除那些 $0$ 。</p>
 </li>
-<li><p>那现在就到了 $How$ 的问题。<del>（我就直接抄题解了）</del><strong>先考虑</strong>区间 $\mathrm{dp}$ ，枚举一个区间<strong>最后一个删除的位置</strong>。这样之前的删除中，左右两边就独立了，可以分别计数，最后合并时乘上一个组合数。<strong>再考虑</strong>限制是什么。如果这个区间最后删除的是 $k$，那么在删除它时，它后面的字符一定是 $s_{r+1} $ ，那么直接判断 $s_{k}$ 是否等于 $s_{r+1}$ 就行了。</p>
+<li><p>那现在就到了 $How$ 的问题。<del>（我就直接抄题解了）</del><strong>先考虑</strong>区间 $\mathrm{dp}$ ，枚举一个区间**==最后一个删除的位置==<strong>。这样之前的删除中，左右两边就独立了，可以分别计数，最后合并时乘上一个组合数。</strong>再考虑**限制是什么。如果这个区间最后删除的是 $k$，那么在删除它时，它后面的字符一定是 $s_{r+1} $ ，那么直接判断 $s_{k}$ 是否等于 $s_{r+1}$ 就行了。</p>
 </li>
 <li><p>至于求组合数，因为左右操作独立，但是删除的位置却是随机的，因此要在 $r-l+1-1$ （减去删除的那个元素）的总操作数中选择 $i-l$ 种操作来执行左区间删除操作，剩下的执行右区间，方案数 $C_{r-l}^{i-l}$ 。</p>
 </li>
@@ -847,7 +873,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31.6k</span>
+                        class="white-color">44k</span>
             
             
             
