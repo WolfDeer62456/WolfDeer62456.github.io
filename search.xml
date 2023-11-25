@@ -5,10 +5,29 @@
     
     <entry>
       <title>AFO 小技巧</title>
-      <link href="https://wolfdeer62456.github.io/2025/06/10/afo-xiao-ji-qiao/"/>
-      <url>https://wolfdeer62456.github.io/2025/06/10/afo-xiao-ji-qiao/</url>
+      <link href="https://wolfdeer62456.github.io/2025/12/31/afo-xiao-ji-qiao/"/>
+      <url>https://wolfdeer62456.github.io/2025/12/31/afo-xiao-ji-qiao/</url>
       
         <content type="html"><![CDATA[<h1 id="AFO-小技巧"><a href="#AFO-小技巧" class="headerlink" title="AFO 小技巧"></a>AFO 小技巧</h1><ul><li>不开 $long\ long$</li><li>$int$ 没有 $return$</li><li>并列的 $if$ 判断后面没有写 $else$ 导致两个判断相互影响</li><li>$STL$ 容器没有先判断 $.empty()$ 就直接引用</li><li>容易将 $u$ 和 $v$ 看错</li><li>不写好做题的大致“题纲”或没有想好用什么算法就开始写代码，后面又一直调，浪费大量时间</li><li>花费大量时间在一道题上，导致一分的暴力分都没有写</li><li>$unique$ 之后是 $-a-1$ ，$lower\ bound$之后是$-a$ </li><li>如果定义类似<code>#define For(i,l,r) for(int i=l;i&lt;=r;i++)</code> 的函数的时候，里面一定不能套任何的$STL$变量，例如<code>For(i,1,s.length())</code>绝对会出问题，甚至<code>For(i,1,n)</code>中<code>n</code>的值发生改变都会运行错误</li><li>致敬所有的<code>inline input()</code></li><li>题目中若说到：进行以下操作 $n$ ：。。。，一定要注意到底是每次选一个操作，一共进行 $n$ 次，还是每次进行<strong>以下的所有操作</strong>，一共进行 $n$ 次。详见下图：</li></ul><p><img src="https://wolfdeer62456.github.io/2023/11/15/afo-xiao-ji-qiao/%E8%AF%BB%E9%A2%98%E9%94%99%E8%AF%AF.png"></p><ul><li>建议考试的时候打个快读，并且分析好数据范围，每个板块的思维要清晰，<strong>防止卡常</strong>。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 说说 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>仿若从梦中苏醒</title>
+      <link href="https://wolfdeer62456.github.io/2023/11/25/fang-ruo-cong-meng-zhong-su-xing/"/>
+      <url>https://wolfdeer62456.github.io/2023/11/25/fang-ruo-cong-meng-zhong-su-xing/</url>
+      
+        <content type="html"><![CDATA[<h1 id="仿若从梦中苏醒"><a href="#仿若从梦中苏醒" class="headerlink" title="仿若从梦中苏醒"></a>仿若从梦中苏醒</h1><p>望见明月高悬天空，便知太阳落下的地方。一个庞大的身影无声着离去，沉入了高楼大厦中。没有人抬头，只有我独自站在即将沉睡的大地上，望着它离去的背影。</p><p>夜深了。</p><p>我却仿若从梦中苏醒。</p><p>云朵遮住了高挂的月亮，想要伪装成冬日早晨天空的苍白色，仿佛想要藏住月光的皎洁与清晰，留下混沌与迷茫。</p><p>熟悉，而又亲近。</p><p>无数的意识在身旁走过，他们似乎并未发现我，这也好，谁知道表面沉默的他们聚在一起时，张开嘴说话后又将传染多少精神污染。话语，可能满足了说话者一时的心里快意，但是却将本人的情绪如病毒一般的传播。这些意识怎么可能寻得层云之中的高挂明月，他们甚至从来没有抬头望过那变幻莫测的天空。</p><p>陌生，而又厌恶。</p><p>谁又想将这初醒的、纯粹的灵魂污染成恶心的血红呢？</p><p>谁又想将这天真的、乐观的心灵冲刷成阴郁的苍白呢？</p><p>哦？是明月吗？它可真是纯粹与皎洁，而它所面向的太阳又总是充满了无数的希望与激情。</p><p>一片天空，一颗明月；一群意识，一个孤影。</p><p>黑暗，明亮。</p><p>交织成银白色的——纯粹。</p><p>梦是纯粹的白，尘是无限的黑。从尘中睡去，却从梦中醒来。梦是对尘埃的洗礼，而留下的，便是纯粹。</p><p>仿若从梦中苏醒，每次都仿佛是重新认识了这个世界，并且用经验避开了尘埃。</p><p>纯，善。</p>]]></content>
       
       
       <categories>
