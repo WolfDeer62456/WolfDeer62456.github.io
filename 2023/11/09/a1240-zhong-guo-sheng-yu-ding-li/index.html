@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="#A1240. 中国剩余定理, C++">
+    <meta name="keywords" content="#A1240. 中国剩余定理, WolfDeer">
     <meta name="description" content="#A1240. 中国剩余定理前言（Front talk)$\qquad$数学？使劲凹凹就能过了，还不加油？
 网址（Website） 题目详情 - 【NOIP模板】中国剩余定理 - 曹冲养猪 - Super 
  题解 - 【NOIP模板】中国">
@@ -242,7 +242,7 @@
         <li><div class="divider"></div></li>
         <li>
             <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Github
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
         
@@ -299,7 +299,7 @@
 </style>
 
 <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Github" data-position="left" data-delay="50">
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
         <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
@@ -397,11 +397,6 @@
                 
 
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
             </div>
         </div>
         <hr class="clearfix">
@@ -426,9 +421,45 @@
 <p> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1495">P1495 【模板】中国剩余定理（CRT）</a> </p>
 <h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$中国剩余定理就不用讲了，题解已经讲得够清晰了，只是这几天一直考数学，看到这道题比较妙，有多种解法，于是记录下来。</p>
 <p>$\qquad$有问题看 <a target="_blank" rel="noopener" href="https://oi-wiki.org/math/number-theory/crt/">OI-Wiki</a> 就好了。</p>
-<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><h3 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1012345</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">exgcd</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> &amp;x,<span class="type">int</span> &amp;y)</span></span>{</span><br><span class="line">	<span class="keyword">if</span>(!b) <span class="keyword">return</span> x=<span class="number">1</span>,y=<span class="number">0</span>,a;</span><br><span class="line">	<span class="type">int</span> d=<span class="built_in">exgcd</span>(b,a%b,y,x);</span><br><span class="line">	y-=a/b*x;<span class="keyword">return</span> d;</span><br><span class="line">}</span><br><span class="line"><span class="type">int</span> a[N],b[N],m[N],t[N];</span><br><span class="line"><span class="type">int</span> sum=<span class="number">1</span>,ans,n,x,y;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	cin&gt;&gt;n;<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cin&gt;&gt;a[i]&gt;&gt;b[i],sum*=a[i];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++){</span><br><span class="line">		m[i]=sum/a[i];</span><br><span class="line">		<span class="built_in">exgcd</span>(m[i],a[i],t[i],y);</span><br><span class="line">		t[i]=(a[i]+t[i]%a[i])%a[i];</span><br><span class="line">		x=x+m[i]*t[i]%sum*b[i]%sum;</span><br><span class="line">	}<span class="keyword">return</span> cout&lt;&lt;x%sum&lt;&lt;<span class="string">'\n'</span>,<span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><h3 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define int long long
+const int N = 1012345;
+inline int exgcd(int a,int b,int &amp;x,int &amp;y){
+	if(!b) return x=1,y=0,a;
+	int d=exgcd(b,a%b,y,x);
+	y-=a/b*x;return d;
+}
+int a[N],b[N],m[N],t[N];
+int sum=1,ans,n,x,y;
+signed main(){
+	ios::sync_with_stdio(false);
+	cin&gt;&gt;n;for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i]&gt;&gt;b[i],sum*=a[i];
+	for(int i=1;i&lt;=n;i++){
+		m[i]=sum/a[i];
+		exgcd(m[i],a[i],t[i],y);
+		t[i]=(a[i]+t[i]%a[i])%a[i];
+		x=x+m[i]*t[i]%sum*b[i]%sum;
+	}return cout&lt;&lt;x%sum&lt;&lt;'\n',0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="枚举法"><a href="#枚举法" class="headerlink" title="枚举法"></a>枚举法</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 1012345</span></span><br><span class="line"><span class="type">int</span> a[N],b[N];</span><br><span class="line"><span class="type">int</span> n,m,sum,ans;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	cin&gt;&gt;n;<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++){</span><br><span class="line">		cin&gt;&gt;a[i]&gt;&gt;b[i];</span><br><span class="line">	}ans=b[<span class="number">1</span>],sum=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;n;i++){</span><br><span class="line">		sum*=a[i];</span><br><span class="line">		<span class="keyword">while</span>(ans%a[i+<span class="number">1</span>]!=b[i+<span class="number">1</span>]) ans+=sum;</span><br><span class="line">	}cout&lt;&lt;ans&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="枚举法"><a href="#枚举法" class="headerlink" title="枚举法"></a>枚举法</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define int long long
+#define N 1012345
+int a[N],b[N];
+int n,m,sum,ans;
+signed main(){
+	ios::sync_with_stdio(false);
+	cin&gt;&gt;n;for(int i=1;i&lt;=n;i++){
+		cin&gt;&gt;a[i]&gt;&gt;b[i];
+	}ans=b[1],sum=1;
+	for(int i=1;i&lt;n;i++){
+		sum*=a[i];
+		while(ans%a[i+1]!=b[i+1]) ans+=sum;
+	}cout&lt;&lt;ans&lt;&lt;'\n';
+	return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -580,7 +611,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/6.jpg" class="responsive-img" alt="2023.11.10 考试总结">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="2023.11.10 考试总结">
                         
                         <span class="card-title">2023.11.10 考试总结</span>
                     </div>
@@ -621,7 +652,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/14.jpg" class="responsive-img" alt="#P10253. 万能遥控器">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="#P10253. 万能遥控器">
                         
                         <span class="card-title">#P10253. 万能遥控器</span>
                     </div>
@@ -777,13 +808,6 @@
 </main>
 
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
-
 
 
     <footer class="page-footer bg-color">
@@ -861,8 +885,6 @@
             
             
             
-                
-            
             
                 <span id="busuanzi_container_site_pv">
                 &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
@@ -936,7 +958,7 @@
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/WolfDeer62456" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1164,8 +1186,6 @@ $(function () {
     
     <script src="https://wolfdeer62456.github.io/libs/others/clicklove.js" async="async"></script>
     
-    
-    <script async src="https://wolfdeer62456.github.io/libs/others/busuanzi.pure.mini.js"></script>
     
 
     

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="#C231106B. 塔(tower), C++">
+    <meta name="keywords" content="#C231106B. 塔(tower), WolfDeer">
     <meta name="description" content="#C231106B. 塔(tower)前言（Front talk）$\qquad$做这道题的时候不知道该往哪个方向思考，导致最终没有做出来（也许就算想出来了实现也不会）。
 网址（Website） 题目详情 - 塔(tower) - Supe">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -241,7 +241,7 @@
         <li><div class="divider"></div></li>
         <li>
             <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Github
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
         
@@ -298,7 +298,7 @@
 </style>
 
 <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Github" data-position="left" data-delay="50">
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
         <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
@@ -316,7 +316,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -396,11 +396,6 @@
                 
 
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
             </div>
         </div>
         <hr class="clearfix">
@@ -440,12 +435,122 @@
 <li><strong>用动态数组代替静态数组</strong>： 若用静态的数组存下该矩阵，在计算当前位置下面的目标个数会很麻烦，<strong>而动态数组解决了这个问题 （<code>loc[i].size()</code>）</strong> ，有助于在 $dp$ 过程中更好的计算答案。</li>
 <li><strong>类似尺取法的取数方法：</strong>当然这是对于动态数组来说的，详细见代码中的<code>while</code>语句。</li>
 </ul>
-<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><h3 id="我的代码（原版）"><a href="#我的代码（原版）" class="headerlink" title="我的代码（原版）"></a>我的代码<del>（原版）</del></h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> For(i,l,r) for(int i=l;i&lt;=r;i++)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> Rof(i,l,r) for(int i=l;i&gt;=r;i--)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">input</span><span class="params">()</span></span>{<span class="type">int</span> x;<span class="keyword">return</span> cin&gt;&gt;x,x;}</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x3f3f3f3f3f3f3f3f</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">101234</span>;</span><br><span class="line"><span class="type">int</span> n,m,k,s[N];</span><br><span class="line"><span class="type">int</span> f[<span class="number">2</span>][N];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; loc[N];</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>),cin.<span class="built_in">tie</span>(<span class="number">0</span>),cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">freopen</span>(<span class="string">"tower.in"</span>,<span class="string">"r"</span>,stdin);</span><br><span class="line">	<span class="built_in">freopen</span>(<span class="string">"tower.out"</span>,<span class="string">"w"</span>,stdout);</span><br><span class="line">	cin&gt;&gt;n&gt;&gt;m;<span class="built_in">For</span>(i,<span class="number">1</span>,m){</span><br><span class="line">		<span class="type">int</span> x=<span class="built_in">input</span>(),y=<span class="built_in">input</span>();</span><br><span class="line">		loc[y].<span class="built_in">push_back</span>(n-x+<span class="number">1</span>);</span><br><span class="line">	}</span><br><span class="line">	k=s[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(s[k]&lt;=<span class="number">3</span>*m) k++,s[k]=k*(k+<span class="number">1</span>)/<span class="number">2</span>+(k&gt;<span class="number">0</span>)*<span class="number">2</span>;<span class="comment">//求得会放大招的有效行</span></span><br><span class="line">	<span class="built_in">For</span>(i,<span class="number">1</span>,k) f[<span class="number">0</span>][i]=inf;<span class="comment">//初始化数组 </span></span><br><span class="line">	<span class="built_in">For</span>(i,<span class="number">1</span>,n){</span><br><span class="line">		<span class="built_in">sort</span>(loc[i].<span class="built_in">begin</span>(),loc[i].<span class="built_in">end</span>());</span><br><span class="line">		<span class="type">int</span> p=i&amp;<span class="number">1</span>;<span class="comment">//滚动</span></span><br><span class="line">		<span class="type">int</span> mn=f[p][k]=inf;<span class="comment">//初始化</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>,g=<span class="number">0</span>;j&lt;=k;j++){</span><br><span class="line">			<span class="keyword">while</span>(g&lt;loc[i].<span class="built_in">size</span>() &amp;&amp; loc[i][g]&lt;j) g++;</span><br><span class="line">			f[p][j<span class="number">-1</span>]=f[p^<span class="number">1</span>][j] + (loc[i].<span class="built_in">size</span>()-g)*<span class="number">3</span>;</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>,g=<span class="number">0</span>;j&lt;k;j++){</span><br><span class="line">			<span class="keyword">while</span>(g&lt;loc[i].<span class="built_in">size</span>() &amp;&amp; loc[i][g]&lt;=j) g++;</span><br><span class="line">			mn=<span class="built_in">min</span>(f[p^<span class="number">1</span>][j],mn);</span><br><span class="line">			f[p][j]=<span class="built_in">min</span>(f[p][j],mn + s[j] + (<span class="type">int</span>)(loc[i].<span class="built_in">size</span>()-g)*<span class="number">3</span>);</span><br><span class="line">		}</span><br><span class="line">	}cout&lt;&lt;(<span class="built_in">min</span>(f[n&amp;<span class="number">1</span>][<span class="number">0</span>],f[n&amp;<span class="number">1</span>][<span class="number">1</span>]));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><h3 id="我的代码（原版）"><a href="#我的代码（原版）" class="headerlink" title="我的代码（原版）"></a>我的代码<del>（原版）</del></h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+#define For(i,l,r) for(int i=l;i&lt;=r;i++)
+#define Rof(i,l,r) for(int i=l;i&gt;=r;i--)
+using namespace std;
+#define int long long
+inline int input(){int x;return cin&gt;&gt;x,x;}
+const int inf = 0x3f3f3f3f3f3f3f3f;
+const int N = 101234;
+int n,m,k,s[N];
+int f[2][N];
+vector&lt;int&gt; loc[N];
+signed main(){
+	ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+	freopen("tower.in","r",stdin);
+	freopen("tower.out","w",stdout);
+	cin&gt;&gt;n&gt;&gt;m;For(i,1,m){
+		int x=input(),y=input();
+		loc[y].push_back(n-x+1);
+	}
+	k=s[0]=0;
+	while(s[k]&lt;=3*m) k++,s[k]=k*(k+1)/2+(k&gt;0)*2;//求得会放大招的有效行
+	For(i,1,k) f[0][i]=inf;//初始化数组 
+	For(i,1,n){
+		sort(loc[i].begin(),loc[i].end());
+		int p=i&amp;1;//滚动
+		int mn=f[p][k]=inf;//初始化
+		for(int j=1,g=0;j&lt;=k;j++){
+			while(g&lt;loc[i].size() &amp;&amp; loc[i][g]&lt;j) g++;
+			f[p][j-1]=f[p^1][j] + (loc[i].size()-g)*3;
+		}
+		for(int j=0,g=0;j&lt;k;j++){
+			while(g&lt;loc[i].size() &amp;&amp; loc[i][g]&lt;=j) g++;
+			mn=min(f[p^1][j],mn);
+			f[p][j]=min(f[p][j],mn + s[j] + (int)(loc[i].size()-g)*3);
+		}
+	}cout&lt;&lt;(min(f[n&amp;1][0],f[n&amp;1][1]));
+	return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="题解代码（原版）"><a href="#题解代码（原版）" class="headerlink" title="题解代码（原版）"></a>题解代码（原版）</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 100005</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> oo 0x3f3f3f3f</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt;v[N];</span><br><span class="line"><span class="type">int</span> n,m,x,y,K,S[N],f[<span class="number">2</span>][N];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="built_in">freopen</span>(<span class="string">"tower.in"</span>,<span class="string">"r"</span>,stdin);</span><br><span class="line">	<span class="built_in">freopen</span>(<span class="string">"tower.out"</span>,<span class="string">"w"</span>,stdout);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++){</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">		v[y].<span class="built_in">push_back</span>(n-x+<span class="number">1</span>);</span><br><span class="line">	}</span><br><span class="line">	K=S[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (S[K]&lt;=m*<span class="number">3</span>)K++,S[K]=K*(K+<span class="number">1</span>)/<span class="number">2</span>+(K&gt;<span class="number">0</span>)*<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=K;i++)f[<span class="number">0</span>][i]=oo;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++){</span><br><span class="line">		<span class="built_in">sort</span>(v[i].<span class="built_in">begin</span>(),v[i].<span class="built_in">end</span>());</span><br><span class="line">		<span class="type">int</span> p=(i&amp;<span class="number">1</span>),mn=f[p][K]=oo;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>,k=<span class="number">0</span>;j&lt;=K;j++){</span><br><span class="line">			<span class="keyword">while</span> ((k&lt;v[i].<span class="built_in">size</span>())&amp;&amp;(v[i][k]&lt;j))k++;</span><br><span class="line">			f[p][j<span class="number">-1</span>]=f[p^<span class="number">1</span>][j]+(v[i].<span class="built_in">size</span>()-k)*<span class="number">3</span>;</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>,k=<span class="number">0</span>;j&lt;K;j++){</span><br><span class="line">			<span class="keyword">while</span> ((k&lt;v[i].<span class="built_in">size</span>())&amp;&amp;(v[i][k]&lt;=j))k++;</span><br><span class="line">			mn=<span class="built_in">min</span>(mn,f[p^<span class="number">1</span>][j]);</span><br><span class="line">			f[p][j]=<span class="built_in">min</span>(f[p][j],mn+S[j]+(<span class="type">int</span>)(v[i].<span class="built_in">size</span>()-k)*<span class="number">3</span>);</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="built_in">min</span>(f[n&amp;<span class="number">1</span>][<span class="number">0</span>],f[n&amp;<span class="number">1</span>][<span class="number">1</span>]));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">} </span><br></pre></td></tr></tbody></table></figure>
+<h3 id="题解代码（原版）"><a href="#题解代码（原版）" class="headerlink" title="题解代码（原版）"></a>题解代码（原版）</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define N 100005
+#define oo 0x3f3f3f3f
+vector&lt;int&gt;v[N];
+int n,m,x,y,K,S[N],f[2][N];
+int main(){
+	freopen("tower.in","r",stdin);
+	freopen("tower.out","w",stdout);
+	scanf("%d%d",&amp;n,&amp;m);
+	for(int i=1;i&lt;=m;i++){
+		scanf("%d%d",&amp;x,&amp;y);
+		v[y].push_back(n-x+1);
+	}
+	K=S[0]=0;
+	while (S[K]&lt;=m*3)K++,S[K]=K*(K+1)/2+(K&gt;0)*2;
+	for(int i=1;i&lt;=K;i++)f[0][i]=oo;
+	for(int i=1;i&lt;=n;i++){
+		sort(v[i].begin(),v[i].end());
+		int p=(i&amp;1),mn=f[p][K]=oo;
+		for(int j=1,k=0;j&lt;=K;j++){
+			while ((k&lt;v[i].size())&amp;&amp;(v[i][k]&lt;j))k++;
+			f[p][j-1]=f[p^1][j]+(v[i].size()-k)*3;
+		}
+		for(int j=0,k=0;j&lt;K;j++){
+			while ((k&lt;v[i].size())&amp;&amp;(v[i][k]&lt;=j))k++;
+			mn=min(mn,f[p^1][j]);
+			f[p][j]=min(f[p][j],mn+S[j]+(int)(v[i].size()-k)*3);
+		}
+	}
+	printf("%d\n",min(f[n&amp;1][0],f[n&amp;1][1]));
+	return 0;
+} <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="题解代码（注释版）"><a href="#题解代码（注释版）" class="headerlink" title="题解代码（注释版）"></a>题解代码（注释版）</h3><p><strong>感谢 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/superl61">superl61</a> 的友情提供！（博客网址： <a target="_blank" rel="noopener" href="https://www.cnblogs.com/superl61">superl61</a> ）</strong></p>
-<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> F(i,l,r) for(int i=l;i&lt;=r;++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> G(i,r,l) for(int i=r;i&gt;=l;--i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">1e5</span>+<span class="number">10</span>,inf=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="type">int</span> n,m,k=<span class="number">0</span>;</span><br><span class="line">ll f[<span class="number">2</span>][N],s[N];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v[N];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="built_in">freopen</span>(<span class="string">"tower.in"</span>,<span class="string">"r"</span>,stdin);</span><br><span class="line">	<span class="built_in">freopen</span>(<span class="string">"tower.out"</span>,<span class="string">"w"</span>,stdout);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m); <span class="type">int</span> x,y;</span><br><span class="line">	<span class="built_in">F</span>(i,<span class="number">1</span>,m){</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</span><br><span class="line">		v[y].<span class="built_in">push_back</span>(n-x+<span class="number">1</span>);<span class="comment">//第y条斜线(从左往右)的第n-x+1行(从低到高)存在守卫</span></span><br><span class="line">	}</span><br><span class="line">	k=<span class="number">0</span>,s[k]=<span class="number">0</span>; <span class="comment">//s[i]:在一个h=i的三角形中释放法术2的花费</span></span><br><span class="line">	<span class="keyword">while</span>(s[k]&lt;=<span class="number">3</span>*m) ++k,s[k]=<span class="number">1ll</span>*(k+<span class="number">1</span>)*k/<span class="number">2</span>+<span class="number">2</span>;</span><br><span class="line">	<span class="built_in">F</span>(i,<span class="number">1</span>,k) f[<span class="number">0</span>][i]=inf;<span class="comment">//初始化:因为第1条斜线不存在所谓继承上一次的答案,不初始化会出错 </span></span><br><span class="line">	<span class="built_in">F</span>(i,<span class="number">1</span>,n){<span class="comment">//枚举斜线</span></span><br><span class="line">		<span class="built_in">sort</span>(v[i].<span class="built_in">begin</span>(),v[i].<span class="built_in">end</span>());</span><br><span class="line">		<span class="type">int</span> p=(i&amp;<span class="number">1</span>),cnt=<span class="number">0</span>; ll mn=inf; </span><br><span class="line">		f[p][k]=inf;<span class="comment">//k存的是s&gt;sqrt(m) 的第一个位置,从这里释放法术肯定是不优的 </span></span><br><span class="line">		<span class="comment">//全部用操作1的最优解 </span></span><br><span class="line">		<span class="built_in">F</span>(j,<span class="number">0</span>,k<span class="number">-1</span>){<span class="comment">//枚举守卫的位置</span></span><br><span class="line">			<span class="keyword">while</span>(cnt&lt;v[i].<span class="built_in">size</span>() &amp;&amp; v[i][cnt]&lt;=j) ++cnt;</span><br><span class="line">			f[p][j]=f[p^<span class="number">1</span>][j+<span class="number">1</span>]+(v[i].<span class="built_in">size</span>()-cnt)*<span class="number">3</span>;</span><br><span class="line">			<span class="comment">//枚举第i条斜线每个守卫的位置,找最下面j行有多少个守卫</span></span><br><span class="line">			<span class="comment">//v[i][k]:第i条斜线的第k个守卫在哪一行  只处理最底部的sqrt(m)行</span></span><br><span class="line">		}<span class="comment">//继承上一次的答案</span></span><br><span class="line">		<span class="comment">//寻找可能的操作2是否更优 </span></span><br><span class="line">		cnt=<span class="number">0</span>;</span><br><span class="line">		<span class="built_in">F</span>(j,<span class="number">0</span>,k<span class="number">-1</span>){</span><br><span class="line">			<span class="keyword">while</span>(cnt&lt;v[i].<span class="built_in">size</span>() &amp;&amp; v[i][cnt]&lt;=j) ++cnt;</span><br><span class="line">			mn=<span class="built_in">min</span>(f[p^<span class="number">1</span>][j],mn);<span class="comment">//在前i-1行最优秀的一种施法方案的基础上实施当前法术 </span></span><br><span class="line">			f[p][j]=<span class="built_in">min</span>(f[p][j],mn+s[j]+(<span class="type">int</span>)(v[i].<span class="built_in">size</span>()-cnt)*<span class="number">3</span>);</span><br><span class="line">		}<span class="comment">//单独施法 </span></span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,<span class="built_in">min</span>(f[n&amp;<span class="number">1</span>][<span class="number">1</span>],f[n&amp;<span class="number">1</span>][<span class="number">0</span>]));<span class="comment">//施法或不施法 </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define F(i,l,r) for(int i=l;i&lt;=r;++i)
+#define G(i,r,l) for(int i=r;i&gt;=l;--i)
+#define ll long long
+const int N=1e5+10,inf=1e9+7;
+int n,m,k=0;
+ll f[2][N],s[N];
+vector&lt;int&gt; v[N];
+int main(){
+	freopen("tower.in","r",stdin);
+	freopen("tower.out","w",stdout);
+	scanf("%d%d",&amp;n,&amp;m); int x,y;
+	F(i,1,m){
+		scanf("%d%d",&amp;x,&amp;y);
+		v[y].push_back(n-x+1);//第y条斜线(从左往右)的第n-x+1行(从低到高)存在守卫
+	}
+	k=0,s[k]=0; //s[i]:在一个h=i的三角形中释放法术2的花费
+	while(s[k]&lt;=3*m) ++k,s[k]=1ll*(k+1)*k/2+2;
+	F(i,1,k) f[0][i]=inf;//初始化:因为第1条斜线不存在所谓继承上一次的答案,不初始化会出错 
+	F(i,1,n){//枚举斜线
+		sort(v[i].begin(),v[i].end());
+		int p=(i&amp;1),cnt=0; ll mn=inf; 
+		f[p][k]=inf;//k存的是s&gt;sqrt(m) 的第一个位置,从这里释放法术肯定是不优的 
+		//全部用操作1的最优解 
+		F(j,0,k-1){//枚举守卫的位置
+			while(cnt&lt;v[i].size() &amp;&amp; v[i][cnt]&lt;=j) ++cnt;
+			f[p][j]=f[p^1][j+1]+(v[i].size()-cnt)*3;
+			//枚举第i条斜线每个守卫的位置,找最下面j行有多少个守卫
+			//v[i][k]:第i条斜线的第k个守卫在哪一行  只处理最底部的sqrt(m)行
+		}//继承上一次的答案
+		//寻找可能的操作2是否更优 
+		cnt=0;
+		F(j,0,k-1){
+			while(cnt&lt;v[i].size() &amp;&amp; v[i][cnt]&lt;=j) ++cnt;
+			mn=min(f[p^1][j],mn);//在前i-1行最优秀的一种施法方案的基础上实施当前法术 
+			f[p][j]=min(f[p][j],mn+s[j]+(int)(v[i].size()-cnt)*3);
+		}//单独施法 
+	}
+	printf("%lld",min(f[n&amp;1][1],f[n&amp;1][0]));//施法或不施法 
+	return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="后续（Ending）"><a href="#后续（Ending）" class="headerlink" title="后续（Ending）"></a>后续（Ending）</h2><p>为什么这道题还是没有完全理解，啊啊啊啊啊啊啊啊。。。w(ﾟДﾟ)w</p>
 <h2 id="还有后续（And-Ending）"><a href="#还有后续（And-Ending）" class="headerlink" title="还有后续（And Ending）"></a>还有后续（And Ending）</h2><p>噫！我中了！</p>
@@ -649,7 +754,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="#C231106A. 点分治(tree)">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="#C231106A. 点分治(tree)">
                         
                         <span class="card-title">#C231106A. 点分治(tree)</span>
                     </div>
@@ -805,13 +910,6 @@
 </main>
 
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
-
 
 
     <footer class="page-footer bg-color">
@@ -889,8 +987,6 @@
             
             
             
-                
-            
             
                 <span id="busuanzi_container_site_pv">
                 &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
@@ -964,7 +1060,7 @@
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/WolfDeer62456" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1192,8 +1288,6 @@ $(function () {
     
     <script src="https://wolfdeer62456.github.io/libs/others/clicklove.js" async="async"></script>
     
-    
-    <script async src="https://wolfdeer62456.github.io/libs/others/busuanzi.pure.mini.js"></script>
     
 
     

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="My First New Blog, C++">
+    <meta name="keywords" content="My First New Blog, WolfDeer">
     <meta name="description" content="Welcome to the best,the greatest WolfDeer’s blog!Thanks: Codesheep
 Learning Website: 手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo
 M">
@@ -242,7 +242,7 @@ M">
         <li><div class="divider"></div></li>
         <li>
             <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Github
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
         
@@ -299,7 +299,7 @@ M">
 </style>
 
 <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Github" data-position="left" data-delay="50">
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
         <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
@@ -317,7 +317,7 @@ M">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -381,7 +381,7 @@ M">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    549
+                    558
                 </div>
                 
 
@@ -393,11 +393,6 @@ M">
                 
 
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
             </div>
         </div>
         <hr class="clearfix">
@@ -422,46 +417,108 @@ M">
 <p>Model Website: <a target="_blank" rel="noopener" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine</a></p>
 <h3 id="博客装载："><a href="#博客装载：" class="headerlink" title="博客装载："></a>博客装载：</h3><p><strong>注意：需要先安装 <a target="_blank" rel="noopener" href="https://nodejs.cn/download/">Node-js</a> ，以及 <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git-bash</a></strong></p>
 <p>用WIN自带的cmd软件，并打开管理员模式。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">--- //安装Nodejs</span><br><span class="line">node -v //查看node版本</span><br><span class="line">npm -v  //查看npm版本</span><br><span class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org //安装淘宝的cnpm 管理器</span><br><span class="line">cnpm -v //查看cnpm版本</span><br><span class="line">cnpm install -g hexo-cli //安装hexo框架</span><br><span class="line">hexo -v //查看hexo版本</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">--- //安装Nodejs
+node -v //查看node版本
+npm -v  //查看npm版本
+npm install -g cnpm --registry=http://registry.npm.taobao.org //安装淘宝的cnpm 管理器
+cnpm -v //查看cnpm版本
+cnpm install -g hexo-cli //安装hexo框架
+hexo -v //查看hexo版本<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="博客运行："><a href="#博客运行：" class="headerlink" title="博客运行："></a>博客运行：</h3><p><strong>请使用  <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git-bash</a> 进入相应文件夹（blog）</strong></p>
-<h4 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd filename //进入文件夹</span><br><span class="line">cd .. //返回</span><br><span class="line">cd e //进入 e 盘</span><br><span class="line">ls //显示当前文件夹</span><br><span class="line">vim filename.后缀名 //编辑文件</span><br><span class="line">    Esc + ":wq" //保存并退出</span><br><span class="line">    Esc + ":q!" //直接退出（不保存）</span><br><span class="line">    Insert //切换模式（INSERT 或 REPLACE）</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h4><pre class="line-numbers language-none"><code class="language-none">cd filename //进入文件夹
+cd .. //返回
+cd e //进入 e 盘
+ls //显示当前文件夹
+vim filename.后缀名 //编辑文件
+    Esc + ":wq" //保存并退出
+    Esc + ":q!" //直接退出（不保存）
+    Insert //切换模式（INSERT 或 REPLACE）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="配置："><a href="#配置：" class="headerlink" title="配置："></a>配置：</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslVerify false //修改网页设置</span><br><span class="line">cnpm install --save hexo-deployer-git </span><br><span class="line">mkdir blog</span><br><span class="line">cd blog</span><br><span class="line">hexo init //初始化，必须是空文件夹！</span><br><span class="line">vim _config.yml : //修改配置</span><br><span class="line">    url: https://wolfdeer62456.github.io/project</span><br><span class="line">    root: https://wolfdeer62456.github.io/ //注意：hexo s时需要注释掉，否则会出错</span><br><span class="line">    deploy:</span><br><span class="line">      type: 'git'</span><br><span class="line">      repo: https://github.com/你的Github用户名/你的Git仓库名</span><br><span class="line">      branch: master</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="配置："><a href="#配置：" class="headerlink" title="配置："></a>配置：</h4><pre class="line-numbers language-none"><code class="language-none">git config --global http.sslVerify false //修改网页设置
+cnpm install --save hexo-deployer-git 
+mkdir blog
+cd blog
+hexo init //初始化，必须是空文件夹！
+vim _config.yml : //修改配置
+    url: https://wolfdeer62456.github.io/project
+    root: https://wolfdeer62456.github.io/ //注意：hexo s时需要注释掉，否则会出错
+    deploy:
+      type: 'git'
+      repo: https://github.com/你的Github用户名/你的Git仓库名
+      branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="操作"><a href="#操作" class="headerlink" title="操作:"></a>操作:</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo n "filename" //新建博客</span><br><span class="line">hexo s //本地模拟</span><br><span class="line">hexo cl //清楚缓存</span><br><span class="line">hexo g //装载</span><br><span class="line">hexo d //上传</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="操作"><a href="#操作" class="headerlink" title="操作:"></a>操作:</h4><pre class="line-numbers language-none"><code class="language-none">hexo n "filename" //新建博客
+hexo s //本地模拟
+hexo cl //清楚缓存
+hexo g //装载
+hexo d //上传<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="博客装载：-1"><a href="#博客装载：-1" class="headerlink" title="博客装载："></a>博客装载：</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml : //修改配置</span><br><span class="line">    theme: #模板的名字</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="博客装载：-1"><a href="#博客装载：-1" class="headerlink" title="博客装载："></a>博客装载：</h4><pre class="line-numbers language-none"><code class="language-none">vim _config.yml : //修改配置
+    theme: #模板的名字<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="配件下载"><a href="#配件下载" class="headerlink" title="配件下载 :"></a>配件下载 :</h3><h4 id="网站加速（hexo-neat）"><a href="#网站加速（hexo-neat）" class="headerlink" title="网站加速（hexo-neat）"></a>网站加速（hexo-neat）</h4><p><strong>下载：</strong></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-neat --save</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cnpm install hexo-neat --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>博客文件下的_config.yml配置:</strong></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">neat_enable: true</span><br><span class="line">//压缩html</span><br><span class="line">neat_html:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line">//压缩css</span><br><span class="line">neat_css:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude: </span><br><span class="line">//压缩js</span><br><span class="line">neat_js:</span><br><span class="line">  enable: true</span><br><span class="line">  mangle: true</span><br><span class="line">  output: </span><br><span class="line">  compress: </span><br><span class="line">  exclude: </span><br><span class="line">    - '**/*.min.js'</span><br><span class="line">    - '**/jquery.fancybox.pack.js'</span><br><span class="line">    - '**/index.js'</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">neat_enable: true
+//压缩html
+neat_html:
+  enable: true
+  exclude:
+//压缩css
+neat_css:
+  enable: true
+  exclude: 
+//压缩js
+neat_js:
+  enable: true
+  mangle: true
+  output: 
+  compress: 
+  exclude: 
+    - '**/*.min.js'
+    - '**/jquery.fancybox.pack.js'
+    - '**/index.js'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h4><p><strong>下载：</strong></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">npm install hexo-generator-search --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>博客文件下的_config.yml配置:</strong></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">search:
+  path: search.xml
+  field: post<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="将中文链接翻译成拼音"><a href="#将中文链接翻译成拼音" class="headerlink" title="将中文链接翻译成拼音"></a>将中文链接翻译成拼音</h4><p><strong>下载：</strong></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-permalink-pinyin --save</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">npm i hexo-permalink-pinyin --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>博客文件下的_config.yml配置:</strong></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">permalink_pinyin:</span><br><span class="line">  enable: true</span><br><span class="line">  separator: '-' # default: '-'</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="帖子字数统计插件"><a href="#帖子字数统计插件" class="headerlink" title="帖子字数统计插件"></a>帖子字数统计插件</h4><p><strong>下载：</strong></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save hexo-wordcount</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">npm i --save hexo-wordcount<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>博客文件下的_config.yml配置:</strong></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">postInfo:</span><br><span class="line">  date: true</span><br><span class="line">  update: true</span><br><span class="line">  wordCount: true # set true.</span><br><span class="line">  totalCount: true # set true.</span><br><span class="line">  min2read: true # set true.</span><br><span class="line">  readCount: true # set true.</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">postInfo:
+  date: true
+  update: true
+  wordCount: true # set true.
+  totalCount: true # set true.
+  min2read: true # set true.
+  readCount: true # set true.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="添加表情符号支持"><a href="#添加表情符号支持" class="headerlink" title="添加表情符号支持"></a>添加表情符号支持</h4><p><strong>下载：</strong></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-filter-github-emojis --save</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">npm install hexo-filter-github-emojis --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>博客文件下的_config.yml配置:</strong></p>
-<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">githubEmojis:</span><br><span class="line">  enable: true</span><br><span class="line">  className: github-emoji</span><br><span class="line">  inject: true</span><br><span class="line">  styles:</span><br><span class="line">  customEmojis:</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -652,7 +709,7 @@ M">
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="My First New Blog">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="My First New Blog">
                         
                         <span class="card-title">My First New Blog</span>
                     </div>
@@ -801,13 +858,6 @@ M">
 </main>
 
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
-
 
 
     <footer class="page-footer bg-color">
@@ -885,8 +935,6 @@ M">
             
             
             
-                
-            
             
                 <span id="busuanzi_container_site_pv">
                 &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
@@ -960,7 +1008,7 @@ M">
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/WolfDeer62456" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1188,8 +1236,6 @@ $(function () {
     
     <script src="https://wolfdeer62456.github.io/libs/others/clicklove.js" async="async"></script>
     
-    
-    <script async src="https://wolfdeer62456.github.io/libs/others/busuanzi.pure.mini.js"></script>
     
 
     

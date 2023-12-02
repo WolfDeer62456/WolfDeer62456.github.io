@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="#C231107A. 剪发(haircut), C++">
+    <meta name="keywords" content="#C231107A. 剪发(haircut), WolfDeer">
     <meta name="description" content="#C231107A. 剪发(haircut)前言（Front talk)此题打了好久，我觉得做题前应该首先想好思路，然后想好实现方式，不能抓着半截就开打，否则只会花费更多的时间，总结下来就是：
 
 What - 什么：想好思路；
@@ -243,7 +243,7 @@ Why - ">
         <li><div class="divider"></div></li>
         <li>
             <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Github
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
         
@@ -300,7 +300,7 @@ Why - ">
 </style>
 
 <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Github" data-position="left" data-delay="50">
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
         <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
@@ -318,7 +318,7 @@ Why - ">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -398,11 +398,6 @@ Why - ">
                 
 
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
             </div>
         </div>
         <hr class="clearfix">
@@ -435,7 +430,79 @@ Why - ">
 <p>$\qquad$所以，我们来想一下这道题为什么不能正着做：</p>
 <p>$\qquad$首先，每次将一格删去，我们都需要判断一下有没有将某个连通块拆掉，则需要申请一个新的位置来储存这个新的区块，而且，判断有没有拆掉可能还需要对当前连通块判环，如果有环，肯定是拆不掉的，如果每次都跑一次 $tarjan$ 时间复杂度将达到惊人的 $O(nmq)$ ，你有可能用两个小时都打不出一个暴力分。</p>
 <p>$\qquad$拆分当然是可以转换为合并的，因此，我们将每一个询问离线，倒着加头发，用并查集维护一下连通块数量和最大的 $size$ 就可以轻易的解决此题。</p>
-<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> For(i,l,r) for(int i=l;i&lt;=r;i++)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> Rof(i,l,r) for(int i=l;i&gt;=r;i--)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> P pair<span class="string">&lt;int,int&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> Fi first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> Se second</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">input</span><span class="params">()</span></span>{<span class="type">char</span> c;<span class="type">bool</span> f=<span class="literal">false</span>;<span class="keyword">while</span>(!<span class="built_in">isdigit</span>(c=<span class="built_in">getchar</span>()))f=c==<span class="string">'-'</span>;<span class="type">int</span> x=c^<span class="number">48</span>;<span class="keyword">while</span>(<span class="built_in">isdigit</span>(c=<span class="built_in">getchar</span>())){x=(((x&lt;&lt;<span class="number">2</span>)+x)&lt;&lt;<span class="number">1</span>)+(c^<span class="number">48</span>);}<span class="keyword">return</span> f?-x:x;}</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> Q = <span class="number">3012345</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">3005</span>;</span><br><span class="line"><span class="type">bool</span> ST;</span><br><span class="line">bitset&lt;N&gt; a[N];</span><br><span class="line"><span class="type">int</span> n,m,q,maxs,num;</span><br><span class="line"><span class="type">int</span> x[Q],y[Q];</span><br><span class="line">P ans[Q];</span><br><span class="line"></span><br><span class="line">P fa[N][N];<span class="comment">//二维并查集 </span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> P <span class="title">find</span><span class="params">(P p)</span></span>{</span><br><span class="line">	<span class="type">int</span> x=p.Fi,y=p.Se;</span><br><span class="line">	<span class="keyword">if</span>(fa[x][y]==<span class="built_in">make_pair</span>(x,y)) <span class="keyword">return</span> {x,y};</span><br><span class="line">	<span class="keyword">return</span> fa[x][y]=<span class="built_in">find</span>(fa[x][y]);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> dx[<span class="number">4</span>]={<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">1</span>};</span><br><span class="line"><span class="type">int</span> dy[<span class="number">4</span>]={<span class="number">-1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>};</span><br><span class="line"><span class="type">int</span> siz[N][N];</span><br><span class="line">map&lt;P,<span class="type">int</span>&gt; mp;</span><br><span class="line"><span class="type">bool</span> ED;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	cerr&lt;&lt;<span class="built_in">abs</span>(&amp;ST-&amp;ED)/<span class="number">1024.</span>/<span class="number">1024.</span>&lt;&lt;<span class="string">"MB\n"</span>;</span><br><span class="line">	<span class="function">string <span class="title">str</span><span class="params">(<span class="string">"haircut"</span>)</span></span>;</span><br><span class="line">	<span class="built_in">freopen</span>((str+<span class="string">".in"</span>).<span class="built_in">c_str</span>(),<span class="string">"r"</span>,stdin);</span><br><span class="line">	<span class="built_in">freopen</span>((str+<span class="string">".out"</span>).<span class="built_in">c_str</span>(),<span class="string">"w"</span>,stdout);</span><br><span class="line">	<span class="type">int</span> T=<span class="built_in">input</span>();</span><br><span class="line">	<span class="keyword">while</span>(T--){</span><br><span class="line">		n=<span class="built_in">input</span>(),m=<span class="built_in">input</span>(),q=<span class="built_in">input</span>();</span><br><span class="line">		<span class="built_in">For</span>(i,<span class="number">1</span>,n) <span class="built_in">For</span>(j,<span class="number">1</span>,m) a[i][j]=(<span class="built_in">input</span>()==<span class="literal">true</span>),fa[i][j]={i,j},siz[i][j]=<span class="number">1</span>;</span><br><span class="line">		<span class="built_in">For</span>(i,<span class="number">1</span>,q) x[i]=<span class="built_in">input</span>(),y[i]=<span class="built_in">input</span>(),a[x[i]][y[i]]=<span class="literal">false</span>;</span><br><span class="line">		<span class="built_in">For</span>(i,<span class="number">1</span>,n) <span class="built_in">For</span>(j,<span class="number">1</span>,m) <span class="keyword">if</span>(a[i][j]){</span><br><span class="line">			<span class="built_in">For</span>(k,<span class="number">0</span>,<span class="number">3</span>){</span><br><span class="line">				<span class="type">int</span> tx=i+dx[k],ty=j+dy[k];</span><br><span class="line">				<span class="keyword">if</span>(tx&lt;=<span class="number">0</span> || tx&gt;n || ty&lt;=<span class="number">0</span> || ty&gt;m) <span class="keyword">continue</span>;</span><br><span class="line">				<span class="keyword">if</span>(a[tx][ty]){</span><br><span class="line">					P fx=<span class="built_in">find</span>({tx,ty}),fy=<span class="built_in">find</span>({i,j});</span><br><span class="line">					<span class="keyword">if</span>(fx==fy) <span class="keyword">continue</span>;</span><br><span class="line">					fa[fx.Fi][fx.Se]=fy;</span><br><span class="line">					siz[fy.Fi][fy.Se]+=siz[fx.Fi][fx.Se];</span><br><span class="line">					maxs=<span class="built_in">max</span>(maxs,siz[fy.Fi][fy.Se]);</span><br><span class="line">				}</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">		<span class="built_in">For</span>(i,<span class="number">1</span>,n) <span class="built_in">For</span>(j,<span class="number">1</span>,m) <span class="keyword">if</span>(a[i][j]){P f=<span class="built_in">find</span>({i,j});mp[f]++;}</span><br><span class="line">		num=mp.<span class="built_in">size</span>();</span><br><span class="line">		<span class="built_in">Rof</span>(i,q,<span class="number">1</span>){</span><br><span class="line">			a[x[i]][y[i]]=<span class="literal">true</span>;</span><br><span class="line">			ans[i]={num,maxs};</span><br><span class="line">			<span class="built_in">For</span>(k,<span class="number">0</span>,<span class="number">3</span>){</span><br><span class="line">				<span class="type">int</span> tx=x[i]+dx[k],ty=y[i]+dy[k];</span><br><span class="line">				<span class="keyword">if</span>(tx&lt;=<span class="number">0</span> || tx&gt;n || ty&lt;=<span class="number">0</span> || ty&gt;m) <span class="keyword">continue</span>;</span><br><span class="line">				<span class="keyword">if</span>(a[tx][ty]){</span><br><span class="line">					P fx=<span class="built_in">find</span>({tx,ty}),fy=<span class="built_in">find</span>({x[i],y[i]});</span><br><span class="line">					<span class="keyword">if</span>(fx==fy) <span class="keyword">continue</span>;</span><br><span class="line">					fa[fx.Fi][fx.Se]=fy;num--;</span><br><span class="line">					siz[fy.Fi][fy.Se]+=siz[fx.Fi][fx.Se];</span><br><span class="line">					maxs=<span class="built_in">max</span>(maxs,siz[fy.Fi][fy.Se]);</span><br><span class="line">				}</span><br><span class="line">			}<span class="keyword">if</span>(fa[x[i]][y[i]]==<span class="built_in">make_pair</span>(x[i],y[i])) num++,maxs=<span class="built_in">max</span>(<span class="number">1</span>,maxs);</span><br><span class="line">		}<span class="built_in">For</span>(i,<span class="number">1</span>,q) <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,ans[i].Fi,ans[i].Se);</span><br><span class="line">		</span><br><span class="line">		maxs=<span class="number">0</span>;mp.<span class="built_in">clear</span>();</span><br><span class="line">	}<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+#include&lt;map&gt;
+#define For(i,l,r) for(int i=l;i&lt;=r;i++)
+#define Rof(i,l,r) for(int i=l;i&gt;=r;i--)
+using namespace std;
+#define P pair&lt;int,int&gt; 
+#define Fi first
+#define Se second
+inline int input(){char c;bool f=false;while(!isdigit(c=getchar()))f=c=='-';int x=c^48;while(isdigit(c=getchar())){x=(((x&lt;&lt;2)+x)&lt;&lt;1)+(c^48);}return f?-x:x;}
+const int Q = 3012345;
+const int N = 3005;
+bool ST;
+bitset&lt;N&gt; a[N];
+int n,m,q,maxs,num;
+int x[Q],y[Q];
+P ans[Q];
+
+P fa[N][N];//二维并查集 
+inline P find(P p){
+	int x=p.Fi,y=p.Se;
+	if(fa[x][y]==make_pair(x,y)) return {x,y};
+	return fa[x][y]=find(fa[x][y]);
+}
+
+int dx[4]={0,0,-1,1};
+int dy[4]={-1,1,0,0};
+int siz[N][N];
+map&lt;P,int&gt; mp;
+bool ED;
+signed main(){
+	cerr&lt;&lt;abs(&amp;ST-&amp;ED)/1024./1024.&lt;&lt;"MB\n";
+	string str("haircut");
+	freopen((str+".in").c_str(),"r",stdin);
+	freopen((str+".out").c_str(),"w",stdout);
+	int T=input();
+	while(T--){
+		n=input(),m=input(),q=input();
+		For(i,1,n) For(j,1,m) a[i][j]=(input()==true),fa[i][j]={i,j},siz[i][j]=1;
+		For(i,1,q) x[i]=input(),y[i]=input(),a[x[i]][y[i]]=false;
+		For(i,1,n) For(j,1,m) if(a[i][j]){
+			For(k,0,3){
+				int tx=i+dx[k],ty=j+dy[k];
+				if(tx&lt;=0 || tx&gt;n || ty&lt;=0 || ty&gt;m) continue;
+				if(a[tx][ty]){
+					P fx=find({tx,ty}),fy=find({i,j});
+					if(fx==fy) continue;
+					fa[fx.Fi][fx.Se]=fy;
+					siz[fy.Fi][fy.Se]+=siz[fx.Fi][fx.Se];
+					maxs=max(maxs,siz[fy.Fi][fy.Se]);
+				}
+			}
+		}
+		For(i,1,n) For(j,1,m) if(a[i][j]){P f=find({i,j});mp[f]++;}
+		num=mp.size();
+		Rof(i,q,1){
+			a[x[i]][y[i]]=true;
+			ans[i]={num,maxs};
+			For(k,0,3){
+				int tx=x[i]+dx[k],ty=y[i]+dy[k];
+				if(tx&lt;=0 || tx&gt;n || ty&lt;=0 || ty&gt;m) continue;
+				if(a[tx][ty]){
+					P fx=find({tx,ty}),fy=find({x[i],y[i]});
+					if(fx==fy) continue;
+					fa[fx.Fi][fx.Se]=fy;num--;
+					siz[fy.Fi][fy.Se]+=siz[fx.Fi][fx.Se];
+					maxs=max(maxs,siz[fy.Fi][fy.Se]);
+				}
+			}if(fa[x[i]][y[i]]==make_pair(x[i],y[i])) num++,maxs=max(1,maxs);
+		}For(i,1,q) printf("%d %d\n",ans[i].Fi,ans[i].Se);
+		
+		maxs=0;mp.clear();
+	}return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -589,7 +656,7 @@ Why - ">
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/7.jpg" class="responsive-img" alt="#C231107B. 残片(garbage)">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="#C231107B. 残片(garbage)">
                         
                         <span class="card-title">#C231107B. 残片(garbage)</span>
                     </div>
@@ -786,13 +853,6 @@ Why - ">
 </main>
 
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
-
 
 
     <footer class="page-footer bg-color">
@@ -870,8 +930,6 @@ Why - ">
             
             
             
-                
-            
             
                 <span id="busuanzi_container_site_pv">
                 &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
@@ -945,7 +1003,7 @@ Why - ">
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/WolfDeer62456" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1173,8 +1231,6 @@ $(function () {
     
     <script src="https://wolfdeer62456.github.io/libs/others/clicklove.js" async="async"></script>
     
-    
-    <script async src="https://wolfdeer62456.github.io/libs/others/busuanzi.pure.mini.js"></script>
     
 
     

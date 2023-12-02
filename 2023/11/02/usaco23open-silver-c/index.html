@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="USACO23OPEN-Silver C, C++">
+    <meta name="keywords" content="USACO23OPEN-Silver C, WolfDeer">
     <meta name="description" content="USACO23OPEN-Silver C题目来源洛谷： USACO23OPEN-Pareidolia(C) 
 SPOJ：USACO23OPEN-Pareidolia(C) 
 题解： USACO23OPEN-Pareidolia(C) 
@@ -243,7 +243,7 @@ SPOJ：USACO23OPEN-Pareidolia(C)
         <li><div class="divider"></div></li>
         <li>
             <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Github
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
         
@@ -300,7 +300,7 @@ SPOJ：USACO23OPEN-Pareidolia(C)
 </style>
 
 <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Github" data-position="left" data-delay="50">
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
         <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
@@ -318,7 +318,7 @@ SPOJ：USACO23OPEN-Pareidolia(C)
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -398,11 +398,6 @@ SPOJ：USACO23OPEN-Pareidolia(C)
                 
 
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
             </div>
         </div>
         <hr class="clearfix">
@@ -430,16 +425,16 @@ SPOJ：USACO23OPEN-Pareidolia(C)
 <p>$\qquad$对字符串 $s$ 计算 $B(s)$ 是一个有趣的挑战，但 农夫约翰想到了一个更有趣的挑战：对 $s$ 的所有子串进行计算 $B$ 函数，并求和。</p>
 <h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>$\qquad$输入一个字符串 $s$ ，该字符串仅包含小写英语字母 $a～z$，其的长度不超过 $3\times 10^5$。</p>
 <h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>$\qquad$输出一个整数，表示对 $s$ 的所有子串进行计算 $B$ 函数后的和。</p>
-<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><h3 id="输入数据-1"><a href="#输入数据-1" class="headerlink" title="输入数据 1"></a>输入数据 1</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bessiebessie</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><h3 id="输入数据-1"><a href="#输入数据-1" class="headerlink" title="输入数据 1"></a>输入数据 1</h3><pre class="line-numbers language-input1" data-language="input1"><code class="language-input1">bessiebessie<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="输出数据-1"><a href="#输出数据-1" class="headerlink" title="输出数据 1"></a>输出数据 1</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">14</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="输出数据-1"><a href="#输出数据-1" class="headerlink" title="输出数据 1"></a>输出数据 1</h3><pre class="line-numbers language-output1" data-language="output1"><code class="language-output1">14<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="样例1解释"><a href="#样例1解释" class="headerlink" title="样例1解释"></a>样例1解释</h3><p>$\qquad$有 $12$ 个子字符串$(b,e,s,s,i,e,b,e,s,s,i,e)$正好包含 $11$ 个 <code>bessie</code>；</p>
 <p>$\qquad$有 $1$ 个字符串 $(bessiebessie)$ 正好包含 $2$ 个 <code>bessie</code>；</p>
 <p>$\qquad$因此总数为 $12 \times 1+1 \times 2=14$。</p>
-<h3 id="输入数据-2"><a href="#输入数据-2" class="headerlink" title="输入数据 2"></a>输入数据 2</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abcdefghssijebessie</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="输入数据-2"><a href="#输入数据-2" class="headerlink" title="输入数据 2"></a>输入数据 2</h3><pre class="line-numbers language-input2" data-language="input2"><code class="language-input2">abcdefghssijebessie<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="输出数据-2"><a href="#输出数据-2" class="headerlink" title="输出数据 2"></a>输出数据 2</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">28</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="输出数据-2"><a href="#输出数据-2" class="headerlink" title="输出数据 2"></a>输出数据 2</h3><pre class="line-numbers language-output2" data-language="output2"><code class="language-output2">28<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="数据规模与约定"><a href="#数据规模与约定" class="headerlink" title="数据规模与约定"></a>数据规模与约定</h2><ul>
 <li>测试点 $3～5$ ：输入 $s$ 的长度不超过 $5000$。</li>
@@ -456,7 +451,30 @@ SPOJ：USACO23OPEN-Pareidolia(C)
 <p>$\qquad$对于当前的字符串，我们发现对于 $l \in\left[1, l s t_{6}\right]$ 而言都可以包含当前这个 <code>bessie</code>，因此 <code>bessie</code> 总数会增加 $l s t_{6}$ .</p>
 <p>$\qquad$得转移方程：$f_{i}=f_{l s t_{6}-1}+l s t_{6}$.</p>
 <p>$\qquad$而问题问的是所有区间，所有我们需要把它们加起来，即：$\text { ans }=\sum_{i=1}^{n}f_{i}$.</p>
-<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> For(i,l,r) for(int i=l;i&lt;=r;i++)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> Rof(i,l,r) for(int i=l;i&gt;=r;i--)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">input</span><span class="params">()</span></span>{<span class="type">int</span> x;<span class="keyword">return</span> cin&gt;&gt;x,x;}</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">301234</span>;</span><br><span class="line"><span class="type">char</span> s[N];</span><br><span class="line"><span class="type">int</span> n,lst[N],f[N],ans;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>),cin.<span class="built_in">tie</span>(<span class="number">0</span>),cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">freopen</span>(<span class="string">"c.in"</span>,<span class="string">"r"</span>,stdin);</span><br><span class="line">	<span class="built_in">freopen</span>(<span class="string">"c.out"</span>,<span class="string">"w"</span>,stdout);</span><br><span class="line">	cin&gt;&gt;(s+<span class="number">1</span>);</span><br><span class="line">	n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++){<span class="comment">//bessie </span></span><br><span class="line">		<span class="keyword">if</span>(s[i]==<span class="string">'b'</span>) lst[<span class="number">1</span>]=i;</span><br><span class="line">		<span class="keyword">if</span>(s[i]==<span class="string">'e'</span>) lst[<span class="number">6</span>]=lst[<span class="number">5</span>],lst[<span class="number">2</span>]=lst[<span class="number">1</span>];</span><br><span class="line">		<span class="keyword">if</span>(s[i]==<span class="string">'s'</span>) lst[<span class="number">4</span>]=lst[<span class="number">3</span>],lst[<span class="number">3</span>]=lst[<span class="number">2</span>];</span><br><span class="line">		<span class="keyword">if</span>(s[i]==<span class="string">'i'</span>) lst[<span class="number">5</span>]=lst[<span class="number">4</span>];</span><br><span class="line">		f[i]=f[lst[<span class="number">6</span>]<span class="number">-1</span>]+lst[<span class="number">6</span>];</span><br><span class="line">	}<span class="built_in">For</span>(i,<span class="number">1</span>,n) ans+=f[i];</span><br><span class="line">	<span class="keyword">return</span> cout&lt;&lt;ans&lt;&lt;<span class="string">'\n'</span>,<span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+#define For(i,l,r) for(int i=l;i&lt;=r;i++)
+#define Rof(i,l,r) for(int i=l;i&gt;=r;i--)
+using namespace std;
+#define int long long
+inline int input(){int x;return cin&gt;&gt;x,x;}
+const int N = 301234;
+char s[N];
+int n,lst[N],f[N],ans;
+signed main(){
+	ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+	freopen("c.in","r",stdin);
+	freopen("c.out","w",stdout);
+	cin&gt;&gt;(s+1);
+	n=strlen(s+1);
+	for(int i=1;i&lt;=n;i++){//bessie 
+		if(s[i]=='b') lst[1]=i;
+		if(s[i]=='e') lst[6]=lst[5],lst[2]=lst[1];
+		if(s[i]=='s') lst[4]=lst[3],lst[3]=lst[2];
+		if(s[i]=='i') lst[5]=lst[4];
+		f[i]=f[lst[6]-1]+lst[6];
+	}For(i,1,n) ans+=f[i];
+	return cout&lt;&lt;ans&lt;&lt;'\n',0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="后续（Ending）"><a href="#后续（Ending）" class="headerlink" title="后续（Ending）"></a>后续（Ending）</h2><p>$\qquad$又是一道动态规划的题呢~</p>
 
@@ -611,7 +629,7 @@ SPOJ：USACO23OPEN-Pareidolia(C)
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/20.jpg" class="responsive-img" alt="2023.11.03 考试总结">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/8.jpg" class="responsive-img" alt="2023.11.03 考试总结">
                         
                         <span class="card-title">2023.11.03 考试总结</span>
                     </div>
@@ -652,7 +670,7 @@ SPOJ：USACO23OPEN-Pareidolia(C)
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/20.jpg" class="responsive-img" alt="USACO23OPEN-Silver B">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/14.jpg" class="responsive-img" alt="USACO23OPEN-Silver B">
                         
                         <span class="card-title">USACO23OPEN-Silver B</span>
                     </div>
@@ -808,13 +826,6 @@ SPOJ：USACO23OPEN-Pareidolia(C)
 </main>
 
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
-
 
 
     <footer class="page-footer bg-color">
@@ -892,8 +903,6 @@ SPOJ：USACO23OPEN-Pareidolia(C)
             
             
             
-                
-            
             
                 <span id="busuanzi_container_site_pv">
                 &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
@@ -967,7 +976,7 @@ SPOJ：USACO23OPEN-Pareidolia(C)
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/WolfDeer62456" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1195,8 +1204,6 @@ $(function () {
     
     <script src="https://wolfdeer62456.github.io/libs/others/clicklove.js" async="async"></script>
     
-    
-    <script async src="https://wolfdeer62456.github.io/libs/others/busuanzi.pure.mini.js"></script>
     
 
     

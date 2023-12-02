@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="#C231116A. 玩具序列(sequence), C++">
+    <meta name="keywords" content="#C231116A. 玩具序列(sequence), WolfDeer">
     <meta name="description" content="#C231116A. 玩具序列(sequence)前言（Front talk)$\qquad$哈哈哈，结果只需要跑一遍就好了，我还傻傻的跑了两遍。。。
 网址（Website）$\qquad$ 题目详情 - 玩具序列(sequence) - ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -241,7 +241,7 @@
         <li><div class="divider"></div></li>
         <li>
             <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Github
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
         
@@ -298,7 +298,7 @@
 </style>
 
 <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Github" data-position="left" data-delay="50">
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
         <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
@@ -384,7 +384,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    435
+                    434
                 </div>
                 
 
@@ -396,11 +396,6 @@
                 
 
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
             </div>
         </div>
         <hr class="clearfix">
@@ -424,7 +419,34 @@
 <p>$\qquad$ <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231116A/solution">题解 - 玩具序列(sequence) - Super</a> </p>
 <h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$题解也很简单，直接走一个单调队列，求出对于当前的 $a_i$ 最多能像左右延伸多少就好啦，但其实只需要考虑做从左到右的，因为如果当前的 $a_i$ 可以延伸到一个位置，那么 $a_{i+1}$ 同样在满足条件的情况下也可以，那么一定能得到以当前位置为结尾的想左延伸的最大区间，所以只用跑一遍。</p>
 <p>$\qquad$我当时还以为需要同时求出对于当前点满足条件的左边和右边，结果挂了 $70pts$ 。`(*&gt;﹏&lt;*)′</p>
-<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;deque&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> For(i,l,r) for(int i=l;i&lt;=r;i++) </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> Rof(i,l,r) for(int i=l;i&gt;=r;i--)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">input</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">char</span> c;<span class="type">bool</span> f=<span class="literal">false</span>;<span class="keyword">while</span>(!<span class="built_in">isdigit</span>(c=<span class="built_in">getchar</span>()))f=c==<span class="string">'-'</span>;<span class="type">int</span> x=c^<span class="number">48</span>;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">isdigit</span>(c=<span class="built_in">getchar</span>())){x=(((x&lt;&lt;<span class="number">2</span>)+x)&lt;&lt;<span class="number">1</span>)+(c^<span class="number">48</span>);}<span class="keyword">return</span> f?-x:x;</span><br><span class="line">}</span><br><span class="line">deque&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&gt; qmax,qmin;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">3012345</span>;</span><br><span class="line"><span class="type">int</span> n,k,ans,lst=<span class="number">1</span>,a[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="function">string <span class="title">str</span><span class="params">(<span class="string">"sequence"</span>)</span></span>;</span><br><span class="line">	<span class="built_in">freopen</span>((str+<span class="string">".in"</span>).<span class="built_in">c_str</span>(),<span class="string">"r"</span>,stdin);</span><br><span class="line">	<span class="built_in">freopen</span>((str+<span class="string">".out"</span>).<span class="built_in">c_str</span>(),<span class="string">"w"</span>,stdout);</span><br><span class="line">	k=<span class="built_in">input</span>(),n=<span class="built_in">input</span>();<span class="built_in">For</span>(i,<span class="number">1</span>,n) a[i]=<span class="built_in">input</span>();</span><br><span class="line">	<span class="built_in">For</span>(i,<span class="number">1</span>,n){</span><br><span class="line">		<span class="keyword">while</span>(qmax.<span class="built_in">size</span>() &amp;&amp; qmax.<span class="built_in">back</span>().first&lt;a[i]) qmax.<span class="built_in">pop_back</span>();</span><br><span class="line">		<span class="keyword">while</span>(qmin.<span class="built_in">size</span>() &amp;&amp; qmin.<span class="built_in">back</span>().first&gt;a[i]) qmin.<span class="built_in">pop_back</span>();</span><br><span class="line">		<span class="keyword">while</span>(qmax.<span class="built_in">size</span>() &amp;&amp; <span class="built_in">abs</span>(qmax.<span class="built_in">front</span>().first-a[i])&gt;k) lst=qmax.<span class="built_in">front</span>().second+<span class="number">1</span>,qmax.<span class="built_in">pop_front</span>();</span><br><span class="line">		<span class="keyword">while</span>(qmin.<span class="built_in">size</span>() &amp;&amp; <span class="built_in">abs</span>(qmin.<span class="built_in">front</span>().first-a[i])&gt;k) lst=qmin.<span class="built_in">front</span>().second+<span class="number">1</span>,qmin.<span class="built_in">pop_front</span>();</span><br><span class="line">		qmax.<span class="built_in">push_back</span>({a[i],i});</span><br><span class="line">		qmin.<span class="built_in">push_back</span>({a[i],i});</span><br><span class="line">		ans=<span class="built_in">max</span>(ans,i-lst+<span class="number">1</span>); </span><br><span class="line">	}<span class="keyword">return</span> <span class="built_in">printf</span>(<span class="string">"%d"</span>,ans),<span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+#include&lt;deque&gt;
+#define For(i,l,r) for(int i=l;i&lt;=r;i++) 
+#define Rof(i,l,r) for(int i=l;i&gt;=r;i--)
+using namespace std;
+inline int input(){
+	char c;bool f=false;while(!isdigit(c=getchar()))f=c=='-';int x=c^48;
+	while(isdigit(c=getchar())){x=(((x&lt;&lt;2)+x)&lt;&lt;1)+(c^48);}return f?-x:x;
+}
+deque&lt;pair&lt;int,int&gt;&gt; qmax,qmin;
+const int N = 3012345;
+int n,k,ans,lst=1,a[N];
+
+signed main(){
+	string str("sequence");
+	freopen((str+".in").c_str(),"r",stdin);
+	freopen((str+".out").c_str(),"w",stdout);
+	k=input(),n=input();For(i,1,n) a[i]=input();
+	For(i,1,n){
+		while(qmax.size() &amp;&amp; qmax.back().first&lt;a[i]) qmax.pop_back();
+		while(qmin.size() &amp;&amp; qmin.back().first&gt;a[i]) qmin.pop_back();
+		while(qmax.size() &amp;&amp; abs(qmax.front().first-a[i])&gt;k) lst=qmax.front().second+1,qmax.pop_front();
+		while(qmin.size() &amp;&amp; abs(qmin.front().first-a[i])&gt;k) lst=qmin.front().second+1,qmin.pop_front();
+		qmax.push_back({a[i],i});
+		qmin.push_back({a[i],i});
+		ans=max(ans,i-lst+1); 
+	}return printf("%d",ans),0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -576,7 +598,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/11.jpg" class="responsive-img" alt="#C231116B. 排列(perm)">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/20.jpg" class="responsive-img" alt="#C231116B. 排列(perm)">
                         
                         <span class="card-title">#C231116B. 排列(perm)</span>
                     </div>
@@ -625,7 +647,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/15.jpg" class="responsive-img" alt="2023.11.16 考试总结">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/6.jpg" class="responsive-img" alt="2023.11.16 考试总结">
                         
                         <span class="card-title">2023.11.16 考试总结</span>
                     </div>
@@ -773,13 +795,6 @@
 </main>
 
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
-
 
 
     <footer class="page-footer bg-color">
@@ -857,8 +872,6 @@
             
             
             
-                
-            
             
                 <span id="busuanzi_container_site_pv">
                 &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
@@ -932,7 +945,7 @@
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/WolfDeer62456" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1160,8 +1173,6 @@ $(function () {
     
     <script src="https://wolfdeer62456.github.io/libs/others/clicklove.js" async="async"></script>
     
-    
-    <script async src="https://wolfdeer62456.github.io/libs/others/busuanzi.pure.mini.js"></script>
     
 
     

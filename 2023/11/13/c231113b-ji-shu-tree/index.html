@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="#C231113B. 计树(tree), C++">
+    <meta name="keywords" content="#C231113B. 计树(tree), WolfDeer">
     <meta name="description" content="#C231113B. 计树(tree)前言（Front talk)$\qquad$动态规划的题，需要仔细地研究。
 $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方面想，一直在思考怎么“模拟”这个过程，自然也（一定也）想不出来">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -241,7 +241,7 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
         <li><div class="divider"></div></li>
         <li>
             <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Github
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
         
@@ -298,7 +298,7 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
 </style>
 
 <a href="https://github.com/WolfDeer62456/WolfDeer62456.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Github" data-position="left" data-delay="50">
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
         <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
@@ -316,7 +316,7 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -396,11 +396,6 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
                 
 
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
             </div>
         </div>
         <hr class="clearfix">
@@ -433,7 +428,50 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
 <p>答案对 $10^{9}+7$ 取模。</p>
 <p><strong>范围</strong>： 对于所有数据, 有 $1 \leq T \leq 3$；$1 \leq n \leq 300$；$0 \leq l_{i} \leq r_{i} \leq 2$ 。 </p>
 <h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$题解讲的很明白了。。。</p>
-<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> For(i,l,r) for(int i=l;i&lt;=r;i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">input</span><span class="params">()</span></span>{<span class="type">int</span> x;<span class="keyword">return</span> cin&gt;&gt;x,x;}</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> mod = <span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">305</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> &amp;x,<span class="type">int</span> y)</span></span>{<span class="keyword">if</span>((x+=y)&gt;mod) x-=mod;}</span><br><span class="line"><span class="type">int</span> tid,T,n,l[N],r[N],f[<span class="number">2</span>][N][N];</span><br><span class="line"><span class="comment">// f[i][j][k]: 前 i 个节点  目前有 j 棵树  还有 k 个节点没有儿子</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>{</span><br><span class="line">	cin&gt;&gt;n;<span class="built_in">For</span>(i,<span class="number">1</span>,n) cin&gt;&gt;l[i]&gt;&gt;r[i];</span><br><span class="line">	<span class="built_in">memset</span>(f[<span class="number">0</span>],<span class="number">0</span>,<span class="keyword">sizeof</span> f[<span class="number">0</span>]);f[<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="built_in">For</span>(i,<span class="number">1</span>,n){</span><br><span class="line">		<span class="built_in">memset</span>(f[i&amp;<span class="number">1</span>],<span class="number">0</span>,<span class="keyword">sizeof</span> f[i&amp;<span class="number">1</span>]);</span><br><span class="line">		<span class="built_in">For</span>(j,<span class="number">0</span>,i<span class="number">-1</span>){</span><br><span class="line">			<span class="built_in">For</span>(k,<span class="number">0</span>,n){</span><br><span class="line">				<span class="keyword">if</span>(!f[i<span class="number">-1</span>&amp;<span class="number">1</span>][j][k]) <span class="keyword">continue</span>;<span class="comment">//如果上一个节点在当前状态下没有可能，跳过</span></span><br><span class="line">				<span class="keyword">if</span>(l[i]==<span class="number">0</span>){</span><br><span class="line">					<span class="built_in">add</span>(f[i&amp;<span class="number">1</span>][j+<span class="number">1</span>][k],f[i<span class="number">-1</span>&amp;<span class="number">1</span>][j][k]);<span class="comment">//新开一棵树</span></span><br><span class="line">					<span class="keyword">if</span>(k) <span class="built_in">add</span>(f[i&amp;<span class="number">1</span>][j][k<span class="number">-1</span>],k*f[i<span class="number">-1</span>&amp;<span class="number">1</span>][j][k]%mod);<span class="comment">//接在之前的点上 </span></span><br><span class="line">				}<span class="keyword">if</span>(l[i]&lt;=<span class="number">1</span> &amp;&amp; r[i]&gt;=<span class="number">1</span>){</span><br><span class="line">					<span class="built_in">add</span>(f[i&amp;<span class="number">1</span>][j+<span class="number">1</span>][k+<span class="number">1</span>],<span class="number">2</span>*f[i<span class="number">-1</span>&amp;<span class="number">1</span>][j][k]%mod);<span class="comment">//新开一棵树，可能是左儿子，也有可能是右儿子 </span></span><br><span class="line">					<span class="built_in">add</span>(f[i&amp;<span class="number">1</span>][j][k],<span class="number">2ll</span>*k*f[i<span class="number">-1</span>&amp;<span class="number">1</span>][j][k]%mod);<span class="comment">//缺儿子的节点数量不会变 </span></span><br><span class="line">				}<span class="keyword">if</span>(r[i]==<span class="number">2</span>){</span><br><span class="line">					<span class="built_in">add</span>(f[i&amp;<span class="number">1</span>][j+<span class="number">1</span>][k+<span class="number">2</span>],f[i<span class="number">-1</span>&amp;<span class="number">1</span>][j][k]);<span class="comment">//新开一棵树</span></span><br><span class="line">					<span class="built_in">add</span>(f[i&amp;<span class="number">1</span>][j][k+<span class="number">1</span>],<span class="number">1</span>*f[i<span class="number">-1</span>&amp;<span class="number">1</span>][j][k]*k%mod);<span class="comment">//接在之前的点上</span></span><br><span class="line">					<span class="built_in">add</span>(f[i&amp;<span class="number">1</span>][j][k+<span class="number">1</span>],<span class="number">2</span>*f[i<span class="number">-1</span>&amp;<span class="number">1</span>][j][k]*j%mod);<span class="comment">//让左儿子或右儿子接上一棵树</span></span><br><span class="line">					<span class="comment">//如果至少有一棵子树：将一棵子树接在自己身上（接左或接右），自己接在一棵子树上 </span></span><br><span class="line">					<span class="keyword">if</span>(j&gt;<span class="number">1</span>) <span class="built_in">add</span>(f[i&amp;<span class="number">1</span>][j<span class="number">-1</span>][k],<span class="number">2</span>*f[i<span class="number">-1</span>&amp;<span class="number">1</span>][j][k]*k%mod*(j<span class="number">-1</span>)%mod);</span><br><span class="line">				}</span><br><span class="line">			} </span><br><span class="line">		}</span><br><span class="line">	}cout&lt;&lt;f[n&amp;<span class="number">1</span>][<span class="number">1</span>][<span class="number">0</span>]&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">} </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="built_in">freopen</span>(<span class="string">"tree.in"</span>,<span class="string">"r"</span>,stdin);</span><br><span class="line">	<span class="built_in">freopen</span>(<span class="string">"tree.out"</span>,<span class="string">"w"</span>,stdout);</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>),cin.<span class="built_in">tie</span>(<span class="number">0</span>),cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	cin&gt;&gt;tid&gt;&gt;T;</span><br><span class="line">	<span class="keyword">while</span>(T--) <span class="built_in">solve</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">} </span><br></pre></td></tr></tbody></table></figure>
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+#define For(i,l,r) for(int i=l;i&lt;=r;i++)
+using namespace std;
+#define int long long
+inline int input(){int x;return cin&gt;&gt;x,x;}
+const int mod = 1e9+7;
+const int N = 305;
+inline void add(int &amp;x,int y){if((x+=y)&gt;mod) x-=mod;}
+int tid,T,n,l[N],r[N],f[2][N][N];
+// f[i][j][k]: 前 i 个节点  目前有 j 棵树  还有 k 个节点没有儿子
+inline void solve(){
+	cin&gt;&gt;n;For(i,1,n) cin&gt;&gt;l[i]&gt;&gt;r[i];
+	memset(f[0],0,sizeof f[0]);f[0][0][0]=1;
+	For(i,1,n){
+		memset(f[i&amp;1],0,sizeof f[i&amp;1]);
+		For(j,0,i-1){
+			For(k,0,n){
+				if(!f[i-1&amp;1][j][k]) continue;//如果上一个节点在当前状态下没有可能，跳过
+				if(l[i]==0){
+					add(f[i&amp;1][j+1][k],f[i-1&amp;1][j][k]);//新开一棵树
+					if(k) add(f[i&amp;1][j][k-1],k*f[i-1&amp;1][j][k]%mod);//接在之前的点上 
+				}if(l[i]&lt;=1 &amp;&amp; r[i]&gt;=1){
+					add(f[i&amp;1][j+1][k+1],2*f[i-1&amp;1][j][k]%mod);//新开一棵树，可能是左儿子，也有可能是右儿子 
+					add(f[i&amp;1][j][k],2ll*k*f[i-1&amp;1][j][k]%mod);//缺儿子的节点数量不会变 
+				}if(r[i]==2){
+					add(f[i&amp;1][j+1][k+2],f[i-1&amp;1][j][k]);//新开一棵树
+					add(f[i&amp;1][j][k+1],1*f[i-1&amp;1][j][k]*k%mod);//接在之前的点上
+					add(f[i&amp;1][j][k+1],2*f[i-1&amp;1][j][k]*j%mod);//让左儿子或右儿子接上一棵树
+					//如果至少有一棵子树：将一棵子树接在自己身上（接左或接右），自己接在一棵子树上 
+					if(j&gt;1) add(f[i&amp;1][j-1][k],2*f[i-1&amp;1][j][k]*k%mod*(j-1)%mod);
+				}
+			} 
+		}
+	}cout&lt;&lt;f[n&amp;1][1][0]&lt;&lt;'\n';
+} 
+
+signed main(){
+	freopen("tree.in","r",stdin);
+	freopen("tree.out","w",stdout);
+	ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+	cin&gt;&gt;tid&gt;&gt;T;
+	while(T--) solve();
+	return 0;
+} <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -586,7 +624,7 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="2023.11.14 考试总结">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/16.jpg" class="responsive-img" alt="2023.11.14 考试总结">
                         
                         <span class="card-title">2023.11.14 考试总结</span>
                     </div>
@@ -627,7 +665,7 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/15.jpg" class="responsive-img" alt="#C231113A. 项链(necklace)">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="#C231113A. 项链(necklace)">
                         
                         <span class="card-title">#C231113A. 项链(necklace)</span>
                     </div>
@@ -783,13 +821,6 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
 </main>
 
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
-
 
 
     <footer class="page-footer bg-color">
@@ -867,8 +898,6 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
             
             
             
-                
-            
             
                 <span id="busuanzi_container_site_pv">
                 &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
@@ -942,7 +971,7 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/WolfDeer62456" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1170,8 +1199,6 @@ $(function () {
     
     <script src="https://wolfdeer62456.github.io/libs/others/clicklove.js" async="async"></script>
     
-    
-    <script async src="https://wolfdeer62456.github.io/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
