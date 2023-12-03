@@ -34,11 +34,45 @@
   </entry>
   
   <entry>
+    <title>死亡的美丽</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/12/02/si-wang-de-mei-li/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/12/02/si-wang-de-mei-li/</id>
+    <published>2023-12-02T10:31:12.000Z</published>
+    <updated>2023-12-03T03:03:36.939Z</updated>
+    
+    
+    <summary type="html">生命的传奇</summary>
+    
+    
+    
+    <category term="说说" scheme="https://wolfdeer62456.github.io/project/categories/%E8%AF%B4%E8%AF%B4/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2023.12.02 周末总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2023/12/02/2023-12-02-zhou-mo-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2023/12/02/2023-12-02-zhou-mo-zong-jie/</id>
+    <published>2023-12-02T04:00:00.000Z</published>
+    <updated>2023-12-02T10:27:01.574Z</updated>
+    
+    
+    <summary type="html">重生</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>仿若从梦中苏醒</title>
     <link href="https://wolfdeer62456.github.io/project/2023/11/25/fang-ruo-cong-meng-zhong-su-xing/"/>
     <id>https://wolfdeer62456.github.io/project/2023/11/25/fang-ruo-cong-meng-zhong-su-xing/</id>
     <published>2023-11-25T08:23:32.000Z</published>
-    <updated>2023-11-25T09:34:52.331Z</updated>
+    <updated>2023-12-02T10:33:26.695Z</updated>
     
     
     <summary type="html">仿若从梦中苏醒</summary>
@@ -55,7 +89,7 @@
     <link href="https://wolfdeer62456.github.io/project/2023/11/19/jian-chi-shi-yu-zhe-de-zhi-hui/"/>
     <id>https://wolfdeer62456.github.io/project/2023/11/19/jian-chi-shi-yu-zhe-de-zhi-hui/</id>
     <published>2023-11-19T07:20:28.000Z</published>
-    <updated>2023-11-19T08:22:53.566Z</updated>
+    <updated>2023-12-02T10:34:18.348Z</updated>
     
     
     <summary type="html">坚持是愚者的智慧</summary>
@@ -72,7 +106,7 @@
     <link href="https://wolfdeer62456.github.io/project/2023/11/16/c231116d-zui-chang-bu-xia-jiang-zi-xu-lie-lis/"/>
     <id>https://wolfdeer62456.github.io/project/2023/11/16/c231116d-zui-chang-bu-xia-jiang-zi-xu-lie-lis/</id>
     <published>2023-11-16T15:59:59.000Z</published>
-    <updated>2023-11-17T06:53:58.000Z</updated>
+    <updated>2023-12-02T10:30:17.413Z</updated>
     
     
     <summary type="html">反悔贪心+线段树</summary>
@@ -110,7 +144,7 @@
     <link href="https://wolfdeer62456.github.io/project/2023/11/16/c231116b-pai-lie-perm/"/>
     <id>https://wolfdeer62456.github.io/project/2023/11/16/c231116b-pai-lie-perm/</id>
     <published>2023-11-16T05:05:45.000Z</published>
-    <updated>2023-11-17T07:28:28.000Z</updated>
+    <updated>2023-12-03T03:09:00.000Z</updated>
     
     
     <summary type="html">从题目中获取信息，并入手</summary>
@@ -341,44 +375,6 @@
     
     
     <category term="思维" scheme="https://wolfdeer62456.github.io/project/tags/%E6%80%9D%E7%BB%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>USACO22OPEN-Silver B</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/10/usaco22open-silver-b/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/10/usaco22open-silver-b/</id>
-    <published>2023-11-10T06:38:15.000Z</published>
-    <updated>2023-11-12T13:38:58.000Z</updated>
-    
-    
-    <summary type="html">学会联想 最大权值森林</summary>
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="最小生成树" scheme="https://wolfdeer62456.github.io/project/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>USACO22OPEN-Bronze A</title>
-    <link href="https://wolfdeer62456.github.io/project/2023/11/10/usaco22open-bronze-a/"/>
-    <id>https://wolfdeer62456.github.io/project/2023/11/10/usaco22open-bronze-a/</id>
-    <published>2023-11-10T06:37:19.000Z</published>
-    <updated>2023-11-12T13:39:38.000Z</updated>
-    
-    
-    <summary type="html">学会一句一句的读代码</summary>
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="二分答案" scheme="https://wolfdeer62456.github.io/project/tags/%E4%BA%8C%E5%88%86%E7%AD%94%E6%A1%88/"/>
     
   </entry>
   

@@ -377,7 +377,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-11-17
+                    2023-12-03
                 </div>
                 
 
@@ -435,23 +435,17 @@
 <p><strong>但是</strong>，把上面的公式再进行总结，就可以得出：<br>$$<br>f(x,y)=<br>\begin{cases}<br>k &amp; (x+y)=2^k\times d\ (d\in N)\\<br>0 &amp; (x+y)\not=2^k\times d\ (d\in N)<br>\end{cases}<br>$$<br>这个点应该是在开始讲的，但是为了还原我的思维过程（当时我注意到了这个点，但是没在意），我放到最后来讲，这里的 $d$ 是 $gcd(x,y)$ ，容易证明对于 $f(x,y)$ 来说，提取一个 $d$ 出来，<strong>原来的答案并不会受影响，</strong>因此，我们有了这一条思路：</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int d=gcd(x,y);
 if(x/d+y/d==2^k)
-	f(x,y)=(int)log2((x+y)/d)
-```		
+	f(x,y)=(int)log2((x+y)/d)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-**这样就可以只从质数的角度来思考问题**
-
-然后思考如何将通过此题：
-
-- $O(logn)$ 枚举 $2^2-2^{20}$ 的所有 $2$ 的次幂；`for(int k=2;k&lt;=20;k++)`
-- $O(n)$ 枚举奇数，满足 $x+y=2^k$ ，为什么偶数不行呢？因为要互质。
-- $O(logn)$ 枚举 $d=gcd(x,y)$ ，并将值 $x$ 与值 $y$ 所对应的位置连边，，注意从右到左连，方便后续处理。**因为题目条件是==排列==，因此才可以在这样的时间内枚举完。**这也是我当时忽略的地方。
-
-接下来就是处理每一条连边，或者说每一个区间，对于每一个询问 $[l,r]$ ，我们可以先将询问离线，然后遍历每个 $r\in [1,n]$ ，每次先将区间加入树状数组处理，记录前缀区间数量，相减即得最终答案。
-
-## 代码（Code）
-
-```c++
-#include&lt;bits/stdc++.h&gt;
+<p><strong>这样就可以只从质数的角度来思考问题</strong></p>
+<p>然后思考如何将通过此题：</p>
+<ul>
+<li>$O(logn)$ 枚举 $2^2-2^{20}$ 的所有 $2$ 的次幂；<code>for(int k=2;k&lt;=20;k++)</code></li>
+<li>$O(n)$ 枚举奇数，满足 $x+y=2^k$ ，为什么偶数不行呢？因为要互质。</li>
+<li>$O(logn)$ 枚举 $d=gcd(x,y)$ ，并将值 $x$ 与值 $y$ 所对应的位置连边，，注意从右到左连，方便后续处理。<strong>因为题目条件是==排列==，因此才可以在这样的时间内枚举完。</strong>这也是我当时忽略的地方。</li>
+</ul>
+<p>接下来就是处理每一条连边，或者说每一个区间，对于每一个询问 $[l,r]$ ，我们可以先将询问离线，然后遍历每个 $r\in [1,n]$ ，每次先将区间加入树状数组处理，记录前缀区间数量，相减即得最终答案。</p>
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits/stdc++.h&gt;
 #define For(i,l,r) for(int i=l;i&lt;=r;++i)
 #define Rof(i,l,r) for(int i=l;i&gt;=r;--i)
 using namespace std;
@@ -494,7 +488,7 @@ signed main(){
 		}
 	}For(i,1,q) printf("%lld\n",ans[i]);
 	return 0; 
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="后续（Ending）"><a href="#后续（Ending）" class="headerlink" title="后续（Ending）"></a>后续（Ending）</h2><p>讲一些新的思路或方法：</p>
 <ol>
@@ -939,7 +933,7 @@ signed main(){
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">45.1k</span>
+                        class="white-color">47k</span>
             
             
             
