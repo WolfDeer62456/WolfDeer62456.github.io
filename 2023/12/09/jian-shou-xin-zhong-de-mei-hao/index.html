@@ -4,11 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="#WD231105A. 自福串(string)--自编题题解, WolfDeer">
-    <meta name="description" content="网址 题目详情 - 字胡串(string) - Super 
- 题解 - 字胡串(string) - Super 
- 数据 
-骗分代码$\qquad$考虑找到每个区间最大值的位置，设区间 $[L,R]$ 表示该最大值 $a[x]$ 的位置向">
+    <meta name="keywords" content="坚守心中的美好（小说剧）, WolfDeer">
+    <meta name="description" content="坚守心中的美好第一章想要脱离空虚，就必须看清现实。
+$\qquad$空虚。
+$\qquad$现代世界的专利。
+$\qquad$内心自始至终都有一种空虚感，感觉生活总是缺少了有意义的美好，这种折磨人的心态让人感觉生活没有了意义。或者说，如今快">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>#WD231105A. 自福串(string)--自编题题解 | WolfDeer</title>
+    <title>坚守心中的美好（小说剧） | WolfDeer</title>
     <link rel="icon" type="image/png" href="https://wolfdeer62456.github.io/favicon.png">
     
 
@@ -318,12 +318,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">#WD231105A. 自福串(string)--自编题题解</h1>
+                    <h1 class="description center-align post-title">坚守心中的美好（小说剧）</h1>
                 </div>
             </div>
         </div>
@@ -345,13 +345,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="https://wolfdeer62456.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/">
-                                <span class="chip bg-color">单调栈</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -359,8 +355,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/" class="post-category">
-                                题目
+                            <a href="https://wolfdeer62456.github.io/categories/%E8%AF%B4%E8%AF%B4/" class="post-category">
+                                说说
                             </a>
                         
                     </div>
@@ -372,28 +368,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-11-05
+                    2023-12-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-11-15
+                    2023-12-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    3.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    11 分
                 </div>
                 
 
@@ -416,185 +412,69 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C230902C">题目详情 - 字胡串(string) - Super</a> </p>
-<p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C230902C/solution">题解 - 字胡串(string) - Super</a> </p>
-<p> <a href="https://wolfdeer62456.github.io/2023/11/05/wd231105a-zi-fu-chuan-string-zi-bian-ti-ti-jie/%E6%95%B0%E6%8D%AE.zip">数据</a> </p>
-<h2 id="骗分代码"><a href="#骗分代码" class="headerlink" title="骗分代码"></a>骗分代码</h2><p>$\qquad$考虑找到每个区间最大值的位置，设区间 $[L,R]$ 表示该最大值 $a[x]$ 的位置向左向右找到的首个大于最大值 $a[x]$ 的位置，设区间 $[l,r]$ 表示该最大值 $a[x]$ 的位置 $x$ 向左向右找到的第一个能使异或和 $g(S)$ 变大的位置，对答案的贡献是：</p>
-<p>​        $ans+=(l-L)\times(R-pos+1)+(R-r)\times(pos-L+1)-(R-r)\times(l-L);$</p>
-<p>$\qquad$可以用<strong>倍增+线段树</strong>来维护求出区间或和与区间最大值，然后再求 $[L,x-1]$ 和 $[x+1,R]$ 区间的贡献即可。</p>
-<p><strong>时间复杂度：</strong></p>
-<p>​				<strong>最优 $O(nlog^2n)$ , 当最大值总是在区间中心时取得；</strong></p>
-<p>​				<strong>最劣 $O(n^2log^2)$ , 当输入的自福串从小到大或从大到小排序后取得。</strong></p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;algorithm&gt;
-#include&lt;iostream&gt;
-#include&lt;cstring&gt;
-#include&lt;cstdio&gt;
-#include&lt;cmath&gt;
-#include&lt;vector&gt;
-#define _for(i,n) for(int i=1;i&lt;=n;i++)
-#define N 1012345
-#define int long long
-using namespace std;
-inline int input(){
-	char c;bool f=false;while(!isdigit(c=getchar()))f=c=='-';int x=c^48;
-	while(isdigit(c=getchar())){x=(((x&lt;&lt;2)+x)&lt;&lt;1)+(c^48);}return f?-x:x;
-} 
-int n,a[N],ans;
-
-#define ls p&lt;&lt;1
-#define rs p&lt;&lt;1|1
-struct TR{
-	int max,huo,pos;
-}tr[N&lt;&lt;2|3];
-
-void pushup(int p){
-	tr[p].max=max(tr[ls].max,tr[rs].max);
-	tr[p].huo=tr[ls].huo|tr[rs].huo;
-	tr[p].pos=tr[ls].max==tr[p].max?tr[ls].pos:tr[rs].pos;
-}
-
-void build(int p,int l,int r){
-	if(l==r){
-		tr[p].max=tr[p].huo=a[l];
-		tr[p].pos=l;
-		return;
-	}
-	int mid=(l+r)&gt;&gt;1;
-	build(ls,l,mid);
-	build(rs,mid+1,r);
-	pushup(p);
-}
-
-struct B{
-	int x,id;
-	bool operator&lt;(const B y)const{return x&lt;y.x;}
-}b[N];
-inline B ask_max(int p,int l,int r,int L,int R){
-	if(L&lt;=l&amp;&amp;r&lt;=R) return {tr[p].max,tr[p].pos};
-	B res={0,0};
-	int mid=(l+r)&gt;&gt;1;
-	if(L&lt;=mid){
-		B s=ask_max(ls,l,mid,L,R);
-		if(s.x&gt;res.x) res=s;
-	}	
-	if(R&gt;mid){
-		B s=ask_max(rs,mid+1,r,L,R);
-		if(s.x&gt;res.x) res=s;
-	}
-	return res;
-}
-
-inline int ask_huo(int p,int l,int r,int L,int R){
-	if(L&lt;=l&amp;&amp;r&lt;=R) return tr[p].huo;
-	int mid=(l+r)&gt;&gt;1;
-	int res=0;
-	if(L&lt;=mid) res=(res|ask_huo(ls,l,mid,L,R));
-	if(R&gt;mid) res=(res|ask_huo(rs,mid+1,r,L,R));
-	return res;
-}
-
-void search(int L,int R){
-	if(L&gt;=R) return;
-	//找到区间最大值位置 
-	B maxnum=ask_max(1,1,n,L,R);
-	int l=maxnum.id,r=maxnum.id;
-	int pos=maxnum.id;
-//	printf("maxnum=a[%d]=%d\n",pos,maxnum.x);
-//	printf("%d %d %d\n",L,R,pos);
-	//寻找左侧首个满足 g(T)&gt;f(T) 的位置
-	for(int i=24;i&gt;=0;i--){
-		if(l-(1&lt;&lt;i)&lt;L) continue;
-		if(ask_huo(1,1,n,l-(1&lt;&lt;i),pos)&gt;maxnum.x) continue;
-		else l=l-(1&lt;&lt;i);
-	}
-	//寻找右侧首个满足 g(T)&gt;f(T) 的位置
-	for(int i=24;i&gt;=0;i--){
-		if(r+(1&lt;&lt;i)&gt;R) continue;
-		if(ask_huo(1,1,n,pos,r+(1&lt;&lt;i))&gt;maxnum.x) continue;
-		else r=r+(1&lt;&lt;i);
-	}
-	ans+=(l-L)*(R-pos+1)+(R-r)*(pos-L+1)-(R-r)*(l-L);
-	search(L,pos-1);search(pos+1,R);
-}
-
-void solve(){
-	_for(i,n) b[i]={a[i],i};
-	sort(b+1,b+n+1);
-	search(1,n);
-}
-
-signed main(){
-	freopen("string.in", "r", stdin);
-	freopen("string.out", "w", stdout);
-	n=input();
-	_for(i,n) a[i]=input();
-	build(1,1,n);
-	solve();
-	printf("%lld",ans);
-	return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="正解代码"><a href="#正解代码" class="headerlink" title="正解代码"></a>正解代码</h2><p><strong>$\qquad$对于 $50pts$ ,</strong> 直接$ O\left(n^{2}\right)$ 枚举区间, $O(1)$ 判断是否合法即可。</p>
-<p><strong>$\qquad$对于 $100 pts$ ,</strong> 考虑一个区间, 只要这个区间的任意值非最大值有一位不与最大值相同, 那么这个区间就是 合法区间。</p>
-<p>$\qquad$找出所有值左右第一个大于它的位置, 那么以它为最大值的区间就固定在这一段中。只要再 找出这个区间中左右第一个有一位不与最大值相同的值的位置, 那么这个位置左边的所有位置都 可以与最大值右边的位置构成一个合法区间。右边也同理。 可以用单调栈找出左右第一个大于它的位置, 再用 $O\left(n \log a_{i}\right)$ 的时间处理出左右第一个某一位为当前数超集的地方（备注：就是找到首个使当前数异或能变大的数的位置，用 $bef_{i,j}$ 与 $aft_{i,j}$ 表示 $i$ 的上一个与下一个转化为二进制后第 $j$ 位为 $1$ 的位置，可预处理）, 然后就可以 $O(n)$ 统计答案了, 注意处理值相同的情况。</p>
-<p><strong>$\qquad$时间复杂度 $O\left(n \log a_{i}\right)$ 。</strong></p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-inline int read(){
-    char ch=getchar();int i=0,f=1;
-    while(!isdigit(ch)){if(ch=='-')f=-1;ch=getchar();}
-    while(isdigit(ch)){i=(i&lt;&lt;1)+(i&lt;&lt;3)+ch-'0';ch=getchar();}
-    return i*f;
-}
-const int N=1e6+50;
-int n,a[N],l[N],r[N],st[N],pos[N],top,diff_l[N],diff_r[N],mx[35];
-int mxpos[35];
-
-int main(){
-    freopen("string.in","r",stdin);
-    freopen("string.out","w",stdout);
-    n=read(); 
-    for(int i=1;i&lt;=n;i++)a[i]=read();
-    for(int i=1;i&lt;=n;i++){
-        while(top&amp;&amp;st[top]&lt;=a[i])top--;
-        l[i]=pos[top]+1;
-        st[++top]=a[i];pos[top]=i;
-    }
-    top=0; pos[top]=n+1;
-    for(int i=n;i&gt;=1;i--){
-        while(top&amp;&amp;st[top]&lt;a[i]) top--;
-        r[i]=pos[top]-1;
-        st[++top]=a[i];pos[top]=i;
-    }
-    for(int i=1;i&lt;=n;i++){
-        int p=0;
-        for(int j=0;(1ll&lt;&lt;j)&lt;=a[i];j++){
-            if((1ll&lt;&lt;j)&amp;a[i])mx[j]=max(mx[j],i);
-            else p=max(p,mx[j]);
-        }
-        diff_l[i]=p;
-    }
-    fill(mx,mx+32+1,n+1);
-    for(int i=n;i&gt;=1;i--) {
-        int p=n+1;
-        for(int j=0;(1ll&lt;&lt;j)&lt;=a[i];j++) {
-            if((1ll&lt;&lt;j)&amp;a[i]) mx[j]=min(mx[j],i);
-            else p=min(p,mx[j]);
-        }
-        diff_r[i]=p;
-    }
-    long long ans=0;
-    for(int i=1;i&lt;=n;i++) {
-        if(diff_l[i]&gt;=l[i])
-            ans+=1ll*(diff_l[i]-l[i]+1)*(r[i]-i+1);
-        if(diff_r[i]&lt;=r[i])
-            ans+=1ll*(r[i]-diff_r[i]+1)*(i-l[i]+1);
-        if(diff_l[i]&gt;=l[i]&amp;&amp;diff_r[i]&lt;=r[i])
-            ans-=1ll*(r[i]-diff_r[i]+1)*(diff_l[i]-l[i]+1);
-    }
-    cout&lt;&lt;ans&lt;&lt;endl;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+                <h1 id="坚守心中的美好"><a href="#坚守心中的美好" class="headerlink" title="坚守心中的美好"></a>坚守心中的美好</h1><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p><strong>想要脱离空虚，就必须看清现实。</strong></p>
+<p>$\qquad$<strong>空虚。</strong></p>
+<p>$\qquad$现代世界的专利。</p>
+<p>$\qquad$内心自始至终都有一种空虚感，感觉生活总是缺少了有意义的美好，这种折磨人的心态让人感觉生活没有了意义。或者说，如今快节奏的生活，作为学生，我们根本就没有时间记录生活中的美好，更别说学会怎么生活了。</p>
+<p>$\qquad$这种空虚感会在<strong>心灵上</strong>一个人时尤其的明显，而当你有强烈的情绪时，这种空虚感又会消失不见。</p>
+<p>$\qquad$还记得《从红月开始》中提到十三个终极，其中之一名曰“虚无”，我在读小说的时候一直不懂为什么会有这个精神情绪，毕竟“虚无”并不像“愤怒，恐惧，贪婪”等终极那么好理解，我本来以为“虚无”只是作者凭空为剧情设置出来的情绪，而现在才知道，这种情绪可能是现代人感染最深的情绪了。</p>
+<p>$\qquad$在现实生活中感到了麻木与虚无、痛苦与煎熬，以至于不断地向往着游戏、影视，以求满足自己的空虚，逃避现实，然后变得更加的麻木，这不知是多少人现实生活的写照。</p>
+<p>$\qquad$我将其称之为——</p>
+<p><strong>$\qquad$堕落。</strong></p>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p><strong>想要审判别人，就必须审判自己。</strong></p>
+<ul>
+<li>想想自己小时候，是多么的令人憎恨，让如今的我落到了如此与我不适配的班级。我很厌恶；</li>
+<li>也许当选纪律委员是正确的选择，我来到这个班，不是找一个群体交朋友，而是率先成为了一个管理者，开始我的“政治生涯”。母亲曾说过这样可能太累，还容易招仇恨。但是，在这个班上，就算老师在，也不能保持安静，在安静自习这个层面上，我只能自己上，而且我有能力让班上的人静下心来安静自习。</li>
+<li>我在这个班上朋友很少，仅仅是因为我并不想与他们交往，更不可能交心。这导致我在班上熟悉的人甚至少于12、13、14班。这很正常，毕竟我一下课就逃也似的跑出了这个班。</li>
+<li>班上的人有坏习惯不可怕，可怕的是他们会互相污染，而且有些人甚至意识不到自己的坏习惯已经严重影响了他人，也看不到别人看ta时眼中的厌恶。</li>
+<li>那我为什么不选择脱离？是因为已经认命，还是因为自认为没有能力？每个周末仍然持续摆烂，完美的做到了对自身的“零控制力”？——这说明我的不好的习惯与他们的相差的不远，不然命运也不会如此安排。若说这个班上的人是一群火鸡，那么我可能也只是火鸡中的科学家，自认为看到了世界本质，实际上却没有做出任何挽救自己的行动，而是仍然回到了火鸡窝里，只等待着未来屠夫将自己宰掉，再拿到集市上卖个好价钱。</li>
+</ul>
+<p>那我自己也只是充当火鸡中的小丑的角色罢了。</p>
+<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><p><strong>想要对抗丑恶，就必须知晓美好。</strong></p>
+<p>$\qquad$“盗火者”，掌握了“真理”，同时也成为了“囚徒”，陷入了深深的迷茫中。</p>
+<p>$\qquad$知晓了自己的懦弱，便一定要尝试着改变。</p>
+<p>$\qquad$而改变，需要知晓自己的本质。</p>
+<p>$\qquad$如何抵御空虚，让自己变得充实？——拥抱。</p>
+<p>$\qquad$或者说，心灵的陪伴？若每个人心中都隐藏着一个完美的个体，我们会自然而然地将所有的美好的事物都加在其身上，那么这就是我的向往，而我知道这个完美的个体（后文用“她”代替）一定是不可能得到的。用数学的方法证明，假如真的存在现实中的“她”，那么你心中的“她”就一定会拥有现实中“她”的特质，而由于“她”是完美的，而现实中的“她”总有缺点，因此现实中的“她”便不再完美了。总之，“她”永远不可能存在与现实之中，人的想象往往比现实更加的强大，若说一切恐惧源于未知，那“她”的完美也一定类似于“未知”的特质。</p>
+<p>$\qquad$我的目标，就是不断地完美精神上的“她”，通过提升自己的见识，拓宽自己的视野，并且让自己无限的接近于心中的“她”。</p>
+<p>$\qquad$说回“拥抱”，这只是一种心境，让人沉入自己的“温柔乡”中，享受片刻的安定，洗净现实的浮尘，聆听内心的美好。最后，再充满信心的去“和生活打架”。</p>
+<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><p><strong>想要照亮黑暗，就必须手握光明。</strong></p>
+<p>$\qquad$想到了这里，我便发现：现实的快节奏已经想核废水一般，想要夺舍我内心美好的记忆，我不知不觉地就被现实牵着鼻子走，不断地失去着自己的过去，我已经快沦为一个没有感情的只会用脑子学习、考试的机器了。没有对儿时的记忆是多么可怕的一件事啊！这样的学业压力下，人怎么不会变的空虚？怎么不会更容易受到其他人精神地感染？怎么不会一直向往游戏中的世界？而我尽力去回忆时，才发现干涸的心灵不知何时已泪流满面。</p>
+<p>$\qquad$之前在做原神的森林书时，我自己也不知道自己为什么会因为看到天真的孩子而泪如泉涌，仿佛那时的我已经不再是一个孩子，仿佛那时我已经成为了一个压抑的成年人，或者说我见到的孩子，包括我自己，已经因为某种不知名的污染而变得麻木，失去了儿时的纯真，因此再见到天真的孩子时才会有感慨自己过去的感觉。自己是什么时候开始变得呢？是因为小时候的学科补习班，还是老师父母有意无意之中施予地学业压力？都不是。令我最伤痛的地方，是儿时的很多玩伴因为学习、上补习班与我分离；是老师为了让我们学习而没收了我们的玩具，不让我们下课出去玩。尽管那时手机都还不普及，大家都不会玩游戏，我仍然觉得那段时光很美好。我再也没有体会到真正的“好朋友”的感觉了，那是第一次感到了孤独，第一次感受到这种“向往学习”的社会对自己的摧残。于是我当然开始沉迷游戏，结果发现，就算再网络上，与朋友一起玩的机会也如此的少（好像一共才三两次），于是我只能自己玩，期待下次与朋友玩的时候可以展示我的MC杰作，但这个愿望仿佛从来都没有过，因为其不可能实现，我玩游戏的类型也因为长久的孤独，从与好朋友玩的游戏（我的世界），逐渐变成了只有自己玩的游戏（原神）。因为没有人陪我一起玩，那么孤独的空虚感就只能在游戏中满足。（又是空虚，我自己原本写的时候都没想到心灵空虚的原因还有这个，分析下来竟然又是这位“老朋友”）</p>
+<p>$\qquad$我开始了回忆。</p>
+<p>$\qquad$宁静。感动。安心。满足。守护。</p>
+<p>$\qquad$记得初中吃了饭以后，我一个人跑去画美术画，赏赏花，听听鸟语，感受大自然的美丽。——自然（静）</p>
+<p>$\qquad$记得在冬天最寒冷的时候，外面都结了冰，我们呆在家里，吹着暖气，好不快活，内外极大的温度差带给我无尽的安全感。——温暖（安心）</p>
+<p>$\qquad$记得小时候和母亲有一段时间关系很不好，但是那段时间看了一部叫《致命隧道》的电影，晚上吓得不敢睡觉，在最脆弱的时候听了一首南征北战NZBZ的《沉默的誓言》，顿时感到了安全，潸然泪下。——感动</p>
+<p>$\qquad$夏季外面炎热，家中开空调，吹着极其的凉爽，仿佛春天的抚摸，又聆听着白噪音，快乐的入眠。——静、凉（自然）</p>
+<p>$\qquad$看熊出没系列电影——感动</p>
+<p>$\qquad$早晨起床就学习，学累了倒头就睡，然后被朝阳温暖的光轻轻叫醒，然后继续学习。——满足</p>
+<p>$\qquad$在家里时，春雨朦胧地下，铺满了天空，就像有层层的雾气棉花糖一般蓬在空中，只有雨声，洗净了一切的浮尘，点点滴滴，让躁动的心灵不再躁动。我想起了小时候坐着姥爷的电瓶车，去苹果专卖店玩MC，那是我第一次玩，甚至会害怕僵尸和骷髅，我给自己为了一间只用泥土做成的小屋，两个方块高，甚至没有顶，周围插满了火把，避开了怪物，在房间里看着天空中的繁星，美丽的不真实，而后安然入眠——安心（静）</p>
+<p>$\qquad$小时候第一次打完末影龙，进入传送门，仔细地读了一遍终末之诗，感触良深，心灵一下就静下来了，那段时间受这首“诗”的影响颇大。</p>
+<p>$\qquad$鹿鹿还在时，我每天都会格外的关注、呵护她，心甘情愿地伺候这个小公主。最记得她身体健康，甚至有点发福时，从笼子里面跳到我手上要吃的，那温暖的双脚，沉甸甸的重量，让我精神上感受到“付出”带来的前所未有的回馈。我买鸟的原因在潜意识上可能是满足自己“支配”的欲望，而她彻底让我改变了这个想法，我放弃了让她像网上视频里的一样做各种杂技，而是选择顺其自然、让她快乐成长。我真的很爱她。可能正是因为语言的不通带来的未知，让我觉得鹿鹿和“她”真的好像。想念鹿鹿！！！——<strong>守护</strong></p>
+<p>$\qquad$如此的一幕幕还有很多，我突然发现自己竟然也有一个充实的童年，而且我的童年是多么的美好且有意义！我竟然有一种寻回了自己丢失的东西的惊喜。</p>
+<p>$\qquad$我最喜欢的便是和鹿鹿在一起的那段时光，宁静是自己的宁静；感动是看到别人的事后产生的；安心是自己的安心；满足是满足自己的空虚，让自己内心变得充盈。只有守护，是我与外界产生的唯一的美好的纯粹的情绪。</p>
+<h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><p><strong>想要仰望星空，就必须高楼底起。</strong></p>
+<p>$\qquad$给孤独的人一个温暖的抱抱，可以让他安心；让迷茫的人知道生活的意义，让他从内心寻找到真理；让绝望又弱小的人知道守护的意义，可以让他自内而外的充满希望与坚强。</p>
+<p>$\qquad$坚守自己心中的美好，万丈高楼平地起，有了稳固的心灵根基，才能在现实中所向披靡！</p>
+<h1 id="附件（七个层面、十三终极）"><a href="#附件（七个层面、十三终极）" class="headerlink" title="附件（七个层面、十三终极）"></a>附件（七个层面、十三终极）</h1><p>$\qquad$<strong>情绪</strong>：偏执、混乱、恐惧、麻木、虚荣、贪婪、沉默、迷茫、权欲、窃取、噩梦、愤怒、死亡</p>
+<p>$\qquad$<strong>十三终极</strong>：神之梦魇（噩梦、幻想）、苍白之手（窃取、占有）、受刑之母（死亡、怜悯）、加冕小丑（混乱、扭曲）、夜之囚徒（恐惧、懦弱）、深渊蠕虫（贪婪、无知）、黑皇后（虚荣、骄傲）、藏杖人（权欲、支配）、窥命师（沉默、洞察）、执剑者（偏执、审判）、盗火者（迷茫、真理/囚徒）、虚无（麻木、无欲）、暴君（愤怒、绝望）</p>
+<p>$\qquad$<strong>七个层面</strong>：感知、情绪、欲望、认识、本能、记忆、自我</p>
+<p>$\qquad$<strong>终极情绪分析</strong>：</p>
+<p>$\qquad$$\qquad$恐惧；【夜之囚徒/夜之君王】</p>
+<p>$\qquad$$\qquad$好奇；【窥命师】</p>
+<p>$\qquad$$\qquad$求知；【盗火者】</p>
+<p>$\qquad$$\qquad$野心；【藏杖人】</p>
+<p>$\qquad$$\qquad$欲望；【深渊蠕虫】</p>
+<p>$\qquad$$\qquad$混乱；【加冕小丑】</p>
+<p>$\qquad$$\qquad$对世界的怜悯；【受刑之母】</p>
+<p>$\qquad$$\qquad$对自身不公导致的不甘心；【黑皇后】</p>
+<p>$\qquad$$\qquad$对公平的渴望；【执剑者】</p>
+<p>$\qquad$$\qquad$意图成为神，将世界占为己有的贪婪；【苍白之手】</p>
+<p>$\qquad$$\qquad$临死那一刻的麻木；【虚无】</p>
+<p>$\qquad$$\qquad$对于自己能够成为这个惟一以及面对那种庞大未知的扭曲感知；【神之梦魇】</p>
+<p>$\qquad$$\qquad$愤怒；【最初】</p>
+<p>注：附件内容部分来自百度，部分引用《从红月开始》内容。</p>
 
                 
             </div>
@@ -621,7 +501,7 @@ int main(){
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wolfdeer62456.github.io/projecthttps://wolfdeer62456.github.io/2023/11/05/wd231105a-zi-fu-chuan-string-zi-bian-ti-ti-jie/">https://wolfdeer62456.github.io/projecthttps://wolfdeer62456.github.io/2023/11/05/wd231105a-zi-fu-chuan-string-zi-bian-ti-ti-jie/</a>
+                    <a href="https://wolfdeer62456.github.io/projecthttps://wolfdeer62456.github.io/2023/12/09/jian-shou-xin-zhong-de-mei-hao/">https://wolfdeer62456.github.io/projecthttps://wolfdeer62456.github.io/2023/12/09/jian-shou-xin-zhong-de-mei-hao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -658,11 +538,7 @@ int main(){
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="https://wolfdeer62456.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/">
-                                    <span class="chip bg-color">单调栈</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -743,44 +619,36 @@ int main(){
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="https://wolfdeer62456.github.io/2023/11/05/wd231105b-yi-huo-shu-xortree-zi-bian-ti/">
+                <a href="https://wolfdeer62456.github.io/2025/12/31/afo-xiao-ji-qiao/">
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/21.jpg" class="responsive-img" alt="#WD231105B. 异或树(xortree)--自编题">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/8.jpg" class="responsive-img" alt="AFO 小技巧">
                         
-                        <span class="card-title">#WD231105B. 异或树(xortree)--自编题</span>
+                        <span class="card-title">AFO 小技巧</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            树链剖分换根
+                            AFO 小技巧
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-11-05
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-12-31
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/" class="post-category">
-                                    题目
+                            <a href="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/" class="post-category">
+                                    总结
                                 </a>
                             
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="https://wolfdeer62456.github.io/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/">
-                        <span class="chip bg-color">树链剖分</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -792,44 +660,36 @@ int main(){
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="https://wolfdeer62456.github.io/2023/11/05/wd231105a-zi-fu-chuan-string-zi-bian-ti/">
+                <a href="https://wolfdeer62456.github.io/2023/12/09/2023-12-09-zhou-mo-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="#WD231105A. 自福串(string)--自编题">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="2023.12.09 周末总结">
                         
-                        <span class="card-title">#WD231105A. 自福串(string)--自编题</span>
+                        <span class="card-title">2023.12.09 周末总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            多种方法，倍增分治
+                            人之试炼
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/" class="post-category">
-                                    题目
+                            <a href="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/" class="post-category">
+                                    总结
                                 </a>
                             
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="https://wolfdeer62456.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/">
-                        <span class="chip bg-color">单调栈</span>
-                    </a>
-                    
                 </div>
                 
             </div>
