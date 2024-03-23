@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>WolfDeer</title>
+  
+  <subtitle>Dreams Remain Forever</subtitle>
+  <link href="https://wolfdeer62456.github.io/project/atom.xml" rel="self"/>
+  
+  <link href="https://wolfdeer62456.github.io/project/"/>
+  <updated>2024-03-22T13:08:18.000Z</updated>
+  <id>https://wolfdeer62456.github.io/project/</id>
+  
+  <author>
+    <name>WolfDeer</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AFO 小技巧</title>
+    <link href="https://wolfdeer62456.github.io/project/2025/12/31/afo-xiao-ji-qiao/"/>
+    <id>https://wolfdeer62456.github.io/project/2025/12/31/afo-xiao-ji-qiao/</id>
+    <published>2025-12-31T15:59:59.000Z</published>
+    <updated>2024-03-22T13:08:18.000Z</updated>
+    
+    
+    <summary type="html">AFO 小技巧</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>设置</title>
+    <link href="https://wolfdeer62456.github.io/project/2025/01/01/yi-miao-she-zhi/"/>
+    <id>https://wolfdeer62456.github.io/project/2025/01/01/yi-miao-she-zhi/</id>
+    <published>2024-12-31T16:00:00.000Z</published>
+    <updated>2024-03-16T07:31:22.000Z</updated>
+    
+    
+    <summary type="html">设置</summary>
+    
+    
+    
+    <category term="资料" scheme="https://wolfdeer62456.github.io/project/categories/%E8%B5%84%E6%96%99/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>曲鹿纹狼</title>
+    <link href="https://wolfdeer62456.github.io/project/2025/01/01/qu-lu-wen-lang/"/>
+    <id>https://wolfdeer62456.github.io/project/2025/01/01/qu-lu-wen-lang/</id>
+    <published>2024-12-31T16:00:00.000Z</published>
+    <updated>2024-03-23T06:54:39.112Z</updated>
+    
+    
+    <summary type="html">孤狼嗥坚石，隐鹿护眠心</summary>
+    
+    
+    
+    <category term="资料" scheme="https://wolfdeer62456.github.io/project/categories/%E8%B5%84%E6%96%99/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2024.03.23 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/03/23/2024-03-23-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/03/23/2024-03-23-kao-shi-zong-jie/</id>
+    <published>2024-03-23T06:51:02.000Z</published>
+    <updated>2024-03-23T06:53:20.561Z</updated>
+    
+    
+    <summary type="html">先分析样例，再开始答题</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2024.03.16 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/03/16/2024-03-16-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/03/16/2024-03-16-kao-shi-zong-jie/</id>
+    <published>2024-03-16T07:24:41.000Z</published>
+    <updated>2024-03-17T03:18:42.000Z</updated>
+    
+    
+    <summary type="html">调整自己的状态</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>#C240302C. C-最短路</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/03/02/c240302c-c-zui-duan-lu/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/03/02/c240302c-c-zui-duan-lu/</id>
+    <published>2024-03-02T06:44:38.000Z</published>
+    <updated>2024-03-06T08:19:02.000Z</updated>
+    
+    
+    <summary type="html">思维</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="思维" scheme="https://wolfdeer62456.github.io/project/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C240302B. B-01串</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/03/02/c240302b-b-01-chuan/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/03/02/c240302b-b-01-chuan/</id>
+    <published>2024-03-02T06:43:53.000Z</published>
+    <updated>2024-03-06T08:07:24.000Z</updated>
+    
+    
+    <summary type="html">思维</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="思维" scheme="https://wolfdeer62456.github.io/project/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C240302A. A-棋子</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/03/02/c240302a-a-qi-zi/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/03/02/c240302a-a-qi-zi/</id>
+    <published>2024-03-02T06:43:03.000Z</published>
+    <updated>2024-03-02T08:49:52.000Z</updated>
+    
+    
+    <summary type="html">思维</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="思维" scheme="https://wolfdeer62456.github.io/project/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024.03.02 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/03/02/2024-03-02-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/03/02/2024-03-02-kao-shi-zong-jie/</id>
+    <published>2024-03-02T04:00:10.000Z</published>
+    <updated>2024-03-02T07:03:52.000Z</updated>
+    
+    
+    <summary type="html">仔细分析</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2024.02.23 课堂总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/02/23/2024-02-23-ke-tang-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/02/23/2024-02-23-ke-tang-zong-jie/</id>
+    <published>2024-02-23T00:46:42.000Z</published>
+    <updated>2024-03-17T03:11:54.000Z</updated>
+    
+    
+    <summary type="html">分块+莫队</summary>
+    
+    
+    
+    <category term="资料" scheme="https://wolfdeer62456.github.io/project/categories/%E8%B5%84%E6%96%99/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>#C240222C. 质因数分解</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/02/22/c240222c-zhi-yin-shu-fen-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/02/22/c240222c-zhi-yin-shu-fen-jie/</id>
+    <published>2024-02-22T07:57:30.000Z</published>
+    <updated>2024-02-22T09:10:22.000Z</updated>
+    
+    
+    <summary type="html">折半搜索</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="思维" scheme="https://wolfdeer62456.github.io/project/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C240222B. 染色</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/02/22/c240222b-ran-se/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/02/22/c240222b-ran-se/</id>
+    <published>2024-02-22T07:57:17.000Z</published>
+    <updated>2024-02-22T08:41:00.000Z</updated>
+    
+    
+    <summary type="html">分治</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="分治" scheme="https://wolfdeer62456.github.io/project/tags/%E5%88%86%E6%B2%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024.02.22 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/02/22/2024-02-22-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/02/22/2024-02-22-kao-shi-zong-jie/</id>
+    <published>2024-02-22T07:52:19.000Z</published>
+    <updated>2024-02-22T08:27:20.000Z</updated>
+    
+    
+    <summary type="html">分治+折半搜索</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2024.02.21 课堂总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/02/21/2024-02-21-ke-tang-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/02/21/2024-02-21-ke-tang-zong-jie/</id>
+    <published>2024-02-21T00:48:05.000Z</published>
+    <updated>2024-02-22T07:56:48.000Z</updated>
+    
+    
+    <summary type="html">平衡树</summary>
+    
+    
+    
+    <category term="资料" scheme="https://wolfdeer62456.github.io/project/categories/%E8%B5%84%E6%96%99/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>#C240220E. 不递减路径</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/02/20/c240220e-bu-di-jian-lu-jing/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/02/20/c240220e-bu-di-jian-lu-jing/</id>
+    <published>2024-02-20T06:13:27.000Z</published>
+    <updated>2024-02-21T00:47:14.000Z</updated>
+    
+    
+    <summary type="html">最短路算法</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="最短路算法" scheme="https://wolfdeer62456.github.io/project/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C240220D. 翻转</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/02/20/c240220d-fan-zhuan/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/02/20/c240220d-fan-zhuan/</id>
+    <published>2024-02-20T06:03:43.000Z</published>
+    <updated>2024-02-21T00:13:40.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/project/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024.02.20 考试总结</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/02/20/2024-02-20-kao-shi-zong-jie/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/02/20/2024-02-20-kao-shi-zong-jie/</id>
+    <published>2024-02-20T04:00:00.000Z</published>
+    <updated>2024-02-20T07:03:04.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/project/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>#C240219E. 铁人两项</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/02/19/c240219e-tie-ren-liang-xiang/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/02/19/c240219e-tie-ren-liang-xiang/</id>
+    <published>2024-02-19T04:36:00.000Z</published>
+    <updated>2024-02-21T05:09:12.000Z</updated>
+    
+    
+    <summary type="html">圆方树模板</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="tarjan" scheme="https://wolfdeer62456.github.io/project/tags/tarjan/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C240219D. 边双连通分量</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/02/19/c240219d-bian-shuang-lian-tong-fen-liang/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/02/19/c240219d-bian-shuang-lian-tong-fen-liang/</id>
+    <published>2024-02-19T04:24:00.000Z</published>
+    <updated>2024-02-21T05:09:04.000Z</updated>
+    
+    
+    <summary type="html">边双连通分量模板</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="tarjan" scheme="https://wolfdeer62456.github.io/project/tags/tarjan/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C240219C. 点双连通分量</title>
+    <link href="https://wolfdeer62456.github.io/project/2024/02/19/c240219c-dian-shuang-lian-tong-fen-liang/"/>
+    <id>https://wolfdeer62456.github.io/project/2024/02/19/c240219c-dian-shuang-lian-tong-fen-liang/</id>
+    <published>2024-02-19T04:16:00.000Z</published>
+    <updated>2024-02-21T05:08:54.000Z</updated>
+    
+    
+    <summary type="html">点双连通分量模板</summary>
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/project/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="tarjan" scheme="https://wolfdeer62456.github.io/project/tags/tarjan/"/>
+    
+  </entry>
+  
+</feed>
