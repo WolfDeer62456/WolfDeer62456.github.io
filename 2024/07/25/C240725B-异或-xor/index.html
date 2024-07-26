@@ -375,7 +375,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-07-25
+                    2024-07-26
                 </div>
                 
 
@@ -515,7 +515,7 @@
 </tr>
 </tbody></table>
 <p>特殊性质 $𝐴$：$p$ 是质数。</p>
-<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$令 $𝑚x&#x3D;max_{⁡𝑖&#x3D;1}^𝑛𝑎_𝑖$ 。 首先相等的数可以去重，因此更新 $a_i$ 为去重后的数组，$c_i$ 为值为 $a_i$ 的数的个数。</p>
+<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$令 $mx&#x3D;max_{i&#x3D;1}^𝑛𝑎_𝑖$ 。 首先相等的数可以去重，因此更新 $a_i$ 为去重后的数组，$c_i$ 为值为 $a_i$ 的数的个数。</p>
 <p>$\qquad$令 $g_i$表示满足 $f([s1,s2,⋯,sk])&#x3D;i$ 的序列数量，则最终答案为 $\sum_{i&#x3D;1}^{∞}g_i$ ，容易发现 ${g_i}$ 最多计算到 ${mx*2}$。</p>
 <p>$\qquad$考虑计算 $g_i$ 。令 $highbit (𝑥)$ 表示 $𝑥$ 转为二进制后最高位 $1$ 的位置。不难发现对于任意 $x,y$ ，若 $⌊\frac{ 𝑎_x}{2^{highit (𝑖)+1}}⌋≠⌊\frac{𝑎_y}{2^{highbit (𝑖)+1}}⌋$，则一定有 $a_x⊕a_y ≥ i$ 。</p>
 <p>$\qquad$这鼓励我们同时计算出 $𝑖\in[2^{k},2^{𝑘+1})$ 的 $g_i$ 。由于上面的性质，我们考虑将每个数二进制下的后 $k$ 位除去（即 $a_*&#x3D;\lfloor \frac{a_*}{2^{k}}\rfloor$），再将每个 $a_*$ 相同的分到一组；如果两个组存的数满足 $⌊\frac{𝑎∗}{2^{𝑘+1}}⌋$ 相等，那么这两个组必定是<strong>高位相同、二进制下的第 $k$ 位不同</strong>的两个组，我们把这种组称为一对组。</p>
@@ -1009,7 +1009,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">92.1k</span>
+                        class="white-color">92.2k</span>
             
             
             

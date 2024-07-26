@@ -371,14 +371,14 @@ auto it = s.begin();//自动识别变量类型
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-06-14
+                    2024-07-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    476
+                    569
                 </div>
                 
 
@@ -442,6 +442,19 @@ signed main()&#123;
     cout&lt;&lt;ret(a,b,less&lt;int&gt;())&lt;&lt;&#39;\n&#39;;&#x2F;&#x2F;输出 1
     return 0;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="（三）数组的内存分配（适用于只给定-n-m"><a href="#（三）数组的内存分配（适用于只给定-n-m" class="headerlink" title="（三）数组的内存分配（适用于只给定 $n*m&lt;&#x3D;10^6$ 的情况）"></a>（三）数组的内存分配（适用于只给定 $n*m&lt;&#x3D;10^6$ 的情况）</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">const int N &#x3D; 2012345;
+int n,m;
+
+struct node&#123;
+	int v[N&lt;&lt;2];
+	int *operator[](int x)&#123;return v + x*m;&#125;
+&#125;c;&#x2F;&#x2F;引用的时候可以直接使用c[i][j]
+
+signed main()&#123;
+    cin&gt;&gt;n&gt;&gt;m;
+    For(i,1,n) For(j,1,m) cin&gt;&gt;c[i][j];
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="四、资料"><a href="#四、资料" class="headerlink" title="四、资料"></a>四、资料</h2><p>$\qquad$PDF来源：<a target="_blank" rel="noopener" href="http://ssoier.cn:8088/stl.html">http://ssoier.cn:8088/stl.html</a> </p>
 <p>$\qquad$<a href="https://wolfdeer62456.github.io/2025/01/01/qu-lu-wen-lang/C++_string%E7%B1%BB%EF%BC%88C++%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%89.pdf">C++_string类（C++字符串）.pdf</a></p>
@@ -865,7 +878,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">92.1k</span>
+                        class="white-color">92.2k</span>
             
             
             
