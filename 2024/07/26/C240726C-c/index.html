@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="WolfDeer">
-    <meta name="description" content="#C240726C. c网址（Website） 题目详情 - c - Super 
+    <meta name="keywords" content="#$C240726C. c, WolfDeer">
+    <meta name="description" content="$#C240726C. c网址（Website） 题目详情 - c - Super 
  题解 - c - Super 
-题目（Problem）题目描述给定 $n$ 个点，每个点上有一个长度为 $m$ 的字符串（仅包含字母 ‘Y’ 和 ‘N’）">
+题目（Problem）题目描述给定 $n$ 个点，每个点上有一个长度为 $m$ 的字符串（仅包含字母 ‘Y’ 和 ‘N’">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>WolfDeer</title>
+    <title>#$C240726C. c | WolfDeer</title>
     <link rel="icon" type="image/png" href="https://wolfdeer62456.github.io/favicon.png">
     
 
@@ -314,12 +314,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/35.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">#$C240726C. c</h1>
                 </div>
             </div>
         </div>
@@ -375,21 +375,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-07-26
+                    2024-07-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -412,7 +412,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C240726C-c"><a href="#C240726C-c" class="headerlink" title="#C240726C. c"></a>#C240726C. c</h1><h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C240726C">题目详情 - c - Super</a> </p>
+                <h1 id="C240726C-c"><a href="#C240726C-c" class="headerlink" title="$#C240726C. c"></a>$#C240726C. c</h1><h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C240726C">题目详情 - c - Super</a> </p>
 <p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C240726C/solution">题解 - c - Super</a> </p>
 <h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定 $n$ 个点，每个点上有一个长度为 $m$ 的字符串（仅包含字母 ‘Y’ 和 ‘N’），两个点之间的边权为两个字符串不同元素的个数，求最小生成树边权和。</p>
 <h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>从文件 <code>c.in</code> 中读入数据。</p>
@@ -445,7 +445,7 @@ NYY<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 <li>$ 1 \leq T \leq 5 $ </li>
 <li>$ 1 \leq m \leq 18 $</li>
 </ul>
-<h2 id="测试点编号"><a href="#测试点编号" class="headerlink" title="测试点编号"></a>测试点编号</h2><table>
+<h3 id="测试点编号"><a href="#测试点编号" class="headerlink" title="测试点编号"></a>测试点编号</h3><table>
 <thead>
 <tr>
 <th>编号</th>
@@ -484,13 +484,25 @@ NYY<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 <li>每次找到边权最小的边，合并所在联通块。</li>
 <li>使用并查集维护联通块。</li>
 </ul>
-<p>类似于 BFS 的思路，维护和 $2^m$ 个状态距离 $0\sim 18$ 的马。</p>
-<p>找到边权最小的边用双向搜索，长度分奇偶讨论：</p>
+<p>考虑 $dp$ ，类似于 BFS 的思路，由于 $m\le 18$ ，因此我们可以维护 $2^m$ 个状态（转化为十进制的 $int$ 类型存储），令 $f[i][j]$ 表示当前状态为 $i$ （即每一个字符串转化为 $int$ 类型存储之后值），$j$ 表示不同元素的个数，此时状态 $i$ 有 $j$ 个差异能走到的点的编号，最初时，有 $f[s][0]&#x3D;i$ （其中 $s$ 表示字符串 $s[i]$ 转化为 $int$ 的大小）。</p>
+<p>考虑计算答案，首先枚举距离 $j$ ，枚举状态 $i\in[0,2^m-1]$ ，再枚举一个 $k$ ，表示新的状态只在第 $k$ 位上与状态 $i$ 不同，如果这两个状态都存在可通往的一个点，那么就将两个点<code>f[i^(1&lt;&lt;k)][j]</code>和<code>f[i][j]</code>加入并查集判断，两点之间的距离为 $j*2+1$ 。</p>
+<p>考虑更新 $f[i][j]$ ，同样枚举 $k$ ，则新的状态为 <code>f[i^(1&lt;&lt;k)][j+1]</code>，分类讨论：</p>
 <ul>
-<li>假如边的长度为奇数 $x$，一定存在两个相邻的点满足分别和两匹马的距离为 $\frac{x-1}{2}$，枚举这两个点。</li>
-<li>假如边的长度为偶数 $x$，一定存在两个相邻的点满足分别和两匹马的距离为 $\frac{x}{2}$ 和 $\frac{x}{2}-1$，枚举这两个点。</li>
+<li>如果<code>f[i^(1&lt;&lt;k)[j+1]]</code>已经存有一个点，那么直接将<code>f[i][j]</code>和<code>f[i^(1&lt;&lt;k)][j+1]</code>加入并查集判断，两点距离为 $j*2+2$ 。</li>
+<li>如果<code>f[i^(1&lt;&lt;k)[j+1]]</code>没有点，那么<code>f[i^(1&lt;&lt;k)][j+1] = f[i][j]</code>。</li>
 </ul>
-<p>时间复杂度：$O(2^m \times m)$。</p>
+<p>这样一来，对于每个 $j$ ，我们都计算了有贡献的答案，最后输出 $ans$ 即可。</p>
+<p>时间复杂度：$O(\frac{2^m \times m^2}{2})$ （其实$\frac{m^2}{2}$可以看作 ${m}$）。</p>
+<p>⭐⭐⭐</p>
+<p><strong>关于一些问题：</strong></p>
+<ol>
+<li><p>如果两个点的二进制状态相同，那最开始就应该连边，可是代码中并没有具体的体现呢？</p>
+<p>答：由于最开始的状态会直接被覆盖掉，所以相同状态的点在计算过程中只会算作一个点加入计算，由于边长为 $0$ 的边对答案没有贡献，我们可以认为在一开始的时候就将所有距离 $0$ 的点合成为一个点，只需要计算剩下的有贡献的点即可。</p>
+</li>
+<li><p>为什么这里的 $j$ 要选择选择对半搜索的方式?</p>
+<p>答：我也不知道，但是我构想了其他的方案，发现时间复杂度都不好过。</p>
+</li>
+</ol>
 <h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
 #include&lt;queue&gt;
 #define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
@@ -516,34 +528,33 @@ inline int Solve()&#123;
     &#x2F;&#x2F; 初始化答案和计数器
 	cnt &#x3D; n-1; ans &#x3D; 0; 
 	
-	For(i,0,m&#x2F;2)&#123;&#x2F;&#x2F;枚举距离 
+	For(j,0,m&#x2F;2)&#123;&#x2F;&#x2F;枚举距离 
 		&#x2F;&#x2F; 计算每个二进制位的连接情况
-		For(j,0,(1&lt;&lt;m)-1)&#123;&#x2F;&#x2F;枚举状态 
-			if(f[j][i])
+		For(i,0,(1&lt;&lt;m)-1)&#123;&#x2F;&#x2F;枚举状态 
+			if(f[i][j])
 				For(k,0,m-1)
-					if(f[j^(1&lt;&lt;k)][i])&#123;
-						int x &#x3D; find(f[j^(1&lt;&lt;k)][i]), y &#x3D; find(f[j][i]);
-						if(x!&#x3D;y) fa[x] &#x3D; y, ans +&#x3D; i*2+1, cnt--;
+					if(f[i^(1&lt;&lt;k)][j])&#123;
+						int x &#x3D; find(f[i^(1&lt;&lt;k)][j]), y &#x3D; find(f[i][j]);
+						if(x!&#x3D;y) fa[x] &#x3D; y, ans +&#x3D; j*2+1, cnt--;
 					&#125;				
 		&#125;
 		
-			&#x2F;&#x2F; 如果已经连接完所有点，则退出
-			if(!cnt) break;
-			
-			&#x2F;&#x2F; 处理下一个二进制位的连接情况
-			For(j,0,(1&lt;&lt;m)-1)&#123;&#x2F;&#x2F;枚举状态 
-				if(f[j][i])
-					For(k,0,m-1)&#123;
-						if(f[j^(1&lt;&lt;k)][i+1])&#123;
-							int x &#x3D; find(f[j^(1&lt;&lt;k)][i+1]), y &#x3D; find(f[j][i]);
-							if(x!&#x3D;y) fa[x] &#x3D; y, ans +&#x3D; i*2+2, cnt--;
-						&#125;else&#123;
-							f[j^(1&lt;&lt;k)][i+1] &#x3D; f[j][i];
-						&#125;
-					&#125;
-			&#125;
+		&#x2F;&#x2F; 如果已经连接完所有点，则退出
+		if(!cnt) break;
 		
-        &#x2F;&#x2F; 如果已经连接完所有点，则退出
+		&#x2F;&#x2F; 处理下一个二进制位的连接情况
+		For(i,0,(1&lt;&lt;m)-1)&#123;&#x2F;&#x2F;枚举状态 
+			if(f[i][j])
+				For(k,0,m-1)&#123;
+					if(f[i^(1&lt;&lt;k)][j+1])&#123;
+						int x &#x3D; find(f[i^(1&lt;&lt;k)][j+1]), y &#x3D; find(f[i][j]);
+						if(x!&#x3D;y) fa[x] &#x3D; y, ans +&#x3D; j*2+2, cnt--;
+					&#125;else&#123;
+						f[i^(1&lt;&lt;k)][j+1] &#x3D; f[i][j];
+					&#125;
+				&#125;
+		&#125;
+		&#x2F;&#x2F; 如果已经连接完所有点，则退出
 		if(!cnt) break;		
 	&#125;return ans;
 &#125;
@@ -570,7 +581,7 @@ signed main()&#123;
 		
 		cout&lt;&lt;Solve()&lt;&lt;&#39;\n&#39;;
 	&#125;return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -991,7 +1002,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">93.2k</span>
+                        class="white-color">98.2k</span>
             
             
             
