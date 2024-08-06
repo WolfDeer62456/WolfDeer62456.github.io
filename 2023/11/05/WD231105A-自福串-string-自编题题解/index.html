@@ -376,7 +376,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-11-15
+                    2024-08-03
                 </div>
                 
 
@@ -415,7 +415,7 @@
             <div id="articleContent">
                 <h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C230902C">题目详情 - 字胡串(string) - Super</a> </p>
 <p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C230902C/solution">题解 - 字胡串(string) - Super</a> </p>
-<p> <a href="https://wolfdeer62456.github.io/2023/11/05/wd231105a-zi-fu-chuan-string-zi-bian-ti-ti-jie/%E6%95%B0%E6%8D%AE.zip">数据</a> </p>
+<p> <a href="https://wolfdeer62456.github.io/2023/11/05/WD231105A-%E8%87%AA%E7%A6%8F%E4%B8%B2-string-%E8%87%AA%E7%BC%96%E9%A2%98%E9%A2%98%E8%A7%A3/%E6%95%B0%E6%8D%AE.zip">数据</a> </p>
 <h2 id="骗分代码"><a href="#骗分代码" class="headerlink" title="骗分代码"></a>骗分代码</h2><p>$\qquad$考虑找到每个区间最大值的位置，设区间 $[L,R]$ 表示该最大值 $a[x]$ 的位置向左向右找到的首个大于最大值 $a[x]$ 的位置，设区间 $[l,r]$ 表示该最大值 $a[x]$ 的位置 $x$ 向左向右找到的第一个能使异或和 $g(S)$ 变大的位置，对答案的贡献是：</p>
 <p>​        $ans+&#x3D;(l-L)\times(R-pos+1)+(R-r)\times(pos-L+1)-(R-r)\times(l-L);$</p>
 <p>$\qquad$可以用<strong>倍增+线段树</strong>来维护求出区间或和与区间最大值，然后再求 $[L,x-1]$ 和 $[x+1,R]$ 区间的贡献即可。</p>

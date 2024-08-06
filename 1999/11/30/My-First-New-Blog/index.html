@@ -371,21 +371,21 @@ M">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-16
+                    2024-08-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    670
+                    475
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -454,55 +454,11 @@ hexo d &#x2F;&#x2F;上传<span aria-hidden="true" class="line-numbers-rows"><spa
 <h4 id="博客装载：-1"><a href="#博客装载：-1" class="headerlink" title="博客装载："></a>博客装载：</h4><pre class="line-numbers language-none"><code class="language-none">vim _config.yml : &#x2F;&#x2F;修改配置
     theme: #模板的名字<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h3 id="配件下载"><a href="#配件下载" class="headerlink" title="配件下载 :"></a>配件下载 :</h3><h4 id="网站加速（hexo-neat）"><a href="#网站加速（hexo-neat）" class="headerlink" title="网站加速（hexo-neat）"></a>网站加速（hexo-neat）</h4><p><strong>下载：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">cnpm install hexo-neat --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="配件下载"><a href="#配件下载" class="headerlink" title="配件下载 :"></a>配件下载 :</h3><h4 id="帖子字数统计插件"><a href="#帖子字数统计插件" class="headerlink" title="帖子字数统计插件"></a>帖子字数统计插件</h4><p><strong>下载：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">cnpm i --save hexo-wordcount<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>博客文件下的_config.yml配置:</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">neat_enable: true
-&#x2F;&#x2F;压缩html
-neat_html:
-  enable: true
-  exclude:
-&#x2F;&#x2F;压缩css
-neat_css:
-  enable: true
-  exclude: 
-&#x2F;&#x2F;压缩js
-neat_js:
-  enable: true
-  mangle: true
-  output: 
-  compress: 
-  exclude: 
-    - &#39;**&#x2F;*.min.js&#39;
-    - &#39;**&#x2F;jquery.fancybox.pack.js&#39;
-    - &#39;**&#x2F;index.js&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="文件压缩（hexo）"><a href="#文件压缩（hexo）" class="headerlink" title="文件压缩（hexo）"></a>文件压缩（hexo）</h4><pre class="line-numbers language-download" data-language="download"><code class="language-download">npm install hexo-html-minifier --save
-npm install hexo-clean-css --save
-npm install hexo-uglify --save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h4><p><strong>下载：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">npm install hexo-generator-search --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>博客文件下的_config.yml配置:</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">search:
-  path: search.xml
-  field: post<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="将中文链接翻译成拼音"><a href="#将中文链接翻译成拼音" class="headerlink" title="将中文链接翻译成拼音"></a>将中文链接翻译成拼音</h4><p><strong>下载：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">npm i hexo-permalink-pinyin --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>博客文件下的_config.yml配置:</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">permalink_pinyin:
-  enable: true
-  separator: &#39;-&#39; # default: &#39;-&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="帖子字数统计插件"><a href="#帖子字数统计插件" class="headerlink" title="帖子字数统计插件"></a>帖子字数统计插件</h4><p><strong>下载：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">npm i --save hexo-wordcount<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>博客文件下的_config.yml配置:</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">postInfo:
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">postInfo:
   date: true
   update: true
   wordCount: true # set true.
@@ -510,16 +466,6 @@ npm install hexo-uglify --save<span aria-hidden="true" class="line-numbers-rows"
   min2read: true # set true.
   readCount: true # set true.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="添加表情符号支持"><a href="#添加表情符号支持" class="headerlink" title="添加表情符号支持"></a>添加表情符号支持</h4><p><strong>下载：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">npm install hexo-filter-github-emojis --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>博客文件下的_config.yml配置:</strong></p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">githubEmojis:
-  enable: true
-  className: github-emoji
-  inject: true
-  styles:
-  customEmojis:<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>

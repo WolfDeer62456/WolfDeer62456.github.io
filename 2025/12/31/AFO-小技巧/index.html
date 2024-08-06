@@ -371,14 +371,14 @@ $unique$ 之后是 $-a-1$ ，$lower\ bound$之后是$-a$
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-01
+                    2024-08-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    460
+                    521
                 </div>
                 
 
@@ -412,11 +412,11 @@ $unique$ 之后是 $-a-1$ ，$lower\ bound$之后是$-a$
 <li>$unique$ 之后是 $-a-1$ ，$lower\ bound$之后是$-a$ </li>
 <li>题目中若说到：进行以下操作 $n$ ：。。。，一定要注意到底是每次选一个操作，一共进行 $n$ 次，还是每次进行<strong>以下的所有操作</strong>，一共进行 $n$ 次。详见下图：</li>
 </ul>
-<p><img src="https://wolfdeer62456.github.io/2025/12/31/afo-xiao-ji-qiao/%E8%AF%BB%E9%A2%98%E9%94%99%E8%AF%AF.png"></p>
+<p><img src="https://wolfdeer62456.github.io/2025/12/31/AFO-%E5%B0%8F%E6%8A%80%E5%B7%A7/%E8%AF%BB%E9%A2%98%E9%94%99%E8%AF%AF.png"></p>
 <ul>
 <li><strong>思维：遇见树链（关键点到跟）的并的问题的经典做法：</strong></li>
 </ul>
-<p><img src="https://wolfdeer62456.github.io/2025/12/31/afo-xiao-ji-qiao/%E6%A0%91%E9%93%BE%E7%9A%84%E5%B9%B6.png"></p>
+<p><img src="https://wolfdeer62456.github.io/2025/12/31/AFO-%E5%B0%8F%E6%8A%80%E5%B7%A7/%E6%A0%91%E9%93%BE%E7%9A%84%E5%B9%B6.png"></p>
 <ul>
 <li>现在的评测机 $1s$ 可以跑 $O(10^{9})$ 左右，但是计算时间复杂度时尽量不要超过 $O(10^8)$ 。</li>
 </ul>
@@ -431,13 +431,16 @@ $unique$ 之后是 $-a-1$ ，$lower\ bound$之后是$-a$
 <li>根据题目<strong>所有信息提示</strong>，猜测题目考点。</li>
 </ul>
 <h3 id="序列操作"><a href="#序列操作" class="headerlink" title="序列操作"></a>序列操作</h3><ul>
-<li>有关序列的处理：1. 求前缀和找规律；2.用下标乘上数值； 3. 数值范围允许时，考虑将下标和数值取反；4.前后做差找规律；5.将序列转化为统一的形式，例如将一段 $1111011000$ 看作 $4$ 个 $1$ 、$1$ 个 $0$ 、$2$ 个 $1$ 、$3$ 个 $0$ 的形式。</li>
-<li>对序列进行操作：1. 从小范围考虑到大范围；2. 动态规划（可以多尝试几个 $f_{i,j}$）； 3. 从答案开始操作（逆向操作）；4.考虑将区间修改压缩到具体的一个点上。</li>
+<li>有关序列的处理：1. 求前缀和找规律；2.用下标乘上数值； 3. 数值范围允许时，考虑将下标和数值取反；4.前后做差找规律；5.将序列转化为统一的形式，例如将一段 $1111011000$ 看作 $4$ 个 $1$ 、$1$ 个 $0$ 、$2$ 个 $1$ 、$3$ 个 $0$ 的形式<a href="https://wolfdeer62456.github.io/2024/07/31/C240731D-%E6%8E%92%E5%BA%8F/">②</a> ；6.遇到求 $01$ 串中 $1$ 比 $0$ 多的个数，可以把 $0$ 转换为 $-1$ ，通过前缀和求解<a href="https://wolfdeer62456.github.io/2024/07/29/C240729B-%E5%91%A8%E9%BB%91%E9%B8%AD-b/">③</a>。</li>
+<li>对序列进行操作：1. 从小范围考虑到大范围；2. 动态规划（可以多尝试几个 $f_{i,j}$）； 3. 从答案开始操作（逆向操作）；4.考虑将区间修改压缩到具体的一个点上<a href="https://wolfdeer62456.github.io/2024/07/29/C240729A-%E5%91%A8%E9%BB%91%E9%B8%AD-a/">④</a>。</li>
+<li>括号序列：1.用栈存储维护；2.动态规划处理子问题。</li>
 </ul>
 <h3 id="出现异或操作的思路"><a href="#出现异或操作的思路" class="headerlink" title="出现异或操作的思路"></a>出现异或操作的思路</h3><ul>
 <li>题目中有异或：1. 将答案分成  $2^k$ 份计算； 2.  两次异或同一个值对原数字没有影响。</li>
 </ul>
-<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><p>- </p>
+<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><ul>
+<li>值域很小时，考虑状态压缩<a href="https://wolfdeer62456.github.io/2024/07/26/C240726C-c/">⑤</a></li>
+</ul>
 
                 
             </div>
