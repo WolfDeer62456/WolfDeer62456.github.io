@@ -311,10 +311,23 @@ M">
 </header>
 
     
+<script src="https://wolfdeer62456.github.io/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入邀请码')).toString(CryptoJS.enc.Hex)) {
+                alert('您输入的邀请码不合规或不正确。');
+                location.href = 'https://wolfdeer62456.github.io/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/50.jpg')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/86.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -371,14 +384,14 @@ M">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-05
+                    2024-08-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    475
+                    531
                 </div>
                 
 
@@ -466,6 +479,22 @@ hexo d &#x2F;&#x2F;上传<span aria-hidden="true" class="line-numbers-rows"><spa
   min2read: true # set true.
   readCount: true # set true.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h4 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h4><p><strong>下载：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>博客文件下的_config.yml配置:</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">search:
+  path: search.xml
+  field: post<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="中文链接转拼音"><a href="#中文链接转拼音" class="headerlink" title="中文链接转拼音"></a>中文链接转拼音</h4><p><strong>下载：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm i hexo-permalink-pinyin <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p> <strong>博客文件下的_config.yml配置:</strong> </p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">permalink_pinyin</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">separator</span><span class="token punctuation">:</span> <span class="token string">'-'</span> <span class="token comment"># default: '-'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -492,7 +521,7 @@ hexo d &#x2F;&#x2F;上传<span aria-hidden="true" class="line-numbers-rows"><spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wolfdeer62456.github.io/projecthttps://wolfdeer62456.github.io/1999/11/30/My-First-New-Blog/">https://wolfdeer62456.github.io/projecthttps://wolfdeer62456.github.io/1999/11/30/My-First-New-Blog/</a>
+                    <a href="https://wolfdeer62456.github.io/projecthttps://wolfdeer62456.github.io/1999/11/30/my-first-new-blog/">https://wolfdeer62456.github.io/projecthttps://wolfdeer62456.github.io/1999/11/30/my-first-new-blog/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -614,7 +643,7 @@ hexo d &#x2F;&#x2F;上传<span aria-hidden="true" class="line-numbers-rows"><spa
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/36.jpg" class="responsive-img" alt="Hello World">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/91.jpg" class="responsive-img" alt="Hello World">
                         
                         <span class="card-title">Hello World</span>
                     </div>
@@ -651,11 +680,11 @@ hexo d &#x2F;&#x2F;上传<span aria-hidden="true" class="line-numbers-rows"><spa
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="https://wolfdeer62456.github.io/1999/11/30/My-First-New-Blog/">
+                <a href="https://wolfdeer62456.github.io/1999/11/30/my-first-new-blog/">
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/50.jpg" class="responsive-img" alt="My First New Blog">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/86.jpg" class="responsive-img" alt="My First New Blog">
                         
                         <span class="card-title">My First New Blog</span>
                     </div>
@@ -884,7 +913,7 @@ hexo d &#x2F;&#x2F;上传<span aria-hidden="true" class="line-numbers-rows"><spa
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">104.3k</span>
+                        class="white-color">104.4k</span>
             
             
             
