@@ -384,21 +384,21 @@ auto it = s.begin();//自动识别变量类型
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-07
+                    2024-08-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    569
+                    635
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -456,7 +456,11 @@ signed main()&#123;
     return 0;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="（三）数组的内存分配（适用于只给定-n-m"><a href="#（三）数组的内存分配（适用于只给定-n-m" class="headerlink" title="（三）数组的内存分配（适用于只给定 $n*m&lt;&#x3D;10^6$ 的情况）"></a>（三）数组的内存分配（适用于只给定 $n*m&lt;&#x3D;10^6$ 的情况）</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">const int N &#x3D; 2012345;
+<h4 id="（三）内部函数的定义"><a href="#（三）内部函数的定义" class="headerlink" title="（三）内部函数的定义"></a>（三）内部函数的定义</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">sort(a.begin(),a.end(),[&amp;](I x,I y)&#123;return x.id&lt;y.id;&#125;);&#x2F;&#x2F;从小到大排序
+&#x2F;&#x2F;在函数内部，可以定义：
+auto add &#x3D; [&amp;](int l, int r, int v)&#123;c[l] +&#x3D; v, c[r+1] -&#x3D; v;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="（四）数组的内存分配（适用于只给定-n-m"><a href="#（四）数组的内存分配（适用于只给定-n-m" class="headerlink" title="（四）数组的内存分配（适用于只给定 $n*m&lt;&#x3D;10^6$ 的情况）"></a>（四）数组的内存分配（适用于只给定 $n*m&lt;&#x3D;10^6$ 的情况）</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">const int N &#x3D; 2012345;
 int n,m;
 
 struct node&#123;
@@ -889,7 +893,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">107.5k</span>
+                        class="white-color">112k</span>
             
             
             

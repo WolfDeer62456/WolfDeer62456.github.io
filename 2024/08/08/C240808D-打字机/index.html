@@ -388,14 +388,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-09
+                    2024-08-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    905
+                    901
                 </div>
                 
 
@@ -475,9 +475,7 @@
 </tbody></table>
 <h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>很明显，对于每一个位置，打印有没有错误的概率是一定的，而每一个串的顺序和答案无关，考虑对每一个 $01$ 串建 $Trie$ 树：对于 $Trie$ 树上的每一个节点，设它的下一位有 $x$ 个 $0$ ，$y$ 个 $1$ ，那么要打出好的串，这个节点至少要被经过 $x+y$ 次。</p>
 <p>令 $f(x,y)$ 表示当前节点打出 $x$ 个 $0$ ，$y$ 个 $1$ 的概率，则可以推出：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">f[0][0] &#x3D; 1, f[x][0] &#x3D; pow(p,x), f[0][y] &#x3D; pow(p,y);
-f[x][y] &#x3D; max(p*f[x-1][y]+(1-p)*f[x][y-1],p*f[x][y-1]+(1-p)*f[x-1][y]);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<p><code>f[0][0] = 1, f[x][0] = pow(p,x), f[0][y] = pow(p,y);</code><br><code>f[x][y] = max(p*f[x-1][y]+(1-p)*f[x][y-1],p*f[x][y-1]+(1-p)*f[x-1][y]);</code></p>
 <p>最终要求出每个点的 $f(x,y)$ ，由乘法原理，答案为 $\Pi_{p&#x3D;0}^{p\le idx}f(x,y) $</p>
 <h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
 #define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
@@ -700,8 +698,8 @@ signed main()&#123;
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="https://wolfdeer62456.github.io/categories/%E8%B5%84%E6%96%99/" class="post-category">
-                                    资料
+                            <a href="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/" class="post-category">
+                                    总结
                                 </a>
                             
                             
@@ -722,9 +720,9 @@ signed main()&#123;
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/37.jpg" class="responsive-img" alt="#C240808C. 简单数论题">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/3.jpg" class="responsive-img" alt="$#C240808C. 简单数论题">
                         
-                        <span class="card-title">#C240808C. 简单数论题</span>
+                        <span class="card-title">$#C240808C. 简单数论题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -958,7 +956,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">107.5k</span>
+                        class="white-color">112k</span>
             
             
             
