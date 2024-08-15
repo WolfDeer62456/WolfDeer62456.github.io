@@ -388,21 +388,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-12
+                    2024-08-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.8k
+                    3.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    15 分
                 </div>
                 
 
@@ -488,9 +488,10 @@
 <td align="left">无</td>
 </tr>
 </tbody></table>
-<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>你这家伙怎么自己都不会打部分分啊？(恼)</p>
-<p>花费了大概一天的时间把这道题打了一遍但是还是有很多地方没有理解清楚。</p>
-<p>如此看来，写题解还是很重要的，可以增进理解。</p>
+<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>你这家伙怎么自己都不会打部分分啊？(恼)（2024.08.08）</p>
+<p>花费了大概一天的时间把这道题打了一遍但是还是有很多地方没有理解清楚。（2024.08.09）</p>
+<p>如此看来，写题解还是很重要的，可以增进理解。（2024.08.12）</p>
+<p>哇！题解写的什么抽象代码啊！每个线段树计算答案不统一写，害得我理解了几个小时。后面自己推了一遍，最后还是按自己的做法做出来了！（2024.08.14）</p>
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>通过 $RMQ$ 计算一段区间的 $gcd$ ，固定左端点 $i$ ，枚举 $2$ 的进制数 $j$ ，则有 <code>fr[i][j] = __gcd(fr[i][j-1],fr[i+(1&lt;&lt;(j-1))][j-1])</code>；固定右端点，同样有 <code>fl[i][j] = gcd(fl[i][j-1],fl[i-(1&lt;&lt;(j-1))][j-1]);</code> 。枚举端点 $O(n)$ ，枚举进制数 $O(logn)$ ，求 $gcd$ 复杂度 $O(loga)$ ，总复杂度 $O(nlognloga)$ 。</p>
 <p><strong>注</strong>：这里的 <code>fl</code> 和 <code>fr</code> 指的是<strong>固定右端点向左</strong>和<strong>固定左端点向右</strong>的意思。</p>
 <p><strong>性质1</strong>：集合里面加入数字后 $gcd$ 若改变则至少除 $2$ ，所以不同的 $gcd$ 数量最多 $O(nlog⁡a)$ 级别。 </p>
@@ -498,13 +499,19 @@
 <p>令<strong>三元组</strong> $gl[g]&#x3D;\{id,l,r\}$ 表示固定当前区间的<strong>左</strong>端点 $id$ ，满足 $\forall j\in[l,r],GCD_{i&#x3D;id}^{i\le j}a[i]&#x3D;g$ ；同理，令<strong>三元组</strong> $gr[g]&#x3D;\{id,l,r\}$ 表示固定当前区间的<strong>右</strong>端点 $id$ ，满足 $\forall j\in[l,r],(GCD_{i&#x3D;id}^{i\ge j}a[i])&#x3D;g$ 。（解释：$gl$ 可以理解为左边界为 $id$ ，右边界 $j$ 满足 $j\in[l,r]$ 的所有区间 $[i,j]$ 的区间 $gcd$ 为 $g$ ，$gr$ 同理）</p>
 <p><strong>性质3</strong>：对于一个 $g$ ，当前点 $a_i$ 对其的贡献为包含这个点的区间的个数，同时也等于总的 $gcd&#x3D;g$ 的区间的个数减去不包含这个点的区间的个数。</p>
 <p>考虑维护不包含当前点的区间的个数，令 $f[i]$ 表示从 $1$ 到 $i$ 范围内满足 $gcd&#x3D;g$ 的区间组成的方案数，$g[i]$ 表示从 $i$ 到 $n$ 范围内满足 $gcd&#x3D;g$ 的区间组成的方案数，那么对于一个点 $x$ ，包含它的区间的方案数为 $f[n]-f[x-1]\times g[x+1]$ （$f[n]$ 刚好就是总方案数）。</p>
-<p>考虑对于每个 $gcd$ 求出 $f[i]$ 和 $g[i]$ 。对于 $f[i]$ ，将 $gcd&#x3D;g$ 区间（用 $gl[g]$ 存储）的右端点 $id$ 从小到大排序，对于每一个三元组 $(i,l,r)$ ，分类讨论：</p>
+<p>考虑对于每个 $gcd$ 求出 $f[i]$ 和 $g[i]$ 。对于 $f[i]$ ，将 $gcd&#x3D;g$ 区间（用 $gl[g]$ 存储）的右端点 $id$ 从小到大排序，对于每一个三元组 $(i,l,r)$ ，分类讨论（这里以 $f[i]$ 举例，$g[i]$ 同理）：</p>
 <ul>
 <li>对于右端点小于 $l-1$ 的区间，它们可以和所有 $j\in[l,r]$ 的区间 $[j,i]$ 组合，贡献为 $\sum_{j&#x3D;0}^{l-1} (f[j]\times (r-l+1))$  ，其中 $r-l+1$ 可以提出来，只需要维护 $f[j]$ 的区间和即可。</li>
 <li>对于右端点在 $[l,r]$ 之间的区间，它们只能和自己右端点右边的区间组合，贡献为 $\sum_{j&#x3D;l}^{r}(f[j]\times (r-j))$ ；</li>
 <li>对于右端点大于 $r$ 的点，当前区间必定相交，没有贡献。</li>
 </ul>
-<p>综上，$f[i]&#x3D;\sum_{j&#x3D;0}^{l-1} (f[j]\times (r-l+1))+\sum_{j&#x3D;l}^{r}(f[j]\times (r-j))$ ，整理式子得 $f[i]&#x3D; (\sum_{j&#x3D;0}^{l-1} f[j])\times(r-l+1) + (\sum_{j&#x3D;l}^rf[j])\times r-\sum_{j&#x3D;l}^{r}f[j]\times j$ ，分别用线段树维护 $f[j]$ 和 $f[j]\times j$ 即可。</p>
+<p>综上，对于 $f[i]$ 和 $g[i]$ ，有：<br>$$<br>f[i]&#x3D;\sum_{j&#x3D;0}^{l-1} (f[j]\times (r-l+1))+\sum_{j&#x3D;l}^{r}(f[j]\times (r-j))\\<br>g[i]&#x3D;\sum_{j&#x3D;r+1}^{n+1}(g[j]\times(r-l+1))+\sum_{j&#x3D;l}^r(g[j]\times(j-l))<br>$$</p>
+<p>$$<br>f[i]&#x3D;(\sum_{j&#x3D;0}^{l-1} f[j])\times(r-l+1) + (\sum_{j&#x3D;l}^rf[j])\times r-\sum_{j&#x3D;l}^{r}f[j]\times j\\<br>g[i]&#x3D;(\sum_{j&#x3D;r+1}^{n+1} g[j])\times(r-l+1) - (\sum_{j&#x3D;l}^rg[j])\times l+\sum_{j&#x3D;l}^rg[j]\times j<br>$$</p>
+<p>分别用线段树维护 $f[i]$、$f[i]\times i$、$g[i]$、$g[i]\times i$ 即可，对于点 $i$ 的答案的贡献就是 $\sum_{j&#x3D;0}^{i-1}f[j]\times \sum_{j&#x3D;i+1}^{n+1}g[j]$ 。</p>
+<p>发现对于每一个 $gcd$ 都要更新一遍 $1\sim n$ 的答案，不满足时间复杂度。考虑优化。</p>
+<p><strong>性质4</strong>：对于排序后的三元组 $(i,l_i,r_i)$ 和 $(j,l_j,r_j)$ ，当前 $gcd$ 对 $i$ 和 $j$ 中间的数（即 $k\in[i+1,j-1]$ ）的贡献是相同的。</p>
+<p>对于每个 $gcd$ 我们都要枚举对应的三元组，两个三元组之间的数直接用前缀和记录贡献，最后计算即可。</p>
+<p>问题：为什么 $\sum_{j&#x3D;0}^{i-1}f[j]\times \sum_{j&#x3D;i+1}^{n+1}g[j]$ 是从 $0$ 和 $n+1$ 开始。</p>
 <h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
 #include&lt;vector&gt;
 #include&lt;map&gt;
@@ -578,17 +585,10 @@ void Get()&#123;
 #define rs (p&lt;&lt;1|1)
 struct Segment_Tree&#123;
 	struct Tr&#123;int sum,sum2;&#125;tr[N&lt;&lt;2|3];
-	int type;Segment_Tree(int x)&#123;type &#x3D; x;&#125;
 	void pushup(Tr &amp;T,Tr L,Tr R)&#123;T &#x3D; &#123;L.sum+R.sum, L.sum2+R.sum2&#125;;&#125;
-	void build(int p,int l,int r,int pos,int val)&#123;
-		if(l&#x3D;&#x3D;r) return tr[p].sum&#x3D;val,void();
-		if(pos&lt;&#x3D;mid) build(ls,l,mid,pos,val);
-		else build(rs,mid+1,r,pos,val);
-		pushup(tr[p],tr[ls],tr[rs]);
-	&#125;
 	void update(int p,int l,int r,int pos,int val)&#123;
 		if(l&#x3D;&#x3D;r)&#123;
-			tr[p].sum2 &#x3D; val*(type?n-pos:pos)%mod;
+			tr[p].sum2 &#x3D; val*pos%mod;
 			tr[p].sum &#x3D; val;return;&#125;
 		if(pos&lt;&#x3D;mid) update(ls,l,mid,pos,val);
 		else update(rs,mid+1,r,pos,val);
@@ -600,14 +600,14 @@ struct Segment_Tree&#123;
 		if(L&gt;mid) return ask(rs,mid+1,r,L,R);
 		Tr T;return pushup(T,ask(ls,l,mid,L,mid),ask(rs,mid+1,r,mid+1,R)),T;
 	&#125;
-&#125;T1(1),T2(0);
+&#125;T1,T2;
 
 
 int c[N];&#x2F;&#x2F;维护前缀和 
 void Solve()&#123;
-	&#x2F;&#x2F;建树，不选也是一种方案 
-	T1.build(1,0,n+1,0,1);
-	T2.build(1,0,n+1,n+1,1);
+	&#x2F;&#x2F;建树，更新初始值(注意！！！这不是一种方案！！！) 
+	T1.update(1,0,n+1,0,1);
+	T2.update(1,0,n+1,n+1,1);
 	
 	&#x2F;&#x2F;枚举 gcd O(nlogn)
 	for(auto pg:mp)&#123;
@@ -617,52 +617,47 @@ void Solve()&#123;
 		sort(gr[id].begin(),gr[id].end(),[&amp;](I a,I b)&#123;return a.id&gt;b.id;&#125;);&#x2F;&#x2F;起始点从大到小
 		
 		vector&lt;int&gt; vec;&#x2F;&#x2F;记录出现的区间的id
-		int sum &#x3D; 1;&#x2F;&#x2F;????????????????????????????????????????????????????????????
-		for(auto itl:gl[id])&#123;&#x2F;&#x2F;itl:区间interval 
-			int x &#x3D; itl.id, l &#x3D; itl.x, r &#x3D; itl.y;
-			vec.emplace_back(x);
-			int res &#x3D;	T1.ask(1,0,n+1,0,l-1).sum*(r-l+1)
-					  + T1.ask(1,0,n+1,l,r).sum2
-					  - T1.ask(1,0,n+1,l,r).sum*(n-r);
+		
+		for(auto p:gl[id])&#123;&#x2F;&#x2F;p:区间interval 
+			int i&#x3D;p.id,l&#x3D;p.x,r&#x3D;p.y;
+			vec.emplace_back(i);
+			int res &#x3D; T1.ask(1,0,n+1,0,l-1).sum * (r-l+1)
+					+ T1.ask(1,0,n+1,l,r).sum * r
+					- T1.ask(1,0,n+1,l,r).sum2;
 			res &#x3D; (res%mod+mod)%mod;
-			(sum +&#x3D; res)%&#x3D;mod;
-			T1.update(1,0,n+1,x,res);
+			T1.update(1,0,n+1,i,res);
 		&#125;
 		
-		for(auto itl:gr[id])&#123;&#x2F;&#x2F;itl:区间interval 
-			int x &#x3D; itl.id, l &#x3D; itl.x, r &#x3D; itl.y;
-			vec.emplace_back(x);
-			int res &#x3D; 	T2.ask(1,0,n+1,r+1,n+1).sum*(r-l+1)
-					  + T2.ask(1,0,n+1,l,r).sum2
-					  - T2.ask(1,0,n+1,l,r).sum*l;
+		for(auto p:gr[id])&#123;&#x2F;&#x2F;p:区间interval 
+			int i&#x3D;p.id,l&#x3D;p.x,r&#x3D;p.y;
+			vec.emplace_back(i);
+			int res &#x3D; T2.ask(1,0,n+1,r+1,n+1).sum * (r-l+1)
+					- T2.ask(1,0,n+1,l,r).sum * l
+					+ T2.ask(1,0,n+1,l,r).sum2;
 			res &#x3D; (res%mod+mod)%mod;
-			T2.update(1,0,n+1,x,res);
+			T2.update(1,0,n+1,i,res);
 		&#125;
-		
+			
 		&#x2F;&#x2F;将出现的区间id排序加去重 
 		sort(vec.begin(),vec.end());
-		vec.erase(unique(vec.begin(),vec.end()), vec.end());
+		vec.erase(unique(vec.begin(),vec.end()),vec.end());
 		
-		auto add &#x3D; [&amp;](int l, int r, int v) -&gt; void&#123;c[l] +&#x3D; v, c[r+1] -&#x3D; v;&#125;;
+		auto add &#x3D; [&amp;](int l, int r, int v)&#123;c[l] +&#x3D; v, c[r+1] -&#x3D; v;&#125;;
+		int sum &#x3D; T1.ask(1,0,n+1,0,n+1).sum;
 		
 		int l &#x3D; 0;
 		for(auto r:vec)&#123;&#x2F;&#x2F;对 x 贡献为 f(0,x-1)*g(x+1,n+1) 
-			int tmp  &#x3D; (T1.ask(1,0,n+1,0,r-1).sum%mod) * (T2.ask(1,0,n+1,r+1,n+1).sum%mod) % mod;
+			int tmp &#x3D; (T1.ask(1,0,n+1,0,r-1).sum%mod) * (T2.ask(1,0,n+1,r+1,n+1).sum%mod) % mod;
 			ans[r] +&#x3D; sum - tmp;&#x2F;&#x2F;总数减去没有用到当前 x 的个数 
-			if(r-l&gt;1)&#123;&#x2F;&#x2F;如果[l,r-1]至少有2个数 
-				&#x2F;&#x2F;维护前缀和加减 
+			if(r-l&gt;1)&#123;&#x2F;&#x2F;如果 l 和 r 之间有数字 
+				&#x2F;&#x2F;维护前缀和加减 (对[l+1,r-1]区间所有的点的贡献都是...(见下)) 
 				add(l+1, r-1, (sum - (T1.ask(1,0,n+1,0,l).sum%mod)*(T2.ask(1,0,n+1,r,n+1).sum%mod))%mod);
 			&#125;l &#x3D; r;
 		&#125;if(l&lt;n) add(l+1, n, sum - (T1.ask(1,0,n+1,0,l).sum%mod));
 		
-		for(auto itl:gl[id])&#123;&#x2F;&#x2F;itl:区间interval 
-			int x &#x3D; itl.id;
-			T1.update(1,0,n+1,x,0);
-		&#125;
-		for(auto itl:gr[id])&#123;&#x2F;&#x2F;itl:区间interval 
-			int x &#x3D; itl.id;
-			T2.update(1,0,n+1,x,0);
-		&#125;
+		&#x2F;&#x2F;清空线段树 
+		for(auto p:gl[id]) T1.update(1,0,n+1,p.id,0);
+		for(auto p:gr[id]) T2.update(1,0,n+1,p.id,0);
 	&#125;
 &#125;
 
@@ -683,7 +678,7 @@ signed main()&#123;
 		ans[i] &#x3D; (ans[i]%mod+mod)%mod;
 		cout&lt;&lt;ans[i]&lt;&lt;&#39;\n&#39;;
 	&#125;return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1112,7 +1107,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">112k</span>
+                        class="white-color">112.3k</span>
             
             
             

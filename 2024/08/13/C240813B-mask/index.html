@@ -430,7 +430,7 @@
 <h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>发现正向计算比较麻烦，考虑逆向进行。易计算得如果没有任何一条斜边最终的答案是 $ans&#x3D;(q+1)\times \frac{p\times (p+1)}{2}+(p+1)\times \frac{q\times (q+1)}{2}$ 。</p>
 <p>如果加入一条斜边，这条斜边会使自己影响到的所有的点最终计算的距离 $-1$ ，而这个斜边能影响到的点就是它后面的一个矩形区域，易计算得对于从 $(x,y)$ 走到 $(x+1,y+1)$ 得斜边，其对答案的贡献是 $(p-x)\times (q-y)$ </p>
 <p>令 $f[i]$ 表示走到斜边 $(x_i,y_i)$ 前最多能走多少条斜边，则所有 $f[i]$ 相等的斜边最终影响到的点会组成如图得形状：</p>
-<p><a href="https://wolfdeer62456.github.io/2024/08/13/C240813B-mask/1.png"></a></p>
+<p><img src="https://wolfdeer62456.github.io/2024/08/13/C240813B-mask/1.png"></p>
 <p>考虑如何求得 $f[i]$ ，发现 $f[i]$ 的求法与一道<a target="_blank" rel="noopener" href="http://ybt.ssoier.cn:8088/problem_show.php?pid=1536">树状数组经典题</a>很相像，我考试的时候还不知道这个思路叫扫描线，直接用树状数组维护，实时更新，将每次计算得到的 $f[i]$ 用 <code>vector</code> 存下来（最多有 $n$ 条斜边，因此 $f[i]$ 最大为 $n$ ），最后计算上图所示的面积之和即为总共减少的距离，用 $ans$ 减去即可。</p>
 <h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
 #include&lt;vector&gt;
@@ -634,30 +634,31 @@ signed main()&#123;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="https://wolfdeer62456.github.io/2024/12/31/%E5%BF%83%E7%81%B5%E6%8E%A2%E7%B4%A2/">
+                <a href="https://wolfdeer62456.github.io/2024/08/14/2024-08-14-%E8%AF%BE%E5%A0%82%E6%80%BB%E7%BB%93/">
                     <div class="card-image">
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/34.jpg" class="responsive-img" alt="心灵探索">
                         
-                        <span class="card-title">心灵探索</span>
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/45.jpg" class="responsive-img" alt="2024.08.14 课堂总结">
+                        
+                        <span class="card-title">2024.08.14 课堂总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            心灵探索
+                            必下严令
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-12-31
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-08-14
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="https://wolfdeer62456.github.io/categories/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" class="post-category">
-                                    社会学
+                            <a href="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/" class="post-category">
+                                    总结
                                 </a>
                             
                             
@@ -906,7 +907,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">112k</span>
+                        class="white-color">112.3k</span>
             
             
             
