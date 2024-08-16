@@ -388,21 +388,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-14
+                    2024-08-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.1k
+                    5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    26 分
                 </div>
                 
 
@@ -492,7 +492,7 @@
 <p>花费了大概一天的时间把这道题打了一遍但是还是有很多地方没有理解清楚。（2024.08.09）</p>
 <p>如此看来，写题解还是很重要的，可以增进理解。（2024.08.12）</p>
 <p>哇！题解写的什么抽象代码啊！每个线段树计算答案不统一写，害得我理解了几个小时。后面自己推了一遍，最后还是按自己的做法做出来了！（2024.08.14）</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>通过 $RMQ$ 计算一段区间的 $gcd$ ，固定左端点 $i$ ，枚举 $2$ 的进制数 $j$ ，则有 <code>fr[i][j] = __gcd(fr[i][j-1],fr[i+(1&lt;&lt;(j-1))][j-1])</code>；固定右端点，同样有 <code>fl[i][j] = gcd(fl[i][j-1],fl[i-(1&lt;&lt;(j-1))][j-1]);</code> 。枚举端点 $O(n)$ ，枚举进制数 $O(logn)$ ，求 $gcd$ 复杂度 $O(loga)$ ，总复杂度 $O(nlognloga)$ 。</p>
+<h3 id="我的题解"><a href="#我的题解" class="headerlink" title="我的题解"></a>我的题解</h3><p>通过 $RMQ$ 计算一段区间的 $gcd$ ，固定左端点 $i$ ，枚举 $2$ 的进制数 $j$ ，则有 <code>fr[i][j] = __gcd(fr[i][j-1],fr[i+(1&lt;&lt;(j-1))][j-1])</code>；固定右端点，同样有 <code>fl[i][j] = gcd(fl[i][j-1],fl[i-(1&lt;&lt;(j-1))][j-1]);</code> 。枚举端点 $O(n)$ ，枚举进制数 $O(logn)$ ，求 $gcd$ 复杂度 $O(loga)$ ，总复杂度 $O(nlognloga)$ 。</p>
 <p><strong>注</strong>：这里的 <code>fl</code> 和 <code>fr</code> 指的是<strong>固定右端点向左</strong>和<strong>固定左端点向右</strong>的意思。</p>
 <p><strong>性质1</strong>：集合里面加入数字后 $gcd$ 若改变则至少除 $2$ ，所以不同的 $gcd$ 数量最多 $O(nlog⁡a)$ 级别。 </p>
 <p><strong>性质2</strong>：对于每一个点 $l$ ，以之为区间的左边界，在端点从 $r$ 转移到 $r+1$ 时，$gcd$ 要么不变，要么变化，因此，对于 $j\in [l,n]$ ，区间 $[l,j]$ 的 $gcd$ 会随着 $j$ 的增长<strong>呈阶梯式下降</strong>趋势。</p>
@@ -507,12 +507,274 @@
 </ul>
 <p>综上，对于 $f[i]$ 和 $g[i]$ ，有：<br>$$<br>f[i]&#x3D;\sum_{j&#x3D;0}^{l-1} (f[j]\times (r-l+1))+\sum_{j&#x3D;l}^{r}(f[j]\times (r-j))\\<br>g[i]&#x3D;\sum_{j&#x3D;r+1}^{n+1}(g[j]\times(r-l+1))+\sum_{j&#x3D;l}^r(g[j]\times(j-l))<br>$$</p>
 <p>$$<br>f[i]&#x3D;(\sum_{j&#x3D;0}^{l-1} f[j])\times(r-l+1) + (\sum_{j&#x3D;l}^rf[j])\times r-\sum_{j&#x3D;l}^{r}f[j]\times j\\<br>g[i]&#x3D;(\sum_{j&#x3D;r+1}^{n+1} g[j])\times(r-l+1) - (\sum_{j&#x3D;l}^rg[j])\times l+\sum_{j&#x3D;l}^rg[j]\times j<br>$$</p>
-<p>分别用线段树维护 $f[i]$、$f[i]\times i$、$g[i]$、$g[i]\times i$ 即可，对于点 $i$ 的答案的贡献就是 $\sum_{j&#x3D;0}^{i-1}f[j]\times \sum_{j&#x3D;i+1}^{n+1}g[j]$ 。</p>
+<p>分别用线段树维护 $f[i]$、$f[i]\times i$、$g[i]$、$g[i]\times i$ 即可，对于点 $i$ 的答案的贡献就是总方案数 - $(\sum_{j&#x3D;0}^{i-1}f[j])\times (\sum_{j&#x3D;i+1}^{n+1}g[j])$ 。</p>
 <p>发现对于每一个 $gcd$ 都要更新一遍 $1\sim n$ 的答案，不满足时间复杂度。考虑优化。</p>
 <p><strong>性质4</strong>：对于排序后的三元组 $(i,l_i,r_i)$ 和 $(j,l_j,r_j)$ ，当前 $gcd$ 对 $i$ 和 $j$ 中间的数（即 $k\in[i+1,j-1]$ ）的贡献是相同的。</p>
 <p>对于每个 $gcd$ 我们都要枚举对应的三元组，两个三元组之间的数直接用前缀和记录贡献，最后计算即可。</p>
-<p>问题：为什么 $\sum_{j&#x3D;0}^{i-1}f[j]\times \sum_{j&#x3D;i+1}^{n+1}g[j]$ 是从 $0$ 和 $n+1$ 开始。</p>
-<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
+<p><strong>问题1</strong>：为什么 $(\sum_{j&#x3D;0}^{i-1}f[j])\times (\sum_{j&#x3D;i+1}^{n+1}g[j])$ 是从 $0$ 和 $n+1$ 开始？算上 $f[0]&#x3D;1$ 我可以理解，相当于 $i$ 右边的区间自由组合的方案数， $g[n+1]&#x3D;1$ 算上我也可以理解，但是乘的时候算上了 $f[0]\times g[n+1]$ ，这是什么意思？左边右边都不选？那怎么保证 $gcd&#x3D; g$ 呢？</p>
+<p><strong>解答</strong>：（2024.08.16）后面才发现，计算 $sum&#x3D;\sum_{j&#x3D;0}^{n+1}f[j]$ 的时候也计算了 $f[0]\times g[n+1]$ ，二者相减刚好就抵消掉了。</p>
+<p><strong>问题2</strong>：为什么最后代码打出来发现 $\sum_{j&#x3D;0}^{n+1}f[j]$ 不等于 $\sum_{j&#x3D;0}^{n+1}g[j]$ 呢？最大的问题是：令 $sum$ 等于 $\sum_{j&#x3D;0}^{n+1}f[j]$ 或 $\sum_{j&#x3D;0}^{n+1}g[j]$ 最后计算出来的答案是一样的，但是这两个值可能不同（详见<a href="https://wolfdeer62456.github.io/2024/08/08/C240808C-%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA%E9%A2%98/#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81">我的代码</a>第 $132$ 行）。</p>
+<p><img src="https://wolfdeer62456.github.io/2024/08/08/C240808C-%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA%E9%A2%98/1.png"></p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>集合里面加入数字后 $gcd$ 若改变则至少除 $2$ ，所以不同的 $gcd$ 数量最多 $O(nloga)$ 级别。</p>
+<p>固定左端点，通过倍增预处理区间 $gcd$ 可以在 $O(nlognloga)$ 的时间复杂度内找出每一个 $gcd$ 发生变化的右端点，记录每一个这样的极大区间。</p>
+<p>枚举 $gcd$，考虑以 $fi$ 代表 $1\sim i$ 中 $gcd$ 等于枚举的数的不交区间集的方案数，这是个简单的 $DP$，可以将区间按左端点排序后利用线段树优化。复杂度与区间个数有关，总复杂度均摊下来也是 $O(nlognloga)$。</p>
+<p>对后缀按相同方式做一遍，则包含 $i$ 位置的方案数就是总数减去只在 $[1,i−1],[i+1,n]$ 中选区间的方案数，后者可以直接通过前后缀计算得到的方案数乘算获得。</p>
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><h3 id="题解代码"><a href="#题解代码" class="headerlink" title="题解代码"></a>题解代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+
+struct Info&#123;
+    int id, p, _p;
+    Info(int id &#x3D; 0, int p &#x3D; 0, int _p &#x3D; 0): id(id), p(p), _p(_p)&#123;&#125;
+&#125;;
+
+const int MAXN &#x3D; 100000+5;
+const ll mod &#x3D; 998244353;
+int n, cnt;
+int a[MAXN];
+int lx[MAXN][18], rx[MAXN][18];
+ll lsum[MAXN&lt;&lt;2], lsum2[MAXN&lt;&lt;2], rsum[MAXN&lt;&lt;2], rsum2[MAXN&lt;&lt;2];
+ll ans[MAXN], b[MAXN];
+vector&lt;Info&gt; lv[MAXN*10], rv[MAXN*10];
+map&lt;int, int&gt; mp;
+
+int gcd(int a, int b)&#123;
+    return b ? gcd(b, a%b) : a;
+&#125;
+
+int find(int g)&#123;
+    if(mp.find(g) &#x3D;&#x3D; mp.end()) mp[g] &#x3D; ++cnt;
+    return mp[g];
+&#125;
+
+void push_up(int x)&#123;
+    int ls &#x3D; x&lt;&lt;1, rs &#x3D; x&lt;&lt;1|1;
+    lsum[x] &#x3D; lsum[ls] + lsum[rs];
+    rsum[x] &#x3D; rsum[ls] + rsum[rs];
+    lsum2[x] &#x3D; lsum2[ls] + lsum2[rs];
+    rsum2[x] &#x3D; rsum2[ls] + rsum2[rs];
+&#125;
+
+void build(int x, int l, int r)&#123;
+    if(l &#x3D;&#x3D; r)&#123;
+        if(l &#x3D;&#x3D; 0)&#123;
+            lsum[x] &#x3D; 1;
+        &#125;
+        if(r &#x3D;&#x3D; n+1)&#123;
+            rsum[x] &#x3D; 1;
+        &#125;
+        return;
+    &#125;
+    int mid &#x3D; (l+r)&#x2F;2;
+    build(x&lt;&lt;1, l, mid);
+    build(x&lt;&lt;1|1, mid+1, r);
+    push_up(x);
+&#125;
+
+ll qlsum(int x, int l, int r, int L, int R)&#123;
+    if(L &lt;&#x3D; l &amp;&amp; r &lt;&#x3D; R)&#123;
+        return lsum[x];
+    &#125;
+    int mid &#x3D; (l+r)&#x2F;2;
+    ll res &#x3D; 0;
+    if(L &lt;&#x3D; mid)&#123;
+        res +&#x3D; qlsum(x&lt;&lt;1, l, mid, L, R);
+    &#125;
+    if(R &gt; mid)&#123;
+        res +&#x3D; qlsum(x&lt;&lt;1|1, mid+1, r, L, R);
+    &#125;
+    return res;
+&#125;
+
+ll qlsum2(int x, int l, int r, int L, int R)&#123;
+    if(L &lt;&#x3D; l &amp;&amp; r &lt;&#x3D; R)&#123;
+        return lsum2[x];
+    &#125;
+    int mid &#x3D; (l+r)&#x2F;2;
+    ll res &#x3D; 0;
+    if(L &lt;&#x3D; mid)&#123;
+        res +&#x3D; qlsum2(x&lt;&lt;1, l, mid, L, R);
+    &#125;
+    if(R &gt; mid)&#123;
+        res +&#x3D; qlsum2(x&lt;&lt;1|1, mid+1, r, L, R);
+    &#125;
+    return res;
+&#125;
+
+void updl(int x, int l, int r, int p, ll v)&#123;
+    if(l &#x3D;&#x3D; r)&#123;
+        lsum[x] &#x3D; v;
+        lsum2[x] &#x3D; v*(n-p)%mod;
+        return;
+    &#125;
+    int mid &#x3D; (l+r)&#x2F;2;
+    if(p &lt;&#x3D; mid)&#123;
+        updl(x&lt;&lt;1, l, mid, p, v);
+    &#125;else&#123;
+        updl(x&lt;&lt;1|1, mid+1, r, p, v);
+    &#125;
+    lsum[x] &#x3D; lsum[x&lt;&lt;1] + lsum[x&lt;&lt;1|1];
+    lsum2[x] &#x3D; lsum2[x&lt;&lt;1] + lsum2[x&lt;&lt;1|1];
+&#125;
+
+ll qrsum(int x, int l, int r, int L, int R)&#123;
+    if(L &lt;&#x3D; l &amp;&amp; r &lt;&#x3D; R)&#123;
+        return rsum[x];
+    &#125;
+    int mid &#x3D; (l+r)&#x2F;2;
+    ll res &#x3D; 0;
+    if(L &lt;&#x3D; mid)&#123;
+        res +&#x3D; qrsum(x&lt;&lt;1, l, mid, L, R);
+    &#125;
+    if(R &gt; mid)&#123;
+        res +&#x3D; qrsum(x&lt;&lt;1|1, mid+1, r, L, R);
+    &#125;
+    return res;
+&#125;
+
+ll qrsum2(int x, int l, int r, int L, int R)&#123;
+    if(L &lt;&#x3D; l &amp;&amp; r &lt;&#x3D; R)&#123;
+        return rsum2[x];
+    &#125;
+    int mid &#x3D; (l+r)&#x2F;2;
+    ll res &#x3D; 0;
+    if(L &lt;&#x3D; mid)&#123;
+        res +&#x3D; qrsum2(x&lt;&lt;1, l, mid, L, R);
+    &#125;
+    if(R &gt; mid)&#123;
+        res +&#x3D; qrsum2(x&lt;&lt;1|1, mid+1, r, L, R);
+    &#125;
+    return res;
+&#125;
+
+void updr(int x, int l, int r, int p, ll v)&#123;
+    if(l &#x3D;&#x3D; r)&#123;
+        rsum[x] &#x3D; v;
+        rsum2[x] &#x3D; v*p%mod;
+        return;
+    &#125;
+    int mid &#x3D; (l+r)&#x2F;2;
+    if(p &lt;&#x3D; mid)&#123;
+        updr(x&lt;&lt;1, l, mid, p, v);
+    &#125;else&#123;
+        updr(x&lt;&lt;1|1, mid+1, r, p, v);
+    &#125;
+    rsum[x] &#x3D; rsum[x&lt;&lt;1] + rsum[x&lt;&lt;1|1];
+    rsum2[x] &#x3D; rsum2[x&lt;&lt;1] + rsum2[x&lt;&lt;1|1];
+&#125;
+
+void add(int l, int r, ll v)&#123;
+    b[l] +&#x3D; v;
+    b[r+1] -&#x3D; v;
+&#125;
+
+int main()&#123;
+    freopen(&quot;gcd.in&quot;, &quot;r&quot;, stdin);
+    freopen(&quot;gcd.out&quot;, &quot;w&quot;, stdout);
+    cin.tie(0);
+    ios::sync_with_stdio(false);
+    cin &gt;&gt; n;
+    for(int i &#x3D; 1; i &lt;&#x3D; n; i++)cin &gt;&gt; a[i];
+    for(int i &#x3D; 1; i &lt;&#x3D; n; i++)&#123;
+        lx[i][0] &#x3D; a[i];
+        rx[i][0] &#x3D; a[i];
+    &#125;
+    for(int j &#x3D; 1; j &lt; 18; j++)&#123;
+        for(int i &#x3D; 1; i &lt;&#x3D; n; i++)&#123;
+            if(i-(1&lt;&lt;j)+1 &gt;&#x3D; 1)&#123;
+                lx[i][j] &#x3D; gcd(lx[i][j-1], lx[i-(1&lt;&lt;(j-1))][j-1]);
+            &#125;
+            if(i+(1&lt;&lt;j)-1 &lt;&#x3D; n)&#123;
+                rx[i][j] &#x3D; gcd(rx[i][j-1], rx[i+(1&lt;&lt;(j-1))][j-1]);
+            &#125;
+        &#125;
+    &#125;
+    for(int i &#x3D; 1; i &lt;&#x3D; n; i++)&#123;
+        int p &#x3D; i, g &#x3D; a[i];
+        while(p &gt;&#x3D; 1)&#123;
+            int _p &#x3D; p;
+            for(int j &#x3D; 17; j &gt;&#x3D; 0; j--)&#123;
+                if(p-(1&lt;&lt;j)+1 &gt;&#x3D; 1 &amp;&amp; gcd(g, lx[p][j]) &#x3D;&#x3D; g)&#123;
+                    p &#x3D; p - (1&lt;&lt;j);
+                &#125;
+            &#125;
+            lv[find(g)].push_back(Info(i, p+1, _p));
+            g &#x3D; gcd(g, a[p]);
+        &#125;
+    &#125;
+    for(int i &#x3D; 1; i &lt;&#x3D; n; i++)&#123;
+        int p &#x3D; i, g &#x3D; a[i];
+        while(p &lt;&#x3D; n)&#123;
+            int _p &#x3D; p;
+            for(int j &#x3D; 17; j &gt;&#x3D; 0; j--)&#123;
+                if(p+(1&lt;&lt;j)-1 &lt;&#x3D; n &amp;&amp; gcd(g, rx[p][j]) &#x3D;&#x3D; g)&#123;
+                    p &#x3D; p + (1&lt;&lt;j);
+                &#125;
+            &#125;
+            rv[find(g)].push_back(Info(i, p-1, _p));
+            g &#x3D; gcd(g, a[p]);
+        &#125;
+    &#125;
+    build(1, 0, n+1);
+    for(auto bp : mp)&#123;
+        int g &#x3D; bp.first, id &#x3D; bp.second;
+        sort(lv[id].begin(), lv[id].end(), [&amp;](Info a, Info b)&#123;
+            return a.id &lt; b.id;
+        &#125;);
+        ll sum &#x3D; 1;
+        vector&lt;int&gt; vec;
+        for(auto info : lv[id])&#123;
+            int x &#x3D; info.id, p &#x3D; info.p, _p &#x3D; info._p;
+            vec.push_back(x);
+            ll res &#x3D; qlsum(1, 0, n+1, 0, p-1)*(_p-p+1) + qlsum2(1, 0, n+1, p, _p) - qlsum(1, 0, n+1, p, _p)*(n-_p);
+            res &#x3D; (res % mod + mod) % mod;
+            sum +&#x3D; res;
+            updl(1, 0, n+1, x, res);
+        &#125;
+        sum %&#x3D; mod;
+        sort(rv[id].begin(), rv[id].end(), [&amp;](Info a, Info b)&#123;
+            return a.id &gt; b.id;
+        &#125;);
+        for(auto info : rv[id])&#123;
+            int x &#x3D; info.id, p &#x3D; info.p, _p &#x3D; info._p;
+            vec.push_back(x);
+            ll res &#x3D; qrsum(1, 0, n+1, p+1, n+1)*(p-_p+1) + qrsum2(1, 0, n+1, _p, p) - qrsum(1, 0, n+1, _p, p)*_p;
+            res &#x3D; (res % mod + mod) % mod;
+            updr(1, 0, n+1, x, res);
+        &#125;
+        sort(vec.begin(), vec.end());
+        vec.erase(unique(vec.begin(), vec.end()), vec.end());
+        int x &#x3D; 0;
+        for(auto _x : vec)&#123;
+            ll tmp &#x3D; (qlsum(1, 0, n+1, 0, _x-1)%mod)*(qrsum(1, 0, n+1, _x+1, n+1)%mod)%mod;
+            ans[_x] +&#x3D; sum-tmp;
+            if(_x - x &gt; 1)&#123;
+                add(x+1, _x-1, (sum - (qlsum(1, 0, n+1, 0, x)%mod)*(qrsum(1, 0, n+1, _x, n+1)%mod))%mod);
+            &#125;
+            x &#x3D; _x;
+        &#125;
+        if(x &lt; n)&#123;
+            add(x+1, n, sum - qlsum(1, 0, n+1, 0, x));
+        &#125;
+        for(auto info : lv[id])&#123;
+            int x &#x3D; info.id;
+            updl(1, 0, n+1, x, 0);
+        &#125;
+        for(auto info : rv[id])&#123;
+            int x &#x3D; info.id;
+            updr(1, 0, n+1, x, 0);
+        &#125;
+    &#125;
+    for(int i &#x3D; 1; i &lt;&#x3D; n; i++)&#123;
+        b[i] +&#x3D; b[i-1];
+        ans[i] +&#x3D; b[i];
+        ans[i] &#x3D; (ans[i] % mod + mod) % mod;
+        printf(&quot;%d\n&quot;, ans[i]);
+    &#125;
+    return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
 #include&lt;vector&gt;
 #include&lt;map&gt;
 #include&lt;set&gt;
@@ -642,7 +904,7 @@ void Solve()&#123;
 		sort(vec.begin(),vec.end());
 		vec.erase(unique(vec.begin(),vec.end()),vec.end());
 		
-		auto add &#x3D; [&amp;](int l, int r, int v)&#123;c[l] +&#x3D; v, c[r+1] -&#x3D; v;&#125;;
+		auto add &#x3D; [&amp;](int l, int r, int v)&#123;c[l] +&#x3D; v, c[r+1] -&#x3D; v;&#125;;&#x2F;&#x2F;前缀和
 		int sum &#x3D; T1.ask(1,0,n+1,0,n+1).sum;
 		
 		int l &#x3D; 0;
@@ -1107,7 +1369,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">112.3k</span>
+                        class="white-color">114.2k</span>
             
             
             
