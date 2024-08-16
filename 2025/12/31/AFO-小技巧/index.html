@@ -384,7 +384,7 @@ $unique$ 之后是 $-a-1$ ，$lower\ bound$之后是$-a$
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-14
+                    2024-08-16
                 </div>
                 
 
@@ -441,36 +441,38 @@ $unique$ 之后是 $-a-1$ ，$lower\ bound$之后是$-a$
 </ul>
 <h3 id="思维拓展"><a href="#思维拓展" class="headerlink" title="思维拓展"></a>思维拓展</h3><ul>
 <li>计算方案数时，可以以答案为下标进行考虑<a href="https://wolfdeer62456.github.io/2024/07/25/C240725B-%E5%BC%82%E6%88%96-xor">①</a>。</li>
-<li>根据题目<strong>所有信息提示</strong>，猜测题目考点。</li>
 </ul>
 <h3 id="序列操作"><a href="#序列操作" class="headerlink" title="序列操作"></a>序列操作</h3><ul>
 <li>有关序列的处理：1. 求前缀和找规律；2.用下标乘上数值； 3. 数值范围允许时，考虑将下标和数值取反；4.前后做差找规律；5.将序列转化为统一的形式，例如将一段 $1111011000$ 看作 $4$ 个 $1$ 、$1$ 个 $0$ 、$2$ 个 $1$ 、$3$ 个 $0$ 的形式<a href="https://wolfdeer62456.github.io/2024/07/31/C240731D-%E6%8E%92%E5%BA%8F/">①</a> ；6.遇到求 $01$ 串中 $1$ 比 $0$ 多的个数，可以把 $0$ 转换为 $-1$ ，通过前缀和求解<a href="https://wolfdeer62456.github.io/2024/07/29/C240729B-%E5%91%A8%E9%BB%91%E9%B8%AD-b/">②</a>。</li>
 <li>对序列进行操作：1. 从小范围考虑到大范围；2. 动态规划（可以多尝试几个 $f_{i,j}$）； 3. 从答案开始操作（逆向操作）；4.考虑将区间修改压缩到具体的一个点上<a href="https://wolfdeer62456.github.io/2024/07/29/C240729A-%E5%91%A8%E9%BB%91%E9%B8%AD-a/">③</a>。</li>
 <li>括号序列：1.用栈存储维护；2.动态规划处理子问题<a href="https://wolfdeer62456.github.io/2024/08/05/C240805A-%E6%8B%AC%E5%8F%B7">④</a>。</li>
 </ul>
-<h3 id="出现异或操作的思路"><a href="#出现异或操作的思路" class="headerlink" title="出现异或操作的思路"></a>出现异或操作的思路</h3><ul>
-<li>题目中有异或：1. 将答案分成  $2^k$ 份计算； 2.  两次异或同一个值对原数字没有影响。</li>
-</ul>
 <h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><ul>
 <li>值域很小时，考虑状态压缩<a href="https://wolfdeer62456.github.io/2024/07/26/C240726C-c/">①</a> 。</li>
-<li>$f[i][j]$ 可以表示区间 $[i,j]$ 的一些性质，其中 $i$ 和 $j$ 都表示下标<a href="https://wolfdeer62456.github.io/2024/08/05/C240805A-%E6%8B%AC%E5%8F%B7">②</a>。</li>
+<li>$f[l][r]$ 可以表示区间 $[l,r]$ 的一些性质，其中 $l$ 和 $r$ 都表示下标<a href="https://wolfdeer62456.github.io/2024/08/05/C240805A-%E6%8B%AC%E5%8F%B7">②</a>。</li>
 </ul>
 <h3 id="对环的处理"><a href="#对环的处理" class="headerlink" title="对环的处理"></a>对环的处理</h3><ul>
-<li>倍长成两倍，断环成链</li>
+<li>倍长成两倍，断环成链<a href="https://wolfdeer62456.github.io/2024/08/02/C240802B-%E7%9F%B3%E5%A4%B4/">①</a></li>
 </ul>
-<h3 id="出现gcd或lcm"><a href="#出现gcd或lcm" class="headerlink" title="出现gcd或lcm"></a>出现gcd或lcm</h3><ul>
+<h3 id="出现gcd或lcm计算的思路"><a href="#出现gcd或lcm计算的思路" class="headerlink" title="出现gcd或lcm计算的思路"></a>出现gcd或lcm计算的思路</h3><ul>
 <li>枚举质因数，对于 $[1,n]$ 范围，每次枚举质因数和其倍数，时间复杂度为 $O(n+\frac{n}{2}+\frac{n}{3}+\frac{n}{4}+…+1)&#x3D;O(nlogn)$ 。</li>
-<li>集合里面加入数字后 $gcd$ 若改变则至少除 $2$ ，所以长度为 $n$ 数组中不同的 $gcd$ 数量最多 $O(nlog⁡a)$ 级别<a href="https://wolfdeer62456.github.io/2024/08/08/C240808C-%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA%E9%A2%98">①</a>，其中 $a$ 表示值域。</li>
-<li>对于每一个点 $l$ ，以之为区间的左边界，在端点从 $r$ 转移到 $r+1$ 时，$gcd$ 要么不变，要么变化，因此，对于 $j\in [l,n]$ ，区间 $[l,j]$ 的 $gcd$ 会随着 $j$ 的增长<strong>呈阶梯式下降</strong>趋势。</li>
+<li>集合里面加入数字后 $gcd$ 若改变则至少除 $2$ ，所以长度为 $n$ 数组中不同的 $gcd$ 数量最多 $O(nlog⁡a)$ 级别，其中 $a$ 表示值域<a href="https://wolfdeer62456.github.io/2024/08/08/C240808C-%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA%E9%A2%98">①</a>。</li>
+<li>对于每一个点 $l$ ，以之为区间的左边界，在端点从 $r$ 转移到 $r+1$ 时，$gcd$ 要么不变，要么变化，因此，对于 $j\in [l,n]$ ，区间 $[l,j]$ 的 $gcd$ 会随着 $j$ 的增长<strong>呈阶梯式下降</strong>趋势<a href="https://wolfdeer62456.github.io/2024/08/08/C240808C-%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA%E9%A2%98">①</a>。</li>
+</ul>
+<h3 id="出现异或计算的思路"><a href="#出现异或计算的思路" class="headerlink" title="出现异或计算的思路"></a>出现异或计算的思路</h3><ul>
+<li>题目中有异或：1. 将答案分成  $2^k$ 份计算<a href="https://wolfdeer62456.github.io/2024/07/25/C240725B-%E5%BC%82%E6%88%96-xor/">①</a>； 2.  两次异或同一个值对原数字没有影响。</li>
+</ul>
+<h3 id="出现mex计算的思路"><a href="#出现mex计算的思路" class="headerlink" title="出现mex计算的思路"></a>出现mex计算的思路</h3><ul>
+<li>找规律<a href="https://wolfdeer62456.github.io/2024/08/16/C240815C-magic/">①</a>。</li>
 </ul>
 <h3 id="乘法逆元"><a href="#乘法逆元" class="headerlink" title="乘法逆元"></a>乘法逆元</h3><ul>
 <li>如果模数为质数，直接求 <code>ksm(x,mod-2)</code> 便能求出逆元。</li>
-<li>如果模数是合数，可以观察当前模数的性质，例如 $1e9+6$ 可以分成 $5e8+3$ 和 $2$ 两个质数，可以先求出 $x$ 在 $mod&#x3D;5e8+3$ 时的模数，最后在乘个 $2$ 即可。</li>
+<li>如果模数是合数，可以观察当前模数的性质，例如 $1e9+6$ 可以分成 $5e8+3$ 和 $2$ 两个质数，可以先求出 $x$ 在 $mod&#x3D;5e8+3$ 时的模数，最后在乘个 $2$ 即可<a href="https://wolfdeer62456.github.io/2024/08/05/C240805C-%E5%88%87%E7%8E%AF/">①</a>。</li>
 </ul>
 <h3 id="出现-n-为极大值"><a href="#出现-n-为极大值" class="headerlink" title="出现 $n$ 为极大值"></a>出现 $n$ 为极大值</h3><ul>
 <li>推 $dp$ 式子（一般为二维），用矩阵快速幂求解。</li>
-<li>$n$ 可能为值域，考虑离散化。</li>
-<li>时间复杂度可能与 $n$ 无关或为 $logn$ <a href="https://wolfdeer62456.github.io/2024/08/12/%E3%80%8CNOIP2023%E3%80%8D%E5%A4%A9%E5%A4%A9%E7%88%B1%E6%89%93%E5%8D%A1/">①</a>。</li>
+<li>$n$ 可能为值域，考虑离散化<a href="https://wolfdeer62456.github.io/2024/08/12/%E3%80%8CNOIP2023%E3%80%8D%E5%A4%A9%E5%A4%A9%E7%88%B1%E6%89%93%E5%8D%A1/">①</a>。</li>
+<li>时间复杂度可能与 $n$ 无关或为 $logn$ <a href="https://wolfdeer62456.github.io/2024/08/12/%E3%80%8CNOIP2023%E3%80%8D%E5%A4%A9%E5%A4%A9%E7%88%B1%E6%89%93%E5%8D%A1/">②</a>。</li>
 </ul>
 <h3 id="树上操作"><a href="#树上操作" class="headerlink" title="树上操作"></a>树上操作</h3><ul>
 <li>$n$ 个点的树， $q$ 次询问 $x$ 和 $k$ 输出点 $x$ 的 $k$ 级祖先，$n,q\le1e7$。考虑深搜，用<strong>栈</strong>存储祖先，离开后弹出。</li>
@@ -896,7 +898,7 @@ $unique$ 之后是 $-a-1$ ，$lower\ bound$之后是$-a$
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">114.2k</span>
+                        class="white-color">115.9k</span>
             
             
             
