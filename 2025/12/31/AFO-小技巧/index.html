@@ -398,7 +398,7 @@ $unique$ 之后是 $-a-1$ ，$lower\ bound$之后是$-a$
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -459,8 +459,13 @@ $unique$ 之后是 $-a-1$ ，$lower\ bound$之后是$-a$
 <li>集合里面加入数字后 $gcd$ 若改变则至少除 $2$ ，所以长度为 $n$ 数组中不同的 $gcd$ 数量最多 $O(nlog⁡a)$ 级别，其中 $a$ 表示值域<a href="https://wolfdeer62456.github.io/2024/08/08/C240808C-%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA%E9%A2%98">①</a>。</li>
 <li>对于每一个点 $l$ ，以之为区间的左边界，在端点从 $r$ 转移到 $r+1$ 时，$gcd$ 要么不变，要么变化，因此，对于 $j\in [l,n]$ ，区间 $[l,j]$ 的 $gcd$ 会随着 $j$ 的增长<strong>呈阶梯式下降</strong>趋势<a href="https://wolfdeer62456.github.io/2024/08/08/C240808C-%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA%E9%A2%98">①</a>。</li>
 </ul>
-<h3 id="出现异或计算的思路"><a href="#出现异或计算的思路" class="headerlink" title="出现异或计算的思路"></a>出现异或计算的思路</h3><ul>
-<li>题目中有异或：1. 将答案分成  $2^k$ 份计算<a href="https://wolfdeer62456.github.io/2024/07/25/C240725B-%E5%BC%82%E6%88%96-xor/">①</a>； 2.  两次异或同一个值对原数字没有影响。</li>
+<h3 id="出现二进制计算的思路"><a href="#出现二进制计算的思路" class="headerlink" title="出现二进制计算的思路"></a>出现二进制计算的思路</h3><ul>
+<li><p>出现有边权的<strong>图</strong>或者<strong>树</strong>：1.按边权的进制位建边，当前点二进制表示下的第 $k$ 位如果为 $1$ ，就在 $2^k$ 的图上建边，最多建 $O(loga)$ 张图<a href="https://wolfdeer62456.github.io/2024/08/16/C240815C-magic/">①</a>。</p>
+</li>
+<li><p>题目中有按位异或：1. 将答案分成  $2^k$ 份计算<a href="https://wolfdeer62456.github.io/2024/07/25/C240725B-%E5%BC%82%E6%88%96-xor/">②</a>； 2.  两次异或同一个值对原数字没有影响。</p>
+</li>
+<li><p>题目中有按位与：1.每次按位与后当前值一定变小，可以考虑二分。</p>
+</li>
 </ul>
 <h3 id="出现mex计算的思路"><a href="#出现mex计算的思路" class="headerlink" title="出现mex计算的思路"></a>出现mex计算的思路</h3><ul>
 <li>找规律<a href="https://wolfdeer62456.github.io/2024/08/16/C240815C-magic/">①</a>。</li>
@@ -898,7 +903,7 @@ $unique$ 之后是 $-a-1$ ，$lower\ bound$之后是$-a$
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">115.9k</span>
+                        class="white-color">116.6k</span>
             
             
             

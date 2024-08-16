@@ -7,8 +7,9 @@
     <meta name="keywords" content="#C240815C. magic, WolfDeer">
     <meta name="description" content="#C240815C. magic网址（Website）题目详情 - magic - Super 
 题解 - magic - Super 
-题解（Solution）初看这道题的时候感觉很难，但是仔细分析后便会发现规律。
-由于出现了 $mex$">
+题解（Solution）做题经验
+初看这道题的时候感觉很难，但是仔细分析后便会发现规律。
+由于出现了 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -396,14 +397,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    476
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
 
@@ -428,8 +429,24 @@
             <div id="articleContent">
                 <h1 id="C240815C-magic"><a href="#C240815C-magic" class="headerlink" title="#C240815C. magic"></a>#C240815C. magic</h1><h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p><a target="_blank" rel="noopener" href="http://192.168.110.4/p/C240815C">题目详情 - magic - Super</a> </p>
 <p><a target="_blank" rel="noopener" href="http://192.168.110.4/p/C240815C/solution">题解 - magic - Super</a> </p>
-<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>初看这道题的时候感觉很难，但是仔细分析后便会发现规律。</p>
-<p>由于出现了 $mex$ 操作，肯定不能暴力求解，要先静下心来找规律</p>
+<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p><a href="https://wolfdeer62456.github.io/2025/12/31/AFO-%E5%B0%8F%E6%8A%80%E5%B7%A7/">做题经验</a></p>
+<p>初看这道题的时候感觉很难，但是仔细分析后便会发现规律。</p>
+<p>由于出现了 $mex$ 操作，肯定不能暴力求解，要先静下心来找规律。</p>
+<p>首先考虑最后的与和没有 $0$ 的情况，那么对于两个点 $x$ 和 $y$ ，这两个点上的路径一定存在一个二进制位 $k$ 满足经过的路径上的所有的点的二进制表示下的第 $k$ 位都为 $1$ ，考虑<strong>对每一个进制位建图</strong>。</p>
+<p>容易发现，对于询问的两点 $x$ 和 $y$ ，如果在任意图上这两个点联通，那么一定存在一条路径能使从 $x$ 走到 $y$ 的 <code>mex&#123;w1,w1&amp;w2,⋯,w1&amp;w2&amp;⋯&amp;wk&#125;</code> 为 $0$ 。由此，我们顺着思路考虑当前 <code>mex&#123;w1,w1&amp;w2,⋯,w1&amp;w2&amp;⋯&amp;wk&#125;</code> 不为 $0$ 的情况。</p>
+<p><strong>性质1</strong>：对于 <code>mex&#123;w1,w1&amp;w2,⋯,w1&amp;w2&amp;⋯&amp;wk&#125;!=0</code> ，如果在路径上出现了一条偶数边，那么集合后面加入的所有的元素一定不可能为 $1$ ，则此时 <code>mex&#123;w1,w1&amp;w2,⋯,w1&amp;w2&amp;⋯&amp;wk&#125;</code> 必为 $1$；</p>
+<p><strong>性质2</strong>：对于 <code>mex&#123;w1,w1&amp;w2,⋯,w1&amp;w2&amp;⋯&amp;wk&#125;!=0</code> ，当路径上只有奇数边时，最后的集合所有数的 $2^0$ 的二进制位一定为 $1$ ，那么无论怎么 <code>&amp;</code> ，集合中一定不可能出现 $2$ 。</p>
+<p>由上述性质得，最终的 <code>mex&#123;w1,w1&amp;w2,⋯,w1&amp;w2&amp;⋯&amp;wk&#125;</code> 只有 $0,1,2$ 三种可能，分别考虑三种情况。</p>
+<ul>
+<li><p>对于 <code>mex&#123;w1,w1&amp;w2,⋯,w1&amp;w2&amp;⋯&amp;wk&#125;=0</code> ，我们可以直接在按进制位建的图中用并查集分别维护连通块，两点在某个图中可以到达当且仅当两点在同一个并查集中，可以直接在建边的时候维护，时间复杂度 $O(mloga)$ 。</p>
+</li>
+<li><p>对于 <code>mex&#123;w1,w1&amp;w2,⋯,w1&amp;w2&amp;⋯&amp;wk&#125;=1</code> ，此时保证集合中存在 $0$ ，由于路径可以重复走，因此对于某个起点，只要找到一条偶边权的边使得这个点到达这条偶边前的路径集合中不出现 $1$ 即可。枚举每一条偶边，从它的两个点出发，在第 $1\sim 30$ 位二进制的图中标记所有能通往的点，将它们的 $flag$ 标为 $true$ ，判断两点是否存在 <code>mex&#123;w1,w1&amp;w2,⋯,w1&amp;w2&amp;⋯&amp;wk&#125;=1</code> 的路径时，只需要判断起点的 $flag$ 为 $true$ 即可，时间复杂度 $O(nloga)$ 。</p>
+</li>
+<li><p>剩下的所有情况 <code>mex&#123;w1,w1&amp;w2,⋯,w1&amp;w2&amp;⋯&amp;wk&#125;</code>  都为 $2$ ，输出即可。</p>
+</li>
+</ul>
+<p>对于每次询问，直接 $O(1)$ 输出即可，时间复杂度 $O(q)$ 。</p>
+<p>总时间复杂度 $O(nloga+mloga)$ 。</p>
 <h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
 #define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
 #define Rof(i,l,r) for(int i&#x3D;l;i&gt;&#x3D;r;i--)
@@ -908,7 +925,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">115.9k</span>
+                        class="white-color">116.6k</span>
             
             
             
