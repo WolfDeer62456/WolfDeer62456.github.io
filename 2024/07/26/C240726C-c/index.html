@@ -7,7 +7,12 @@
     <meta name="keywords" content="#$C240726C. c, WolfDeer">
     <meta name="description" content="$#C240726C. c网址（Website） 题目详情 - c - Super 
  题解 - c - Super 
-题目（Problem）题目描述给定 $n$ 个点，每个点上有一个长度为 $m$ 的字符串（仅包含字母 ‘Y’ 和 ‘N’">
+题解（Solution）考虑Kruskal算法：
+
+每次找到边权最小的边，合并所在联通块。
+使用并查集维护联通块。
+
+考">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -388,21 +393,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-06
+                    2024-09-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    5 分
                 </div>
                 
 
@@ -427,71 +432,6 @@
             <div id="articleContent">
                 <h1 id="C240726C-c"><a href="#C240726C-c" class="headerlink" title="$#C240726C. c"></a>$#C240726C. c</h1><h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C240726C">题目详情 - c - Super</a> </p>
 <p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C240726C/solution">题解 - c - Super</a> </p>
-<h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定 $n$ 个点，每个点上有一个长度为 $m$ 的字符串（仅包含字母 ‘Y’ 和 ‘N’），两个点之间的边权为两个字符串不同元素的个数，求最小生成树边权和。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>从文件 <code>c.in</code> 中读入数据。</p>
-<ul>
-<li>第一行一个正整数 $T$，表示数据组数。</li>
-<li>对于每组数据，第一行两个数字 $n, m$。</li>
-<li>接下来 $n$ 行，每一行一个长度为 $m$ 仅由 ‘Y’, ‘N’ 组成的字符串。</li>
-</ul>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出到文件 <code>c.out</code> 中。</p>
-<ul>
-<li>输出一行一个整数表示答案。</li>
-</ul>
-<h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h3><h4 id="样例输入1"><a href="#样例输入1" class="headerlink" title="样例输入1"></a>样例输入1</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">2
-3 3
-YYY
-NYY
-YNN
-3 3
-YYN
-YNY
-NYY<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="样例输出1"><a href="#样例输出1" class="headerlink" title="样例输出1"></a>样例输出1</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">3
-4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h4 id="样例输入2"><a href="#样例输入2" class="headerlink" title="样例输入2"></a>样例输入2</h4><p>见下发文件 <code>ex_c2.in</code></p>
-<h4 id="样例输出2"><a href="#样例输出2" class="headerlink" title="样例输出2"></a>样例输出2</h4><p>见下发文件 <code>ex_c2.out</code></p>
-<h3 id="数据规模与约定"><a href="#数据规模与约定" class="headerlink" title="数据规模与约定"></a>数据规模与约定</h3><p>对所有数据：</p>
-<ul>
-<li>$ 1 \leq T \leq 5 $ </li>
-<li>$ 1 \leq m \leq 18 $</li>
-</ul>
-<h3 id="测试点编号"><a href="#测试点编号" class="headerlink" title="测试点编号"></a>测试点编号</h3><table>
-<thead>
-<tr>
-<th>编号</th>
-<th>( n ) ≤</th>
-<th>特殊性质</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$1$</td>
-<td>$100$</td>
-<td>无</td>
-</tr>
-<tr>
-<td>$2\sim3$</td>
-<td>$2000$</td>
-<td>无</td>
-</tr>
-<tr>
-<td>$4\sim 5$</td>
-<td>$35000$</td>
-<td>$n \ge 2^m-50$</td>
-</tr>
-<tr>
-<td>$6\sim 7$</td>
-<td>$35000$</td>
-<td>字符串随机生成</td>
-</tr>
-<tr>
-<td>$8\sim10$</td>
-<td>$150000$</td>
-<td>无</td>
-</tr>
-</tbody></table>
 <h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>考虑Kruskal算法：</p>
 <ul>
 <li>每次找到边权最小的边，合并所在联通块。</li>
@@ -1015,7 +955,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">116.6k</span>
+                        class="white-color">115.8k</span>
             
             
             
