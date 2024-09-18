@@ -5,9 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="$#C231025B. 图论(graph), WolfDeer">
-    <meta name="description" content="$#C231025B. 图论(graph)网址 题目详情 - 图论(graph) - Super 
+    <meta name="description" content="$#C231025B. 图论(graph)标签（Label）bitset、传递闭包、深搜、内存优化、DAG、分块
+网址 题目详情 - 图论(graph) - Super 
  题解 - 图论(graph) - Super 
-题目描述小 $A$ 有一张 $n$ 个点 $m$ 条边的有向无环图，每个点有一个点权，初始">
+题目描述小 $A$">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -388,7 +389,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-09
+                    2024-09-14
                 </div>
                 
 
@@ -425,7 +426,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C231025B-图论-graph"><a href="#C231025B-图论-graph" class="headerlink" title="$#C231025B. 图论(graph)"></a>$#C231025B. 图论(graph)</h1><h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231025B">题目详情 - 图论(graph) - Super</a> </p>
+                <h1 id="C231025B-图论-graph"><a href="#C231025B-图论-graph" class="headerlink" title="$#C231025B. 图论(graph)"></a>$#C231025B. 图论(graph)</h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><p>bitset、传递闭包、深搜、内存优化、DAG、分块</p>
+<h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231025B">题目详情 - 图论(graph) - Super</a> </p>
 <p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231025B/solution">题解 - 图论(graph) - Super</a> </p>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>小 $A$ 有一张 $n$ 个点 $m$ 条边的有向无环图，每个点有一个点权，初始均为 $0$。</p>
 <p>你需要帮他进行 $q$ 次操作，每次操作可能是以下三种操作中的一种：</p>
@@ -481,10 +483,9 @@
 </tbody></table>
 <h2 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a><strong>算法分析</strong></h2><p>以下分析均假定 $n,m,q$ 同阶。</p>
 <h4 id="算法一"><a href="#算法一" class="headerlink" title="算法一"></a><strong>算法一</strong></h4><p>预处理出每个点能到哪些点，每次修改时依次暴力修改。时间复杂度 $O(n^2)$ ，期望得分 $20$ 分。若没有操作 $1$ ，所有点权始终为 $0$ ，特判这类测试点，期望得分 $30$ 分。</p>
-<h4 id="算法二"><a href="#算法二" class="headerlink" title="算法二"></a><strong>算法二</strong></h4><p>考虑修改操作对之后每次询问的影响，不难发现，当询问 u<em>u</em> 的点权时，往前找到最后一次能影响到 u<em>u</em> 的赋值操作，再将这个赋值操作之后的所有能影响到 $u$ 的取 $min$ 操作拿出来，对修改权值一起求个最小值就是答案。</p>
+<h4 id="算法二"><a href="#算法二" class="headerlink" title="算法二"></a><strong>算法二</strong></h4><p>考虑修改操作对之后每次询问的影响，不难发现，当询问 $u$ 的点权时，往前找到最后一次能影响到 $u$ 的赋值操作，再将这个赋值操作之后的所有能影响到 $u$ 的取 $min$ 操作拿出来，对修改权值一起求个最小值就是答案。</p>
 <p>于是可以先用 $bitset$ 预处理传递闭包，将所有的修改操作存在栈里，询问时在栈中找出所有有影响的操作，计算出点权。当栈的大小达到 $O(\sqrt{n})$ 时，将栈中所有操作依次暴力执行并将栈清空即可，时间复杂度 $O(\frac{n^2}{w} + n\sqrt{n})$ ，根据实现时占用的空间，期望得分 $80$ 到 $100$ 分。</p>
-<p>如果最后两个测试点空间不够，可以考虑拿时间换空间，第一次选出 $\frac{n}{k}$ 个点，只回答它们的询问，那么预处理传递闭包时也只需要记录每个点能否到达这 $\frac{n}{k}$ 个点，这样做 $k$ 次，每次将 $bitset$ 的空间拿来重复利用即可。时间复杂度乘了 $k$ ，空间复杂度除以了 $k$ 。k$k$ 的具体值可以根据自己的代码测试调整，对本题数据选 $k&#x3D;2,3$ 是比较合适的。期望得分 $100$ 分。</p>
-<h4 id="后评"><a href="#后评" class="headerlink" title="后评"></a>后评</h4><p>不是哥们你是真的懒啊，好不容易打出来的题甚至不愿意自己写一篇题解。(￣ ‘i ￣;)</p>
+<p>如果最后两个测试点空间不够，可以考虑拿时间换空间，第一次选出 $\frac{n}{k}$ 个点，只回答它们的询问，那么预处理传递闭包时也只需要记录每个点能否到达这 $\frac{n}{k}$ 个点，这样做 $k$ 次，每次将 $bitset$ 的空间拿来重复利用即可。时间复杂度乘了 $k$ ，空间复杂度除以了 $k$ 。$k$ 的具体值可以根据自己的代码测试调整，对本题数据选 $k&#x3D;2,3$ 是比较合适的。期望得分 $100$ 分。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;This is my code!!!
 #include&lt;bits&#x2F;stdc++.h&gt;
 #define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
@@ -526,11 +527,10 @@ inline void dfs(int x)&#123;
 int lst[N];&#x2F;&#x2F;当前询问的上一次修改点 
 
 inline void dfs_fz(int x,int j)&#123;
-	vst[x]&#x3D;true;
+	vst[x]&#x3D;true, 
 	lst[x]&#x3D;j;
-	for(auto y:ft[x])&#123;
+	for(auto y:ft[x]) 
 		if(!vst[y]) dfs_fz(y,j);
-	&#125;
 &#125;
 
 int op[N],x[N],y[N];&#x2F;&#x2F;存储操作 
@@ -615,7 +615,7 @@ signed main()&#123;
 	&#125;
 	For(i,1,q) if(op[i]&#x3D;&#x3D;3) cout&lt;&lt;ans[i]&lt;&lt;&#39;\n&#39;;
 	return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="cx的代码"><a href="#cx的代码" class="headerlink" title="cx的代码"></a>cx的代码</h3><p>$\qquad$cx大佬 的博客网址： <a target="_blank" rel="noopener" href="https://blog.huasushis.cn/">Huasushis ‘s Blog</a> </p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;Instruction: This is the code of Chen Xin, the Submitted by just
@@ -1262,7 +1262,7 @@ int main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">115.8k</span>
+                        class="white-color">116k</span>
             
             
             

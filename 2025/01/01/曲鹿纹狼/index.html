@@ -384,14 +384,14 @@ auto it = s.begin();//自动识别变量类型
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-10
+                    2024-09-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    635
+                    826
                 </div>
                 
 
@@ -437,16 +437,16 @@ assert(A);//如果不满足事件A，程序会提前终止,并且返回当前所
 exit(0);//无论在哪个函数，直接结束运行进程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="二、预先设置"><a href="#二、预先设置" class="headerlink" title="二、预先设置"></a>二、预先设置</h2><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">1.</span> Alt + &#123;T,C&#125;
-添加：-std=c++14 -O2 -Wl,--stack=536870912 -Wall
+添加：-std=c++14 -O2 -Wl,--stack=1073741824 -Wall
 <span class="token list punctuation">2.</span> Alt + &#123;T,V,A,O&#125; + Enter
 设置：编译完成，自动关闭。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="三、常用知识"><a href="#三、常用知识" class="headerlink" title="三、常用知识"></a>三、常用知识</h2><h4 id="（一）函数的初始化与重载运算符"><a href="#（一）函数的初始化与重载运算符" class="headerlink" title="（一）函数的初始化与重载运算符"></a><strong>（一）函数的初始化与重载运算符</strong></h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">struct Tr&#123;
+<h2 id="三、常用知识"><a href="#三、常用知识" class="headerlink" title="三、常用知识"></a>三、常用知识</h2><h3 id="（一）函数的初始化与重载运算符"><a href="#（一）函数的初始化与重载运算符" class="headerlink" title="（一）函数的初始化与重载运算符"></a><strong>（一）函数的初始化与重载运算符</strong></h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">struct Tr&#123;
     int x,y;Tr(int a)&#123;x &#x3D; a,y &#x3D; 0;&#125;&#x2F;&#x2F;初始化 x&#x3D;a&#x3D;1,y&#x3D;0
     bool operator&lt;(const Tr b)&#123;return y&lt;b.y;&#125;&#x2F;&#x2F;可以在STL容器中更新“&lt;”符号的比较方式
 &#125;thi(1);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="（二）比较函数的使用"><a href="#（二）比较函数的使用" class="headerlink" title="（二）比较函数的使用"></a>（二）比较函数的使用</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">inline int ret(int a,int b,const auto &amp;cmp)&#123;
+<h3 id="（二）比较函数的使用"><a href="#（二）比较函数的使用" class="headerlink" title="（二）比较函数的使用"></a>（二）比较函数的使用</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">inline int ret(int a,int b,const auto &amp;cmp)&#123;
 	return cmp(a,b);
 &#125;
 signed main()&#123;
@@ -456,11 +456,11 @@ signed main()&#123;
     return 0;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="（三）内部函数的定义"><a href="#（三）内部函数的定义" class="headerlink" title="（三）内部函数的定义"></a>（三）内部函数的定义</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">sort(a.begin(),a.end(),[&amp;](I x,I y)&#123;return x.id&lt;y.id;&#125;);&#x2F;&#x2F;从小到大排序
+<h3 id="（三）内部函数的定义"><a href="#（三）内部函数的定义" class="headerlink" title="（三）内部函数的定义"></a>（三）内部函数的定义</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">sort(a.begin(),a.end(),[&amp;](I x,I y)&#123;return x.id&lt;y.id;&#125;);&#x2F;&#x2F;从小到大排序
 &#x2F;&#x2F;在函数内部，可以定义：
 auto add &#x3D; [&amp;](int l, int r, int v)&#123;c[l] +&#x3D; v, c[r+1] -&#x3D; v;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="（四）数组的内存分配（适用于只给定-n-m"><a href="#（四）数组的内存分配（适用于只给定-n-m" class="headerlink" title="（四）数组的内存分配（适用于只给定 $n*m&lt;&#x3D;10^6$ 的情况）"></a>（四）数组的内存分配（适用于只给定 $n*m&lt;&#x3D;10^6$ 的情况）</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">const int N &#x3D; 2012345;
+<h3 id="（四）数组的内存分配（适用于只给定-n-m"><a href="#（四）数组的内存分配（适用于只给定-n-m" class="headerlink" title="（四）数组的内存分配（适用于只给定 $n*m&lt;&#x3D;10^6$ 的情况）"></a>（四）数组的内存分配（适用于只给定 $n*m&lt;&#x3D;10^6$ 的情况）</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">const int N &#x3D; 2012345;
 int n,m;
 
 struct node&#123;
@@ -473,11 +473,32 @@ signed main()&#123;
     For(i,1,n) For(j,1,m) cin&gt;&gt;c[i][j];
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h3 id="（五）switch函数的应用"><a href="#（五）switch函数的应用" class="headerlink" title="（五）switch函数的应用"></a>（五）switch函数的应用</h3><p>在下面的<code>switch</code>函数中，$a$ 可以为 $1,2,3$ ：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">switch(a)&#123;
+	case 1:&#123;程序A;break;&#125;
+    case 2:&#123;程序B;&#125;
+	case 3:&#123;程序C;break&#125;
+    case 4: case 5:&#123;程序D;break;&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>若 $a&#x3D;&#x3D;1$，执行<strong>程序A</strong>；</li>
+<li>若 $a&#x3D;&#x3D;2$，执行<strong>程序B</strong>和<strong>程序C</strong>；</li>
+<li>若 $a&#x3D;&#x3D;3$，执行<strong>程序C</strong>；</li>
+<li>若 $a&#x3D;&#x3D;4$ 或 $a&#x3D;&#x3D;5$ ，执行<strong>程序D</strong>；</li>
+</ul>
+<p>可见，当<code>case x</code>语句满足时，会直接<strong>贯穿</strong>执行后面所有的语句，直到遇到后面的第一个<code>break</code>语句后停止。</p>
 <h2 id="四、资料"><a href="#四、资料" class="headerlink" title="四、资料"></a>四、资料</h2><p>$\qquad$PDF来源：<a target="_blank" rel="noopener" href="http://ssoier.cn:8088/stl.html">http://ssoier.cn:8088/stl.html</a> </p>
 <p>$\qquad$<a href="https://wolfdeer62456.github.io/2025/01/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/C++_string%E7%B1%BB%EF%BC%88C++%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%89.pdf">C++_string类（C++字符串）.pdf</a></p>
 <p>$\qquad$<a href="https://wolfdeer62456.github.io/2025/01/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/lemon%E8%AF%84%E6%B5%8B%E8%BD%AF%E4%BB%B6SPJ%E8%AF%B4%E6%98%8E.pdf">lemon评测软件SPJ说明.pdf</a></p>
 <p>$\qquad$<a href="https://wolfdeer62456.github.io/2025/01/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.pdf">常用的排序算法.pdf</a></p>
 <p>$\qquad$<a href="https://wolfdeer62456.github.io/2025/01/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/%E5%85%B3%E4%BA%8ESTL%E5%AE%B9%E5%99%A8%E7%9A%84%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93.pdf">关于STL容器的简单总结.pdf</a></p>
+<h2 id="五、标签"><a href="#五、标签" class="headerlink" title="五、标签"></a>五、标签</h2><ul>
+<li><strong>算法</strong>：深搜、</li>
+<li><strong>数据结构</strong>：bitset、分块、单调栈</li>
+<li><strong>思维</strong>：图论转化、传递闭包、内存优化、动态规划、观察+分析</li>
+<li><strong>考点</strong>：数学、gcd、DAG</li>
+</ul>
 
                 
             </div>
@@ -662,30 +683,31 @@ signed main()&#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="https://wolfdeer62456.github.io/2024/12/31/%E5%BF%83%E7%81%B5%E6%8E%A2%E7%B4%A2/">
+                <a href="https://wolfdeer62456.github.io/2024/09/15/2024-09-15-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/">
                     <div class="card-image">
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/34.jpg" class="responsive-img" alt="心灵探索">
                         
-                        <span class="card-title">心灵探索</span>
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/73.jpg" class="responsive-img" alt="2024.09.15 考试总结">
+                        
+                        <span class="card-title">2024.09.15 考试总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            心灵探索
+                            调整好状态，不要浪费时间在进入状态上
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-12-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-09-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="https://wolfdeer62456.github.io/categories/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" class="post-category">
-                                    社会学
+                            <a href="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/" class="post-category">
+                                    总结
                                 </a>
                             
                             
@@ -893,7 +915,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">115.8k</span>
+                        class="white-color">116k</span>
             
             
             
