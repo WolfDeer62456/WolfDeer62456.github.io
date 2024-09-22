@@ -5,9 +5,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="$#C231025B. 图论(graph), WolfDeer">
-    <meta name="description" content="$#C231025B. 图论(graph)网址 题目详情 - 图论(graph) - Super 
- 题解 - 图论(graph) - Super 
-题目描述小 $A$ 有一张 $n$ 个点 $m$ 条边的有向无环图，每个点有一个点权，初始">
+    <meta name="description" content="$#C231025B. 图论(graph)标签（Label）
+bitset
+传递闭包
+深搜
+时间换空间
+DAG
+分块
+
+网址（Website） 题目详情 - 图论(graph) - Super 
+ 题解 - 图论(graph) - Supe">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -327,7 +334,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/83.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/34.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -408,7 +415,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-09-20
+                    2024-09-22
                 </div>
                 
 
@@ -445,9 +452,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C231025B-图论-graph"><a href="#C231025B-图论-graph" class="headerlink" title="$#C231025B. 图论(graph)"></a>$#C231025B. 图论(graph)</h1><h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231025B">题目详情 - 图论(graph) - Super</a> </p>
+                <h1 id="C231025B-图论-graph"><a href="#C231025B-图论-graph" class="headerlink" title="$#C231025B. 图论(graph)"></a>$#C231025B. 图论(graph)</h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><ul>
+<li>bitset</li>
+<li>传递闭包</li>
+<li>深搜</li>
+<li>时间换空间</li>
+<li>DAG</li>
+<li>分块</li>
+</ul>
+<h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231025B">题目详情 - 图论(graph) - Super</a> </p>
 <p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231025B/solution">题解 - 图论(graph) - Super</a> </p>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>小 $A$ 有一张 $n$ 个点 $m$ 条边的有向无环图，每个点有一个点权，初始均为 $0$。</p>
+<h2 id="题目描述（Problem）"><a href="#题目描述（Problem）" class="headerlink" title="题目描述（Problem）"></a>题目描述（Problem）</h2><p>小 $A$ 有一张 $n$ 个点 $m$ 条边的有向无环图，每个点有一个点权，初始均为 $0$。</p>
 <p>你需要帮他进行 $q$ 次操作，每次操作可能是以下三种操作中的一种：</p>
 <p>$1\ u \ x$：给出 $u, x$，表示将 $u$ 点能到达的点的点权全部改成 $x$ 。</p>
 <p>$2 \ u \ x$：给出 $u, x$，表示将 $ u $ 点能到达的点的点权全部和 $x$ 取 $min$。</p>
@@ -504,7 +519,7 @@
 <h4 id="算法二"><a href="#算法二" class="headerlink" title="算法二"></a><strong>算法二</strong></h4><p>考虑修改操作对之后每次询问的影响，不难发现，当询问 $u$ 的点权时，往前找到最后一次能影响到 $u$ 的赋值操作，再将这个赋值操作之后的所有能影响到 $u$ 的取 $min$ 操作拿出来，对修改权值一起求个最小值就是答案。</p>
 <p>于是可以先用 $bitset$ 预处理传递闭包，将所有的修改操作存在栈里，询问时在栈中找出所有有影响的操作，计算出点权。当栈的大小达到 $O(\sqrt{n})$ 时，将栈中所有操作依次暴力执行并将栈清空即可，时间复杂度 $O(\frac{n^2}{w} + n\sqrt{n})$ ，根据实现时占用的空间，期望得分 $80$ 到 $100$ 分。</p>
 <p>如果最后两个测试点空间不够，可以考虑拿时间换空间，第一次选出 $\frac{n}{k}$ 个点，只回答它们的询问，那么预处理传递闭包时也只需要记录每个点能否到达这 $\frac{n}{k}$ 个点，这样做 $k$ 次，每次将 $bitset$ 的空间拿来重复利用即可。时间复杂度乘了 $k$ ，空间复杂度除以了 $k$ 。$k$ 的具体值可以根据自己的代码测试调整，对本题数据选 $k&#x3D;2,3$ 是比较合适的。期望得分 $100$ 分。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;This is my code!!!
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><h3 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;This is my code!!!
 #include&lt;bits&#x2F;stdc++.h&gt;
 #define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
 #define Rof(i,l,r) for(int i&#x3D;l;i&gt;&#x3D;r;i--)
@@ -877,7 +892,7 @@ int main()&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wolfdeer62456.github.io/projecthttps://wolfdeer62456.github.io/2023/10/25/C231025B-%E5%9B%BE%E8%AE%BA-graph/">https://wolfdeer62456.github.io/projecthttps://wolfdeer62456.github.io/2023/10/25/C231025B-%E5%9B%BE%E8%AE%BA-graph/</a>
+                    <a target="_blank" rel="noopener" href="https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2023/10/25/C231025B-%E5%9B%BE%E8%AE%BA-graph/">https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2023/10/25/C231025B-%E5%9B%BE%E8%AE%BA-graph/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1023,7 +1038,7 @@ int main()&#123;
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="#C231028B. 排列(per)">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/71.jpg" class="responsive-img" alt="#C231028B. 排列(per)">
                         
                         <span class="card-title">#C231028B. 排列(per)</span>
                     </div>
@@ -1303,7 +1318,7 @@ int main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">117k</span>
+                        class="white-color">117.6k</span>
             
             
             

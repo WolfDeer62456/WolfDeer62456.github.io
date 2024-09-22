@@ -5,7 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="#C231108B. 子序列(sub), WolfDeer">
-    <meta name="description" content="#C231108B. 子序列(sub)前言（Front talk)$\qquad$动态规划的题都需要特殊理解，那彻底理解后，这道题对我的提升可不小，明天准备去凹 $1-2$ 道难题，再次提升代码能力，今天的 $T4$ 就很好。ヾ(•ω•&amp;#">
+    <meta name="description" content="#C231108B. 子序列(sub)标签（Label）
+分治
+动态规划
+
+前言（Front talk)$\qquad$动态规划的题都需要特殊理解，那彻底理解后，这道题对我的提升可不小，明天准备去凹 $1-2$ 道难题，再次提升代码能力，今">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -325,7 +329,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/48.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/68.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -358,6 +362,10 @@
                                 <span class="chip bg-color">动态规划</span>
                             </a>
                         
+                            <a href="https://wolfdeer62456.github.io/tags/%E5%88%86%E6%B2%BB/">
+                                <span class="chip bg-color">分治</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -386,7 +394,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-11-17
+                    2024-09-22
                 </div>
                 
 
@@ -423,7 +431,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C231108B-子序列-sub"><a href="#C231108B-子序列-sub" class="headerlink" title="#C231108B. 子序列(sub)"></a>#C231108B. 子序列(sub)</h1><h2 id="前言（Front-talk"><a href="#前言（Front-talk" class="headerlink" title="前言（Front talk)"></a>前言（Front talk)</h2><p>$\qquad$动态规划的题都需要特殊理解，那彻底理解后，这道题对我的提升可不小，明天准备去凹 $1-2$ 道难题，再次提升代码能力，今天的 $T4$ 就很好。ヾ(•ω•&#96;)o</p>
+                <h1 id="C231108B-子序列-sub"><a href="#C231108B-子序列-sub" class="headerlink" title="#C231108B. 子序列(sub)"></a>#C231108B. 子序列(sub)</h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><ul>
+<li>分治</li>
+<li>动态规划</li>
+</ul>
+<h2 id="前言（Front-talk"><a href="#前言（Front-talk" class="headerlink" title="前言（Front talk)"></a>前言（Front talk)</h2><p>$\qquad$动态规划的题都需要特殊理解，那彻底理解后，这道题对我的提升可不小，明天准备去凹 $1-2$ 道难题，再次提升代码能力，今天的 $T4$ 就很好。ヾ(•ω•&#96;)o</p>
 <h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231108B">题目详情 - 子序列(sub) - Super</a> </p>
 <p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231108B/solution">题解 - 子序列(sub) - Super</a> </p>
 <h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><p>给定一个长为 $n$ 的 $01$ 字符串 $S$ 。求有多少个长为 $n$ 的字符串序列，满足 $A_{0}&#x3D;S$，$A_{n}$ 为空，$A_{i}$ 长度为 $n-i$，且 $\forall 1 \leq i \leq n$，$A_{i}$ 是 $A_{i-1}$ 的子序列。</p>
@@ -438,7 +450,7 @@
 </li>
 <li><p>按正常情况来理解，如果出现 $10001$ 这个序列，在不去重的情况下，删除后会出现五种情况： $@0001$ ，$1@001$，$10@01$ ，$100@1$ ，$1000@$ （其中 $@$ 代表删除的位置），对于删除最左边的 $1$ 或者删除最右边的 $1$ 方案数接不会计算重复，在此略去，仅考虑中间 $3$ 个 $0$ 的情况，我们固定只删除最右边的 $0$ ，那么对于 $0$ 不在最右边的情况则一定不能删去，因此在枚举到删除了左边的 $0$ 的情况时，我们可以直接特判，不去删除那些 $0$ 。</p>
 </li>
-<li><p>那现在就到了 $How$ 的问题。<del>（我就直接抄题解了）</del><strong>先考虑</strong>区间 $\mathrm{dp}$ ，枚举一个区间**&#x3D;&#x3D;最后一个删除的位置&#x3D;&#x3D;<strong>。这样之前的删除中，左右两边就独立了，可以分别计数，最后合并时乘上一个组合数。</strong>再考虑**限制是什么。如果这个区间最后删除的是 $k$，那么在删除它时，它后面的字符一定是 $s_{r+1} $ ，那么直接判断 $s_{k}$ 是否等于 $s_{r+1}$ 就行了。</p>
+<li><p>那现在就到了 $How$ 的问题。<del>（我就直接抄题解了）</del>先考虑区间 $\mathrm{dp}$ ，枚举一个区间<strong>最后一个删除的位置</strong>。这样之前的删除中，左右两边就独立了，可以分别计数，最后合并时乘上一个组合数。*再考虑限制是什么。如果这个区间最后删除的是 $k$，那么在删除它时，它后面的字符一定是 $s_{r+1} $ ，那么直接判断 $s_{k}$ 是否等于 $s_{r+1}$ 就行了。</p>
 </li>
 <li><p>至于求组合数，因为左右操作独立，但是删除的位置却是随机的，因此要在 $r-l+1-1$ （减去删除的那个元素）的总操作数中选择 $i-l$ 种操作来执行左区间删除操作，剩下的执行右区间，方案数 $C_{r-l}^{i-l}$ 。</p>
 </li>
@@ -530,7 +542,7 @@ int main()&#123;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="后续（Ending）"><a href="#后续（Ending）" class="headerlink" title="后续（Ending）"></a>后续（Ending）</h2><p><strong>对于这些题目一定要加深理解，加油！q(≧▽≦q)</strong></p>
-<h2 id="还有后续（And-Ending）"><a href="#还有后续（And-Ending）" class="headerlink" title="还有后续（And Ending）"></a>还有后续（And Ending）</h2><p>结果是黄色部分看错了才导致不理解，这道题作者反着做确实很妙。</p>
+<h2 id="还有后续（And-Ending）"><a href="#还有后续（And-Ending）" class="headerlink" title="还有后续（And Ending）"></a>还有后续（And Ending）</h2><p>结果是加粗部分看错了才导致不理解，这道题作者反着做确实很妙。</p>
 
                 
             </div>
@@ -557,7 +569,7 @@ int main()&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wolfdeer62456.github.io/projecthttps://wolfdeer62456.github.io/2023/11/08/C231108B-%E5%AD%90%E5%BA%8F%E5%88%97-sub/">https://wolfdeer62456.github.io/projecthttps://wolfdeer62456.github.io/2023/11/08/C231108B-%E5%AD%90%E5%BA%8F%E5%88%97-sub/</a>
+                    <a target="_blank" rel="noopener" href="https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2023/11/08/C231108B-%E5%AD%90%E5%BA%8F%E5%88%97-sub/">https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2023/11/08/C231108B-%E5%AD%90%E5%BA%8F%E5%88%97-sub/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -597,6 +609,10 @@ int main()&#123;
                             
                                 <a href="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
                                     <span class="chip bg-color">动态规划</span>
+                                </a>
+                            
+                                <a href="https://wolfdeer62456.github.io/tags/%E5%88%86%E6%B2%BB/">
+                                    <span class="chip bg-color">分治</span>
                                 </a>
                             
                         </div>
@@ -683,7 +699,7 @@ int main()&#123;
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/43.jpg" class="responsive-img" alt="2023.11.09 考试总结">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/58.jpg" class="responsive-img" alt="2023.11.09 考试总结">
                         
                         <span class="card-title">2023.11.09 考试总结</span>
                     </div>
@@ -724,7 +740,7 @@ int main()&#123;
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/83.jpg" class="responsive-img" alt="#C231108A. 最大公约数(gcd)">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/92.jpg" class="responsive-img" alt="#C231108A. 最大公约数(gcd)">
                         
                         <span class="card-title">#C231108A. 最大公约数(gcd)</span>
                     </div>
@@ -754,8 +770,12 @@ int main()&#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="https://wolfdeer62456.github.io/tags/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/">
-                        <span class="chip bg-color">最大公约数</span>
+                    <a href="https://wolfdeer62456.github.io/tags/gcd/">
+                        <span class="chip bg-color">gcd</span>
+                    </a>
+                    
+                    <a href="https://wolfdeer62456.github.io/tags/%E5%80%BC%E5%9F%9F%E8%BD%AC%E4%B8%8B%E6%A0%87/">
+                        <span class="chip bg-color">值域转下标</span>
                     </a>
                     
                 </div>
@@ -960,7 +980,7 @@ int main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">117k</span>
+                        class="white-color">117.6k</span>
             
             
             
