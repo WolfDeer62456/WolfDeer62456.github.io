@@ -5,8 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="#C231116B. 排列(perm), WolfDeer">
-    <meta name="description" content="#C231116B. 排列(perm)前言（Front talk) $\qquad$这道题自己推了大部分，但是后面因为方向错了，以及不注重细节的缘故，导致想出了正解但是自身没有意识到，还以为时间超了。
-网址（Website） 题目详情 - ">
+    <meta name="description" content="从题目中获取信息，并入手">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -355,8 +354,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="https://wolfdeer62456.github.io/tags/%E8%A7%82%E5%AF%9F-%E5%88%86%E6%9E%90/">
-                                <span class="chip bg-color">观察+分析</span>
+                            <a href="https://wolfdeer62456.github.io/tags/%E6%95%B0%E5%AD%A6%E6%8E%A8%E7%90%86/">
+                                <span class="chip bg-color">数学推理</span>
+                            </a>
+                        
+                            <a href="https://wolfdeer62456.github.io/tags/%E5%80%BC%E5%9F%9F%E8%BD%AC%E4%B8%8B%E6%A0%87/">
+                                <span class="chip bg-color">值域转下标</span>
                             </a>
                         
                     </div>
@@ -387,7 +390,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-03
+                    2024-09-23
                 </div>
                 
 
@@ -424,7 +427,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C231116B-排列-perm"><a href="#C231116B-排列-perm" class="headerlink" title="#C231116B. 排列(perm)"></a>#C231116B. 排列(perm)</h1><h2 id="前言（Front-talk"><a href="#前言（Front-talk" class="headerlink" title="前言（Front talk)"></a>前言（Front talk)</h2><p> $\qquad$这道题自己推了大部分，但是后面因为方向错了，以及不注重细节的缘故，导致想出了正解但是自身没有意识到，还以为时间超了。</p>
+                <h1 id="C231116B-排列-perm"><a href="#C231116B-排列-perm" class="headerlink" title="#C231116B. 排列(perm)"></a>#C231116B. 排列(perm)</h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><ul>
+<li>数学推理</li>
+<li>值域转下标</li>
+</ul>
+<h2 id="前言（Front-talk"><a href="#前言（Front-talk" class="headerlink" title="前言（Front talk)"></a>前言（Front talk)</h2><p> $\qquad$这道题自己推了大部分，但是后面因为方向错了，以及不注重细节的缘故，导致想出了正解但是自身没有意识到，还以为时间超了。</p>
 <h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231116B">题目详情 - 排列(perm) - Super</a> </p>
 <p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231116B/solution">题解 - 排列(perm) - Super</a> </p>
 <h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><p>给定一个长度为 $n$ 的排列 $A$ 与 $q$ 个询问。</p>
@@ -433,7 +440,7 @@
 <p>其中 $f(x,y)$ 定义如下：</p>
 <ul>
 <li>当 $x&#x3D;y$ 时，其值为 $1$；</li>
-<li>当 $x\not&#x3D;y$ 时，其值为 $f(x+y-|x-y|,|x-y|)+1f(x+y−∣x−y∣,∣x−y∣)+1$；</li>
+<li>当 $x\not&#x3D;y$ 时，其值为 $f(x+y-|x-y|,|x-y|)+1$；</li>
 <li>若无限循环，将其值看作 $0$。</li>
 </ul>
 <p> 对于 $100%$ 的数据，$1 \leq n \leq 3\times 10^5$；$1 \leq q \leq 10^6$；$1 \leq l \leq r \leq n$。 </p>
@@ -570,8 +577,12 @@ signed main()&#123;
                     
                         <div class="article-tag">
                             
-                                <a href="https://wolfdeer62456.github.io/tags/%E8%A7%82%E5%AF%9F-%E5%88%86%E6%9E%90/">
-                                    <span class="chip bg-color">观察+分析</span>
+                                <a href="https://wolfdeer62456.github.io/tags/%E6%95%B0%E5%AD%A6%E6%8E%A8%E7%90%86/">
+                                    <span class="chip bg-color">数学推理</span>
+                                </a>
+                            
+                                <a href="https://wolfdeer62456.github.io/tags/%E5%80%BC%E5%9F%9F%E8%BD%AC%E4%B8%8B%E6%A0%87/">
+                                    <span class="chip bg-color">值域转下标</span>
                                 </a>
                             
                         </div>
@@ -687,6 +698,10 @@ signed main()&#123;
                 </div>
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="https://wolfdeer62456.github.io/tags/%E8%A7%82%E5%AF%9F-%E5%88%86%E6%9E%90/">
+                        <span class="chip bg-color">观察+分析</span>
+                    </a>
                     
                     <a href="https://wolfdeer62456.github.io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/">
                         <span class="chip bg-color">最短路算法</span>
@@ -943,7 +958,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">119k</span>
+                        class="white-color">120k</span>
             
             
             

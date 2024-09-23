@@ -389,14 +389,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 
@@ -436,11 +436,37 @@ next(it,x);&#x2F;&#x2F;迭代器的上一位，x不填默认为1
 int number &#x3D; atoi(str);&#x2F;&#x2F;将字符串str转换为number
 iota(fa+1, fa+n+1, 1);&#x2F;&#x2F;从1开始将fa[1]~fa[n]依次赋值为1~n
 
+cerr&lt;&lt;a;&#x2F;&#x2F;输出a到控制板上，并不会影响实际输出
+
 assert(A);&#x2F;&#x2F;如果不满足事件A，程序会提前终止,并且返回当前所在行
-exit(0);&#x2F;&#x2F;无论在哪个函数，直接结束运行进程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+exit(0);&#x2F;&#x2F;无论在哪个函数，直接结束运行进程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="三、代码模板"><a href="#三、代码模板" class="headerlink" title="三、代码模板"></a>三、代码模板</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
+#include&lt;vector&gt;
+#define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
+#define Rof(i,l,r) for(int i&#x3D;l;i&gt;&#x3D;r;i--)
+using namespace std;
+#define P pair&lt;int,int&gt;
+#define int long long
+#define x first
+#define y second
+inline int rd()&#123;int x;return cin&gt;&gt;x,x;&#125;
+const int inf &#x3D; 0x3f3f3f3f3f3f3f3f;
+const int N &#x3D; 201234;
+bool ST;
+&#x2F;&#x2F;在这里定义数组 
+bool ED;
+signed main()&#123;
+	ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);&#x2F;&#x2F;关闭同步流 
+	cerr&lt;&lt;abs(&amp;ST-&amp;ED)&#x2F;1024.&#x2F;1024.&lt;&lt;&quot;MB\n&quot;;&#x2F;&#x2F;输出静态内存占用 
+	freopen(&quot;a.in&quot;,&quot;r&quot;,stdin);
+	freopen(&quot;a.out&quot;,&quot;w&quot;,stdout);
+	cin&gt;&gt;n;int Tim &#x3D; clock();&#x2F;&#x2F;建议在Tim定义前先输入一个数据
+	&#x2F;&#x2F;代码 
+	return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;&#x2F;&#x2F;输出时间 
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="三、常用知识"><a href="#三、常用知识" class="headerlink" title="三、常用知识"></a>三、常用知识</h2><h3 id="（一）函数的初始化与重载运算符"><a href="#（一）函数的初始化与重载运算符" class="headerlink" title="（一）函数的初始化与重载运算符"></a><strong>（一）函数的初始化与重载运算符</strong></h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">struct Tr&#123;
+<h2 id="四、常用知识"><a href="#四、常用知识" class="headerlink" title="四、常用知识"></a>四、常用知识</h2><h3 id="（一）函数的初始化与重载运算符"><a href="#（一）函数的初始化与重载运算符" class="headerlink" title="（一）函数的初始化与重载运算符"></a><strong>（一）函数的初始化与重载运算符</strong></h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">struct Tr&#123;
     int x,y;Tr(int a)&#123;x &#x3D; a,y &#x3D; 0;&#125;&#x2F;&#x2F;初始化 x&#x3D;a&#x3D;1,y&#x3D;0
     bool operator&lt;(const Tr b)&#123;return y&lt;b.y;&#125;&#x2F;&#x2F;可以在STL容器中更新“&lt;”符号的比较方式
 &#125;thi(1);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
@@ -931,7 +957,7 @@ lis.erase(x);&#x2F;&#x2F;删除指针x对应的元素。注意：删除后该指
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">119k</span>
+                        class="white-color">120k</span>
             
             
             

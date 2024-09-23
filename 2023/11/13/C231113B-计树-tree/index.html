@@ -5,8 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="#C231113B. 计树(tree), WolfDeer">
-    <meta name="description" content="#C231113B. 计树(tree)前言（Front talk)$\qquad$动态规划的题，需要仔细地研究。
-$\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方面想，一直在思考怎么“模拟”这个过程，自然也（一定也）想不出来">
+    <meta name="description" content="动态规划">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -359,6 +358,10 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
                                 <span class="chip bg-color">动态规划</span>
                             </a>
                         
+                            <a href="https://wolfdeer62456.github.io/tags/%E6%BB%9A%E5%8A%A8%E6%95%B0%E7%BB%84/">
+                                <span class="chip bg-color">滚动数组</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -387,21 +390,21 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-11-17
+                    2024-09-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    846
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    7 分
                 </div>
                 
 
@@ -424,20 +427,56 @@ $\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C231113B-计树-tree"><a href="#C231113B-计树-tree" class="headerlink" title="#C231113B. 计树(tree)"></a>#C231113B. 计树(tree)</h1><h2 id="前言（Front-talk"><a href="#前言（Front-talk" class="headerlink" title="前言（Front talk)"></a>前言（Front talk)</h2><p>$\qquad$动态规划的题，需要仔细地研究。</p>
-<p>$\qquad$其实一般遇到动态规划的题，我都没有往动态规划这方面想，一直在思考怎么“模拟”这个过程，自然也（一定也）想不出来，之后应该多想想对于 $f_{i,j,k}$ 等式子的定义， 再多练习推理类似的方程。</p>
+                <h1 id="C231113B-计树-tree"><a href="#C231113B-计树-tree" class="headerlink" title="#C231113B. 计树(tree)"></a>#C231113B. 计树(tree)</h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><ul>
+<li>动态规划</li>
+<li>滚动数组</li>
+</ul>
 <h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p>$\qquad$ <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231113B">题目详情 - 计树(tree) - Super</a> </p>
 <p>$\qquad$ <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C231113B/solution">题解 - 计树(tree) - Super</a> </p>
-<h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><p>统计满足以下条件的 $n$ 个节点的二叉树个数：</p>
+<h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><p>统计满足以下条件的 $n$ 个结点的<strong>二叉树</strong>个数：</p>
 <ol>
-<li>第 $i$ 个节点的儿子个数在 $\left[l_{i}, r_{i}\right]$ 之间。</li>
-<li>如果第 $i$ 个节点不为叶子，且其儿子的最大编号为 $k_{i}$, 则需要满足 $k_{i}&gt;i$ 。</li>
+<li>第 $i$ 个结点的<strong>儿子个数</strong>在 $\left[l_{i}, r_{i}\right]$ 之间。</li>
+<li>如果第 $i$ 个结点不为叶子，且其儿子的最大编号为 $k_{i}$, 则需要满足 $k_{i}&gt;i$ 。</li>
 </ol>
 <p><strong>注意左右儿子是区分的。</strong></p>
 <p>我们认为两棵树不同，当且仅当在某个点在两棵树中的父亲不同，或是左右儿子不同。</p>
 <p>答案对 $10^{9}+7$ 取模。</p>
 <p><strong>范围</strong>： 对于所有数据, 有 $1 \leq T \leq 3$；$1 \leq n \leq 300$；$0 \leq l_{i} \leq r_{i} \leq 2$ 。 </p>
-<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$题解讲的很明白了。。。</p>
+<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>设 $ f_{i,j,k} $ 表示考虑了前 $ i $ 个结点，有 $ j $ 个结点没有父亲（即当前图形态为 $ j $ 棵树的森林），且前 $ i $ 个点还缺少 $ k $ 个儿子的状态。在转移的过程中，我们钦定第 $ i+1 $ 个点的儿子数量 $ l $ ，令 $fa$ 表示父结点编号，$cur$ 表示当前结点编号，$son$ 与 $sonl,sonr$ 分别表示 $l&#x3D;&#x3D;1$ 和 $l&#x3D;&#x3D;2$ 时的儿子的编号： </p>
+<p><strong>当 $ l &#x3D; 0 $ 时：</strong></p>
+<ol>
+<li>新开一棵树：$ f_{i,j,k} \rightarrow f_{i+1,j+1,k}$ ，此时$fa&lt;cur$。</li>
+<li>接在之前某个缺儿子的结点下面：$k\times f_{i,j,k} \rightarrow f_{i+1,j,k-1} $ ，此时 $fa&gt;cur$ 。</li>
+</ol>
+<p><strong>当 $ l &#x3D; 1 $ 时：</strong></p>
+<ol>
+<li>转移方式与 $ l &#x3D; 0 $ 相同，但注意转移系数为 2，因为需要钦定这个点的儿子是左儿子还是右儿子。</li>
+<li>新开一棵树：$fa&lt;cur$ 且 $son&gt;cur$ 。</li>
+<li>接在之前某个缺儿子的结点下面：$fa&gt;cur$ 且 $son&gt;cur$ 。</li>
+</ol>
+<p><strong>当 $ l &#x3D; 2 $ 时：</strong></p>
+<ol>
+<li><p>与 $ l &#x3D; 0&#x2F;1 $ 有相同的转移方式。额外的：</p>
+</li>
+<li><p>将之前某个没有父亲的结点接在它下面：$ 2 \times j \times f_{i,j,k} \rightarrow f_{i+1,j,k+1} $，</p>
+</li>
+</ol>
+<p>  乘二是因为要钦定它接在左儿子还是右儿子。</p>
+<p>  此时 $fa&gt;cur$ 、 $sonl&lt;cur$ 、$sonr&gt;cur$ 。</p>
+<ol start="3">
+<li>将之前某个没有父亲的结点接在它下面，并将它接在之前某个缺儿子的结点下面：$ 2 \times (j-1) \times k \times f_{i,j,k} \rightarrow f_{i+1,j-1,k} $</li>
+</ol>
+<p>  $ j-1 $ 是因为，你接在一个缺儿子的结点下面，而这个结点所在的树的根就不能接在你下面了。</p>
+<p>  此时 $fa&lt;cur$ 、 $sonl&lt;cur$ 、$sonr&gt;cur$ 。</p>
+<p>总时间复杂度为 $ O(Tn^3) $ 。</p>
+<h3 id="概念解释："><a href="#概念解释：" class="headerlink" title="概念解释："></a>概念解释：</h3><p>由于题目中对儿子的编号要求：</p>
+<ol>
+<li>当新开一棵树时，其所有的儿子（可能没有）的编号都会比当前结点大，且当前结点未来的父亲编号一定比这个点大（按照题目要求，这个时候这个点只能接上 $l&#x3D;&#x3D;2$ 的父亲）；</li>
+<li>当这个点接在某个缺少儿子的结点下面时，只会接在 $l&#x3D;&#x3D;1$ 或者已经接了一个点的 $l&#x3D;&#x3D;2$ 的结点上（$l&#x3D;&#x3D;2$的已经接了的儿子编号应小于那个 $l&#x3D; &#x3D;2$ 的结点），此时当前点的编号一定大于接上的那些结点；</li>
+<li>当这个点下面接上一个没有父亲的结点时，正如“1.”中的括号所说，这个点的编号大于它儿子的编号，那么下一次就只能接编号比它更大的儿子，正如“2.”中所说；</li>
+<li>当这个点下面接上一个没有父亲的结点，同时自己上面有接上一个结点时，父亲的编号和儿子的编号都小于自己。</li>
+</ol>
+<p>综上，对于一个结点，<strong>如何考虑不同的情况呢？</strong>只需要区分它的父亲的编号和自己的关系、它的儿子的编号和自己的关系便可以考虑所有情况。</p>
 <h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
 #define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
 using namespace std;
@@ -447,7 +486,7 @@ const int mod &#x3D; 1e9+7;
 const int N &#x3D; 305;
 inline void add(int &amp;x,int y)&#123;if((x+&#x3D;y)&gt;mod) x-&#x3D;mod;&#125;
 int tid,T,n,l[N],r[N],f[2][N][N];
-&#x2F;&#x2F; f[i][j][k]: 前 i 个节点  目前有 j 棵树  还有 k 个节点没有儿子
+&#x2F;&#x2F; f[i][j][k]: 前 i 个结点  目前有 j 棵树  还有 k 个结点没有儿子
 inline void solve()&#123;
 	cin&gt;&gt;n;For(i,1,n) cin&gt;&gt;l[i]&gt;&gt;r[i];
 	memset(f[0],0,sizeof f[0]);f[0][0][0]&#x3D;1;
@@ -455,13 +494,13 @@ inline void solve()&#123;
 		memset(f[i&amp;1],0,sizeof f[i&amp;1]);
 		For(j,0,i-1)&#123;
 			For(k,0,n)&#123;
-				if(!f[i-1&amp;1][j][k]) continue;&#x2F;&#x2F;如果上一个节点在当前状态下没有可能，跳过
+				if(!f[i-1&amp;1][j][k]) continue;&#x2F;&#x2F;如果上一个结点在当前状态下没有可能，跳过
 				if(l[i]&#x3D;&#x3D;0)&#123;
 					add(f[i&amp;1][j+1][k],f[i-1&amp;1][j][k]);&#x2F;&#x2F;新开一棵树
 					if(k) add(f[i&amp;1][j][k-1],k*f[i-1&amp;1][j][k]%mod);&#x2F;&#x2F;接在之前的点上 
 				&#125;if(l[i]&lt;&#x3D;1 &amp;&amp; r[i]&gt;&#x3D;1)&#123;
 					add(f[i&amp;1][j+1][k+1],2*f[i-1&amp;1][j][k]%mod);&#x2F;&#x2F;新开一棵树，可能是左儿子，也有可能是右儿子 
-					add(f[i&amp;1][j][k],2ll*k*f[i-1&amp;1][j][k]%mod);&#x2F;&#x2F;缺儿子的节点数量不会变 
+					add(f[i&amp;1][j][k],2ll*k*f[i-1&amp;1][j][k]%mod);&#x2F;&#x2F;缺儿子的结点数量不会变 
 				&#125;if(r[i]&#x3D;&#x3D;2)&#123;
 					add(f[i&amp;1][j+1][k+2],f[i-1&amp;1][j][k]);&#x2F;&#x2F;新开一棵树
 					add(f[i&amp;1][j][k+1],1*f[i-1&amp;1][j][k]*k%mod);&#x2F;&#x2F;接在之前的点上
@@ -548,6 +587,10 @@ signed main()&#123;
                             
                                 <a href="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
                                     <span class="chip bg-color">动态规划</span>
+                                </a>
+                            
+                                <a href="https://wolfdeer62456.github.io/tags/%E6%BB%9A%E5%8A%A8%E6%95%B0%E7%BB%84/">
+                                    <span class="chip bg-color">滚动数组</span>
                                 </a>
                             
                         </div>
@@ -915,7 +958,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">119k</span>
+                        class="white-color">120k</span>
             
             
             
