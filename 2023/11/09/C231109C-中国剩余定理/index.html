@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="「NOIP2023」天天爱打卡, WolfDeer">
-    <meta name="description" content="「NOIP2023」天天爱打卡网址（Website）洛谷，SPOJ
-题目（Problem）题目描述小 T 同学非常热衷于跑步。为了让跑步更加有趣，他决定制作一款叫做《天天爱打卡》的软件，使得用户每天都可以进行跑步打卡。
-开发完成后，小 T ">
+    <meta name="keywords" content="#C231109C. 中国剩余定理, WolfDeer">
+    <meta name="description" content="中国剩余定理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>「NOIP2023」天天爱打卡 | WolfDeer</title>
+    <title>#C231109C. 中国剩余定理 | WolfDeer</title>
     <link rel="icon" type="image/png" href="https://wolfdeer62456.github.io/favicon.png">
     
 
@@ -327,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/83.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/55.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">「NOIP2023」天天爱打卡</h1>
+                    <h1 class="description center-align post-title">#C231109C. 中国剩余定理</h1>
                 </div>
             </div>
         </div>
@@ -356,8 +354,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                                <span class="chip bg-color">动态规划</span>
+                            <a href="https://wolfdeer62456.github.io/tags/%E6%95%B0%E5%AD%A6/">
+                                <span class="chip bg-color">数学</span>
+                            </a>
+                        
+                            <a href="https://wolfdeer62456.github.io/tags/exgcd/">
+                                <span class="chip bg-color">exgcd</span>
                             </a>
                         
                     </div>
@@ -381,28 +383,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-08-12
+                    2023-11-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-09-23
+                    2024-09-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    879
+                    413
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -425,117 +427,54 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="「NOIP2023」天天爱打卡"><a href="#「NOIP2023」天天爱打卡" class="headerlink" title="「NOIP2023」天天爱打卡"></a>「NOIP2023」天天爱打卡</h1><h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P9871">洛谷</a>，<a target="_blank" rel="noopener" href="http://192.168.110.4/p/C10137">SPOJ</a></p>
-<h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>小 T 同学非常热衷于跑步。为了让跑步更加有趣，他决定制作一款叫做《天天爱打卡》的软件，使得用户每天都可以进行跑步打卡。</p>
-<p>开发完成后，小 T 同学计划进行试运行，他找了大 Y 同学来帮忙。试运行共 $n$ 天，编号为从 $1$ 到 $n$。</p>
-<p>对大 Y 同学来说，如果某天他选择跑步打卡，那么他的能量值会减少 $d$。初始时，他的能量值是 $0$，并且试运行期间他的<strong>能量值可以是负数</strong>。</p>
-<p>而且大 Y 不会<strong>连续</strong>跑步打卡<strong>超过</strong> $k$ 天；即不能存在 $1\le x\le n-k$，使得他在第 $x$ 到第 $x+k$ 天均进行了跑步打卡。</p>
-<p>小 T 同学在软件中设计了 $m$ 个挑战，第 $i$（$1\le i \le m$）个挑战可以用三个正整数 $(x_i,y_i,v_i)$ 描述，表示如果在第 $x_i$ 天时，用户已经连续跑步打卡至少 $y_i$ 天（即第 $x_i-y_i+1$ 到第 $x_i$ 天均完成了跑步打卡），那么小 T 同学就会请用户吃饭，从而使用户的能量值提高 $v_i$。</p>
-<p>现在大 Y 想知道，在软件试运行的 $n$ 天结束后，他的能量值<strong>最高</strong>可以达到多少？</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p><strong>本题的测试点包含有多组测试数据。</strong></p>
-<p>输入的第一行包含两个整数 $c$ 和 $t$，分别表示测试点编号和测试数据组数。对于样例，$c$ 表示该样例与测试点 $c$ 拥有相同的限制条件。</p>
-<p>接下来，对于每组测试数据：</p>
-<ul>
-<li>输入的第一行包含四个正整数 $n,m,k,d$，分别表示试运行的天数、挑战的个数、大 Y 单次跑步打卡的连续天数限制以及大 Y 跑步打卡减少的能量值。</li>
-<li>接下来 $m$ 行，每行包含三个正整数 $x_i,y_i,v_i$，表示一次挑战。</li>
+                <h1 id="C231109C-中国剩余定理"><a href="#C231109C-中国剩余定理" class="headerlink" title="#C231109C. 中国剩余定理"></a>#C231109C. 中国剩余定理</h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><ul>
+<li>数学</li>
+<li>exgcd</li>
 </ul>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一行一个整数表示对应的答案。</p>
-<h3 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h3><h4 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h4><pre class="line-numbers language-none"><code class="language-none">1 1
-3 2 2 1
-2 2 4
-3 2 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/A1240">题目详情 - 【NOIP模板】中国剩余定理 - 曹冲养猪 - Super</a> </p>
+<p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/A1240/solution">题解 - 【NOIP模板】中国剩余定理 - 曹冲养猪 - Super</a> </p>
+<p> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1495">P1495 【模板】中国剩余定理（CRT）</a> </p>
+<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$中国剩余定理就不用讲了，题解已经讲得够清晰了，只是这几天一直考数学，看到这道题比较妙，有多种解法，于是记录下来。</p>
+<p>$\qquad$有问题看 <a target="_blank" rel="noopener" href="https://oi-wiki.org/math/number-theory/crt/">OI-Wiki</a> 就好了。</p>
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><h3 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+#define int long long
+const int N &#x3D; 1012345;
+inline int exgcd(int a,int b,int &amp;x,int &amp;y)&#123;
+	if(!b) return x&#x3D;1,y&#x3D;0,a;
+	int d&#x3D;exgcd(b,a%b,y,x);
+	y-&#x3D;a&#x2F;b*x;return d;
+&#125;
+int a[N],b[N],m[N],t[N];
+int sum&#x3D;1,ans,n,x,y;
+signed main()&#123;
+	ios::sync_with_stdio(false);
+	cin&gt;&gt;n;for(int i&#x3D;1;i&lt;&#x3D;n;i++) cin&gt;&gt;a[i]&gt;&gt;b[i],sum*&#x3D;a[i];
+	for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;
+		m[i]&#x3D;sum&#x2F;a[i];
+		exgcd(m[i],a[i],t[i],y);
+		t[i]&#x3D;(a[i]+t[i]%a[i])%a[i];
+		x&#x3D;x+m[i]*t[i]%sum*b[i]%sum;
+	&#125;return cout&lt;&lt;x%sum&lt;&lt;&#39;\n&#39;,0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h4><pre class="line-numbers language-none"><code class="language-none">2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><p><strong>【样例解释 #1】</strong></p>
-<p>在第 $1,2$ 天跑步打卡，第 $3$ 天不跑步打卡，最终会获得 $(-1)+(-1)+4&#x3D;2$ 的能量值。</p>
-<p><strong>【样例解释 #2】</strong></p>
-<p>该组样例满足测试点 $3$ 的条件。</p>
-<p><strong>【样例解释 #3】</strong></p>
-<p>该组样例满足测试点 $5$ 的条件。</p>
-<p><strong>【样例解释 #4】</strong></p>
-<p>该组样例满足测试点 $15$ 的条件。</p>
-<p><strong>【样例解释 #5】</strong></p>
-<p>该组样例满足测试点 $17$ 的条件。</p>
-<p><strong>【样例解释 #6】</strong></p>
-<p>该组样例满足测试点 $19$ 的条件。</p>
-<p><strong>【数据范围】</strong></p>
-<p>记 $l_i&#x3D;x_i-y_i+1$，$r_i&#x3D;x_i$；</p>
-<p>对于所有测试数据，保证：$1\le t\le 10$，$1\le k\le n\le 10^9$，$1\le m\le 10^5$，$1\le l_i\le r_i\le n$，$1\le d,v_i\le 10^9$。</p>
-<table>
-<thead>
-<tr>
-<th align="center">测试点编号</th>
-<th align="center">$n \le$</th>
-<th align="center">$m \le$</th>
-<th align="center">特殊性质</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">$1, 2$</td>
-<td align="center">$18$</td>
-<td align="center">$10 ^ 2$</td>
-<td align="center">无</td>
-</tr>
-<tr>
-<td align="center">$3, 4$</td>
-<td align="center">$10 ^ 2$</td>
-<td align="center">$10 ^ 2$</td>
-<td align="center">无</td>
-</tr>
-<tr>
-<td align="center">$5 \sim 7$</td>
-<td align="center">$10 ^ 3$</td>
-<td align="center">$10 ^ 3$</td>
-<td align="center">无</td>
-</tr>
-<tr>
-<td align="center">$8, 9$</td>
-<td align="center">$10 ^ 3$</td>
-<td align="center">$10 ^ 5$</td>
-<td align="center">无</td>
-</tr>
-<tr>
-<td align="center">$10, 11$</td>
-<td align="center">$10 ^ 5$</td>
-<td align="center">$10 ^ 3$</td>
-<td align="center">无</td>
-</tr>
-<tr>
-<td align="center">$12 \sim 14$</td>
-<td align="center">$10 ^ 5$</td>
-<td align="center">$10 ^ 5$</td>
-<td align="center">无</td>
-</tr>
-<tr>
-<td align="center">$15, 16$</td>
-<td align="center">$10 ^ 9$</td>
-<td align="center">$10 ^ 5$</td>
-<td align="center">A</td>
-</tr>
-<tr>
-<td align="center">$17, 18$</td>
-<td align="center">$10 ^ 9$</td>
-<td align="center">$10 ^ 5$</td>
-<td align="center">B</td>
-</tr>
-<tr>
-<td align="center">$19 \sim 21$</td>
-<td align="center">$10 ^ 9$</td>
-<td align="center">$10 ^ 5$</td>
-<td align="center">C</td>
-</tr>
-<tr>
-<td align="center">$22 \sim 25$</td>
-<td align="center">$10 ^ 9$</td>
-<td align="center">$10 ^ 5$</td>
-<td align="center">无</td>
-</tr>
-</tbody></table>
-<p>特殊性质 A：$k\le 10^2$；</p>
-<p>特殊性质 B：$\forall 1\le i&lt;m$，$r_i&lt;l_{i+1}$；</p>
-<p>特殊性质 C：$\forall 1\le i&lt;j\le m$，$l_i&lt;l_j$，$r_i&lt;r_j$。</p>
-<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2>
+<h3 id="枚举法"><a href="#枚举法" class="headerlink" title="枚举法"></a>枚举法</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+#define int long long
+#define N 1012345
+int a[N],b[N];
+int n,m,sum,ans;
+signed main()&#123;
+	ios::sync_with_stdio(false);
+	cin&gt;&gt;n;for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;
+		cin&gt;&gt;a[i]&gt;&gt;b[i];
+	&#125;ans&#x3D;b[1],sum&#x3D;1;
+	for(int i&#x3D;1;i&lt;n;i++)&#123;
+		sum*&#x3D;a[i];
+		while(ans%a[i+1]!&#x3D;b[i+1]) ans+&#x3D;sum;
+	&#125;cout&lt;&lt;ans&lt;&lt;&#39;\n&#39;;
+	return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -561,7 +500,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a target="_blank" rel="noopener" href="https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2024/08/12/%E3%80%8CNOIP2023%E3%80%8D%E5%A4%A9%E5%A4%A9%E7%88%B1%E6%89%93%E5%8D%A1/">https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2024/08/12/%E3%80%8CNOIP2023%E3%80%8D%E5%A4%A9%E5%A4%A9%E7%88%B1%E6%89%93%E5%8D%A1/</a>
+                    <a target="_blank" rel="noopener" href="https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2023/11/09/C231109C-%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/">https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2023/11/09/C231109C-%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -599,8 +538,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                                    <span class="chip bg-color">动态规划</span>
+                                <a href="https://wolfdeer62456.github.io/tags/%E6%95%B0%E5%AD%A6/">
+                                    <span class="chip bg-color">数学</span>
+                                </a>
+                            
+                                <a href="https://wolfdeer62456.github.io/tags/exgcd/">
+                                    <span class="chip bg-color">exgcd</span>
                                 </a>
                             
                         </div>
@@ -683,25 +626,66 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="https://wolfdeer62456.github.io/2024/08/12/%E3%80%8CNOIP2023%E3%80%8D%E5%8F%8C%E5%BA%8F%E5%88%97%E6%8B%93%E5%B1%95/">
+                <a href="https://wolfdeer62456.github.io/2023/11/10/2023-11-10-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/">
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/76.jpg" class="responsive-img" alt="「NOIP2023」双序列拓展">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="2023.11.10 考试总结">
                         
-                        <span class="card-title">「NOIP2023」双序列拓展</span>
+                        <span class="card-title">2023.11.10 考试总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            dp+思维
+                            保持睡眠，理清思路
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-08-12
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-11-10
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/" class="post-category">
+                                    总结
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="https://wolfdeer62456.github.io/2023/11/09/C231109B-k-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/100.jpg" class="responsive-img" alt="#C231109B. k-斐波那契">
+                        
+                        <span class="card-title">#C231109B. k-斐波那契</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            欧几里得 线性同余方程
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -717,51 +701,14 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="https://wolfdeer62456.github.io/tags/%E8%A7%82%E5%AF%9F-%E5%88%86%E6%9E%90/">
-                        <span class="chip bg-color">观察+分析</span>
+                    <a href="https://wolfdeer62456.github.io/tags/%E6%95%B0%E5%AD%A6/">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="https://wolfdeer62456.github.io/2024/08/10/2024-08-10-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/59.jpg" class="responsive-img" alt="2024.08.10 考试总结">
-                        
-                        <span class="card-title">2024.08.10 考试总结</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            虽然感冒，但是不落下
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-10
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/" class="post-category">
-                                    总结
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
+                    <a href="https://wolfdeer62456.github.io/tags/exgcd/">
+                        <span class="chip bg-color">exgcd</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -964,7 +911,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">120k</span>
+                        class="white-color">120.7k</span>
             
             
             

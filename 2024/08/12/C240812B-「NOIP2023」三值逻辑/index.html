@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="#D10052.「NOI2007」社交网络, WolfDeer">
-    <meta name="description" content="#D10052. 「NOI2007」社交网络前言（Front talk)$\qquad$这是Floyd的进阶，我觉得非常的妙。
-网址（Website）$\qquad$题目详情 - 「NOI2007」社交网络 - Super 
-$\qquad">
+    <meta name="keywords" content="#C240812B.「NOIP2023」三值逻辑, WolfDeer">
+    <meta name="description" content="细心跑样例">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@ $\qquad">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>#D10052.「NOI2007」社交网络 | WolfDeer</title>
+    <title>#C240812B.「NOIP2023」三值逻辑 | WolfDeer</title>
     <link rel="icon" type="image/png" href="https://wolfdeer62456.github.io/favicon.png">
     
 
@@ -327,12 +325,12 @@ $\qquad">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/28.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">#D10052.「NOI2007」社交网络</h1>
+                    <h1 class="description center-align post-title">#C240812B.「NOIP2023」三值逻辑</h1>
                 </div>
             </div>
         </div>
@@ -356,8 +354,12 @@ $\qquad">
                     
                     <div class="article-tag">
                         
-                            <a href="https://wolfdeer62456.github.io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/">
-                                <span class="chip bg-color">最短路算法</span>
+                            <a href="https://wolfdeer62456.github.io/tags/%E6%B7%B1%E6%90%9C/">
+                                <span class="chip bg-color">深搜</span>
+                            </a>
+                        
+                            <a href="https://wolfdeer62456.github.io/tags/%E5%9B%BE%E8%AE%BA%E8%BD%AC%E5%8C%96/">
+                                <span class="chip bg-color">图论转化</span>
                             </a>
                         
                     </div>
@@ -381,28 +383,28 @@ $\qquad">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-12-29
+                    2024-08-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-30
+                    2024-09-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    10 分
                 </div>
                 
 
@@ -425,91 +427,272 @@ $\qquad">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="D10052-「NOI2007」社交网络"><a href="#D10052-「NOI2007」社交网络" class="headerlink" title="#D10052. 「NOI2007」社交网络"></a>#D10052. 「NOI2007」社交网络</h1><h2 id="前言（Front-talk"><a href="#前言（Front-talk" class="headerlink" title="前言（Front talk)"></a>前言（Front talk)</h2><p>$\qquad$这是Floyd的进阶，我觉得非常的妙。</p>
-<h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p>$\qquad$<a target="_blank" rel="noopener" href="http://192.168.110.4/p/D10052">题目详情 - 「NOI2007」社交网络 - Super</a> </p>
-<p>$\qquad$<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2047">P2047 [NOI2007] 社交网络 - 洛谷</a> </p>
-<h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><p> $\qquad$ 在社交网络 ( Social Network ) 的研究中，我们常常使用图论概念去解释一些社会现象。不妨看这样的一个问题: </p>
-<p> $\qquad$ 在一个社交圈子里有 $n$ 个人，人与人之间有不同程度的关系。我们将这个关系网络对应到一个 $n$ 个结点的无向图上，两个不同的人若互相认识，则在他们对应的结点之间连接一条无向边，并附上一个正数权值 $c$ ，$c$ 越小，表示两个人之间的关系越密切。我们可以用对应结点之间的最短路长度来衡量两个人 $s$ 和 $t$ 之间的关系密切程度，注意到最短路径上的其他结点为 $s$ 和 $t$ 的联系提供了某种便利，即这些结点对于 $s$ 和 $t$ 之间的联系有一定的重要程度。我们可以通过统计经过一个结点 $v$ 的最短路径的数目来衡量该结点在社交网络中的重要程度。考虑到两个结点 $A$ 和 $B$ 之间可能会有多条最短路径。我们修改重要程度的定义如下：令 $C_{s,t}$ 表示从s到t的不同的最短路的数目，$C_{s,t}(v)$ 表示经过 $v$ 从 $s$ 到 $t$ 的最短路的数目；则定义：</p>
-<p>$$\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad I(v)&#x3D;\sum_{s \ne v,t\ne v} \frac{C_{s,t}(v)}{C_{s,t}}$$</p>
-<p> $\qquad$为结点 $v$ 在社交网络中的重要程度。为了使 $I(v)$ 和 $C_{s,t}(v)$ 有意义，我们规定需要处理的社交网络都是连通的无向图，即任意两个结点之间都有一条有限长度的最短路径。现在给出这样一幅描述社交网络的加权无向图，请你求出每一个结点的重要程度。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>$\qquad$输入第一行有两个整数 $n$ 和 $m$ ，表示社交网络中结点和无向边的数目。<br>在无向图中，我们将所有结点从 $1$ 到 $n$ 进行编号。</p>
-<p>$\qquad$接下来 $m$ 行，每行用三个整数 $a , b , c$ 描述一条连接结点 $a$ 和 $b$ ，权值为 $c$ 的无向边。<br>注意任意两个结点之间最多有一条无向边相连，无向图中也不会出现自环（即不存在一条无向边的两个端点是相同的结点）。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>$\qquad$输出包括 $n$ 行，每行一个实数，精确到小数点后 $3$ 位。第 $i$ 行的实数表示结点 $i$ 在社交网络中的重要程度。</p>
-<h3 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h3><h4 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h4><pre class="line-numbers language-input" data-language="input"><code class="language-input">4 4
-1 2 1
-2 3 1
-3 4 1
-4 1 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="C240812B-「NOIP2023」三值逻辑"><a href="#C240812B-「NOIP2023」三值逻辑" class="headerlink" title="#C240812B.「NOIP2023」三值逻辑"></a>#C240812B.「NOIP2023」三值逻辑</h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><ul>
+<li>图论转化</li>
+<li>深搜</li>
+</ul>
+<h2 id="前言（Front-talk"><a href="#前言（Front-talk" class="headerlink" title="前言（Front talk)"></a>前言（Front talk)</h2><p>$\qquad$去年没有做出来主要是两个问题：1.考场上太急，没有认真分析就开始做；2.没有细心模拟样例。</p>
+<p>$\qquad$这道题确实是转化为图论来做，但是由于没有分析好样例，导致我那时抓着半截就走，从一开始方向就错了。</p>
+<h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P9869">洛谷</a> ， <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C10135">spoj</a> </p>
+<h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>小 L 今天学习了 Kleene 三值逻辑。</p>
+<p>在三值逻辑中，一个变量的值可能为：真（$\mathit{True}$，简写作 $\mathit{T}$）、假（$\mathit{False}$，简写作 $\mathit{F}$）或未确定（$\mathit{Unknown}$，简写作 $\mathit{U}$）。</p>
+<p>在三值逻辑上也可以定义逻辑运算。由于小 L 学习进度很慢，只掌握了逻辑非运算 $\lnot$，其运算法则为：<br>$$\lnot \mathit{T} &#x3D; \mathit{F}, \lnot \mathit{F} &#x3D; \mathit{T}, \lnot\mathit{U} &#x3D; \mathit{U}.$$</p>
+<p>现在小 L 有 $n$ 个三值逻辑变量 $x_1,\cdots, x_n$。小 L 想进行一些有趣的尝试，于是他写下了 $m$ 条语句。语句有以下三种类型，其中 $\leftarrow$ 表示赋值：</p>
+<ol>
+<li>$x_i \leftarrow v$，其中 $v$ 为 $\mathit{T}, \mathit{F}, \mathit{U}$ 的一种；</li>
+<li>$x_i \leftarrow x_j$；</li>
+<li>$x_i \leftarrow \lnot x_j$。</li>
+</ol>
+<p>一开始，小 L 会给这些变量赋初值，然后按顺序运行这 $m$ 条语句。</p>
+<p>小 L 希望执行了所有语句后，所有变量的最终值与初值都相等。在此前提下，小 L 希望初值中 $\mathit{Unknown}$ 的变量尽可能少。</p>
+<p>在本题中，你需要帮助小 L 找到 $\mathit{Unknown}$ 变量个数最少的赋初值方案，使得执行了所有语句后所有变量的最终值和初始值相等。小 L 保证，至少对于本题的所有测试用例，这样的赋初值方案都必然是存在的。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p><strong>本题的测试点包含有多组测试数据。</strong></p>
+<p>输入的第一行包含两个整数 $c$ 和 $t$，分别表示测试点编号和测试数据组数。对于样例，$c$ 表示该样例与测试点 $c$ 拥有相同的限制条件。</p>
+<p>接下来，对于每组测试数据：</p>
+<ul>
+<li>输入的第一行包含两个整数 $n$ 和 $m$，分别表示变量个数和语句条数。</li>
+<li>接下来 $m$ 行，按运行顺序给出每条语句。<ul>
+<li>输入的第一个字符 $v$ 描述这条语句的类型。保证 $v$ 为 <code>TFU+-</code> 的其中一种。</li>
+<li>若 $v$ 为 <code>TFU</code> 的某一种时，接下来给出一个整数 $i$，表示该语句为 $x_i \leftarrow v$；</li>
+<li>若 $v$ 为 <code>+</code>，接下来给出两个整数 $i,j$，表示该语句为 $x_i \leftarrow x_j$；</li>
+<li>若 $v$ 为 <code>-</code>，接下来给出两个整数 $i,j$，表示该语句为 $x_i \leftarrow \lnot x_j$。</li>
+</ul>
+</li>
+</ul>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>对于每组测试数据输出一行一个整数，表示所有符合条件的赋初值方案中，$\mathit{Unknown}$ 变量个数的最小值。</p>
+<h3 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h3><h4 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h4><pre class="line-numbers language-input1" data-language="input1"><code class="language-input1">1 3
+3 3
+- 2 1
+- 3 2
++ 1 3
+3 3
+- 2 1
+- 3 2
+- 1 3
+2 2
+T 2
+U 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h4><pre class="line-numbers language-output" data-language="output"><code class="language-output">1.000
-1.000
-1.000
-1.000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h4><pre class="line-numbers language-output1" data-language="output1"><code class="language-output1">0
+3
+1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><p><img src="https://cdn.luogu.com.cn/upload/pic/1136.png"> </p>
-<p>$\qquad$对于1号结点而言，只有2号到4号结点和4号到2号结点的最短路经过1号结点，而2号结点和4号结点之间的最短路又有2条。因而根据定义，1号结点的重要程度计算为1&#x2F;2+1&#x2F;2&#x3D;1。由于图的对称性，其他三个结点的重要程度也都是1。</p>
-<p>$\qquad$对于 $50%$ 的数据， $n \le 10 , m \le 45$。<br>$\qquad$对于 $100%$ 的数据， $n \le 100 , m \le 4500$ ，任意一条边的权值 $c$ 是正整数且 $1 \leqslant c \leqslant 1000$ 。所有数据中保证给出的无向图连通，且任意两个结点之间的最短路径数目不超过 $10^{10}$。</p>
-<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$这道题非常的妙。</p>
-<p>$\qquad$刚刚看到时，我一直在想这道题要怎么求出每个点是不是一条路径的最短路，然后就一直没有思路。</p>
-<p>$\qquad$结果这道题用神奇的 $Floyd$ 算法做。</p>
-<p>$\qquad$可知，令 $mp[x][y]$ 表示点 $x$ 到点 $y$ 的最短路，那么如果满足 $mp[x][y]&#x3D;mp[x][k]+mp[k][y]$ ，则点 $k$ 一定在点 $x$ 与点 $y$ 的最短路上，那么，再思考如何求出最短路的条数。</p>
-<p>$\qquad$设 $ed[x][y]$ 表示点 $x$ 到点 $y$ 的最短路径条数，我们通过每次判断最短路来计入路径，于是有：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">For(k,1,n) For(i,1,n) For(j,1,n)&#123;&#x2F;&#x2F;O(n^3)
-	if(mp[i][k]&#x3D;&#x3D;inf &amp;&amp; mp[k][j]&#x3D;&#x3D;inf) continue;
-	if(mp[i][j]&gt;mp[i][k]+mp[k][j])&#123;
-		ed[i][j]&#x3D;ed[i][k]*ed[k][j];
-		mp[i][j]&#x3D;mp[i][k]+mp[j][k];
-	&#125;else if(mp[i][j]&#x3D;&#x3D;mp[i][k]+mp[k][j])&#123;
-		ed[i][j]+&#x3D;ed[i][k]*ed[k][j];
-	&#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><p><strong>【样例解释 #1】</strong></p>
+<p>第一组测试数据中，$m$ 行语句依次为</p>
+<ul>
+<li>$x_2 \leftarrow \lnot x_1$；</li>
+<li>$x_3 \leftarrow \lnot x_2$；</li>
+<li>$x_1 \leftarrow x_3$。</li>
+</ul>
+<p>一组合法的赋初值方案为 $x_1 &#x3D; \mathit{T}, x_2 &#x3D; \mathit{F}, x_3 &#x3D; \mathit{T}$，共有 $0$ 个$\mathit{Unknown}$ 变量。因为不存在赋初值方案中有小于 $0$ 个$\mathit{Unknown}$ 变量，故输出为 $0$。</p>
+<p>第二组测试数据中，$m$ 行语句依次为</p>
+<ul>
+<li>$x_2 \leftarrow \lnot x_1$；</li>
+<li>$x_3 \leftarrow \lnot x_2$；</li>
+<li>$x_1 \leftarrow \lnot x_3$。</li>
+</ul>
+<p>唯一的赋初值方案为 $x_1 &#x3D; x_2 &#x3D; x_3 &#x3D; \mathit{U}$，共有 $3$ 个$\mathit{Unknown}$ 变量，故输出为 $3$。</p>
+<p>第三组测试数据中，$m$ 行语句依次为</p>
+<ul>
+<li>$x_2 \leftarrow \mathit{T}$；</li>
+<li>$x_2 \leftarrow \mathit{U}$；</li>
+</ul>
+<p>一个最小化 $\mathit{Unknown}$ 变量个数的赋初值方案为 $x_1 &#x3D; \mathit{T}, x_2 &#x3D; \mathit{U}$。$x_1 &#x3D; x_2 &#x3D; \mathit{U}$ 也是一个合法的方案，但它没有最小化 $\mathit{Unknown}$ 变量的个数。</p>
+<p><strong>【样例解释 #2】</strong></p>
+<p>该组样例满足测试点 $2$ 的条件。</p>
+<p><strong>【样例解释 #3】</strong></p>
+<p>该组样例满足测试点 $5$ 的条件。</p>
+<p><strong>【样例解释 #4】</strong></p>
+<p>该组样例满足测试点 $8$ 的条件。</p>
+<p><strong>【数据范围】</strong></p>
+<p>对于所有测试数据，保证：</p>
+<ul>
+<li>$1 \le t \le 6$，$1 \le n,m \le 10 ^ 5$；</li>
+<li>对于每个操作，$v$ 为 <code>TFU+-</code> 中的某个字符，$1 \le i,j \le n$。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">测试点编号</th>
+<th align="center">$n,m\leq$</th>
+<th align="center">$v$ 可能的取值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$1,2$</td>
+<td align="center">$10$</td>
+<td align="center">$\mathit{TFU+-}$</td>
+</tr>
+<tr>
+<td align="center">$3$</td>
+<td align="center">$10^3$</td>
+<td align="center">$\mathit{TFU}$</td>
+</tr>
+<tr>
+<td align="center">$4$</td>
+<td align="center">$10^5$</td>
+<td align="center">$\mathit{TFU}$</td>
+</tr>
+<tr>
+<td align="center">$5$</td>
+<td align="center">$10^3$</td>
+<td align="center">$\mathit{U+}$</td>
+</tr>
+<tr>
+<td align="center">$6$</td>
+<td align="center">$10^5$</td>
+<td align="center">$\mathit{U+}$</td>
+</tr>
+<tr>
+<td align="center">$7$</td>
+<td align="center">$10^3$</td>
+<td align="center">$\mathit{+-}$</td>
+</tr>
+<tr>
+<td align="center">$8$</td>
+<td align="center">$10^5$</td>
+<td align="center">$\mathit{+-}$</td>
+</tr>
+<tr>
+<td align="center">$9$</td>
+<td align="center">$10^3$</td>
+<td align="center">$\mathit{TFU+-}$</td>
+</tr>
+<tr>
+<td align="center">$10$</td>
+<td align="center">$10^5$</td>
+<td align="center">$\mathit{TFU+-}$</td>
+</tr>
+</tbody></table>
+<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$分析样例以及数据范围，可以发现每个值最终的结果只和最后一次操作有关，这个地方很容易误导我们直接倒着做，但是中间被覆盖的操作虽然对当前位置没有影响，却会影响到其他的位置，因此，到这座反而更加的麻烦。</p>
+<p>$\qquad$考虑正向分析，这里用了样例二中的第二组数据：</p>
+<pre class="line-numbers language-input" data-language="input"><code class="language-input">1 1
+10 10
+- 7 6
++ 4 1
++ 6 4
+T 1
++ 2 9
+- 9 10
+U 10
++ 5 5
+U 8
+T 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>$\qquad$那么可得当 $mp[x][y]&#x3D;mp[x][k]+mp[k][y]$ 时，这个点的重要程度 $ansd[k]$ 会加上 $ed[i][k]\times ed[k][j]\div ed[i][j]$ ，有：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">For(k,1,n) For(i,1,n) For(j,1,n)&#123;
-	if(i&#x3D;&#x3D;j || j&#x3D;&#x3D;k || k&#x3D;&#x3D;i) continue;
-	if(mp[i][j]&#x3D;&#x3D;mp[i][k]+mp[k][j])&#123;
-		ans[k]+&#x3D;1.0*ed[i][k]*ed[k][j]&#x2F;ed[i][j];
-	&#125; 
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>$\qquad$那么最终的答案就得出来了，这道题的经典之处在于 $mp[x][y]&#x3D;mp[x][k]+mp[k][y]$ 这一个判断，其实可以通过 $n\le 100$ 这个条件看出要用 $Floyd$ 算法，但是我当时看到路径之后就只在想如何用 $dijkstra$ 或者 $spfa$ 来记录最短路径，然后发现越想脑壳越晕，这告诉我们<strong>做题之前要先想想这道题和哪些算法有关</strong>，才能保证走上正确的道路。</p>
+<p><img src="https://wolfdeer62456.github.io/2024/08/12/C240812B-%E3%80%8CNOIP2023%E3%80%8D%E4%B8%89%E5%80%BC%E9%80%BB%E8%BE%91/1.png"></p>
+<p>$\qquad$注意图中的 $x_6$ 位置，由于其被赋值为 $x_4$ ，而此时的 $x_4$ 的值为 $x1$ ，因此我们可以直接将其赋值为 $x_1$ 。可见，最终每个 $x_i$ 值只有 $5$ 中情况：$T$、$F$、$U$、$x_j$、$!x_j$ 。</p>
+<p>$\qquad$发现位置之间的关系可以转化为图上点与点之间的关系，于是我们考虑依照最后的关系建无向图，建出来的图最终会是几个连通块的形式。对于每个连通块，如果里面存在 $T$ 、$F$ 中的任意一个，那么这个图中的所有点都一定是 $T$ 、$F$；如果存在 $U$ ，那么所有的点都是 $U$ ；如果都没有，那么我们可以尝试令其中任意一个点为 $T$ ，若最终没有矛盾，那么这个连通块里面的所有点都可以成为$T$或$F$，否则只能全部为 $U$ 。因为题目保证一定有解，出现$T$ 、$F$的联通块中一定不会有$U$，且出现$U$的联通块中一定不会有$T$ 、$F$。</p>
+<p>$\qquad$时间复杂度：$O(n+m)$</p>
+<p>$\qquad$后补：对于如何建边，以下标为 $x,y$ ，是否取反为边权 $v$ ，搜索时只需要看边权 $v$ ，就知道 $x$ 、$y$ 两点是相同还是相反了。</p>
 <h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
-#include&lt;vector&gt;
+#include&lt;vector&gt; 
 #define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
 #define Rof(i,l,r) for(int i&#x3D;l;i&gt;&#x3D;r;i--)
 using namespace std;
 #define P pair&lt;int,int&gt;
 #define int long long
-inline int input()&#123;int x;return cin&gt;&gt;x,x;&#125;
+#define fi first
+#define se second
+inline int rd()&#123;int x;return cin&gt;&gt;x,x;&#125;
 const int inf &#x3D; 0x3f3f3f3f3f3f3f3f;
-const int N &#x3D; 105;
-int mp[N][N],ed[N][N];
-double ans[N];
-int n,m;
-signed main()&#123; 
-	ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-	memset(mp,0x3f,sizeof mp);
-	cin&gt;&gt;n&gt;&gt;m;For(i,1,m)&#123;
-		int x&#x3D;input(),y&#x3D;input(),v&#x3D;input();
-		mp[x][y]&#x3D;mp[y][x]&#x3D;v;
-		ed[x][y]&#x3D;ed[y][x]&#x3D;1;
-	&#125;For(k,1,n) For(i,1,n) For(j,1,n)&#123;&#x2F;&#x2F;O(n^3)
-		if(mp[i][k]&#x3D;&#x3D;inf &amp;&amp; mp[k][j]&#x3D;&#x3D;inf) continue;
-		if(mp[i][j]&gt;mp[i][k]+mp[k][j])&#123;
-			ed[i][j]&#x3D;ed[i][k]*ed[k][j];
-			mp[i][j]&#x3D;mp[i][k]+mp[j][k];
-		&#125;else if(mp[i][j]&#x3D;&#x3D;mp[i][k]+mp[k][j])&#123;
-			ed[i][j]+&#x3D;ed[i][k]*ed[k][j];
-		&#125;
-	&#125;For(k,1,n) For(i,1,n) For(j,1,n)&#123;
-		if(i&#x3D;&#x3D;j || j&#x3D;&#x3D;k || k&#x3D;&#x3D;i) continue;
-		if(mp[i][j]&#x3D;&#x3D;mp[i][k]+mp[k][j])&#123;
-			ans[k]+&#x3D;1.0*ed[i][k]*ed[k][j]&#x2F;ed[i][j];
-		&#125; 
-	&#125;For(i,1,n) printf(&quot;%.3lf\n&quot;,ans[i]);
-	return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+const int N &#x3D; 2012345;
 
+vector&lt;P&gt; ft[N];
+int n,m,ans,a[N]; 
+
+#define T (n+1)
+#define F (n+2)
+#define U (n+3)
+inline int f(int x)&#123;
+	if(x&#x3D;&#x3D;T) return F;else
+	if(x&#x3D;&#x3D;F) return T;else
+	if(x&#x3D;&#x3D;U) return U;
+	else return -x;
+&#125;
+
+bitset&lt;N&gt; vst;
+int siz[N];
+inline void dfs_col(int x)&#123;
+	siz[x] &#x3D; vst[x] &#x3D; true;
+	for(auto p:ft[x])&#123;
+		int y &#x3D; p.fi, v &#x3D; p.se;
+		if(a[y]) assert(v?a[x]&#x3D;&#x3D;a[y]:a[x]&#x3D;&#x3D;f(a[y]));
+		else&#123;
+			a[y] &#x3D; v ? a[x] : f(a[x]);
+			dfs_col(y);
+			siz[x] +&#x3D; siz[y];
+		&#125;
+	&#125;
+&#125;
+
+inline bool dfs_nxt(int x)&#123;
+	siz[x] &#x3D; vst[x] &#x3D; true;
+	bool flg &#x3D; false;
+	for(auto p:ft[x])&#123;
+		int y &#x3D; p.fi, v &#x3D; p.se;
+		if(a[y])&#123;
+			int chk &#x3D; v ? a[x] : f(a[x]);
+			if(chk!&#x3D;a[y]) flg &#x3D; true;
+		&#125;else&#123;
+			a[y] &#x3D; v ? a[x] : f(a[x]);
+			flg |&#x3D; dfs_nxt(y);
+			siz[x] +&#x3D; siz[y];
+		&#125;
+	&#125;return flg;
+&#125;
+
+&#x2F;&#x2F;多测清空 
+signed main()&#123;
+	ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+	int Tim &#x3D; clock(), tid&#x3D;rd(), TT&#x3D;rd();
+	cerr&lt;&lt;&quot;TID:&quot;&lt;&lt;tid&lt;&lt;&#39;\n&#39;;
+	while(TT--)&#123;
+		cin&gt;&gt;n&gt;&gt;m;
+		
+		fill(siz,siz+n+1,0);vst.reset();
+		fill(a,a+n+1,0);ans &#x3D; 0;
+		For(i,1,n) ft[i].clear();
+		
+		while(m--)&#123;
+			char v;cin&gt;&gt;v;
+			if(v&#x3D;&#x3D;&#39;+&#39;||v&#x3D;&#x3D;&#39;-&#39;)&#123;
+				int i,j;cin&gt;&gt;i&gt;&gt;j;
+				if(a[j]) a[i] &#x3D; v&#x3D;&#x3D;&#39;+&#39; ? a[j] : f(a[j]);
+				else	 a[i] &#x3D; v&#x3D;&#x3D;&#39;+&#39; ? j : -j;
+			&#125;else&#123;
+				int i &#x3D; rd();
+				switch(v)&#123;
+					case &#39;T&#39;:&#123;a[i] &#x3D; T;break;&#125;
+					case &#39;F&#39;:&#123;a[i] &#x3D; F;break;&#125;
+					case &#39;U&#39;:&#123;a[i] &#x3D; U;break;&#125;
+				&#125;
+			&#125;
+		&#125;For(i,1,n) cerr&lt;&lt;a[i]&lt;&lt;&#39; &#39;;cerr&lt;&lt;&#39;\n&#39;;
+		&#x2F;&#x2F;以点建边 
+		For(i,1,n)&#123;
+			int x &#x3D; i, y &#x3D; abs(a[i]);
+			if(1&lt;&#x3D;y &amp;&amp; y&lt;&#x3D;n)&#123;
+				if(a[i]&gt;0)&#123;
+					ft[x].emplace_back(y,1);
+					ft[y].emplace_back(x,1);
+				&#125;else
+				if(a[i]&lt;0)&#123;
+					ft[x].emplace_back(y,0);
+					ft[y].emplace_back(x,0);
+				&#125;a[i] &#x3D; 0;&#x2F;&#x2F;将颜色调为 0  
+			&#125;
+		&#125;
+		
+		For(x,1,n) if(a[x]&gt;n &amp;&amp; !vst[x])  dfs_col(x), ans +&#x3D; a[x]&#x3D;&#x3D;U?siz[x]:0;
+		For(x,1,n) if(a[x]&lt;&#x3D;n)&#123;
+			a[x]&#x3D;T;
+			if(dfs_nxt(x)) 
+				ans +&#x3D; siz[x];	
+		&#125;
+		
+		cout&lt;&lt;ans&lt;&lt;&#39;\n&#39;;
+	&#125;return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -535,7 +718,7 @@ signed main()&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a target="_blank" rel="noopener" href="https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2023/12/29/D10052-%E3%80%8CNOI2007%E3%80%8D%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%BB%9C/">https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2023/12/29/D10052-%E3%80%8CNOI2007%E3%80%8D%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%BB%9C/</a>
+                    <a target="_blank" rel="noopener" href="https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2024/08/12/C240812B-%E3%80%8CNOIP2023%E3%80%8D%E4%B8%89%E5%80%BC%E9%80%BB%E8%BE%91/">https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2024/08/12/C240812B-%E3%80%8CNOIP2023%E3%80%8D%E4%B8%89%E5%80%BC%E9%80%BB%E8%BE%91/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -573,8 +756,12 @@ signed main()&#123;
                     
                         <div class="article-tag">
                             
-                                <a href="https://wolfdeer62456.github.io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/">
-                                    <span class="chip bg-color">最短路算法</span>
+                                <a href="https://wolfdeer62456.github.io/tags/%E6%B7%B1%E6%90%9C/">
+                                    <span class="chip bg-color">深搜</span>
+                                </a>
+                            
+                                <a href="https://wolfdeer62456.github.io/tags/%E5%9B%BE%E8%AE%BA%E8%BD%AC%E5%8C%96/">
+                                    <span class="chip bg-color">图论转化</span>
                                 </a>
                             
                         </div>
@@ -657,36 +844,44 @@ signed main()&#123;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="https://wolfdeer62456.github.io/2023/12/30/2023-12-30-%E5%91%A8%E6%9C%AB%E6%80%BB%E7%BB%93/">
+                <a href="https://wolfdeer62456.github.io/2024/08/12/C240812C-%E3%80%8CNOIP2023%E3%80%8D%E5%8F%8C%E5%BA%8F%E5%88%97%E6%8B%93%E5%B1%95/">
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/72.jpg" class="responsive-img" alt="2023.12.30 周末总结">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/42.jpg" class="responsive-img" alt="#C240812C.「NOIP2023」双序列拓展">
                         
-                        <span class="card-title">2023.12.30 周末总结</span>
+                        <span class="card-title">#C240812C.「NOIP2023」双序列拓展</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我们就一天天长大
+                            dp+思维
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-30
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-08-12
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/" class="post-category">
-                                    总结
+                            <a href="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/" class="post-category">
+                                    题目
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="https://wolfdeer62456.github.io/tags/%E8%A7%82%E5%AF%9F-%E5%88%86%E6%9E%90/">
+                        <span class="chip bg-color">观察+分析</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -698,31 +893,31 @@ signed main()&#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="https://wolfdeer62456.github.io/2023/12/24/%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E4%BA%86/">
+                <a href="https://wolfdeer62456.github.io/2024/08/10/2024-08-10-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/">
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/41.jpg" class="responsive-img" alt="时间都去哪了?">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/59.jpg" class="responsive-img" alt="2024.08.10 考试总结">
                         
-                        <span class="card-title">时间都去哪了?</span>
+                        <span class="card-title">2024.08.10 考试总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            对于这周时间安排的总结
+                            虽然感冒，但是不落下
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="https://wolfdeer62456.github.io/categories/%E8%AF%B4%E8%AF%B4/" class="post-category">
-                                    说说
+                            <a href="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/" class="post-category">
+                                    总结
                                 </a>
                             
                             
@@ -930,7 +1125,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">120k</span>
+                        class="white-color">120.7k</span>
             
             
             

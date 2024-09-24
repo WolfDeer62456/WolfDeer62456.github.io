@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="#A1240. 中国剩余定理, WolfDeer">
-    <meta name="description" content="中国剩余定理">
+    <meta name="keywords" content="#C240812C.「NOIP2023」双序列拓展, WolfDeer">
+    <meta name="description" content="dp+思维">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>#A1240. 中国剩余定理 | WolfDeer</title>
+    <title>#C240812C.「NOIP2023」双序列拓展 | WolfDeer</title>
     <link rel="icon" type="image/png" href="https://wolfdeer62456.github.io/favicon.png">
     
 
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/42.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">#A1240. 中国剩余定理</h1>
+                    <h1 class="description center-align post-title">#C240812C.「NOIP2023」双序列拓展</h1>
                 </div>
             </div>
         </div>
@@ -354,12 +354,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="https://wolfdeer62456.github.io/tags/%E6%95%B0%E5%AD%A6/">
-                                <span class="chip bg-color">数学</span>
-                            </a>
-                        
-                            <a href="https://wolfdeer62456.github.io/tags/exgcd/">
-                                <span class="chip bg-color">exgcd</span>
+                            <a href="https://wolfdeer62456.github.io/tags/%E8%A7%82%E5%AF%9F-%E5%88%86%E6%9E%90/">
+                                <span class="chip bg-color">观察+分析</span>
                             </a>
                         
                     </div>
@@ -383,28 +379,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-11-09
+                    2024-08-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-09-23
+                    2024-09-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    413
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -427,54 +423,132 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="A1240-中国剩余定理"><a href="#A1240-中国剩余定理" class="headerlink" title="#A1240. 中国剩余定理"></a>#A1240. 中国剩余定理</h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><ul>
-<li>数学</li>
-<li>exgcd</li>
+                <h1 id="C240812C-「NOIP2023」双序列拓展"><a href="#C240812C-「NOIP2023」双序列拓展" class="headerlink" title="#C240812C.「NOIP2023」双序列拓展"></a>#C240812C.「NOIP2023」双序列拓展</h1><h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P9870">洛谷</a>，<a target="_blank" rel="noopener" href="http://192.168.110.4/p/C10136">SPOJ</a> </p>
+<h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>称某个序列 $B &#x3D; {b_1,b_2,\cdots,b_n}$ 是另一个序列 $A &#x3D; {a_1,a_2,\cdots,a_m}$ 的<strong>拓展</strong>当且仅当存在<strong>正整数</strong>序列 $L &#x3D; {l_1,l_2,\cdots,l_m}$，将 $a_i$ 替换为 $l_i$ 个 $a_i$ 后得到序列 $B$。例如，</p>
+<ul>
+<li>${1,3,3,3,2,2,2}$ 是 ${1,3,3,2}$ 的拓展，取 $L &#x3D; {1,1,2,3}$ 或 ${1,2,1,3}$；</li>
+<li>而 ${1,3,3,2}$ 不是 ${1,3,3,3,2}$ 的拓展，${1,2,3}$ 不是 ${1,3,2}$ 的拓展。</li>
 </ul>
-<h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/A1240">题目详情 - 【NOIP模板】中国剩余定理 - 曹冲养猪 - Super</a> </p>
-<p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/A1240/solution">题解 - 【NOIP模板】中国剩余定理 - 曹冲养猪 - Super</a> </p>
-<p> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1495">P1495 【模板】中国剩余定理（CRT）</a> </p>
-<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$中国剩余定理就不用讲了，题解已经讲得够清晰了，只是这几天一直考数学，看到这道题比较妙，有多种解法，于是记录下来。</p>
-<p>$\qquad$有问题看 <a target="_blank" rel="noopener" href="https://oi-wiki.org/math/number-theory/crt/">OI-Wiki</a> 就好了。</p>
-<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><h3 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
-using namespace std;
-#define int long long
-const int N &#x3D; 1012345;
-inline int exgcd(int a,int b,int &amp;x,int &amp;y)&#123;
-	if(!b) return x&#x3D;1,y&#x3D;0,a;
-	int d&#x3D;exgcd(b,a%b,y,x);
-	y-&#x3D;a&#x2F;b*x;return d;
-&#125;
-int a[N],b[N],m[N],t[N];
-int sum&#x3D;1,ans,n,x,y;
-signed main()&#123;
-	ios::sync_with_stdio(false);
-	cin&gt;&gt;n;for(int i&#x3D;1;i&lt;&#x3D;n;i++) cin&gt;&gt;a[i]&gt;&gt;b[i],sum*&#x3D;a[i];
-	for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;
-		m[i]&#x3D;sum&#x2F;a[i];
-		exgcd(m[i],a[i],t[i],y);
-		t[i]&#x3D;(a[i]+t[i]%a[i])%a[i];
-		x&#x3D;x+m[i]*t[i]%sum*b[i]%sum;
-	&#125;return cout&lt;&lt;x%sum&lt;&lt;&#39;\n&#39;,0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>小 R 给了你两个序列 $X$ 和 $Y$，他希望你找到 $X$ 的一个长度为 $l_0 &#x3D; 10^{100}$ 的拓展 $F &#x3D; {f_i}$ 以及 $Y$ 的一个长度为 $l_0$ 的拓展 $G &#x3D; {g_i}$，使得任意 $1 \le i , j \le l_0$ 都有 $(f_i - g_i)(f_j - g_j) &gt; 0$。由于序列太长，你只需要告诉小 R 是否存在这样的两个序列即可。</p>
+<p>为了避免你扔硬币蒙混过关，小 R 还给了 $q$ 次额外询问，每次额外询问中小 R 会修改 $X$ 和 $Y$ 中若干元素的值。你需要对每次得到的新的 $X$ 和 $Y$ 都进行上述的判断。</p>
+<p><strong>询问之间是独立的，每次询问中涉及的修改均在原始序列上完成。</strong></p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入的第一行包含四个整数 $c, n, m, q$，分别表示测试点编号、序列 $X$ 的长度、序列 $Y$ 的长度和额外询问的个数。对于样例，$c$ 表示该样例与测试点 $c$ 拥有相同的限制条件。</p>
+<p>输入的第二行包含 $n$ 个整数 $x_1,x_2,\cdots, x_n$，描述序列 $X$。</p>
+<p>输入的第三行包含 $m$ 个整数 $y_1,y_2,\cdots, y_m$，描述序列 $Y$。</p>
+<p>接下来依次描述 $q$ 组额外询问。对于每组额外询问：</p>
+<ul>
+<li>输入的第一行包含两个整数 $k_x$ 和 $k_y$，分别表示对序列 $X$ 和 $Y$ 产生的修改个数。</li>
+<li>接下来 $k_x$ 行每行包含两个整数 $p_x, v_x$，表示将 $x_{p_x}$ 修改为 $v_x$。</li>
+<li>接下来 $k_y$ 行每行包含两个整数 $p_y, v_y$，表示将 $y_{p_y}$ 修改为 $v_y$。</li>
+</ul>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一行，其中包含一个长度为 $(q+1)$ 的 <code>01</code> 序列，序列的第一个元素表示初始询问的答案，之后 $q$ 个元素依次表示每组额外询问的答案。对于每个询问，如果存在满足题目条件的序列 $F$ 和 $G$，输出 <code>1</code>，否则输出 <code>0</code>。</p>
+<h3 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h3><h4 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h4><pre class="line-numbers language-none"><code class="language-none">3 3 3 3
+8 6 9
+1 7 4
+1 0
+3 0
+0 2
+1 8
+3 5
+1 1
+2 8
+1 7<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="枚举法"><a href="#枚举法" class="headerlink" title="枚举法"></a>枚举法</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
-using namespace std;
-#define int long long
-#define N 1012345
-int a[N],b[N];
-int n,m,sum,ans;
-signed main()&#123;
-	ios::sync_with_stdio(false);
-	cin&gt;&gt;n;for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;
-		cin&gt;&gt;a[i]&gt;&gt;b[i];
-	&#125;ans&#x3D;b[1],sum&#x3D;1;
-	for(int i&#x3D;1;i&lt;n;i++)&#123;
-		sum*&#x3D;a[i];
-		while(ans%a[i+1]!&#x3D;b[i+1]) ans+&#x3D;sum;
-	&#125;cout&lt;&lt;ans&lt;&lt;&#39;\n&#39;;
-	return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h4><pre class="line-numbers language-none"><code class="language-none">1001<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><p><strong>【样例解释 #1】</strong></p>
+<p>由于 $F$ 和 $G$ 太长，用省略号表示重复最后一个元素直到序列长度为 $l_0$。如 ${1,2,3,3,\cdots}$ 表示序列从第三个元素之后都是 $3$。</p>
+<p>以下依次描述四次询问，其中第一次询问为初始询问，之后的三次为额外询问：</p>
+<ol>
+<li>$A &#x3D; {8,6,9}$，$B &#x3D; {1,7,4}$，取 $F &#x3D; {8,8,6,9,\cdots}, G &#x3D; {1,7,4,4,\cdots}$；</li>
+<li>$A &#x3D; {8,6,0}$，$B &#x3D; {1,7,4}$，可以证明不存在满足要求的方案；</li>
+<li>$A &#x3D; {8,6,9}$，$B &#x3D; {8,7,5}$，可以证明不存在满足要求的方案；</li>
+<li>$A &#x3D; {8,8,9}$，$B &#x3D; {7,7,4}$，取 $F &#x3D; {8,8,9,\cdots}, G &#x3D; {7,7,4,\cdots}$。</li>
+</ol>
+<p><strong>【样例解释 #2】</strong></p>
+<p>该组样例满足测试点 $4$ 的条件。</p>
+<p><strong>【样例解释 #3】</strong></p>
+<p>该组样例满足测试点 $7$ 的条件。</p>
+<p><strong>【样例解释 #4】</strong></p>
+<p>该组样例满足测试点 $9$ 的条件。</p>
+<p><strong>【样例解释 #5】</strong></p>
+<p>该组样例满足测试点 $18$ 的条件。</p>
+<p><strong>【数据范围】</strong></p>
+<p>对于所有测试数据，保证：</p>
+<ul>
+<li>$1 \le n, m \le 5 \times 10 ^ 5$；</li>
+<li>$0 \le q \le 60$；</li>
+<li>$0 \le x_i, y_i &lt; 10 ^ 9$；</li>
+<li>$0 \le k_x, k_y \le 5 \times 10 ^ 5$，且所有额外询问的 $(k_x+k_y)$ 的和不超过 $5 \times 10 ^ 5$；</li>
+<li>$1 \le p_x \le n$，$1 \le p_y \le m$，$0 \le v_x, v_y &lt; 10 ^ 9$；</li>
+<li>对于每组额外询问，$p_x$ 两两不同，$p_y$ 两两不同。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">测试点编号</th>
+<th align="center">$n, m \le$</th>
+<th align="center">特殊性质</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$1$</td>
+<td align="center">$1$</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">$2$</td>
+<td align="center">$2$</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">$3, 4$</td>
+<td align="center">$6$</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">$5$</td>
+<td align="center">$200$</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">$6, 7$</td>
+<td align="center">$2000$</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">$8, 9$</td>
+<td align="center">$4 \times 10 ^ 4$</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">$10, 11$</td>
+<td align="center">$1.5 \times 10 ^ 5$</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">$12 \sim 14$</td>
+<td align="center">$5 \times 10 ^ 5$</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">$15, 16$</td>
+<td align="center">$4 \times 10 ^ 4$</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">$17, 18$</td>
+<td align="center">$1.5 \times 10 ^ 5$</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">$19, 20$</td>
+<td align="center">$5 \times 10 ^ 5$</td>
+<td align="center">否</td>
+</tr>
+</tbody></table>
+<p>特殊性质：对于每组询问（包括初始询问和额外询问），保证 $x_1 &lt; y_1$，且 $x_n$ 是序列 $X$ 唯一的一个最小值，$y_m$ 是序列 $Y$ 唯一的一个最大值。</p>
+<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2>
                 
             </div>
             <hr/>
@@ -500,7 +574,7 @@ signed main()&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a target="_blank" rel="noopener" href="https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2023/11/09/A1240-%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/">https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2023/11/09/A1240-%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</a>
+                    <a target="_blank" rel="noopener" href="https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2024/08/12/C240812C-%E3%80%8CNOIP2023%E3%80%8D%E5%8F%8C%E5%BA%8F%E5%88%97%E6%8B%93%E5%B1%95/">https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2024/08/12/C240812C-%E3%80%8CNOIP2023%E3%80%8D%E5%8F%8C%E5%BA%8F%E5%88%97%E6%8B%93%E5%B1%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -538,12 +612,8 @@ signed main()&#123;
                     
                         <div class="article-tag">
                             
-                                <a href="https://wolfdeer62456.github.io/tags/%E6%95%B0%E5%AD%A6/">
-                                    <span class="chip bg-color">数学</span>
-                                </a>
-                            
-                                <a href="https://wolfdeer62456.github.io/tags/exgcd/">
-                                    <span class="chip bg-color">exgcd</span>
+                                <a href="https://wolfdeer62456.github.io/tags/%E8%A7%82%E5%AF%9F-%E5%88%86%E6%9E%90/">
+                                    <span class="chip bg-color">观察+分析</span>
                                 </a>
                             
                         </div>
@@ -626,36 +696,44 @@ signed main()&#123;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="https://wolfdeer62456.github.io/2023/11/10/2023-11-10-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/">
+                <a href="https://wolfdeer62456.github.io/2024/08/12/C240812D-%E3%80%8CNOIP2023%E3%80%8D%E5%A4%A9%E5%A4%A9%E7%88%B1%E6%89%93%E5%8D%A1/">
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="2023.11.10 考试总结">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/80.jpg" class="responsive-img" alt="#C240812D.「NOIP2023」天天爱打卡">
                         
-                        <span class="card-title">2023.11.10 考试总结</span>
+                        <span class="card-title">#C240812D.「NOIP2023」天天爱打卡</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            保持睡眠，理清思路
+                            dp+线段树维护
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-11-10
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-08-12
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/" class="post-category">
-                                    总结
+                            <a href="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/" class="post-category">
+                                    题目
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -667,24 +745,24 @@ signed main()&#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="https://wolfdeer62456.github.io/2023/11/09/P10253-%E4%B8%87%E8%83%BD%E9%81%A5%E6%8E%A7%E5%99%A8/">
+                <a href="https://wolfdeer62456.github.io/2024/08/12/C240812B-%E3%80%8CNOIP2023%E3%80%8D%E4%B8%89%E5%80%BC%E9%80%BB%E8%BE%91/">
                     <div class="card-image">
                         
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/74.jpg" class="responsive-img" alt="#P10253. 万能遥控器">
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/6.jpg" class="responsive-img" alt="#C240812B.「NOIP2023」三值逻辑">
                         
-                        <span class="card-title">#P10253. 万能遥控器</span>
+                        <span class="card-title">#C240812B.「NOIP2023」三值逻辑</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是一道大美女
+                            细心跑样例
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-12
                             </span>
                         <span class="publish-author">
                             
@@ -701,8 +779,12 @@ signed main()&#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="https://wolfdeer62456.github.io/tags/%E6%A8%A1%E6%8B%9F/">
-                        <span class="chip bg-color">模拟</span>
+                    <a href="https://wolfdeer62456.github.io/tags/%E6%B7%B1%E6%90%9C/">
+                        <span class="chip bg-color">深搜</span>
+                    </a>
+                    
+                    <a href="https://wolfdeer62456.github.io/tags/%E5%9B%BE%E8%AE%BA%E8%BD%AC%E5%8C%96/">
+                        <span class="chip bg-color">图论转化</span>
                     </a>
                     
                 </div>
@@ -907,7 +989,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">120k</span>
+                        class="white-color">120.7k</span>
             
             
             
