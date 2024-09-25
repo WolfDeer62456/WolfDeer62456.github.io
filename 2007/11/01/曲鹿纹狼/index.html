@@ -389,14 +389,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -454,6 +454,30 @@ inline int rd()&#123;int x;return cin&gt;&gt;x,x;&#125;
 const int inf &#x3D; 0x3f3f3f3f3f3f3f3f;
 const int N &#x3D; 201234;
 bool ST;
+bool ED;
+signed main()&#123;
+	ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+	cerr&lt;&lt;abs(&amp;ST-&amp;ED)&#x2F;1024.&#x2F;1024.&lt;&lt;&quot;MB\n&quot;;
+	freopen(&quot;.in&quot;,&quot;r&quot;,stdin);
+	freopen(&quot;.out&quot;,&quot;w&quot;,stdout);
+	cin&gt;&gt;n;int Tim &#x3D; clock();
+	return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<details><summary>注释版在这里↓</summary>
+<pre class="line-numbers language-none"><code class="language-none">#include&lt;bits&#x2F;stdc++.h&gt;
+#include&lt;vector&gt;
+#define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
+#define Rof(i,l,r) for(int i&#x3D;l;i&gt;&#x3D;r;i--)
+using namespace std;
+#define P pair&lt;int,int&gt;
+#define int long long
+#define x first
+#define y second
+inline int rd()&#123;int x;return cin&gt;&gt;x,x;&#125;
+const int inf &#x3D; 0x3f3f3f3f3f3f3f3f;
+const int N &#x3D; 201234;
+bool ST;
 &#x2F;&#x2F;在这里定义数组 
 bool ED;
 signed main()&#123;
@@ -465,6 +489,7 @@ signed main()&#123;
 	&#x2F;&#x2F;代码 
 	return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;&#x2F;&#x2F;输出时间 
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</details>
 
 <h2 id="四、常用知识"><a href="#四、常用知识" class="headerlink" title="四、常用知识"></a>四、常用知识</h2><h3 id="（一）函数的初始化与重载运算符"><a href="#（一）函数的初始化与重载运算符" class="headerlink" title="（一）函数的初始化与重载运算符"></a><strong>（一）函数的初始化与重载运算符</strong></h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">struct Tr&#123;
     int x,y;Tr(int a)&#123;x &#x3D; a,y &#x3D; 0;&#125;&#x2F;&#x2F;初始化 x&#x3D;a&#x3D;1,y&#x3D;0
@@ -485,7 +510,7 @@ signed main()&#123;
 &#x2F;&#x2F;在函数内部，可以定义：
 auto add &#x3D; [&amp;](int l, int r, int v)&#123;c[l] +&#x3D; v, c[r+1] -&#x3D; v;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="（四）数组的内存分配"><a href="#（四）数组的内存分配" class="headerlink" title="（四）数组的内存分配"></a>（四）数组的内存分配</h3><p>$\qquad$该方法适用于给定 $n*m&lt;&#x3D;10^6$ 的情况。</p>
+<h3 id="（四）数组的内存分配"><a href="#（四）数组的内存分配" class="headerlink" title="（四）数组的内存分配"></a>（四）数组的内存分配</h3><p>该方法适用于给定 $n*m&lt;&#x3D;10^6$ 的情况。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">const int N &#x3D; 2012345;
 int n,m;
 
@@ -499,14 +524,16 @@ signed main()&#123;
     For(i,1,n) For(j,1,m) cin&gt;&gt;c[i][j];
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="（五）switch函数的应用"><a href="#（五）switch函数的应用" class="headerlink" title="（五）switch函数的应用"></a>（五）switch函数的应用</h3><p>在下面的<code>switch</code>函数中，$a$ 可以为 $1,2,3,4$ ：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">switch(a)&#123;
+<h3 id="（五）switch函数的应用"><a href="#（五）switch函数的应用" class="headerlink" title="（五）switch函数的应用"></a>（五）switch函数的应用</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">switch(a)&#123;
 	case 1:&#123;程序A;break;&#125;
     case 2:&#123;程序B;&#125;
 	case 3:&#123;程序C;break&#125;
     case 4: case 5:&#123;程序D;break;&#125;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<details><summary>样例解释</summary>
+
+<p>在下面的<code>switch</code>函数中，$a$ 可以为 $1,2,3,4$ ：</p>
 <ul>
 <li>若 $a&#x3D;&#x3D;1$，执行<strong>程序A</strong>；</li>
 <li>若 $a&#x3D;&#x3D;2$，执行<strong>程序B</strong>和<strong>程序C</strong>；</li>
@@ -514,6 +541,8 @@ signed main()&#123;
 <li>若 $a&#x3D;&#x3D;4$ 或 $a&#x3D;&#x3D;5$ ，执行<strong>程序D</strong>；</li>
 </ul>
 <p>可见，当<code>case x</code>语句满足时，会直接<strong>贯穿</strong>执行后面所有的语句，直到遇到后面的第一个<code>break</code>语句后停止。</p>
+</details>
+
 <h3 id="（六）-builtin函数的应用"><a href="#（六）-builtin函数的应用" class="headerlink" title="（六）__builtin函数的应用"></a>（六）__builtin函数的应用</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">__builtin_ctz(x);&#x2F;&#x2F;返回x的二进制表示下末尾0的个数
 __buitlin_clz(x);&#x2F;&#x2F;返回x的二进制表示下前导0的个数
 __builtin_popcount(x);&#x2F;&#x2F;返回x的二进制表示下1的个数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -526,8 +555,14 @@ vst &#x3D; a|b, vst &#x3D; a&amp;b, vst &#x3D; a^b;&#x2F;&#x2F;进行符号运�
 int x &#x3D; vst._Find_first();&#x2F;&#x2F;找到vst的第一个1的位置
 int y &#x3D; vst._Find_next(x);&#x2F;&#x2F;找到vst中x位置后面第一个1的位置<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="（八）list容器的运用"><a href="#（八）list容器的运用" class="headerlink" title="（八）list容器的运用"></a>（八）list容器的运用</h3><p>$\qquad$每次手写链表的时候都很容易把自己搞晕，甚至对链表产生了恐惧感，现在用<code>STL</code>容器封装后便舒服了许多。<code>list</code>容器可以使用<code>STL</code>容器的基本函数加入和删除，也可以使用<code>insert</code>来对特定位置进行插入与删除。十分有趣的是，这个容器支持在前面和后面添加元素，那<code>deque</code>不就失业了吗？</p>
-<p>$\qquad$ 好吧，经过测验，<code>list</code>至少比<code>deque</code>慢了 $5$ 倍左右，<strong>常数巨大</strong>，建议不要乱用。</p>
+<h3 id="（八）list容器的运用"><a href="#（八）list容器的运用" class="headerlink" title="（八）list容器的运用"></a>（八）list容器的运用</h3><details><summary>浅谈</summary>
+
+<p>$\qquad$每次手写链表的时候都很容易把自己搞晕，甚至对链表产生了恐惧感，现在用<code>STL</code>容器封装后便舒服了许多。<code>list</code>容器可以使用<code>STL</code>容器的基本函数加入和删除，也可以使用<code>insert</code>来对特定位置进行插入与删除。十分有趣的是，这个容器支持在前面和后面添加元素，那<code>deque</code>不就失业了吗？</p>
+<p>$\qquad$好吧，经过测验，<code>list</code>至少比<code>deque</code>慢了 $5$ 倍左右，<strong>常数巨大</strong>，建议不要乱用。</p>
+</details>
+
+
+
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;list&gt;
 list&lt;int&gt; lis;
 lis.push_back(x),lis.pop_back();
@@ -541,7 +576,8 @@ lis.erase(x);&#x2F;&#x2F;删除指针x对应的元素。注意：删除后该指
 $\verb!a!$		//函数格式
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>details</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>summary</span><span class="token punctuation">></span></span> b <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>summary</span><span class="token punctuation">></span></span>c<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>details</span><span class="token punctuation">></span></span>		//b是最小化的标题，将 c 最小化<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>效果如下：</p>
+<details><summary>效果</summary>
+
 <ol>
 <li><p>$\ Hello World$ </p>
 </li>
@@ -551,6 +587,8 @@ $\verb!a!$		//函数格式
 </li>
 <li><details><summary> Greatings </summary>Hello World</details></li>
 </ol>
+</details>
+
 <h2 id="六、资料"><a href="#六、资料" class="headerlink" title="六、资料"></a>六、资料</h2><p>$\qquad$PDF来源：<a target="_blank" rel="noopener" href="http://ssoier.cn:8088/stl.html">http://ssoier.cn:8088/stl.html</a> </p>
 <p>$\qquad$<a href="https://wolfdeer62456.github.io/2025/01/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/C++_string%E7%B1%BB%EF%BC%88C++%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%89.pdf">C++_string类（C++字符串）.pdf</a></p>
 <p>$\qquad$<a href="https://wolfdeer62456.github.io/2025/01/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/lemon%E8%AF%84%E6%B5%8B%E8%BD%AF%E4%BB%B6SPJ%E8%AF%B4%E6%98%8E.pdf">lemon评测软件SPJ说明.pdf</a></p>
@@ -972,7 +1010,7 @@ $\verb!a!$		//函数格式
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">122.6k</span>
+                        class="white-color">122.8k</span>
             
             
             
