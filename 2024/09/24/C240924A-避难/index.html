@@ -386,21 +386,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-09-24
+                    2024-09-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    677
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    7 分
                 </div>
                 
 
@@ -430,7 +430,97 @@
 <h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C240924A">题目详情 - 避难 - Super</a> </p>
 <p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C240924A/solution">题解 - 避难 - Super</a> </p>
 <h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$ 将点按照它到上方第一个避难点的距离排序，那么最优的设置方法为设置在最大的 $k$ 个点的 $LCA$ 处，实现一个 $LCA$ 算法即可。</p>
-<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><p>$\qquad$注意第 $53$ 行，对时间的优化十分重要。</p>
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><p>给出两份代码，一份是使用<a href="https://wolfdeer62456.github.io/2024/09/24/C240924E-DFS-%E5%BA%8F%E6%B1%82-LCA/">dfn序求lca</a>，一份是用倍增求lca。</p>
+<details><summary>dfn序求lca</summary>
+
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
+#include&lt;vector&gt;
+#include&lt;queue&gt;
+#define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
+#define Rof(i,l,r) for(int i&#x3D;l;i&gt;&#x3D;r;i--)
+using namespace std;
+#define P pair&lt;int,int&gt; 
+#define int long long
+#define x first
+#define y second
+inline int rd()&#123;int x;return cin&gt;&gt;x,x;&#125;
+const int inf &#x3D; 0x3f3f3f3f3f3f3f3f;
+const int N &#x3D; 2012345;
+bool ST;
+
+int n,m,q,ans,dan[N];
+vector&lt;P&gt; ft[N];
+bool r[N];
+
+int f[N][24],dfn[N],idx;
+int dis[N],d[N];&#x2F;&#x2F;到避难所的距离 、到根节点的距离 
+inline void dfs_pre(int x,int fa)&#123;
+	f[dfn[x]&#x3D;++idx][0] &#x3D; fa;
+	
+	if(r[x]) dis[x] &#x3D; 0;
+	for(auto p:ft[x])&#123;
+		int y &#x3D; p.x, v &#x3D; p.y;
+		if(y&#x3D;&#x3D;fa) continue;
+		dis[y] &#x3D; dis[x]+v, 
+		d[y] &#x3D; d[x]+v,
+		dfs_pre(y,x);
+	&#125;
+&#125;
+
+inline int cmn(int x,int y)&#123;return dfn[x] &lt; dfn[y] ? x : y;&#125;
+inline int lca(int x,int y)&#123;
+	if(x&#x3D;&#x3D;y) return x;
+	if((x&#x3D;dfn[x]) &gt; (y&#x3D;dfn[y])) swap(x,y);
+	int d &#x3D; __lg(y-x++);
+	return cmn(f[x][d], f[y-(1&lt;&lt;d)+1][d]);
+&#125;
+
+#define get fnawv94nf4fmvzso
+inline int get(int k)&#123;
+	sort(dan+1,dan+k+1,[&amp;](int x,int y)&#123;return dis[x]&gt;dis[y];&#125;);&#x2F;&#x2F;对剩下的儿子排序 
+	int F &#x3D; dan[1], di &#x3D; dis[dan[1]];
+	int res &#x3D; inf;dan[k+1]&#x3D;0;
+	For(i,1,k)&#123;
+		int x &#x3D; dan[i];F &#x3D; lca(F,x);
+		di &#x3D; max(di, d[dan[i]]);
+		int ans &#x3D; max(di-d[F],dis[dan[i+1]]);
+		if(res&lt;&#x3D;ans) break;
+		res &#x3D; ans;
+	&#125;return res;
+&#125;
+
+
+bool ED;
+signed main()&#123;
+	ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+	cerr&lt;&lt;abs(&amp;ST-&amp;ED)&#x2F;1024.&#x2F;1024.&lt;&lt;&quot;MB\n&quot;;
+&#x2F;&#x2F;	freopen(&quot;ex_disaster2.in&quot;,&quot;r&quot;,stdin);
+	freopen(&quot;disaster.in&quot;,&quot;r&quot;,stdin);
+	freopen(&quot;disaster.out&quot;,&quot;w&quot;,stdout);	
+	cin&gt;&gt;n&gt;&gt;m&gt;&gt;q;int Tim &#x3D; clock();
+	For(i,1,m) r[rd()] &#x3D; true;r[1] &#x3D; true;
+	For(i,1,n-1)&#123;
+		int x,y,v;cin&gt;&gt;x&gt;&gt;y&gt;&gt;v;
+		ft[x].emplace_back(y,v);
+		ft[y].emplace_back(x,v);
+	&#125;
+	
+	dfs_pre(1,0);
+	For(j,1,__lg(n)) for(int i&#x3D;1;i+(1&lt;&lt;j)-1&lt;&#x3D;n;i++)
+		f[i][j] &#x3D; cmn(f[i][j-1],f[i+(1&lt;&lt;(j-1))][j-1]);
+	
+	while(q--)&#123;
+		int k &#x3D; rd();For(i,1,k) cin&gt;&gt;dan[i];
+		if(k&#x3D;&#x3D;1)&#123;cout&lt;&lt;0&lt;&lt;&#39;\n&#39;;continue;&#125;
+		cout&lt;&lt;get(k)&lt;&lt;&#39;\n&#39;;
+	&#125;return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</details>
+
+<details><summary>倍增求lca</summary>
+
+<p>注意第 $53$ 行，对时间的优化十分重要。</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
 #include&lt;vector&gt;
 #include&lt;queue&gt;
@@ -511,6 +601,8 @@ signed main()&#123;
 		cout&lt;&lt;get(k)&lt;&lt;&#39;\n&#39;;
 	&#125;return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</details>
                 
             </div>
             <hr/>
@@ -947,7 +1039,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">122.8k</span>
+                        class="white-color">128.2k</span>
             
             
             
