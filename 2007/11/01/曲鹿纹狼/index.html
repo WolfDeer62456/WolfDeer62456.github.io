@@ -382,7 +382,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-09-25
+                    2024-09-27
                 </div>
                 
 
@@ -442,6 +442,32 @@ assert(A);&#x2F;&#x2F;如果不满足事件A，程序会提前终止,并且返�
 exit(0);&#x2F;&#x2F;无论在哪个函数，直接结束运行进程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="三、代码模板"><a href="#三、代码模板" class="headerlink" title="三、代码模板"></a>三、代码模板</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
+#define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
+#define Rof(i,l,r) for(int i&#x3D;l;i&gt;&#x3D;r;i--)
+using namespace std;
+#define P pair&lt;int,int&gt;
+#define int long long
+#define x first
+#define y second
+inline int rd()&#123;
+	char c;bool f&#x3D;false;while(!isdigit(c&#x3D;getchar()))f&#x3D;c&#x3D;&#x3D;&#39;-&#39;;int x&#x3D;c^48;
+	while(isdigit(c&#x3D;getchar()))&#123;x&#x3D;(((x&lt;&lt;2)+x)&lt;&lt;1)+(c^48);&#125;return f?-x:x;
+&#125;const int inf &#x3D; 0x3f3f3f3f3f3f3f3f;
+const int N &#x3D; 201234;
+bool ST;
+
+
+
+bool ED;
+signed main()&#123;
+	cerr&lt;&lt;abs(&amp;ST-&amp;ED)&#x2F;1024.&#x2F;1024.&lt;&lt;&quot;MB\n&quot;;
+	int Tim &#x3D; clock();
+	
+	return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<details><summary>cin,cout版</summary>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
 #include&lt;vector&gt;
 #define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
 #define Rof(i,l,r) for(int i&#x3D;l;i&gt;&#x3D;r;i--)
@@ -463,32 +489,6 @@ signed main()&#123;
 	cin&gt;&gt;n;int Tim &#x3D; clock();
 	return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<details><summary>注释版在这里↓</summary>
-<pre class="line-numbers language-none"><code class="language-none">#include&lt;bits&#x2F;stdc++.h&gt;
-#include&lt;vector&gt;
-#define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
-#define Rof(i,l,r) for(int i&#x3D;l;i&gt;&#x3D;r;i--)
-using namespace std;
-#define P pair&lt;int,int&gt;
-#define int long long
-#define x first
-#define y second
-inline int rd()&#123;int x;return cin&gt;&gt;x,x;&#125;
-const int inf &#x3D; 0x3f3f3f3f3f3f3f3f;
-const int N &#x3D; 201234;
-bool ST;
-&#x2F;&#x2F;在这里定义数组 
-bool ED;
-signed main()&#123;
-	ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);&#x2F;&#x2F;关闭同步流 
-	cerr&lt;&lt;abs(&amp;ST-&amp;ED)&#x2F;1024.&#x2F;1024.&lt;&lt;&quot;MB\n&quot;;&#x2F;&#x2F;输出静态内存占用 
-	freopen(&quot;a.in&quot;,&quot;r&quot;,stdin);
-	freopen(&quot;a.out&quot;,&quot;w&quot;,stdout);
-	cin&gt;&gt;n;int Tim &#x3D; clock();&#x2F;&#x2F;建议在Tim定义前先输入一个数据
-	&#x2F;&#x2F;代码 
-	return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;&#x2F;&#x2F;输出时间 
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </details>
 
 <h2 id="四、常用知识"><a href="#四、常用知识" class="headerlink" title="四、常用知识"></a>四、常用知识</h2><h3 id="（一）函数的初始化与重载运算符"><a href="#（一）函数的初始化与重载运算符" class="headerlink" title="（一）函数的初始化与重载运算符"></a><strong>（一）函数的初始化与重载运算符</strong></h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">struct Tr&#123;
@@ -543,11 +543,13 @@ signed main()&#123;
 <p>可见，当<code>case x</code>语句满足时，会直接<strong>贯穿</strong>执行后面所有的语句，直到遇到后面的第一个<code>break</code>语句后停止。</p>
 </details>
 
-<h3 id="（六）-builtin函数的应用"><a href="#（六）-builtin函数的应用" class="headerlink" title="（六）__builtin函数的应用"></a>（六）__builtin函数的应用</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">__builtin_ctz(x);&#x2F;&#x2F;返回x的二进制表示下末尾0的个数
-__buitlin_clz(x);&#x2F;&#x2F;返回x的二进制表示下前导0的个数
-__builtin_popcount(x);&#x2F;&#x2F;返回x的二进制表示下1的个数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="（六）-builtin函数的应用"><a href="#（六）-builtin函数的应用" class="headerlink" title="（六）__builtin函数的应用"></a>（六）__builtin函数的应用</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">__builtin_ctzll(x);&#x2F;&#x2F;返回x的二进制表示下末尾0的个数
+__builtin_clzll(x);&#x2F;&#x2F;返回x的二进制表示下前导0的个数
+__builtin_popcountll(x);&#x2F;&#x2F;返回x的二进制表示下1的个数
+&#x2F;&#x2F;注意：&quot;ll&quot;表示x的类型为longlong<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="（七）bitset容器的运用"><a href="#（七）bitset容器的运用" class="headerlink" title="（七）bitset容器的运用"></a>（七）bitset容器的运用</h3><p>$\qquad$<code>bitset</code>在处理 $bool$ 型数组时有很多优势，它可以直接使用<code>&amp;,^,|,~</code>进行二进制下的运算，时间复杂度却比<code>for</code>循环的 $O(n)$ 要快，约为 $O(\frac{n}{\omega})$ ，而神之又神的<code>vst._Find_first</code>与<code>vst._Find_next</code>函数也可以在 $O(\frac{n}{\omega})$ 的时间复杂度运行。一般情况下， $\omega$ 的值为 $64$ 。</p>
+<p>$\qquad$可以参看这个博客： <a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_74189279/article/details/142487117">C++ bitset（位图）的介绍和使用-CSDN博客</a> </p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">bitset&lt;N&gt; vst,a,b;&#x2F;&#x2F;定义长度为N的bool数组vst
 vst.reset();&#x2F;&#x2F;重置bitset为0
 vst &#x3D; ~vst;&#x2F;&#x2F;将vst取反
@@ -590,10 +592,10 @@ $\verb!a!$		//函数格式
 </details>
 
 <h2 id="六、资料"><a href="#六、资料" class="headerlink" title="六、资料"></a>六、资料</h2><p>$\qquad$PDF来源：<a target="_blank" rel="noopener" href="http://ssoier.cn:8088/stl.html">http://ssoier.cn:8088/stl.html</a> </p>
-<p>$\qquad$<a href="https://wolfdeer62456.github.io/2025/01/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/C++_string%E7%B1%BB%EF%BC%88C++%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%89.pdf">C++_string类（C++字符串）.pdf</a></p>
-<p>$\qquad$<a href="https://wolfdeer62456.github.io/2025/01/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/lemon%E8%AF%84%E6%B5%8B%E8%BD%AF%E4%BB%B6SPJ%E8%AF%B4%E6%98%8E.pdf">lemon评测软件SPJ说明.pdf</a></p>
-<p>$\qquad$<a href="https://wolfdeer62456.github.io/2025/01/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.pdf">常用的排序算法.pdf</a></p>
-<p>$\qquad$<a href="https://wolfdeer62456.github.io/2025/01/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/%E5%85%B3%E4%BA%8ESTL%E5%AE%B9%E5%99%A8%E7%9A%84%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93.pdf">关于STL容器的简单总结.pdf</a></p>
+<p>$\qquad$<a href="https://wolfdeer62456.github.io/2007/11/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/C++_string%E7%B1%BB%EF%BC%88C++%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%89.pdf">C++_string类（C++字符串）.pdf</a></p>
+<p>$\qquad$<a href="https://wolfdeer62456.github.io/2007/11/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/lemon%E8%AF%84%E6%B5%8B%E8%BD%AF%E4%BB%B6SPJ%E8%AF%B4%E6%98%8E.pdf">lemon评测软件SPJ说明.pdf</a></p>
+<p>$\qquad$<a href="https://wolfdeer62456.github.io/2007/11/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.pdf">常用的排序算法.pdf</a></p>
+<p>$\qquad$<a href="https://wolfdeer62456.github.io/2007/11/01/%E6%9B%B2%E9%B9%BF%E7%BA%B9%E7%8B%BC/%E5%85%B3%E4%BA%8ESTL%E5%AE%B9%E5%99%A8%E7%9A%84%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93.pdf">关于STL容器的简单总结.pdf</a></p>
 
                 
             </div>
@@ -1010,7 +1012,7 @@ $\verb!a!$		//函数格式
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">128.2k</span>
+                        class="white-color">131k</span>
             
             
             
