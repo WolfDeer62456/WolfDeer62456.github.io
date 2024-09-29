@@ -390,14 +390,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-09-26
+                    2024-09-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    515
+                    511
                 </div>
                 
 
@@ -451,11 +451,12 @@ using namespace std;
 #define int long long 
 
 inline int g(int a,int b,int &amp;x,int &amp;y)&#123;
-	int d,t;
-	if(!b) return x&#x3D;1,y&#x3D;0,a;
-	d&#x3D;g(b,a%b,x,y);
-	t&#x3D;x-a&#x2F;b*y;
-	x&#x3D;y,y&#x3D;t;
+	if(b&#x3D;&#x3D;0)&#123;
+		x &#x3D; 1, y &#x3D; 0;
+		return a;
+	&#125;
+	int d &#x3D; exgcd(b,a%b,y,x);
+	y -&#x3D; a &#x2F; b * x;
 	return d;
 &#125;
 
@@ -466,7 +467,7 @@ signed main()&#123;
 	d&#x3D;g(n-m,L,X,Y);r&#x3D;L&#x2F;d;
 	if((x-y)%d) cout&lt;&lt;&quot;Impossible\n&quot;;
 	else cout&lt;&lt;((x-y)&#x2F;d*X%r+r)%r&lt;&lt;&#39;\n&#39;;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -915,7 +916,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">131k</span>
+                        class="white-color">134.1k</span>
             
             
             

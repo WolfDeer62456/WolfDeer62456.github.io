@@ -362,6 +362,10 @@
                                 <span class="chip bg-color">计算几何</span>
                             </a>
                         
+                            <a href="https://wolfdeer62456.github.io/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/">
+                                <span class="chip bg-color">单调队列</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -390,21 +394,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-09-27
+                    2024-09-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    36
+                    870
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -427,9 +431,105 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C240926C-三维世界-呲"><a href="#C240926C-三维世界-呲" class="headerlink" title="#C240926C. 三维世界(呲)"></a>#C240926C. 三维世界(呲)</h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C221018C">题目详情 - 三维世界(呲) - Super</a> </p>
+                <h1 id="C240926C-三维世界-呲"><a href="#C240926C-三维世界-呲" class="headerlink" title="#C240926C. 三维世界(呲)"></a>#C240926C. 三维世界(呲)</h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><ul>
+<li>扫描线</li>
+<li>计算几何</li>
+<li>单调队列</li>
+</ul>
+<h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C221018C">题目详情 - 三维世界(呲) - Super</a> </p>
 <p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C221018C/solution">题解 - 三维世界(呲) - Super</a> </p>
-<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2>
+<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$先按 $x$ 从大到小排序，可以发现所有的 $type&#x3D;&#x3D;2$ 的操作最后挖出来的是一个阶梯图形，随便用什么东西处理一下算出面积。</p>
+<p>$\qquad$发现 $x$ 从大到小遍历操作，大的会对小的产生影响，而小的不会对大的产生影响。且提取出平面后，每次 $type$ 为 $1$ 或者 $3$ 的操作只需要计算最大的那个矩形，将矩形和原来的梯形求面积并即可。</p>
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
+#include&lt;queue&gt;
+#define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
+#define Rof(i,l,r) for(int i&#x3D;l;i&gt;&#x3D;r;i--)
+using namespace std;
+#define P pair&lt;int,int&gt; 
+#define int long long
+#define x first
+#define y second
+inline int rd()&#123;
+	bool f&#x3D;false;char c;while(!isdigit(c&#x3D;getchar()))f&#x3D;c&#x3D;&#x3D;&#39;-&#39;;int x&#x3D;c^48;
+	while(isdigit(c&#x3D;getchar()))&#123;x&#x3D;(((x&lt;&lt;2)+x)&lt;&lt;1)+(c^48);&#125;return f?-x:x;
+&#125;const int inf &#x3D; 0x3f3f3f3f3f3f3f3f;
+const int N &#x3D; 1012345;
+bool ST;
+
+struct Att&#123;int x,y,z,t;&#125;a[N];
+int n,ans,A,B,C,S;
+
+deque&lt;P&gt; q;
+void Solve_x()&#123;
+	sort(a+1,a+n+1,[&amp;](Att a,Att b)&#123;
+		return a.x&#x3D;&#x3D;b.x ? (a.y&#x3D;&#x3D;b.y ? a.z&lt;b.z : a.y&gt;b.y) : a.x&gt;b.x;&#125;);
+	
+	int lst &#x3D; 0;
+	For(i,1,n)&#123;
+		if(a[i].t!&#x3D;2) continue;
+		int x &#x3D; a[i].y, wid &#x3D; a[i].z - lst;
+		if(wid&lt;&#x3D;0) continue;lst &#x3D; a[i].z;
+		S +&#x3D; x * wid, q.emplace_back(x,a[i].z);
+	&#125;
+&#125;
+
+&#x2F;&#x2F;维护队列 
+inline void add(int x,int y)&#123;&#x2F;&#x2F;x递减,y递增 
+	int lst &#x3D; 0;
+	if(x&#x3D;&#x3D;B)&#123;
+		while(q.size() &amp;&amp; q.front().y&lt;&#x3D;y)&#123;
+			assert(q.front().y&gt;&#x3D;lst);
+			S -&#x3D; (q.front().y-lst) * q.front().x;
+			lst &#x3D; q.front().y, q.pop_front();
+		&#125;
+		if(q.size()) S -&#x3D; (y-lst) * q.front().x;
+		S +&#x3D; x*y, q.emplace_front(x,y);
+	&#125;else&#123;
+		while(q.size() &amp;&amp; q.back().x&lt;&#x3D;x)&#123;
+			assert(q.back().x&gt;&#x3D;lst);
+			S -&#x3D; (q.back().x-lst) * q.back().y;
+			lst &#x3D; q.back().x, q.pop_back();
+		&#125;
+		if(q.size()) S -&#x3D; (x-lst) * q.back().y;
+		S +&#x3D; x*y, q.emplace_back(x,y);
+	&#125;
+&#125;
+
+void Solve_yz()&#123;
+	sort(a+1,a+n+1,[&amp;](Att a,Att b)&#123;
+		return a.x&#x3D;&#x3D;b.x ? (a.y&#x3D;&#x3D;b.y ? a.z&gt;b.z : a.y&gt;b.y) : a.x&gt;b.x;&#125;);
+	
+	int lstx &#x3D; A, high &#x3D; 0;
+	For(i,1,n)&#123;
+		if(a[i].t&#x3D;&#x3D;2) continue;
+		if(a[i].x&lt;lstx) high &#x3D; lstx-a[i].x, ans +&#x3D; high * S, lstx &#x3D; a[i].x;
+		int j &#x3D; i, mxy&#x3D;0, mxz&#x3D;0;
+		for(;a[j].t&#x3D;&#x3D;3 &amp;&amp; a[j].x&#x3D;&#x3D;lstx;j++) mxz &#x3D; max(mxz, a[j].z);
+		for(;a[j].t&#x3D;&#x3D;1 &amp;&amp; a[j].x&#x3D;&#x3D;lstx;j++) mxy &#x3D; max(mxy, a[j].y);
+		if(mxy) add(mxy,C);
+		if(mxz) add(B,mxz);
+		i &#x3D; j-1;
+	&#125;if(lstx) ans +&#x3D; lstx * S;
+&#125;
+
+bool ED;
+signed main()&#123;
+	cerr&lt;&lt;abs(&amp;ST-&amp;ED)&#x2F;1024.&#x2F;1024.&lt;&lt;&quot;MB\n&quot;;
+	freopen(&quot;c.in&quot;,&quot;r&quot;,stdin);	
+	freopen(&quot;c.out&quot;,&quot;w&quot;,stdout);	
+	n&#x3D;rd(),A&#x3D;rd(),B&#x3D;rd(),C&#x3D;rd();
+	int Tim &#x3D; clock();
+	For(i,1,n)&#123;
+		int op &#x3D; rd(), v &#x3D; rd(), w &#x3D; rd();
+		switch(op)&#123;
+			case 1:&#123;a[i] &#x3D; &#123;v,w,C,op&#125;;break;&#125;
+			case 2:&#123;a[i] &#x3D; &#123;A,v,w,op&#125;;break;&#125;
+			case 3:&#123;a[i] &#x3D; &#123;w,B,v,op&#125;;break;&#125;
+		&#125;
+	&#125;Solve_x(),Solve_yz();
+	printf(&quot;%lld\n&quot;,ans);
+	return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -499,6 +599,10 @@
                             
                                 <a href="https://wolfdeer62456.github.io/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/">
                                     <span class="chip bg-color">计算几何</span>
+                                </a>
+                            
+                                <a href="https://wolfdeer62456.github.io/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/">
+                                    <span class="chip bg-color">单调队列</span>
                                 </a>
                             
                         </div>
@@ -898,7 +1002,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">131k</span>
+                        class="white-color">134.1k</span>
             
             
             
