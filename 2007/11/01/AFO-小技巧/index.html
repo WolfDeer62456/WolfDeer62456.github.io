@@ -382,14 +382,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-09-29
+                    2024-09-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    1.8k
                 </div>
                 
 
@@ -446,7 +446,8 @@
 <li>正解并不意味着就一定<strong>是所有情况的通解</strong>，也有可能是<strong>每种情况的解的总和</strong><a href="https://wolfdeer62456.github.io/2023/11/16/C231116C-%E7%AE%80%E5%8D%95%E5%9B%BE-graph/">④</a>。</li>
 <li>多重背包选择时，可以使用<strong>二进制优化</strong>枚举选几个当前物品。例如将可以选 $14$ 个的某种物品变成选 $7,4,2,1$ 个物品，转换为 $01$ 背包来计算<a href="https://wolfdeer62456.github.io/2024/09/29/C240929C-%E8%B4%AA%E5%BF%83/">⑤</a>。</li>
 <li><strong>双向搜索思想</strong>：当出现单向枚举或搜索代价是指数级时，考虑寻找中间点，先计算前面的，再计算后面的。例如例题中 $abcdcd$ ，每次枚举的代价都是 $O(S)$ （即字符种类数），单项枚举时间复杂度是 $O(nS^3)$ （ $n$ 是字符串长度），但是固定一个中间点 $c$ ，预处理出 $ab$ 的方案数和 $dcd$ 的方案数时间复杂度便降到了 $O(nS)$ <a href="https://wolfdeer62456.github.io/2024/09/29/C240929B-%E4%B8%B2%E4%B8%80%E4%B8%B2/">⑥</a>。</li>
-<li>由一般到特殊：优先寻找题目的特殊点，考虑能否将一般的计算转化为特殊的计算<a href="https://wolfdeer62456.github.io/2024/09/29/C240929A-%E6%95%85%E4%BA%8B%E4%B9%A6/">⑦</a>。</li>
+<li><strong>由一般到特殊</strong>：优先寻找题目的特殊点，考虑能否将一般的计算转化为特殊的计算<a href="https://wolfdeer62456.github.io/2024/09/29/C240929A-%E6%95%85%E4%BA%8B%E4%B9%A6/">⑦</a>。</li>
+<li><strong>由简单到复杂</strong>：将题目变成更简单的形式，把这个形式推理到更复杂的形式中<a href="https://wolfdeer62456.github.io/2024/09/30/C240930A-Longest-Max-Min-Subsequence/">⑧</a>。</li>
 </ul>
 <h3 id="序列操作"><a href="#序列操作" class="headerlink" title="序列操作"></a>序列操作</h3><ul>
 <li>有关序列的处理：1. 求前缀和找规律；2.用下标乘上数值； 3. 数值范围允许时，考虑将下标和数值取反；4.前后做差找规律；5.将序列转化为统一的形式，例如将一段 $1111011000$ 看作 $4$ 个 $1$ 、$1$ 个 $0$ 、$2$ 个 $1$ 、$3$ 个 $0$ 的形式<a href="https://wolfdeer62456.github.io/2024/07/31/C240731D-%E6%8E%92%E5%BA%8F/">①</a> ；6.遇到求 $01$ 串中 $1$ 比 $0$ 多的个数，可以把 $0$ 转换为 $-1$ ，通过前缀和求解<a href="https://wolfdeer62456.github.io/2024/07/29/C240729B-%E5%91%A8%E9%BB%91%E9%B8%AD-b/">②</a>。</li>
@@ -454,8 +455,9 @@
 <li>括号序列：1.用栈存储维护；2.动态规划处理子问题<a href="https://wolfdeer62456.github.io/2024/08/05/C240805A-%E6%8B%AC%E5%8F%B7">④</a>。</li>
 </ul>
 <h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><ul>
-<li>值域很小时，考虑状态压缩<a href="https://wolfdeer62456.github.io/2024/07/26/C240726C-c/">①</a> 。</li>
+<li>值域很小时，考虑<strong>动态规划</strong>！！！考虑状态压缩<a href="https://wolfdeer62456.github.io/2024/07/26/C240726C-c/">①</a> 。</li>
 <li>$f[l][r]$ 可以表示区间 $[l,r]$ 的一些性质，其中 $l$ 和 $r$ 都表示下标<a href="https://wolfdeer62456.github.io/2024/08/05/C240805A-%E6%8B%AC%E5%8F%B7">②</a>。</li>
+<li>动态规划的状态数不只有一个，当发现有些东西很难求时，考虑直接使用 $\mathrm{dp}$ 求解<a href="https://wolfdeer62456.github.io/2024/09/30/C240930B-Deterministic-Heap-Easy-Version/">③</a>。</li>
 </ul>
 <h3 id="对环的处理"><a href="#对环的处理" class="headerlink" title="对环的处理"></a>对环的处理</h3><ul>
 <li>倍长成两倍，断环成链<a href="https://wolfdeer62456.github.io/2024/08/02/C240802B-%E7%9F%B3%E5%A4%B4/">①</a></li>
@@ -930,7 +932,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">134.1k</span>
+                        class="white-color">139.8k</span>
             
             
             
