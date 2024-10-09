@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="#C240927A. 「NOIP2018 提高组」货币系统, WolfDeer">
-    <meta name="description" content="手动模拟">
+    <meta name="keywords" content="#C241008C. SolarPea与网格, WolfDeer">
+    <meta name="description" content="再来">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>#C240927A. 「NOIP2018 提高组」货币系统 | WolfDeer</title>
+    <title>#C241008C. SolarPea与网格 | WolfDeer</title>
     <link rel="icon" type="image/png" href="https://wolfdeer62456.github.io/favicon.png">
     
 
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/97.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wolfdeer62456.github.io/medias/featureimages/53.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">#C240927A. 「NOIP2018 提高组」货币系统</h1>
+                    <h1 class="description center-align post-title">#C241008C. SolarPea与网格</h1>
                 </div>
             </div>
         </div>
@@ -354,12 +354,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="https://wolfdeer62456.github.io/tags/%E8%A7%82%E5%AF%9F-%E5%88%86%E6%9E%90/">
-                                <span class="chip bg-color">观察+分析</span>
-                            </a>
-                        
-                            <a href="https://wolfdeer62456.github.io/tags/%E8%B4%AA%E5%BF%83/">
-                                <span class="chip bg-color">贪心</span>
+                            <a href="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                <span class="chip bg-color">动态规划</span>
                             </a>
                         
                     </div>
@@ -383,28 +379,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-09-27
+                    2024-10-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-09-27
+                    2024-10-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    480
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
 
@@ -427,40 +423,125 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C240927A-「NOIP2018-提高组」货币系统"><a href="#C240927A-「NOIP2018-提高组」货币系统" class="headerlink" title="#C240927A. 「NOIP2018 提高组」货币系统"></a>#C240927A. 「NOIP2018 提高组」货币系统</h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><ul>
-<li>贪心</li>
-<li>观察+分析</li>
+                <h1 id="C241008C-SolarPea与网格"><a href="#C241008C-SolarPea与网格" class="headerlink" title="#C241008C. SolarPea与网格"></a>#C241008C. SolarPea与网格</h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><ul>
+<li>动态规划</li>
 </ul>
-<h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5019">[NOIP2018 提高组] 铺设道路 - 洛谷</a> </p>
-<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>$\qquad$这是一道离谱贪心题目。</p>
-<p>$\qquad$直接暴力搜，如果出现 $a[i]&gt;a[i-1]$ 的情况，说明 $a[i-1]$ 在填充的时候就可以顺便帮 $a[i]$ 填充小于等于 $a[i-1]$ 的那一部分，那么只需要填充剩下的 $a[i]-a[i-1]$ 的那一部分就好了。</p>
-<p>$\qquad$为什么可以这么思考呢？假设最开始的时候填充了 $a[i]$ ，那么这个 $a[i]$ 可以一直填到下一个比 $a[i]$ 小的位置为止。（例如数组 $1,4,2,5,4,6,3$ ，在填到 $4$ 的时候就可以顺便把后面的数的小于等于 $2$ 的部分全部填充，剩下的 $2$ 次填充由于被后面的 $2$ 阻挡，只能用于自己的填充）可以理解为，当前点 $a[i]$ 会阻拦所有 $\ge a[i]$ 的填充，所以才导致出现 $a[i]&gt;a[i-1]$ 时需要花费额外的 $a[i]-a[i-1]$ 去填充被 $a[i-1]$ 挡住的部分。</p>
-<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
+<h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C221110C">题目详情 - SolarPea与网格 - Super</a> </p>
+<p> <a target="_blank" rel="noopener" href="http://192.168.110.4/p/C221110C/solution">题解 - SolarPea与网格 - Super</a> </p>
+<h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><p>发现如果一个人在 $x$，另一个人在 $y$（$x &lt; y$），在 $x$ 的人一定会把所有 $x &lt; i &lt; y$ 的 $i$ 全走一遍，走完之后会 $x + 1 &#x3D; y$。</p>
+<p>记 $f_i$ 表示一个人在 $i - 1$，一个人在 $i$，在 $i - 1$ 的人的得分减在 $i$ 的人的得分的最大值，答案即为 $f_2$。初值为 $f_{n-1} &#x3D; a_n$。</p>
+<p>记 $s$ 为 $a$ 的前缀和：</p>
+<p>$f_i &#x3D; \max_{j &gt; i}(a_j - s_{j-1} + s_i - f_j) \\\quad&#x3D; \max(f_{i+1} - a_{i+1}, a_{i+1} - f_{i+1}) \\\quad&#x3D; |f_{i+1} - a_{i+1}|$</p>
+<p>（第二行使用差分实现）</p>
+<p>根据上文，我们可以推得最后的答案是 $\vert\vert\vert a_n-a_{n-1}\vert -a_{n-2}\vert-a_{n-3}\vert…$ </p>
+<p>考虑每次操作对答案的贡献，将 $a_n$ 看作 $x$ ，答案看作 $y$ 则有：$y &#x3D; \vert\vert\vert x-a_{n-1}\vert -a_{n-2}\vert-a_{n-3}\vert…$ ，我们将函数的图像画出来，发现每加入一个点 $i$ 都是将原来的函数右移 $a_i$ 位，然后将其关于 $a_i$ 对称，最终询问的 $ans$ 便是输入的 $a_n$ 对应的 $x$ 的值。</p>
+<p>发现 $a_n$ 的范围是 $[0,10^9]$ ，如果 $a_n$ 已经大于所有数的和了，直接选到 $a_n$ 即可（否则让 $\mathrm{PolarSea}$ 选到了 $a_n$ 贡献就是负的了）</p>
+<p>时间复杂度为 $O(\sum a + q)$。</p>
+</details>
+
+<h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><h3 id="直接对称"><a href="#直接对称" class="headerlink" title="直接对称"></a>直接对称</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
 #include&lt;vector&gt;
+#include&lt;queue&gt;
+#include&lt;list&gt;
 #define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
 #define Rof(i,l,r) for(int i&#x3D;l;i&gt;&#x3D;r;i--)
 using namespace std;
-#define P pair&lt;int,int&gt;
+#define P pair&lt;int,int&gt; 
 #define int long long
 #define x first
 #define y second
-inline int rd()&#123;int x;return cin&gt;&gt;x,x;&#125;
-const int inf &#x3D; 0x3f3f3f3f3f3f3f3f;
+inline int rd()&#123;
+	char c;bool f&#x3D;false;while(!isdigit(c&#x3D;getchar()))f&#x3D;c&#x3D;&#x3D;&#39;-&#39;;int x&#x3D;c^48;
+	while(isdigit(c&#x3D;getchar()))&#123;x&#x3D;(((x&lt;&lt;2)+x)&lt;&lt;1)+(c^48);&#125;return f?-x:x;
+&#125;const int inf &#x3D; 0x3f3f3f3f3f3f3f3f;
 const int N &#x3D; 2012345;
+const int A &#x3D; 1e6;
 bool ST;
 
-int n,ans,a[N];
+int n,q,len,a[N];
+int res[N];
+int f[N&lt;&lt;2|3];
+
+inline void solve()&#123;
+	n &#x3D; rd(); For(i,1,n-1) a[i] &#x3D; rd();
+	int s &#x3D; 0; For(i,3,n-1) s+&#x3D;a[i];&#x2F;&#x2F;对未拿到的分数求和 
+	For(i,0,s) f[i+A] &#x3D; i;&#x2F;&#x2F;复制一份？ 
+	
+	int nw &#x3D; 0;
+	For(i,3,n-1)&#123;
+		nw +&#x3D; a[i];&#x2F;&#x2F;当前位置加上a[i] 
+		For(j,0,a[i]-1) f[j+(A-nw)] &#x3D; f[a[i]*2-j+(A-nw)];
+	&#125; 
+	
+	q &#x3D; rd();
+	while(q--)&#123;
+		int x &#x3D; rd();
+		if(x&lt;s) printf(&quot;%lld\n&quot;, f[x+(A-nw)]+a[1]-a[2]);
+		else printf(&quot;%lld\n&quot;, x-s+a[1]-a[2]);
+	&#125;
+&#125;
 
 bool ED;
 signed main()&#123;
-	ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
 	cerr&lt;&lt;abs(&amp;ST-&amp;ED)&#x2F;1024.&#x2F;1024.&lt;&lt;&quot;MB\n&quot;;
-	cin&gt;&gt;n;int Tim &#x3D; clock();
-	For(i,1,n) cin&gt;&gt;a[i];
-	For(i,2,n) if(a[i]&gt;a[i-1]) ans +&#x3D; a[i] - a[i-1];
-	cout&lt;&lt;ans+a[1]&lt;&lt;&#39;\n&#39;;
+	freopen(&quot;game.in&quot;,&quot;r&quot;,stdin);
+	freopen(&quot;game.out&quot;,&quot;w&quot;,stdout);
+	int T &#x3D; 1, Tim &#x3D; clock();
+	while(T--) solve();
 	return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="使用双端队列"><a href="#使用双端队列" class="headerlink" title="使用双端队列"></a>使用双端队列</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
+#include&lt;vector&gt;
+#include&lt;queue&gt;
+#include&lt;list&gt;
+#define For(i,l,r) for(int i&#x3D;l;i&lt;&#x3D;r;i++)
+#define Rof(i,l,r) for(int i&#x3D;l;i&gt;&#x3D;r;i--)
+using namespace std;
+#define P pair&lt;int,int&gt; 
+#define int long long
+#define x first
+#define y second
+inline int rd()&#123;
+	char c;bool f&#x3D;false;while(!isdigit(c&#x3D;getchar()))f&#x3D;c&#x3D;&#x3D;&#39;-&#39;;int x&#x3D;c^48;
+	while(isdigit(c&#x3D;getchar()))&#123;x&#x3D;(((x&lt;&lt;2)+x)&lt;&lt;1)+(c^48);&#125;return f?-x:x;
+&#125;const int inf &#x3D; 0x3f3f3f3f3f3f3f3f;
+const int N &#x3D; 2012345;
+bool ST;
+
+int n,q,len,a[N];
+int res[N];
+list&lt;int&gt; f;
+
+inline void solve()&#123;
+	n &#x3D; rd(); For(i,1,n-1) a[i] &#x3D; rd();
+	int s &#x3D; 0; For(i,3,n-1) s+&#x3D;a[i];
+	For(i,0,s) f.push_back(i);
+	For(i,3,n-1)&#123;
+		auto it &#x3D; f.begin();
+		For(j,1,a[i]) it++,f.push_front(*it);
+	&#125;
+	len &#x3D; 0;
+	for(auto x:f) res[len++] &#x3D; x;
+	assert(len&#x3D;&#x3D;s*2+1);
+	q &#x3D; rd();
+	while(q--)&#123;
+		int x &#x3D; rd();
+		if(x&lt;len) printf(&quot;%lld\n&quot;, res[x]+a[1]-a[2]);
+		else printf(&quot;%lld\n&quot;, x-s+a[1]-a[2]);
+	&#125;
+&#125;
+
+bool ED;
+signed main()&#123;
+	cerr&lt;&lt;abs(&amp;ST-&amp;ED)&#x2F;1024.&#x2F;1024.&lt;&lt;&quot;MB\n&quot;;
+&#x2F;&#x2F;	freopen(&quot;ex_game.in&quot;,&quot;r&quot;,stdin);
+	freopen(&quot;game.in&quot;,&quot;r&quot;,stdin);
+	freopen(&quot;game.out&quot;,&quot;w&quot;,stdout);
+	int T &#x3D; 1, Tim &#x3D; clock();
+	while(T--) solve();
+	return cerr&lt;&lt;&quot;TIME:&quot;&lt;&lt;(clock()-Tim)&#x2F;1000.,0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -486,7 +567,7 @@ signed main()&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a target="_blank" rel="noopener" href="https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2024/09/27/C240927A-%E3%80%8CNOIP2018-%E6%8F%90%E9%AB%98%E7%BB%84%E3%80%8D%E8%B4%A7%E5%B8%81%E7%B3%BB%E7%BB%9F/">https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2024/09/27/C240927A-%E3%80%8CNOIP2018-%E6%8F%90%E9%AB%98%E7%BB%84%E3%80%8D%E8%B4%A7%E5%B8%81%E7%B3%BB%E7%BB%9F/</a>
+                    <a target="_blank" rel="noopener" href="https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2024/10/08/C241008C-SolarPea%E4%B8%8E%E7%BD%91%E6%A0%BC/">https://wolfdeer62456.github.iohttps://wolfdeer62456.github.io/2024/10/08/C241008C-SolarPea%E4%B8%8E%E7%BD%91%E6%A0%BC/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -524,12 +605,8 @@ signed main()&#123;
                     
                         <div class="article-tag">
                             
-                                <a href="https://wolfdeer62456.github.io/tags/%E8%A7%82%E5%AF%9F-%E5%88%86%E6%9E%90/">
-                                    <span class="chip bg-color">观察+分析</span>
-                                </a>
-                            
-                                <a href="https://wolfdeer62456.github.io/tags/%E8%B4%AA%E5%BF%83/">
-                                    <span class="chip bg-color">贪心</span>
+                                <a href="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                    <span class="chip bg-color">动态规划</span>
                                 </a>
                             
                         </div>
@@ -612,31 +689,30 @@ signed main()&#123;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="https://wolfdeer62456.github.io/2024/09/27/%E5%91%A8%E6%9C%AB%E4%BA%86/">
+                <a href="https://wolfdeer62456.github.io/2024/10/08/%E5%81%BF%E8%BF%98/">
                     <div class="card-image">
                         
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/51.jpg" class="responsive-img" alt="偿还">
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/3.jpg" class="responsive-img" alt="周末了">
-                        
-                        <span class="card-title">周末了</span>
+                        <span class="card-title">偿还</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            考验
+                            Our Island Fell Ill.
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-09-27
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-10-08
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="https://wolfdeer62456.github.io/categories/%E8%AF%B4%E8%AF%B4/" class="post-category">
-                                    说说
+                            <a href="https://wolfdeer62456.github.io/categories/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" class="post-category">
+                                    社会学
                                 </a>
                             
                             
@@ -653,35 +729,44 @@ signed main()&#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="https://wolfdeer62456.github.io/2024/09/27/%E2%80%9C%E7%94%9F%E5%AD%98%E9%A3%9F%E5%A0%82%E2%80%9D/">
+                <a href="https://wolfdeer62456.github.io/2024/10/08/C241008A-PolarSea%E4%B8%8E%E8%BE%B9%E5%89%B2%E9%9B%86/">
                     <div class="card-image">
                         
-                        <img src="https://wolfdeer62456.github.io/medias/featureimages/95.jpg" class="responsive-img" alt="“生存食堂”">
                         
-                        <span class="card-title">“生存食堂”</span>
+                        <img src="https://wolfdeer62456.github.io/medias/featureimages/106.jpg" class="responsive-img" alt="#C241008A. PolarSea与边割集">
+                        
+                        <span class="card-title">#C241008A. PolarSea与边割集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            生存
+                            多练
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-09-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-10-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="https://wolfdeer62456.github.io/categories/%E8%AF%B4%E8%AF%B4/" class="post-category">
-                                    说说
+                            <a href="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/" class="post-category">
+                                    题目
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -884,7 +969,7 @@ signed main()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">139.8k</span>
+                        class="white-color">153.2k</span>
             
             
             
