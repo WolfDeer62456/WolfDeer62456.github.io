@@ -6,7 +6,7 @@
   <link href="https://wolfdeer62456.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolfdeer62456.github.io/"/>
-  <updated>2024-10-16T12:01:05.052Z</updated>
+  <updated>2024-10-17T08:26:39.923Z</updated>
   <id>https://wolfdeer62456.github.io/</id>
   
   <author>
@@ -15,6 +15,116 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>#C241017D. [NOIP2000 提高组] 方格取数（加强版）</title>
+    <link href="https://wolfdeer62456.github.io/2024/10/17/C241017D-NOIP2000-%E6%8F%90%E9%AB%98%E7%BB%84-%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0%EF%BC%88%E5%8A%A0%E5%BC%BA%E7%89%88%EF%BC%89/"/>
+    <id>https://wolfdeer62456.github.io/2024/10/17/C241017D-NOIP2000-%E6%8F%90%E9%AB%98%E7%BB%84-%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0%EF%BC%88%E5%8A%A0%E5%BC%BA%E7%89%88%EF%BC%89/</id>
+    <published>2024-10-17T08:09:23.000Z</published>
+    <updated>2024-10-17T08:26:39.923Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C241017D-NOIP2000-提高组-方格取数（加强版）&quot;&gt;&lt;a href=&quot;#C241017D-NOIP2000-提高组-方格取数（加强版）&quot; class=&quot;headerlink&quot; title=&quot;#C241017D. [NOIP2000 提高组]</summary>
+        
+      
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="维度压缩" scheme="https://wolfdeer62456.github.io/tags/%E7%BB%B4%E5%BA%A6%E5%8E%8B%E7%BC%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C241017C. [NOIP2000 提高组] 方格取数</title>
+    <link href="https://wolfdeer62456.github.io/2024/10/17/C241017C-NOIP2000-%E6%8F%90%E9%AB%98%E7%BB%84-%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0/"/>
+    <id>https://wolfdeer62456.github.io/2024/10/17/C241017C-NOIP2000-%E6%8F%90%E9%AB%98%E7%BB%84-%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0/</id>
+    <published>2024-10-17T07:03:00.000Z</published>
+    <updated>2024-10-17T08:29:11.528Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C241017C-NOIP2000-提高组-方格取数&quot;&gt;&lt;a href=&quot;#C241017C-NOIP2000-提高组-方格取数&quot; class=&quot;headerlink&quot; title=&quot;#C241017C. [NOIP2000 提高组]</summary>
+        
+      
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C241017B. [HNOI2013] 游走</title>
+    <link href="https://wolfdeer62456.github.io/2024/10/17/C241017B-HNOI2013-%E6%B8%B8%E8%B5%B0/"/>
+    <id>https://wolfdeer62456.github.io/2024/10/17/C241017B-HNOI2013-%E6%B8%B8%E8%B5%B0/</id>
+    <published>2024-10-17T01:49:17.000Z</published>
+    <updated>2024-10-17T07:08:25.565Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C241017B-HNOI2013-游走&quot;&gt;&lt;a href=&quot;#C241017B-HNOI2013-游走&quot; class=&quot;headerlink&quot; title=&quot;#C241017B. [HNOI2013] 游走&quot;&gt;&lt;/a&gt;#C241017B. [HNOI2013]</summary>
+        
+      
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="数学推理" scheme="https://wolfdeer62456.github.io/tags/%E6%95%B0%E5%AD%A6%E6%8E%A8%E7%90%86/"/>
+    
+    <category term="高斯消元" scheme="https://wolfdeer62456.github.io/tags/%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83/"/>
+    
+    <category term="期望" scheme="https://wolfdeer62456.github.io/tags/%E6%9C%9F%E6%9C%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C241017A. 高斯消元法</title>
+    <link href="https://wolfdeer62456.github.io/2024/10/17/C241017A-%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E6%B3%95/"/>
+    <id>https://wolfdeer62456.github.io/2024/10/17/C241017A-%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E6%B3%95/</id>
+    <published>2024-10-17T01:09:37.000Z</published>
+    <updated>2024-10-17T03:07:22.983Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C241017A-高斯消元法&quot;&gt;&lt;a href=&quot;#C241017A-高斯消元法&quot; class=&quot;headerlink&quot; title=&quot;#C241017A. 高斯消元法&quot;&gt;&lt;/a&gt;#C241017A. 高斯消元法&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="数学" scheme="https://wolfdeer62456.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="高斯消元" scheme="https://wolfdeer62456.github.io/tags/%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83/"/>
+    
+  </entry>
   
   <entry>
     <title>mathjax 渲染较慢解决方法</title>
@@ -90,7 +200,7 @@
     <link href="https://wolfdeer62456.github.io/2024/10/16/C241016C-HAOI2009-%E9%80%86%E5%BA%8F%E5%AF%B9%E6%95%B0%E5%88%97/"/>
     <id>https://wolfdeer62456.github.io/2024/10/16/C241016C-HAOI2009-%E9%80%86%E5%BA%8F%E5%AF%B9%E6%95%B0%E5%88%97/</id>
     <published>2024-10-16T04:07:36.000Z</published>
-    <updated>2024-10-16T13:49:43.709Z</updated>
+    <updated>2024-10-17T03:07:46.175Z</updated>
     
     
       
@@ -115,7 +225,7 @@
     <link href="https://wolfdeer62456.github.io/2024/10/16/C241016B-SCOI2010-%E8%82%A1%E7%A5%A8%E4%BA%A4%E6%98%93/"/>
     <id>https://wolfdeer62456.github.io/2024/10/16/C241016B-SCOI2010-%E8%82%A1%E7%A5%A8%E4%BA%A4%E6%98%93/</id>
     <published>2024-10-16T04:07:22.000Z</published>
-    <updated>2024-10-16T09:04:32.121Z</updated>
+    <updated>2024-10-17T03:08:01.338Z</updated>
     
     
       
@@ -142,7 +252,7 @@
     <link href="https://wolfdeer62456.github.io/2024/10/16/C241016A-%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%83/"/>
     <id>https://wolfdeer62456.github.io/2024/10/16/C241016A-%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%83/</id>
     <published>2024-10-16T02:17:32.000Z</published>
-    <updated>2024-10-16T02:38:09.113Z</updated>
+    <updated>2024-10-17T03:08:59.790Z</updated>
     
     
       
@@ -192,7 +302,7 @@
     <link href="https://wolfdeer62456.github.io/2024/10/15/C241015C-%E6%9C%80%E5%A4%A7%E7%94%9F%E6%88%90%E6%A0%91-treemax/"/>
     <id>https://wolfdeer62456.github.io/2024/10/15/C241015C-%E6%9C%80%E5%A4%A7%E7%94%9F%E6%88%90%E6%A0%91-treemax/</id>
     <published>2024-10-15T07:14:19.000Z</published>
-    <updated>2024-10-16T00:43:47.930Z</updated>
+    <updated>2024-10-17T03:09:23.160Z</updated>
     
     
       
@@ -219,7 +329,7 @@
     <link href="https://wolfdeer62456.github.io/2024/10/15/C241015B-%E5%BC%82%E6%88%96%E5%BA%8F%E5%88%97-xor/"/>
     <id>https://wolfdeer62456.github.io/2024/10/15/C241015B-%E5%BC%82%E6%88%96%E5%BA%8F%E5%88%97-xor/</id>
     <published>2024-10-15T07:13:58.000Z</published>
-    <updated>2024-10-16T00:12:24.691Z</updated>
+    <updated>2024-10-17T03:09:32.759Z</updated>
     
     
       
@@ -246,7 +356,7 @@
     <link href="https://wolfdeer62456.github.io/2024/10/15/C241015A-%E5%BA%8F%E5%88%97%E7%94%9F%E6%88%90-sequence/"/>
     <id>https://wolfdeer62456.github.io/2024/10/15/C241015A-%E5%BA%8F%E5%88%97%E7%94%9F%E6%88%90-sequence/</id>
     <published>2024-10-15T07:13:41.000Z</published>
-    <updated>2024-10-15T07:34:38.007Z</updated>
+    <updated>2024-10-17T03:09:50.330Z</updated>
     
     
       
@@ -359,7 +469,7 @@
     <link href="https://wolfdeer62456.github.io/2024/10/12/C241012B-%E5%BA%8F%E5%88%97/"/>
     <id>https://wolfdeer62456.github.io/2024/10/12/C241012B-%E5%BA%8F%E5%88%97/</id>
     <published>2024-10-12T09:01:46.000Z</published>
-    <updated>2024-10-16T00:17:35.635Z</updated>
+    <updated>2024-10-17T03:10:06.056Z</updated>
     
     
       
@@ -384,14 +494,14 @@
     <link href="https://wolfdeer62456.github.io/2024/10/12/2024-10-12-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/"/>
     <id>https://wolfdeer62456.github.io/2024/10/12/2024-10-12-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/</id>
     <published>2024-10-12T04:59:51.000Z</published>
-    <updated>2024-10-14T07:59:47.474Z</updated>
+    <updated>2024-10-17T02:17:59.347Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;2024-10-12-考试总结&quot;&gt;&lt;a href=&quot;#2024-10-12-考试总结&quot; class=&quot;headerlink&quot; title=&quot;2024.10.12 考试总结&quot;&gt;&lt;/a&gt;2024.10.12 考试总结&lt;/h1&gt;&lt;p&gt;见 ： &lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;2024-10-12-考试总结&quot;&gt;&lt;a href=&quot;#2024-10-12-考试总结&quot; class=&quot;headerlink&quot; title=&quot;2024.10.12 考试总结&quot;&gt;&lt;/a&gt;2024.10.12</summary>
         
       
     
@@ -399,102 +509,6 @@
     
     <category term="总结" scheme="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>#C241011A. 点分治</title>
-    <link href="https://wolfdeer62456.github.io/2024/10/11/C241011A-%E7%82%B9%E5%88%86%E6%B2%BB/"/>
-    <id>https://wolfdeer62456.github.io/2024/10/11/C241011A-%E7%82%B9%E5%88%86%E6%B2%BB/</id>
-    <published>2024-10-11T06:46:01.000Z</published>
-    <updated>2024-10-11T08:33:13.090Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;C241011A-点分治&quot;&gt;&lt;a href=&quot;#C241011A-点分治&quot; class=&quot;headerlink&quot; title=&quot;#C241011A. 点分治&quot;&gt;&lt;/a&gt;#C241011A. 点分治&lt;/h1&gt;&lt;h2 id=&quot;标签（Label）&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="点分治" scheme="https://wolfdeer62456.github.io/tags/%E7%82%B9%E5%88%86%E6%B2%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>防止windows繁体快捷键攻击</title>
-    <link href="https://wolfdeer62456.github.io/2024/10/11/%E9%98%B2%E6%AD%A2windows%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%94%BB%E5%87%BB/"/>
-    <id>https://wolfdeer62456.github.io/2024/10/11/%E9%98%B2%E6%AD%A2windows%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%94%BB%E5%87%BB/</id>
-    <published>2024-10-11T03:10:42.000Z</published>
-    <updated>2024-10-11T03:19:59.191Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;防止windows繁体快捷键攻击&quot;&gt;&lt;a href=&quot;#防止windows繁体快捷键攻击&quot; class=&quot;headerlink&quot; title=&quot;防止windows繁体快捷键攻击&quot;&gt;&lt;/a&gt;防止windows繁体快捷键攻击&lt;/h1&gt;&lt;p&gt; &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="资料" scheme="https://wolfdeer62456.github.io/categories/%E8%B5%84%E6%96%99/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>活成了自己讨厌的样子</title>
-    <link href="https://wolfdeer62456.github.io/2024/10/11/%E6%B4%BB%E6%88%90%E4%BA%86%E8%87%AA%E5%B7%B1%E8%AE%A8%E5%8E%8C%E7%9A%84%E6%A0%B7%E5%AD%90/"/>
-    <id>https://wolfdeer62456.github.io/2024/10/11/%E6%B4%BB%E6%88%90%E4%BA%86%E8%87%AA%E5%B7%B1%E8%AE%A8%E5%8E%8C%E7%9A%84%E6%A0%B7%E5%AD%90/</id>
-    <published>2024-10-10T23:33:17.000Z</published>
-    <updated>2024-10-16T09:15:27.178Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;活成了自己讨厌的样子&quot;&gt;&lt;a href=&quot;#活成了自己讨厌的样子&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="说说" scheme="https://wolfdeer62456.github.io/categories/%E8%AF%B4%E8%AF%B4/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>#C241010A. 子集背包</title>
-    <link href="https://wolfdeer62456.github.io/2024/10/10/C241010A-%E5%AD%90%E9%9B%86%E8%83%8C%E5%8C%85/"/>
-    <id>https://wolfdeer62456.github.io/2024/10/10/C241010A-%E5%AD%90%E9%9B%86%E8%83%8C%E5%8C%85/</id>
-    <published>2024-10-10T08:13:51.000Z</published>
-    <updated>2024-10-10T09:13:58.774Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;C241010A-子集背包&quot;&gt;&lt;a href=&quot;#C241010A-子集背包&quot; class=&quot;headerlink&quot; title=&quot;#C241010A. 子集背包&quot;&gt;&lt;/a&gt;#C241010A. 子集背包&lt;/h1&gt;&lt;h2 id=&quot;标签（Label）&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
   </entry>
   
