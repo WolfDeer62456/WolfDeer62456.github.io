@@ -6,7 +6,7 @@
   <link href="https://wolfdeer62456.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolfdeer62456.github.io/"/>
-  <updated>2024-10-17T08:26:39.923Z</updated>
+  <updated>2024-10-17T13:31:08.072Z</updated>
   <id>https://wolfdeer62456.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重压</title>
+    <link href="https://wolfdeer62456.github.io/2024/10/17/%E9%87%8D%E5%8E%8B/"/>
+    <id>https://wolfdeer62456.github.io/2024/10/17/%E9%87%8D%E5%8E%8B/</id>
+    <published>2024-10-17T13:08:30.000Z</published>
+    <updated>2024-10-17T13:31:08.072Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;重压&quot;&gt;&lt;a href=&quot;#重压&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="说说" scheme="https://wolfdeer62456.github.io/categories/%E8%AF%B4%E8%AF%B4/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>#C241017E. [NOI1995] 石子合并</title>
+    <link href="https://wolfdeer62456.github.io/2024/10/17/C241017E-NOI1995-%E7%9F%B3%E5%AD%90%E5%90%88%E5%B9%B6/"/>
+    <id>https://wolfdeer62456.github.io/2024/10/17/C241017E-NOI1995-%E7%9F%B3%E5%AD%90%E5%90%88%E5%B9%B6/</id>
+    <published>2024-10-17T12:12:05.000Z</published>
+    <updated>2024-10-17T12:53:08.137Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C241017E-NOI1995-石子合并&quot;&gt;&lt;a href=&quot;#C241017E-NOI1995-石子合并&quot; class=&quot;headerlink&quot; title=&quot;#C241017E. [NOI1995] 石子合并&quot;&gt;&lt;/a&gt;#C241017E.</summary>
+        
+      
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="环" scheme="https://wolfdeer62456.github.io/tags/%E7%8E%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>#C241017D. [NOIP2000 提高组] 方格取数（加强版）</title>
@@ -404,7 +454,7 @@
     <link href="https://wolfdeer62456.github.io/2024/10/14/C241014C-%E5%9F%8E%E5%B8%82/"/>
     <id>https://wolfdeer62456.github.io/2024/10/14/C241014C-%E5%9F%8E%E5%B8%82/</id>
     <published>2024-10-14T06:46:48.000Z</published>
-    <updated>2024-10-14T06:46:48.496Z</updated>
+    <updated>2024-10-17T12:19:12.294Z</updated>
     
     
       
@@ -460,54 +510,6 @@
       
     
     
-    
-    
-  </entry>
-  
-  <entry>
-    <title>#C241012B. 序列</title>
-    <link href="https://wolfdeer62456.github.io/2024/10/12/C241012B-%E5%BA%8F%E5%88%97/"/>
-    <id>https://wolfdeer62456.github.io/2024/10/12/C241012B-%E5%BA%8F%E5%88%97/</id>
-    <published>2024-10-12T09:01:46.000Z</published>
-    <updated>2024-10-17T03:10:06.056Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;C241012B-序列&quot;&gt;&lt;a href=&quot;#C241012B-序列&quot; class=&quot;headerlink&quot; title=&quot;#C241012B. 序列&quot;&gt;&lt;/a&gt;#C241012B. 序列&lt;/h1&gt;&lt;h2 id=&quot;标签（Label）&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="笛卡尔树" scheme="https://wolfdeer62456.github.io/tags/%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024.10.12 考试总结</title>
-    <link href="https://wolfdeer62456.github.io/2024/10/12/2024-10-12-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/"/>
-    <id>https://wolfdeer62456.github.io/2024/10/12/2024-10-12-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/</id>
-    <published>2024-10-12T04:59:51.000Z</published>
-    <updated>2024-10-17T02:17:59.347Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2024-10-12-考试总结&quot;&gt;&lt;a href=&quot;#2024-10-12-考试总结&quot; class=&quot;headerlink&quot; title=&quot;2024.10.12 考试总结&quot;&gt;&lt;/a&gt;2024.10.12</summary>
-        
-      
-    
-    
-    
-    <category term="总结" scheme="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/"/>
     
     
   </entry>
