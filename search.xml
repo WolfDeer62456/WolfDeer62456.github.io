@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>放下自己的长衫</title>
+      <link href="https://wolfdeer62456.github.io/2024/10/19/%E6%94%BE%E4%B8%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E9%95%BF%E8%A1%AB/"/>
+      <url>https://wolfdeer62456.github.io/2024/10/19/%E6%94%BE%E4%B8%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E9%95%BF%E8%A1%AB/</url>
+      
+        <content type="html"><![CDATA[<h1 id="放下自己的长衫"><a href="#放下自己的长衫" class="headerlink" title="放下自己的长衫"></a>放下自己的长衫</h1><p><strong>放下心中的念想，捡起脚底的谦卑。</strong></p><p><strong>放下心中的焦虑，直面现实的困境。</strong></p><p><strong>置身事外的智慧</strong>，<strong>和亲临其中的痛苦</strong>，<strong>也许从来无法让自己置身事外</strong>，<strong>但一定要追寻那至高无上的智慧</strong>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 说说 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2024.10.19 考试总结</title>
+      <link href="https://wolfdeer62456.github.io/2024/10/19/2024-10-19-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/"/>
+      <url>https://wolfdeer62456.github.io/2024/10/19/2024-10-19-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2024-10-19-考试总结"><a href="#2024-10-19-考试总结" class="headerlink" title="2024.10.19 考试总结"></a>2024.10.19 考试总结</h1><p> <a href="http://192.168.110.4/d/system/contest/67126046a20eec0655dd0b9e">比赛详情 - Super</a>  </p><p>今天在前面的 $\mathrm{T1}$ 花的时间太久，没有去看后面的题，导致失去了很多得分。我发现自己往往不是打不出某些题目的暴力，而是总是心存自己能想出正解的心思，不敢“屈尊”下来打暴力，这让我本来就不足的思维能力和代码能力更加的吃紧。</p><p><strong>能放下自己的痴想，弯腰捡起自己的谦卑，也是非常重要的能力。</strong></p><h2 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h2><p>是一个状态压缩 $\mathrm{dp}$ ，但是由于没有系统的训练过类似的题，没做出来</p><h2 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h2><p>想法是正确的，但是代码的实现还存在优化，打了 $\verb!1hour!$ 没有打出来，之后要多加训练，要不然就算有思路都打不出来。</p><h2 id="T3"><a href="#T3" class="headerlink" title="T3"></a>T3</h2><p>完全没看。</p><h2 id="T4"><a href="#T4" class="headerlink" title="T4"></a>T4</h2><p>完全没看。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 总结 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>#C241018E. 【模板】笛卡尔树</title>
       <link href="https://wolfdeer62456.github.io/2024/10/18/C241018E-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/"/>
       <url>https://wolfdeer62456.github.io/2024/10/18/C241018E-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/</url>
@@ -1574,9 +1612,9 @@
       
         <tags>
             
-            <tag> 欧拉函数 </tag>
-            
             <tag> 素数筛 </tag>
+            
+            <tag> 欧拉函数 </tag>
             
         </tags>
       
@@ -1636,11 +1674,11 @@
             
             <tag> gcd </tag>
             
+            <tag> 素数筛 </tag>
+            
             <tag> 欧拉函数 </tag>
             
             <tag> 狄利克雷卷积 </tag>
-            
-            <tag> 素数筛 </tag>
             
             <tag> 高维前缀和 </tag>
             
