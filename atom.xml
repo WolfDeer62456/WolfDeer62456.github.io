@@ -6,7 +6,7 @@
   <link href="https://wolfdeer62456.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolfdeer62456.github.io/"/>
-  <updated>2024-10-24T12:17:39.860Z</updated>
+  <updated>2024-10-25T02:01:56.717Z</updated>
   <id>https://wolfdeer62456.github.io/</id>
   
   <author>
@@ -15,6 +15,93 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>#C241025B. [THUSCH2017] 巧克力</title>
+    <link href="https://wolfdeer62456.github.io/2024/10/25/C241025B-THUSCH2017-%E5%B7%A7%E5%85%8B%E5%8A%9B/"/>
+    <id>https://wolfdeer62456.github.io/2024/10/25/C241025B-THUSCH2017-%E5%B7%A7%E5%85%8B%E5%8A%9B/</id>
+    <published>2024-10-25T01:53:33.000Z</published>
+    <updated>2024-10-25T02:01:56.717Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C241025B-THUSCH2017-巧克力&quot;&gt;&lt;a href=&quot;#C241025B-THUSCH2017-巧克力&quot; class=&quot;headerlink&quot; title=&quot;#C241025B. [THUSCH2017] 巧克力&quot;&gt;&lt;/a&gt;#C241025B.</summary>
+        
+      
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="状态压缩" scheme="https://wolfdeer62456.github.io/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/"/>
+    
+    <category term="Color Coding" scheme="https://wolfdeer62456.github.io/tags/Color-Coding/"/>
+    
+    <category term="斯坦纳树" scheme="https://wolfdeer62456.github.io/tags/%E6%96%AF%E5%9D%A6%E7%BA%B3%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C241025A. 【模板】最小斯坦纳树</title>
+    <link href="https://wolfdeer62456.github.io/2024/10/25/C241025A-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E5%B0%8F%E6%96%AF%E5%9D%A6%E7%BA%B3%E6%A0%91/"/>
+    <id>https://wolfdeer62456.github.io/2024/10/25/C241025A-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E6%9C%80%E5%B0%8F%E6%96%AF%E5%9D%A6%E7%BA%B3%E6%A0%91/</id>
+    <published>2024-10-25T01:53:19.000Z</published>
+    <updated>2024-10-25T07:33:36.339Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C241025A-【模板】最小斯坦纳树&quot;&gt;&lt;a href=&quot;#C241025A-【模板】最小斯坦纳树&quot; class=&quot;headerlink&quot; title=&quot;#C241025A. 【模板】最小斯坦纳树&quot;&gt;&lt;/a&gt;#C241025A.</summary>
+        
+      
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="状态压缩" scheme="https://wolfdeer62456.github.io/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/"/>
+    
+    <category term="斯坦纳树" scheme="https://wolfdeer62456.github.io/tags/%E6%96%AF%E5%9D%A6%E7%BA%B3%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>#C241024E. [TJOI2010] 分金币</title>
+    <link href="https://wolfdeer62456.github.io/2024/10/24/C241024E-TJOI2010-%E5%88%86%E9%87%91%E5%B8%81/"/>
+    <id>https://wolfdeer62456.github.io/2024/10/24/C241024E-TJOI2010-%E5%88%86%E9%87%91%E5%B8%81/</id>
+    <published>2024-10-24T13:29:31.000Z</published>
+    <updated>2024-10-24T13:40:24.733Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C241024E-TJOI2010-分金币&quot;&gt;&lt;a href=&quot;#C241024E-TJOI2010-分金币&quot; class=&quot;headerlink&quot; title=&quot;#C241024E. [TJOI2010] 分金币&quot;&gt;&lt;/a&gt;#C241024E.</summary>
+        
+      
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="模板" scheme="https://wolfdeer62456.github.io/tags/%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="模拟退火" scheme="https://wolfdeer62456.github.io/tags/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>对抗</title>
@@ -92,14 +179,14 @@
     <link href="https://wolfdeer62456.github.io/2024/10/24/2024-10-24-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/"/>
     <id>https://wolfdeer62456.github.io/2024/10/24/2024-10-24-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/</id>
     <published>2024-10-24T07:03:40.000Z</published>
-    <updated>2024-10-24T07:27:03.096Z</updated>
+    <updated>2024-10-24T13:28:37.102Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;2024-10-24-考试总结&quot;&gt;&lt;a href=&quot;#2024-10-24-考试总结&quot; class=&quot;headerlink&quot; title=&quot;2024.10.24 考试总结&quot;&gt;&lt;/a&gt;2024.10.24</summary>
+    <summary type="html">&lt;h1 id=&quot;2024-10-24-考试总结&quot;&gt;&lt;a href=&quot;#2024-10-24-考试总结&quot; class=&quot;headerlink&quot; title=&quot;2024.10.24 考试总结&quot;&gt;&lt;/a&gt;2024.10.24 考试总结&lt;/h1&gt;&lt;p&gt; &lt;a</summary>
         
       
     
@@ -342,14 +429,14 @@
     <link href="https://wolfdeer62456.github.io/2024/10/21/2024-10-21-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/"/>
     <id>https://wolfdeer62456.github.io/2024/10/21/2024-10-21-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/</id>
     <published>2024-10-21T00:11:31.000Z</published>
-    <updated>2024-10-21T08:28:07.239Z</updated>
+    <updated>2024-10-24T13:29:47.969Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;2024-10-21-考试总结&quot;&gt;&lt;a href=&quot;#2024-10-21-考试总结&quot; class=&quot;headerlink&quot; title=&quot;2024.10.21 考试总结&quot;&gt;&lt;/a&gt;2024.10.21 考试总结&lt;/h1&gt;&lt;p&gt;见 ： &lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;2024-10-21-考试总结&quot;&gt;&lt;a href=&quot;#2024-10-21-考试总结&quot; class=&quot;headerlink&quot; title=&quot;2024.10.21 考试总结&quot;&gt;&lt;/a&gt;2024.10.21 考试总结&lt;/h1&gt;&lt;p&gt; &lt;a</summary>
         
       
     
@@ -432,77 +519,6 @@
     <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     <category term="状态压缩" scheme="https://wolfdeer62456.github.io/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>放下自己的长衫</title>
-    <link href="https://wolfdeer62456.github.io/2024/10/19/%E6%94%BE%E4%B8%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E9%95%BF%E8%A1%AB/"/>
-    <id>https://wolfdeer62456.github.io/2024/10/19/%E6%94%BE%E4%B8%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E9%95%BF%E8%A1%AB/</id>
-    <published>2024-10-19T06:35:05.000Z</published>
-    <updated>2024-10-19T06:46:19.633Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;放下自己的长衫&quot;&gt;&lt;a href=&quot;#放下自己的长衫&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="说说" scheme="https://wolfdeer62456.github.io/categories/%E8%AF%B4%E8%AF%B4/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2024.10.19 考试总结</title>
-    <link href="https://wolfdeer62456.github.io/2024/10/19/2024-10-19-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/"/>
-    <id>https://wolfdeer62456.github.io/2024/10/19/2024-10-19-%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/</id>
-    <published>2024-10-19T06:11:31.000Z</published>
-    <updated>2024-10-19T06:33:49.666Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2024-10-19-考试总结&quot;&gt;&lt;a href=&quot;#2024-10-19-考试总结&quot; class=&quot;headerlink&quot; title=&quot;2024.10.19 考试总结&quot;&gt;&lt;/a&gt;2024.10.19 考试总结&lt;/h1&gt;&lt;p&gt; &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="总结" scheme="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>#C241018E. 【模板】笛卡尔树</title>
-    <link href="https://wolfdeer62456.github.io/2024/10/18/C241018E-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/"/>
-    <id>https://wolfdeer62456.github.io/2024/10/18/C241018E-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/</id>
-    <published>2024-10-18T11:47:51.000Z</published>
-    <updated>2024-10-18T11:53:58.222Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;C241018E-【模板】笛卡尔树&quot;&gt;&lt;a href=&quot;#C241018E-【模板】笛卡尔树&quot; class=&quot;headerlink&quot; title=&quot;#C241018E. 【模板】笛卡尔树&quot;&gt;&lt;/a&gt;#C241018E. 【模板】笛卡尔树&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="笛卡尔树" scheme="https://wolfdeer62456.github.io/tags/%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/"/>
     
   </entry>
   
