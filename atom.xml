@@ -6,7 +6,7 @@
   <link href="https://wolfdeer62456.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolfdeer62456.github.io/"/>
-  <updated>2024-10-30T00:49:32.526Z</updated>
+  <updated>2024-10-31T07:10:46.429Z</updated>
   <id>https://wolfdeer62456.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows桌面切换不顺滑</title>
+    <link href="https://wolfdeer62456.github.io/2024/10/31/Windows%E6%A1%8C%E9%9D%A2%E5%88%87%E6%8D%A2%E4%B8%8D%E9%A1%BA%E6%BB%91/"/>
+    <id>https://wolfdeer62456.github.io/2024/10/31/Windows%E6%A1%8C%E9%9D%A2%E5%88%87%E6%8D%A2%E4%B8%8D%E9%A1%BA%E6%BB%91/</id>
+    <published>2024-10-31T07:03:48.000Z</published>
+    <updated>2024-10-31T07:10:46.429Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Windows桌面切换不顺滑&quot;&gt;&lt;a href=&quot;#Windows桌面切换不顺滑&quot; class=&quot;headerlink&quot; title=&quot;Windows桌面切换不顺滑&quot;&gt;&lt;/a&gt;Windows桌面切换不顺滑&lt;/h1&gt;&lt;p&gt;$&#92;qquad$有些时候，你的</summary>
+        
+      
+    
+    
+    
+    <category term="资料" scheme="https://wolfdeer62456.github.io/categories/%E8%B5%84%E6%96%99/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>#C241030A. 点分树</title>
+    <link href="https://wolfdeer62456.github.io/2024/10/30/C241030A-%E7%82%B9%E5%88%86%E6%A0%91/"/>
+    <id>https://wolfdeer62456.github.io/2024/10/30/C241030A-%E7%82%B9%E5%88%86%E6%A0%91/</id>
+    <published>2024-10-30T13:35:20.000Z</published>
+    <updated>2024-10-31T03:50:15.938Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C241030A-点分树&quot;&gt;&lt;a href=&quot;#C241030A-点分树&quot; class=&quot;headerlink&quot; title=&quot;#C241030A. 点分树&quot;&gt;&lt;/a&gt;#C241030A. 点分树&lt;/h1&gt;&lt;h2 id=&quot;标签（Label）&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="模板" scheme="https://wolfdeer62456.github.io/tags/%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="LCA" scheme="https://wolfdeer62456.github.io/tags/LCA/"/>
+    
+    <category term="点分树" scheme="https://wolfdeer62456.github.io/tags/%E7%82%B9%E5%88%86%E6%A0%91/"/>
+    
+    <category term="容斥原理" scheme="https://wolfdeer62456.github.io/tags/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86/"/>
+    
+    <category term="动态开点线段树" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E5%BC%80%E7%82%B9%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+  </entry>
   
   <entry>
     <title>回旋镖</title>
@@ -120,8 +178,8 @@
     <title>利己主义者</title>
     <link href="https://wolfdeer62456.github.io/2024/10/29/%E5%88%A9%E5%B7%B1%E4%B8%BB%E4%B9%89%E8%80%85/"/>
     <id>https://wolfdeer62456.github.io/2024/10/29/%E5%88%A9%E5%B7%B1%E4%B8%BB%E4%B9%89%E8%80%85/</id>
-    <published>2024-10-29T10:43:06.000Z</published>
-    <updated>2024-10-30T00:44:24.384Z</updated>
+    <published>2024-10-29T08:43:06.000Z</published>
+    <updated>2024-10-31T00:30:49.240Z</updated>
     
     
       
@@ -455,56 +513,6 @@
     
     <category term="社会学" scheme="https://wolfdeer62456.github.io/categories/%E7%A4%BE%E4%BC%9A%E5%AD%A6/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Dev-cpp的BUG</title>
-    <link href="https://wolfdeer62456.github.io/2024/10/23/Dev-cpp%E7%9A%84BUG/"/>
-    <id>https://wolfdeer62456.github.io/2024/10/23/Dev-cpp%E7%9A%84BUG/</id>
-    <published>2024-10-23T01:54:58.000Z</published>
-    <updated>2024-10-23T02:09:57.900Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Dev-cpp的BUG&quot;&gt;&lt;a href=&quot;#Dev-cpp的BUG&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="资料" scheme="https://wolfdeer62456.github.io/categories/%E8%B5%84%E6%96%99/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>#C241022D. 火柴</title>
-    <link href="https://wolfdeer62456.github.io/2024/10/22/C241022D-%E7%81%AB%E6%9F%B4/"/>
-    <id>https://wolfdeer62456.github.io/2024/10/22/C241022D-%E7%81%AB%E6%9F%B4/</id>
-    <published>2024-10-22T06:29:51.000Z</published>
-    <updated>2024-10-23T10:33:39.999Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;C241022D-火柴&quot;&gt;&lt;a href=&quot;#C241022D-火柴&quot; class=&quot;headerlink&quot; title=&quot;#C241022D. 火柴&quot;&gt;&lt;/a&gt;#C241022D. 火柴&lt;/h1&gt;&lt;h2 id=&quot;标签（Label）&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="LCA" scheme="https://wolfdeer62456.github.io/tags/LCA/"/>
-    
-    <category term="割边" scheme="https://wolfdeer62456.github.io/tags/%E5%89%B2%E8%BE%B9/"/>
     
   </entry>
   
