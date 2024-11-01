@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>#C241101C. 树</title>
+      <link href="https://wolfdeer62456.github.io/2024/11/01/C241101C-%E6%A0%91/"/>
+      <url>https://wolfdeer62456.github.io/2024/11/01/C241101C-%E6%A0%91/</url>
+      
+        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><h2 id="前言（Front-talk）"><a href="#前言（Front-talk）" class="headerlink" title="前言（Front talk）"></a>前言（Front talk）</h2><h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Trie树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>#C241101E. ARC184D-Erase Balls 2D</title>
       <link href="https://wolfdeer62456.github.io/2024/11/01/C241101E-ARC184D-Erase-Balls-2D/"/>
       <url>https://wolfdeer62456.github.io/2024/11/01/C241101E-ARC184D-Erase-Balls-2D/</url>
@@ -2504,9 +2523,9 @@
             
             <tag> 模板 </tag>
             
-            <tag> 欧拉函数 </tag>
-            
             <tag> 素数筛 </tag>
+            
+            <tag> 欧拉函数 </tag>
             
         </tags>
       
@@ -2566,11 +2585,11 @@
             
             <tag> gcd </tag>
             
+            <tag> 素数筛 </tag>
+            
             <tag> 欧拉函数 </tag>
             
             <tag> 狄利克雷卷积 </tag>
-            
-            <tag> 素数筛 </tag>
             
             <tag> 高维前缀和 </tag>
             
@@ -3747,9 +3766,9 @@
             
             <tag> 二进制 </tag>
             
-            <tag> 思维 </tag>
-            
             <tag> 数学 </tag>
+            
+            <tag> 思维 </tag>
             
         </tags>
       
@@ -5539,9 +5558,9 @@
       
         <tags>
             
-            <tag> 贪心 </tag>
-            
             <tag> 数学 </tag>
+            
+            <tag> 贪心 </tag>
             
         </tags>
       
@@ -6025,9 +6044,9 @@
       
         <tags>
             
-            <tag> 观察+分析 </tag>
-            
             <tag> 二进制 </tag>
+            
+            <tag> 观察+分析 </tag>
             
             <tag> 数学推理 </tag>
             
