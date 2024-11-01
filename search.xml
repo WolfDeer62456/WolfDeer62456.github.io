@@ -8,7 +8,7 @@
       <link href="https://wolfdeer62456.github.io/2024/11/01/C241101C-%E6%A0%91/"/>
       <url>https://wolfdeer62456.github.io/2024/11/01/C241101C-%E6%A0%91/</url>
       
-        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><h2 id="前言（Front-talk）"><a href="#前言（Front-talk）" class="headerlink" title="前言（Front talk）"></a>前言（Front talk）</h2><h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2>]]></content>
+        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><p> <a href="http://192.168.110.4/p/C241101C">题目详情 - 树 - Super</a> </p><p> <a href="http://192.168.110.4/p/C241101C/solution">题解 - 树 - Super</a> </p><h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><p><img src="https://wolfdeer62456.github.io/1"></p><h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><details><summary>出题者题解</summary><h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>考虑要求两条链不相交，那其实就是选一条边断开，对于两棵树分别求解最大值，然后要求和最大。</p><p>考虑如果只要求求出全局最大的链，那应该如何求呢，其实只需要求出每个点到根的异或和，然后就变成了全局最大异或点对，这个直接用 01 trie 就可以做到 $O(n \log v)$ 的复杂度求出答案。</p><p>那就先求出全局最大的链，考虑以链的一个端点为根。</p><p>先考虑我们不断链上的边的情况，这种情况下我们可以发现，由于子树外的贡献是一定的，恒为全局最大的链，那么就只需要子树内的最大异或点对最大就可以了，然后这个可以直接对每个被链分裂出的子树求一遍答案就可以了，因为包含的点数越多，答案是越大的。</p><p>然后考虑断链上的边的情况，这就相当于链上的问题，可以处理前缀答案和后缀答案，因为总的增量是 $O(n)$ 的，所以还是可以在 $O(n \log v)$ 的复杂度内求出前缀答案和后缀答案，然后枚举边拼接就可以了。</p><p>总时间复杂度 $O(n \log v)$。</p></details><h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
       
       
       
@@ -2523,9 +2523,9 @@
             
             <tag> 模板 </tag>
             
-            <tag> 素数筛 </tag>
-            
             <tag> 欧拉函数 </tag>
+            
+            <tag> 素数筛 </tag>
             
         </tags>
       
@@ -2585,11 +2585,11 @@
             
             <tag> gcd </tag>
             
-            <tag> 素数筛 </tag>
-            
             <tag> 欧拉函数 </tag>
             
             <tag> 狄利克雷卷积 </tag>
+            
+            <tag> 素数筛 </tag>
             
             <tag> 高维前缀和 </tag>
             
