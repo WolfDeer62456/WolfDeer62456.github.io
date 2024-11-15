@@ -4,40 +4,13 @@
   
     
     <entry>
-      <title>hexo-theme-matery配置博客</title>
-      <link href="https://wolfdeer62456.github.io/2024/11/15/hexo-theme-matery%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/"/>
-      <url>https://wolfdeer62456.github.io/2024/11/15/hexo-theme-matery%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/</url>
+      <title>博客评论配置</title>
+      <link href="https://wolfdeer62456.github.io/2024/11/15/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E9%85%8D%E7%BD%AE/"/>
+      <url>https://wolfdeer62456.github.io/2024/11/15/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E9%85%8D%E7%BD%AE/</url>
       
         <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><h2 id="前言（Front-talk）"><a href="#前言（Front-talk）" class="headerlink" title="前言（Front talk）"></a>前言（Front talk）</h2><h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><details><summary>出题者题解</summary></details><h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
       
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>#C241115C. C</title>
-      <link href="https://wolfdeer62456.github.io/2024/11/15/C241115C-C/"/>
-      <url>https://wolfdeer62456.github.io/2024/11/15/C241115C-C/</url>
-      
-        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h2 id="标签（Label）"><a href="#标签（Label）" class="headerlink" title="标签（Label）"></a>标签（Label）</h2><h2 id="前言（Front-talk）"><a href="#前言（Front-talk）" class="headerlink" title="前言（Front talk）"></a>前言（Front talk）</h2><h2 id="网址（Website）"><a href="#网址（Website）" class="headerlink" title="网址（Website）"></a>网址（Website）</h2><h2 id="题目（Problem）"><a href="#题目（Problem）" class="headerlink" title="题目（Problem）"></a>题目（Problem）</h2><h2 id="题解（Solution）"><a href="#题解（Solution）" class="headerlink" title="题解（Solution）"></a>题解（Solution）</h2><details><summary>出题者题解</summary></details><h2 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h2><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 动态规划 </tag>
-            
-            <tag> 最短路算法 </tag>
-            
-            <tag> 思维 </tag>
-            
-            <tag> LCA </tag>
-            
-            <tag> 单点最短路树 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -3938,9 +3911,9 @@
       
         <tags>
             
-            <tag> 二进制 </tag>
-            
             <tag> 观察+分析 </tag>
+            
+            <tag> 二进制 </tag>
             
             <tag> 并查集 </tag>
             
@@ -7068,9 +7041,9 @@
       
         <tags>
             
-            <tag> 二进制 </tag>
-            
             <tag> 观察+分析 </tag>
+            
+            <tag> 二进制 </tag>
             
             <tag> 数学推理 </tag>
             
