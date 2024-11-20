@@ -6,7 +6,7 @@
   <link href="https://wolfdeer62456.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolfdeer62456.github.io/"/>
-  <updated>2024-11-20T00:48:13.051Z</updated>
+  <updated>2024-11-20T14:11:11.824Z</updated>
   <id>https://wolfdeer62456.github.io/</id>
   
   <author>
@@ -15,6 +15,85 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>#C241120A. [NOI2016] 优秀的拆分</title>
+    <link href="https://wolfdeer62456.github.io/2024/11/20/C241120A-NOI2016-%E4%BC%98%E7%A7%80%E7%9A%84%E6%8B%86%E5%88%86/"/>
+    <id>https://wolfdeer62456.github.io/2024/11/20/C241120A-NOI2016-%E4%BC%98%E7%A7%80%E7%9A%84%E6%8B%86%E5%88%86/</id>
+    <published>2024-11-20T13:08:12.000Z</published>
+    <updated>2024-11-20T14:11:11.824Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C241120A-NOI2016-优秀的拆分&quot;&gt;&lt;a href=&quot;#C241120A-NOI2016-优秀的拆分&quot; class=&quot;headerlink&quot; title=&quot;#C241120A. [NOI2016] 优秀的拆分&quot;&gt;&lt;/a&gt;#C241120A.</summary>
+        
+      
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="思维" scheme="https://wolfdeer62456.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+    <category term="枚举" scheme="https://wolfdeer62456.github.io/tags/%E6%9E%9A%E4%B8%BE/"/>
+    
+    <category term="二分" scheme="https://wolfdeer62456.github.io/tags/%E4%BA%8C%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024.11.20 课堂总结</title>
+    <link href="https://wolfdeer62456.github.io/2024/11/20/2024-11-20-%E8%AF%BE%E5%A0%82%E6%80%BB%E7%BB%93/"/>
+    <id>https://wolfdeer62456.github.io/2024/11/20/2024-11-20-%E8%AF%BE%E5%A0%82%E6%80%BB%E7%BB%93/</id>
+    <published>2024-11-20T11:39:11.000Z</published>
+    <updated>2024-11-20T11:54:37.024Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2024-11-20-课堂总结&quot;&gt;&lt;a href=&quot;#2024-11-20-课堂总结&quot; class=&quot;headerlink&quot; title=&quot;2024.11.20 课堂总结&quot;&gt;&lt;/a&gt;2024.11.20</summary>
+        
+      
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学习信息有感</title>
+    <link href="https://wolfdeer62456.github.io/2024/11/20/%E5%AD%A6%E4%B9%A0%E4%BF%A1%E6%81%AF%E6%9C%89%E6%84%9F/"/>
+    <id>https://wolfdeer62456.github.io/2024/11/20/%E5%AD%A6%E4%B9%A0%E4%BF%A1%E6%81%AF%E6%9C%89%E6%84%9F/</id>
+    <published>2024-11-20T07:57:33.000Z</published>
+    <updated>2024-11-20T08:01:53.389Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;学习信息有感&quot;&gt;&lt;a href=&quot;#学习信息有感&quot; class=&quot;headerlink&quot; title=&quot;学习信息有感&quot;&gt;&lt;/a&gt;学习信息有感&lt;/h1&gt;&lt;p&gt;今天听了好题选讲，发现所有的题目都会莫名其妙地多出一种讲题人认为人尽皆知的 trick</summary>
+        
+      
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>#C241119D. 简单题</title>
@@ -105,8 +184,8 @@
     <title>#C241119A. 字符串</title>
     <link href="https://wolfdeer62456.github.io/2024/11/19/C241119A-%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     <id>https://wolfdeer62456.github.io/2024/11/19/C241119A-%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
-    <published>2024-11-19T06:42:05.000Z</published>
-    <updated>2024-11-19T13:59:39.735Z</updated>
+    <published>2024-11-19T06:41:05.000Z</published>
+    <updated>2024-11-20T08:02:48.911Z</updated>
     
     
       
@@ -275,7 +354,7 @@
     <link href="https://wolfdeer62456.github.io/2024/11/16/C241116B-%E6%8C%82%E5%88%86/"/>
     <id>https://wolfdeer62456.github.io/2024/11/16/C241116B-%E6%8C%82%E5%88%86/</id>
     <published>2024-11-16T06:14:33.000Z</published>
-    <updated>2024-11-20T04:18:33.561Z</updated>
+    <updated>2024-11-20T14:02:18.503Z</updated>
     
     
       
@@ -288,6 +367,12 @@
     
     
     
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="观察+分析" scheme="https://wolfdeer62456.github.io/tags/%E8%A7%82%E5%AF%9F-%E5%88%86%E6%9E%90/"/>
+    
+    <category term="数学" scheme="https://wolfdeer62456.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -296,7 +381,7 @@
     <link href="https://wolfdeer62456.github.io/2024/11/16/C241116A-%E6%A3%8B%E7%9B%98%E6%B8%B8%E6%88%8F/"/>
     <id>https://wolfdeer62456.github.io/2024/11/16/C241116A-%E6%A3%8B%E7%9B%98%E6%B8%B8%E6%88%8F/</id>
     <published>2024-11-16T06:14:26.000Z</published>
-    <updated>2024-11-20T05:00:34.859Z</updated>
+    <updated>2024-11-20T08:08:06.654Z</updated>
     
     
       
@@ -390,6 +475,33 @@
   </entry>
   
   <entry>
+    <title>2024.11.14 课堂总结</title>
+    <link href="https://wolfdeer62456.github.io/2024/11/14/2024-11-14-%E8%AF%BE%E5%A0%82%E6%80%BB%E7%BB%93/"/>
+    <id>https://wolfdeer62456.github.io/2024/11/14/2024-11-14-%E8%AF%BE%E5%A0%82%E6%80%BB%E7%BB%93/</id>
+    <published>2024-11-14T11:43:51.000Z</published>
+    <updated>2024-11-20T11:54:40.749Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2024-11-14-课堂总结&quot;&gt;&lt;a href=&quot;#2024-11-14-课堂总结&quot; class=&quot;headerlink&quot; title=&quot;2024.11.14 课堂总结&quot;&gt;&lt;/a&gt;2024.11.14 课堂总结&lt;/h1&gt;&lt;p&gt;见 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="总结" scheme="https://wolfdeer62456.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="图论" scheme="https://wolfdeer62456.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>花冷不开心</title>
     <link href="https://wolfdeer62456.github.io/2024/11/14/%E8%8A%B1%E5%86%B7%E4%B8%8D%E5%BC%80%E5%BF%83/"/>
     <id>https://wolfdeer62456.github.io/2024/11/14/%E8%8A%B1%E5%86%B7%E4%B8%8D%E5%BC%80%E5%BF%83/</id>
@@ -408,106 +520,6 @@
     
     
     <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>#C241114E. 树上宝藏</title>
-    <link href="https://wolfdeer62456.github.io/2024/11/14/C241114E-%E6%A0%91%E4%B8%8A%E5%AE%9D%E8%97%8F/"/>
-    <id>https://wolfdeer62456.github.io/2024/11/14/C241114E-%E6%A0%91%E4%B8%8A%E5%AE%9D%E8%97%8F/</id>
-    <published>2024-11-14T07:44:15.000Z</published>
-    <updated>2024-11-16T08:52:30.117Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;C241114E-树上宝藏&quot;&gt;&lt;a href=&quot;#C241114E-树上宝藏&quot; class=&quot;headerlink&quot; title=&quot;#C241114E. 树上宝藏&quot;&gt;&lt;/a&gt;#C241114E. 树上宝藏&lt;/h1&gt;&lt;h2 id=&quot;标签（Label）&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="数学" scheme="https://wolfdeer62456.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-    <category term="贪心" scheme="https://wolfdeer62456.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
-    <category term="概率期望" scheme="https://wolfdeer62456.github.io/tags/%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%9B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>#C241114D. 圆环型零件</title>
-    <link href="https://wolfdeer62456.github.io/2024/11/14/C241114D-%E5%9C%86%E7%8E%AF%E5%9E%8B%E9%9B%B6%E4%BB%B6/"/>
-    <id>https://wolfdeer62456.github.io/2024/11/14/C241114D-%E5%9C%86%E7%8E%AF%E5%9E%8B%E9%9B%B6%E4%BB%B6/</id>
-    <published>2024-11-14T07:43:18.000Z</published>
-    <updated>2024-11-14T13:17:42.890Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;C241114D-圆环型零件&quot;&gt;&lt;a href=&quot;#C241114D-圆环型零件&quot; class=&quot;headerlink&quot; title=&quot;#C241114D. 圆环型零件&quot;&gt;&lt;/a&gt;#C241114D. 圆环型零件&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-    <category term="分类讨论" scheme="https://wolfdeer62456.github.io/tags/%E5%88%86%E7%B1%BB%E8%AE%A8%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>#C241112C. 区间划分</title>
-    <link href="https://wolfdeer62456.github.io/2024/11/12/C241112C-%E5%8C%BA%E9%97%B4%E5%88%92%E5%88%86/"/>
-    <id>https://wolfdeer62456.github.io/2024/11/12/C241112C-%E5%8C%BA%E9%97%B4%E5%88%92%E5%88%86/</id>
-    <published>2024-11-12T14:05:55.000Z</published>
-    <updated>2024-11-16T08:54:33.133Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h2 id=&quot;标签（Label）&quot;&gt;&lt;a href=&quot;#标签（Label）&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>今日搬新家</title>
-    <link href="https://wolfdeer62456.github.io/2024/11/12/%E4%BB%8A%E6%97%A5%E6%90%AC%E6%96%B0%E5%AE%B6/"/>
-    <id>https://wolfdeer62456.github.io/2024/11/12/%E4%BB%8A%E6%97%A5%E6%90%AC%E6%96%B0%E5%AE%B6/</id>
-    <published>2024-11-12T10:59:25.000Z</published>
-    <updated>2024-11-12T11:21:50.287Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;今日搬新家&quot;&gt;&lt;a href=&quot;#今日搬新家&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="说说" scheme="https://wolfdeer62456.github.io/categories/%E8%AF%B4%E8%AF%B4/"/>
     
     
   </entry>
