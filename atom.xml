@@ -6,7 +6,7 @@
   <link href="https://wolfdeer62456.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolfdeer62456.github.io/"/>
-  <updated>2024-11-25T10:35:46.978Z</updated>
+  <updated>2024-11-25T13:50:50.768Z</updated>
   <id>https://wolfdeer62456.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>#C241125D. 最小值</title>
+    <link href="https://wolfdeer62456.github.io/2024/11/25/C241125D-%E6%9C%80%E5%B0%8F%E5%80%BC/"/>
+    <id>https://wolfdeer62456.github.io/2024/11/25/C241125D-%E6%9C%80%E5%B0%8F%E5%80%BC/</id>
+    <published>2024-11-25T13:43:53.000Z</published>
+    <updated>2024-11-25T13:50:50.768Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C241125D-最小值&quot;&gt;&lt;a href=&quot;#C241125D-最小值&quot; class=&quot;headerlink&quot; title=&quot;#C241125D. 最小值&quot;&gt;&lt;/a&gt;#C241125D. 最小值&lt;/h1&gt;&lt;h2 id=&quot;标签（Label）&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
+    
+    
+    <category term="笛卡尔树" scheme="https://wolfdeer62456.github.io/tags/%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>#C241125C. 新月争霸</title>
     <link href="https://wolfdeer62456.github.io/2024/11/25/C241125C-%E6%96%B0%E6%9C%88%E4%BA%89%E9%9C%B8/"/>
     <id>https://wolfdeer62456.github.io/2024/11/25/C241125C-%E6%96%B0%E6%9C%88%E4%BA%89%E9%9C%B8/</id>
     <published>2024-11-25T06:35:41.000Z</published>
-    <updated>2024-11-25T10:35:46.978Z</updated>
+    <updated>2024-11-25T13:40:50.504Z</updated>
     
     
       
@@ -37,6 +62,10 @@
     <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
     
     
+    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="根号分治" scheme="https://wolfdeer62456.github.io/tags/%E6%A0%B9%E5%8F%B7%E5%88%86%E6%B2%BB/"/>
+    
   </entry>
   
   <entry>
@@ -44,7 +73,7 @@
     <link href="https://wolfdeer62456.github.io/2024/11/25/C241125B-%E6%9F%93%E8%89%B2/"/>
     <id>https://wolfdeer62456.github.io/2024/11/25/C241125B-%E6%9F%93%E8%89%B2/</id>
     <published>2024-11-25T06:35:30.000Z</published>
-    <updated>2024-11-25T10:35:58.225Z</updated>
+    <updated>2024-11-25T12:56:47.495Z</updated>
     
     
       
@@ -488,33 +517,6 @@
     
     <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>#C241119D. 简单题</title>
-    <link href="https://wolfdeer62456.github.io/2024/11/19/C241119D-%E7%AE%80%E5%8D%95%E9%A2%98/"/>
-    <id>https://wolfdeer62456.github.io/2024/11/19/C241119D-%E7%AE%80%E5%8D%95%E9%A2%98/</id>
-    <published>2024-11-19T06:42:53.000Z</published>
-    <updated>2024-11-22T11:00:50.789Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;C241119D-简单题&quot;&gt;&lt;a href=&quot;#C241119D-简单题&quot; class=&quot;headerlink&quot; title=&quot;#C241119D. 简单题&quot;&gt;&lt;/a&gt;#C241119D. 简单题&lt;/h1&gt;&lt;h2 id=&quot;标签（Label）&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="题目" scheme="https://wolfdeer62456.github.io/categories/%E9%A2%98%E7%9B%AE/"/>
-    
-    
-    <category term="动态规划" scheme="https://wolfdeer62456.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-    <category term="贪心" scheme="https://wolfdeer62456.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
   </entry>
   
